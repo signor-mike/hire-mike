@@ -6,14 +6,15 @@ import VueRouter from "vue-router";
 // import landingPage from "../views/LandingPage.vue";
 // import learningVuex from "../views/Vuex-learning.vue";
 import mikeCV from "../views/CvMike.vue";
+import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "My CV",
-    component: mikeCV,
+    name: "Home",
+    component: Home,
   },
   // {
   //   path: "/projects",
