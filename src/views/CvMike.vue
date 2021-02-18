@@ -29,6 +29,14 @@
         </v-col>
       </v-row>
     </v-card>
+    <div>
+      <Footer
+        class="d-none"
+        :class="{
+          'd-inline': $vuetify.breakpoint.smAndDown,
+        }"
+      />
+    </div>
   </v-main>
 </template>
 
@@ -39,9 +47,18 @@ import Images from "@/components/CV-components/Images.vue";
 import HardSkills from "@/components/CV-components/HardSkills.vue";
 import SoftSkills from "@/components/CV-components/SoftSkills.vue";
 import Experience from "@/components/CV-components/Experience.vue";
+import Footer from "@/components/CV-components/Footer.vue";
 
 export default {
-  components: { CvHeader, AboutMe, Images, HardSkills, SoftSkills, Experience },
+  components: {
+    CvHeader,
+    AboutMe,
+    Images,
+    HardSkills,
+    SoftSkills,
+    Experience,
+    Footer,
+  },
 };
 </script>
 

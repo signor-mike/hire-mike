@@ -20,7 +20,7 @@
       <li
         v-for="disclaimer in disclaimers"
         :key="disclaimer.id"
-        class="d-none d-md-block"
+        class="d-none d-md-block font-weight-thin"
       >
         <v-text>{{ disclaimer.text }}</v-text>
       </li>
