@@ -109,7 +109,11 @@ export default {
         //   text: "Vuex Learning",
         //   route: "/vuex-learning",
         // },
-
+        {
+          icon: "home",
+          text: "Home",
+          route: "/",
+        },
         {
           icon: "contact_page",
           text: "My CV",
