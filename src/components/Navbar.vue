@@ -5,10 +5,12 @@
         class="grey--text"
         @click="draw = !draw"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title class="text-uppercase grey--text">
-        <span class="font-weight-light">itsa</span>
-        <span>Mike</span>
-      </v-toolbar-title>
+      <a href="/">
+        <v-toolbar-title class="text-uppercase grey--text">
+          <span class="font-weight-light">itsa</span>
+          <span>Mike</span>
+        </v-toolbar-title></a
+      >
 
       <v-spacer></v-spacer>
 

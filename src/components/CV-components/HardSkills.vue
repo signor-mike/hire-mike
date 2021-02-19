@@ -17,6 +17,7 @@
     <v-card class="mt-6" :class="{ 'mt-2': $vuetify.breakpoint.smAndDown }">
       <SoftSkills v-if="replace" />
       <v-card-text v-if="!replace">
+        <div class="gradient-line"></div>
         <v-card-title class="justify-center">
           Hard Skills
           <v-switch v-model="colorSwitch"></v-switch>
@@ -32,10 +33,10 @@
               v-for="hardSkill in hardSkills"
               :key="hardSkill.id"
               cols="auto"
-              :class="[
-                hardSkill.mastery,
-                { 'text-caption': $vuetify.breakpoint.smAndDown },
-              ]"
+              :class="{
+                'text-caption': $vuetify.breakpoint.smAndDown,
+                [hardSkill.mastery]: colorSwitch,
+              }"
             >
               {{ hardSkill.title }}
             </v-col>
@@ -73,4 +74,53 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.gradient-line {
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #ffa500,
+    #ffff00,
+    #adff2f,
+    #008000
+  );
+  -webkit-animation: gradient-line 30s ease infinite;
+  -moz-animation: gradient-line 30s ease infinite;
+  animation: gradient-line 30s ease infinite;
+  max-width: inherit;
+  height: 5px;
+}
+@-webkit-keyframes gradient-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>

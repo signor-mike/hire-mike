@@ -2,7 +2,10 @@
   <v-main>
     <v-card>
       <v-card-text>
-        <v-card-title class="justify-center">Soft Skills</v-card-title>
+        <v-card-title class="justify-center"
+          >Soft Skills
+          <v-switch v-model="colorSwitch"></v-switch>
+        </v-card-title>
         <div
           class="d-flex justify-end"
           :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }"
@@ -19,7 +22,7 @@
               :key="softSkill.id"
               cols="auto"
               :class="[
-                softSkill.mastery,
+                colorSwitch ? softSkill.mastery : '',
                 { 'text-caption': $vuetify.breakpoint.smAndDown },
               ]"
             >
@@ -34,6 +37,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      colorSwitch: false,
+    };
+  },
   computed: {
     skills() {
       return this.$store.state.skills;

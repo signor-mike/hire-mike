@@ -2,6 +2,8 @@
   <div>
     <div>
       <v-divider />
+
+      <!-- use div with background -->
       <!-- <v-sparkline
         :value="[0, 0, 0, 0]"
         :gradient="gradient"
@@ -43,4 +45,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+/* css animation / transition for drawing the div */
+</style>
