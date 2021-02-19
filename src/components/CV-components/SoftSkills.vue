@@ -1,12 +1,7 @@
 <template>
   <v-main>
-    <v-card
-      :class="{
-        'd-none': $vuetify.breakpoint.smAndDown,
-      }"
-      class=""
-    >
-      <v-card-text class="">
+    <v-card>
+      <v-card-text>
         <v-card-title class="justify-center">Soft Skills</v-card-title>
         <div
           class="d-flex justify-end"
@@ -23,8 +18,10 @@
               v-for="softSkill in softSkills"
               :key="softSkill.id"
               cols="auto"
-              :class="{ 'text-caption': $vuetify.breakpoint.smAndDown }"
-              class=""
+              :class="[
+                softSkill.mastery,
+                { 'text-caption': $vuetify.breakpoint.smAndDown },
+              ]"
             >
               {{ softSkill.title }}
             </v-col>

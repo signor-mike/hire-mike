@@ -15,9 +15,13 @@
       </v-col>
     </v-row>
     <v-card class="mt-6" :class="{ 'mt-2': $vuetify.breakpoint.smAndDown }">
-      <SoftSkillsInsteadOfHardSkills v-if="replace" />
+      <SoftSkills v-if="replace" />
       <v-card-text v-if="!replace">
-        <v-card-title class="justify-center">Hard Skills</v-card-title>
+        <v-card-title class="justify-center">
+          Hard Skills
+          <v-switch v-model="colorSwitch"></v-switch>
+        </v-card-title>
+
         <div :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }">
           <v-row
             :dense="$vuetify.breakpoint.smAndDown"
@@ -28,8 +32,10 @@
               v-for="hardSkill in hardSkills"
               :key="hardSkill.id"
               cols="auto"
-              :class="{ 'text-caption': $vuetify.breakpoint.smAndDown }"
-              class=""
+              :class="[
+                hardSkill.mastery,
+                { 'text-caption': $vuetify.breakpoint.smAndDown },
+              ]"
             >
               {{ hardSkill.title }}
             </v-col>
@@ -41,12 +47,13 @@
 </template>
 
 <script>
-import SoftSkillsInsteadOfHardSkills from "@/components/CV-components/SoftSkillsInsteadOfHardSkills.vue";
+import SoftSkills from "@/components/CV-components/SoftSkills.vue";
 
 export default {
   data() {
     return {
       replace: false,
+      colorSwitch: false,
     };
   },
   methods: {
@@ -54,7 +61,7 @@ export default {
       this.replace = !this.replace;
     },
   },
-  components: { SoftSkillsInsteadOfHardSkills },
+  components: { SoftSkills },
   computed: {
     skills() {
       return this.$store.state.skills;

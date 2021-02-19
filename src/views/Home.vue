@@ -1,5 +1,17 @@
 <template>
   <div>
+    <div>
+      <v-divider />
+      <!-- <v-sparkline
+        :value="[0, 0, 0, 0]"
+        :gradient="gradient"
+        gradient-direction="left"
+        type="trend"
+        auto-draw
+      >
+      </v-sparkline> -->
+      <v-divider />
+    </div>
     <div class="d-flex justify-center">
       <h1>Home page, please open menu to navigate</h1>
     </div>
@@ -22,7 +34,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      gradient: ["red", "orange", "yellow", "yellowgreen", "green"],
+    };
+  },
+};
 </script>
 
 <style></style>

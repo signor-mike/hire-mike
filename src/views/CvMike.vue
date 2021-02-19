@@ -25,7 +25,11 @@
         </v-col>
 
         <v-col cols="12" md="4" sm="3" class="d-flex  justify-end">
-          <SoftSkills />
+          <SoftSkills
+            :class="{
+              'd-none': $vuetify.breakpoint.smAndDown,
+            }"
+          />
         </v-col>
       </v-row>
     </v-card>
@@ -68,5 +72,20 @@ ul {
 }
 p {
   font-size: small;
+}
+.low {
+  color: Red;
+}
+.b-medium {
+  color: orange;
+}
+.medium {
+  color: yellow;
+}
+.ab-medium {
+  color: yellowgreen;
+}
+.high {
+  color: green;
 }
 </style>
