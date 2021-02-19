@@ -13,6 +13,11 @@
         </a>
       </v-btn>
     </div>
+    <div class="d-flex justify-center">
+      <p class="text-caption font-weight-thin">
+        cos there's nothing else to see here yet
+      </p>
+    </div>
   </div>
 </template>
 
