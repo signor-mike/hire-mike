@@ -1,8 +1,9 @@
 <template>
   <footer class="parent">
     <div class="child">
-      <span class="" v-for="disclaimer in disclaimers" :key="disclaimer.id">
-        {{ disclaimer.text }}
+      <span>
+        <v-text>{{ $t("disclaimers.one") }}</v-text> <br />
+        <v-text>{{ $t("disclaimers.two") }}</v-text> <br />
       </span>
     </div>
   </footer>

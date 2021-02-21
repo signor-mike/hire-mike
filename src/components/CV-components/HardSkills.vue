@@ -10,7 +10,7 @@
         }"
       >
         <v-btn x-small @click="toggle" class="my-n4">
-          <span>switch between hard/soft skills</span>
+          <span>{{ $t("skills.switch") }}</span>
         </v-btn>
       </v-col>
     </v-row>
@@ -19,7 +19,7 @@
       <v-card-text v-if="!replace">
         <div class="gradient-line"></div>
         <v-card-title class="justify-center">
-          Hard Skills
+          {{ $t("skills.hardSkills") }}
           <v-switch v-model="colorSwitch"></v-switch>
         </v-card-title>
 
@@ -39,7 +39,6 @@
               }"
             >
               {{ $t(`hardSkills.${hardSkill.title}`) }}
-            
             </v-col>
           </v-row>
         </div>

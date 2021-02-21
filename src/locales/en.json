@@ -6,6 +6,11 @@
     "button": "click me",
     "nothing": "because there's nothing else to see here yet"
   },
+  "skills" : {
+    "hardSkills" : "Hard Skills",
+    "softSkills" : "Soft Skills",
+    "switch" : "switch between hard/soft skills"
+  },
 
   "hardSkills": {
     "Technical skills":  "Technical skills",
@@ -29,5 +34,35 @@
     "Work Ethic": "Work Ethic",
     "Flexibility/Adaptability":  "Flexibility/Adaptability",
     "Interpersonal Skills": "Interpersonal Skills"
+  },
+  "person" : {
+    "name": "Mike Litoris",
+    "position" :  "Front End developer"
+  },
+  "contacts": {
+    "email me": "email me",
+    "WhatsApp":"Write me on Whatsapp",
+    "Telegram":"Write me on Telegram",
+    "Facebook":"Write me on Facebook"
+  },
+  "disclaimers" : {
+    "one" : "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history.",
+    "two" : "Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains. ",
+    "mobile" : "And this website is mobile friendly, give it a minute and visit it with your phone or tablet. Thanks."
+
+  },
+  "experience" : {
+    "expandAll" : "expand all",
+    "collapseAll" : "collapse all",
+    "aboutMe" : "About me",
+      "aboutMeContent" : "Age, languages spoken, nationality, permits blah blah ",
+    "myProjects" : "My projects",
+      "myProjectsContent" : "Currently this website is my only project",
+    "relevantExperience" : "Relevant experience",
+      "relevantExperienceContent": "Currently my only relevant experience is developing this website",
+    "irrelevantExperience" : "Irrelevant experience",
+      "irrelevantExperienceContent" : " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant.",
+    "education" : "Education",
+      "educationContent" : "Those dodgy college"
   }
 }

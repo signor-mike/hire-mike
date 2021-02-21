@@ -14,7 +14,7 @@ const store = new Vuex.Store({
       },
       {
         id: "2",
-        title: "whatsapp",
+        title: "WhatsApp",
         link: "https://wa.me/34657722396",
         icon: "mdi-whatsapp",
       },
@@ -34,8 +34,6 @@ const store = new Vuex.Store({
     persons: [
       {
         id: "1",
-        name: "Mike Oxhuge",
-        position: "Front-end developer",
         photo: "/my-face.jpg",
         lazyPhoto: "/my-face-lazy.jpg",
       },

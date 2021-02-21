@@ -2,17 +2,17 @@
   <v-main>
     <div class="text-center d-flex pb-2 justify-space-around">
       <v-btn @click="all">
-        expand all
+        {{ $t("experience.expandAll") }}
       </v-btn>
 
       <v-btn @click="none">
-        collapse all
+        {{ $t("experience.collapseAll") }}
       </v-btn>
     </div>
     <v-expansion-panels accordion focusable popout v-model="panel" multiple>
       <v-expansion-panel>
         <v-expansion-panel-header>
-          About me
+          {{ $t("experience.aboutMe") }}
           <template v-slot:actions>
             <v-icon color="primary">
               $expand
@@ -20,13 +20,13 @@
           </template>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          Age, languages spoken, nationality, permits blah blah
+          {{ $t("experience.aboutMeContent") }}
         </v-expansion-panel-content>
       </v-expansion-panel>
 
       <v-expansion-panel>
         <v-expansion-panel-header>
-          My projects
+          {{ $t("experience.myProjects") }}
           <template v-slot:actions>
             <v-icon color="primary">
               $expand
@@ -34,13 +34,13 @@
           </template>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          Currently this website is my only project
+          {{ $t("experience.myProjectsContent") }}
         </v-expansion-panel-content>
       </v-expansion-panel>
 
       <v-expansion-panel>
         <v-expansion-panel-header>
-          Relevant experience
+          {{ $t("experience.relevantExperience") }}
           <template v-slot:actions>
             <v-icon color="primary">
               $expand
@@ -48,13 +48,13 @@
           </template>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          Currently my only relevant experience is developing this website
+          {{ $t("experience.relevantExperienceContent") }}
         </v-expansion-panel-content>
       </v-expansion-panel>
 
       <v-expansion-panel>
         <v-expansion-panel-header>
-          Irrelevant experience
+          {{ $t("experience.irrelevantExperience") }}
           <template v-slot:actions>
             <v-icon color="primary">
               $expand
@@ -62,16 +62,13 @@
           </template>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          Lots of stuff over here, for now it's Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. At est dolore natus, laudantium cum
-          nisi? Corrupti eligendi repellat quaerat accusamus, veritatis illo
-          recusandae laudantium, ut totam nisi earum vel maxime.
+          {{ $t("experience.irrelevantExperienceContent") }}
         </v-expansion-panel-content>
       </v-expansion-panel>
 
       <v-expansion-panel>
         <v-expansion-panel-header>
-          Education
+          {{ $t("experience.education") }}
           <template v-slot:actions>
             <v-icon color="primary">
               $expand
@@ -79,7 +76,7 @@
           </template>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          Those dodgy college
+          {{ $t("experience.educationContent") }}
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>

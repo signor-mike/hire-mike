@@ -18,6 +18,8 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+Vue.use(FlagIcon);
+
 new Vue({
   Vuex,
   store,

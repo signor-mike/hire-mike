@@ -11,18 +11,16 @@
             :x-small="$vuetify.breakpoint.smAndDown"
           >
             <v-icon left> {{ contact.icon }} </v-icon>
-            <span> {{ contact.title }} </span>
+            <span> {{ $t(`contacts.${contact.title}`) }} </span>
           </v-btn>
         </a>
       </v-col>
     </v-row>
     <ul>
-      <li
-        v-for="disclaimer in disclaimers"
-        :key="disclaimer.id"
-        class="d-none d-md-block font-weight-thin"
-      >
-        <v-text>{{ disclaimer.text }}</v-text>
+      <li class="d-none d-md-block font-weight-thin">
+        <v-text>{{ $t("disclaimers.one") }}</v-text> <br />
+        <v-text>{{ $t("disclaimers.two") }}</v-text> <br />
+        <v-text>{{ $t("disclaimers.mobile") }}</v-text>
       </li>
     </ul>
   </v-div>

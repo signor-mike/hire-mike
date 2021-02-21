@@ -1,10 +1,10 @@
 <template>
-  <v-main>
+  <v-main class="pt-0">
     <v-card>
       <v-card-text>
         <div class="gradient-line"></div>
         <v-card-title class="justify-center"
-          >Soft Skills
+          >{{ $t("skills.softSkills") }}
           <v-switch v-model="colorSwitch"></v-switch>
         </v-card-title>
         <div

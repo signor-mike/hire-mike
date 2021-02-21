@@ -1,16 +1,18 @@
 <template>
   <nav>
-    <v-toolbar flat app>
+    <v-app-bar flat app>
       <v-app-bar-nav-icon
         class="grey--text"
         @click="draw = !draw"
       ></v-app-bar-nav-icon>
-      <a :href="`/${$i18n.locale}`">
-        <v-toolbar-title class="text-uppercase grey--text">
+
+      <v-toolbar-title class="text-uppercase grey--text">
+        <a :href="`/${$i18n.locale}`">
           <span class="font-weight-light">itsa</span>
           <span>Mike</span>
-        </v-toolbar-title>
-      </a>
+        </a>
+      </v-toolbar-title>
+
       <v-spacer></v-spacer>
 
       <!-- dropdown menu -->
@@ -39,7 +41,7 @@
       <!-- language switcher -->
       <LanguageSwitcher />
       <!-- end of language switcher -->
-    </v-toolbar>
+    </v-app-bar>
 
     <v-navigation-drawer app v-model="draw" class="primary py-3">
       <v-list dark>
@@ -109,5 +111,8 @@ export default {
 <style>
 .my-photo {
   border: 0.12em solid white;
+}
+a {
+  text-decoration: none;
 }
 </style>

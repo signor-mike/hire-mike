@@ -6,28 +6,63 @@
     "button": "cliccami",
     "nothing": "perché non c'è ancora nient'altro da vedere qui"
   } ,
+   "skills" : {
+    "hardSkills" : "Hard Skills",
+    "softSkills" : "Soft Skills",
+    "switch" : "passare da abilità hard / soft"
+  },
 
-    "hardSkills": {
-"Technical skills":"Abilità tecniche",
-"Computer skills": "Competenze informatiche",
-"Microsoft skills":"Competenze Microsoft",
-"Analytical skills":"Capacità analitiche",
-"Marketing skills":"Abilità di marketing",
-"Presentation skills":"Abilità di presentazione",
-"Management skills":"Abilità manageriali",
-"Project management":"Gestione di progetto",
-"Writing skills":"Capacità di scrittura",
-"Language skills":"Abilità linguistiche",
-"Design skills":"Capacità di progettazione"
+  "hardSkills": {
+    "Technical skills":"Abilità tecniche",
+    "Computer skills": "Competenze informatiche",
+    "Microsoft skills":"Competenze Microsoft",
+    "Analytical skills":"Capacità analitiche",
+    "Marketing skills":"Abilità di marketing",
+    "Presentation skills":"Abilità di presentazione",
+    "Management skills":"Abilità manageriali",
+    "Project management":"Gestione di progetto",
+    "Writing skills":"Capacità di scrittura",
+    "Language skills":"Abilità linguistiche",
+    "Design skills":"Capacità di progettazione"
   },
 
   "softSkills": {
-"Leadership Skills":"Capacità di leadership",
-"Teamwork":"Lavoro di squadra",
-"Communication Skills":"Capacità di comunicazione",
-"Problem-Solving Skills":"Capacità di risoluzione dei problemi",
-"Work Ethic":"Lavoro etico",
-"Flexibility/Adaptability":"Flessibilità / adattabilità",
-"Interpersonal Skills":"Abilità interpersonali"
+    "Leadership Skills":"Capacità di leadership",
+    "Teamwork":"Lavoro di squadra",
+    "Communication Skills":"Capacità di comunicazione",
+    "Problem-Solving Skills":"Capacità di risoluzione dei problemi",
+    "Work Ethic":"Lavoro etico",
+    "Flexibility/Adaptability":"Flessibilità / adattabilità",
+    "Interpersonal Skills":"Abilità interpersonali"
+  },
+  "person" : {
+    "name": "Michele Litoris",
+    "position" :  "Sviluppatore Front End"
+  },
+  "contacts": {
+    "email me": "mandami un'email",
+    "WhatsApp":"Scrivimi su Whatsapp",
+    "Telegram":"Scrivimi su Telegram",
+    "Facebook":"Scrivimi su Facebook"
+  },
+  "disclaimers" : {
+    "one" : "Secondo il Regolamento generale sulla protezione dei dati (GDPR) (UE) 2016/679. Le informazioni contenute in questo sito Web possono essere privilegiate o riservate e destinate all'uso esclusivo del destinatario originale. Se hai visitato questo sito per errore, lascia il sito immediatamente ed eliminalo dalla cronologia.",
+    "two" : "Tutte le informazioni contenute in questo sito Web sono riservate e sono destinate esclusivamente all'uso della persona o dell'entità a cui sono indirizzate. Se hai visitato questo sito per errore, non devi copiare, distribuire o divulgare le informazioni in esso contenute.",
+    "mobile" : "E questo sito web è ottimizzato per i dispositivi mobili, dagli un minuto e visitalo con il tuo telefono o tablet. Grazie."
+
+  },
+  "experience" : {
+    "expandAll" : "Espandi tutto",
+    "collapseAll" : "crolla tutto",
+    "aboutMe" : "Su di me",
+      "aboutMeContent" : "Età, lingue parlate, nazionalità, permessi blah blah",
+    "myProjects" : "I miei progetti",
+      "myProjectsContent" : "Attualmente questo sito web è il mio unico progetto",
+    "relevantExperience" : "Esperienza rilevante",
+      "relevantExperienceContent": "Attualmente la mia unica esperienza rilevante è lo sviluppo di questo sito web",
+    "irrelevantExperience" : "Esperienza irrilevante",
+      "irrelevantExperienceContent" : "Lavoravo da un venditore di componenti elettronici a un saldatore in cantiere. Da riparatore di veicoli a responsabile dell'ospitalità in ostello. Ma tutto questo è irrilevante.",
+    "education" : "Formazione scolastica",
+      "educationContent" : "Quei college loschi"
   }
 }
