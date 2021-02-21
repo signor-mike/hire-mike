@@ -28,15 +28,26 @@
       <p></p>
     </div>
     <v-divider />
+    <LanguageSwitcher />
   </div>
 </template>
 
 <script>
+import LanguageSwitcher from "../components/LanguageSwitcher";
 export default {
+  components: { LanguageSwitcher },
   data() {
     return {
       gradient: ["red", "orange", "yellow", "yellowgreen", "green"],
     };
+  },
+  methods: {
+    setLocale(locale) {
+      this.$i18n.locale = locale;
+      this.$router.push({
+        params: { lang: locale },
+      });
+    },
   },
 };
 </script>

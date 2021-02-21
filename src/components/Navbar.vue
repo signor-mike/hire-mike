@@ -37,47 +37,7 @@
       <!-- end of dropdown menu -->
 
       <!-- language switcher -->
-      <div class="text-center">
-        <v-menu offset-y>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn text color="grey" dark v-bind="attrs" v-on="on">
-              <v-icon left>expand_more</v-icon>
-              <span>{{ $i18n.locale.toUpperCase() }}</span>
-              <v-avatar size="25">
-                <img :src="`/flag_${$i18n.locale}.png`" alt="" />
-              </v-avatar>
-            </v-btn>
-          </template>
-          <ul>
-            <a href="#" @click="setLocale('en')">
-              <li>
-                <v-avatar size="25">
-                  <img :src="`/flag_en.png`" alt="" />
-                </v-avatar>
-                <span>EN</span>
-              </li>
-            </a>
-
-            <a href="#" @click="setLocale('fr')">
-              <li>
-                <v-avatar size="25">
-                  <img :src="`/flag_fr.png`" alt="" />
-                </v-avatar>
-                <span>FR</span>
-              </li>
-            </a>
-
-            <a href="#" @click="setLocale('it')">
-              <li>
-                <v-avatar size="25">
-                  <img :src="`/flag_it.png`" alt="" />
-                </v-avatar>
-                <span>IT</span>
-              </li>
-            </a>
-          </ul>
-        </v-menu>
-      </div>
+      <LanguageSwitcher />
       <!-- end of language switcher -->
     </v-toolbar>
 
@@ -112,9 +72,9 @@
 </template>
 
 <script>
-// import popUp from "./Popup";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
 export default {
-  // components: { popUp },
+  components: { LanguageSwitcher },
 
   methods: {
     setLocale(locale) {

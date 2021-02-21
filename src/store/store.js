@@ -1,8 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import en from "../locales/en.json";
-import fr from "../locales/fr.json";
-import it from "../locales/it.json";
 
 Vue.use(Vuex);
 
@@ -129,14 +126,5 @@ const store = new Vuex.Store({
 });
 
 export { store };
-
-// {
-//   i18n;
-// }
-{
-  en;
-  it;
-  fr;
-}
 
 //set it up in main.js
