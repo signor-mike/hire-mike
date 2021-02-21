@@ -52,7 +52,7 @@ const store = new Vuex.Store({
       {
         id: "1",
         type: "hard",
-        title: `${fr.hardSkills.TechnicalSkills}`,
+        title: "Technical skills",
         mastery: "low",
       },
       {
