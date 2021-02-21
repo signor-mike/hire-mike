@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>
+      <!-- blah blah blah  -->
       <!-- use div with background -->
     </div>
     <div class="d-flex justify-center">
