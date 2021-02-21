@@ -24,6 +24,7 @@
     <div class="d-flex justify-center">
       <p class="text-caption font-weight-thin">
         {{ $t("home.nothing") }}
+        <flag iso="it" />
       </p>
       <p></p>
     </div>

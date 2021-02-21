@@ -5,6 +5,7 @@ import Vuex from "vuex";
 import vuetify from "./plugins/vuetify";
 import { store } from "./store/store";
 import i18n from "./i18n";
+import FlagIcon from "vue-flag-icon";
 
 Vue.config.productionTip = false;
 
@@ -23,5 +24,6 @@ new Vue({
   router,
   vuetify,
   i18n,
+  FlagIcon,
   render: (h) => h(App),
 }).$mount("#app");
