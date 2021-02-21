@@ -3,12 +3,6 @@ import Vuex from "vuex";
 import en from "../locales/en.json";
 import fr from "../locales/fr.json";
 import it from "../locales/it.json";
-// import hardSkills from "../components/CV-components/HardSkills.vue";
-
-// import { $t } from "../i18n";
-// import i18n from "../i18n";
-// title: `${fr.hardSkills.TechnicalSkills}`,
-// title: "Technical Skills",
 
 Vue.use(Vuex);
 

@@ -9,25 +9,32 @@
 
   "hardSkills": {
     "Technical skills":  "Compétences techniques",
-    "Computer skills": "traduisez-moi s'il vous plaît",
-    "Microsoft skills": "traduisez-moi s'il vous plaît",
-    "Analytical skills": "traduisez-moi s'il vous plaît",
-    "Marketing skills": "traduisez-moi s'il vous plaît",
-    "Presentation skills": "traduisez-moi s'il vous plaît",
-    "Management skills": "traduisez-moi s'il vous plaît",
-    "Project management": "traduisez-moi s'il vous plaît",
-    "Writing skills": "traduisez-moi s'il vous plaît",
-    "Language skills": "traduisez-moi s'il vous plaît",
-    "Design skills": "traduisez-moi s'il vous plaît"
+    "Computer skills": "Compétences informatiques",
+    "Microsoft skills": "Compétences Microsoft",
+    "Analytical skills": "Compétences analytiques",
+    "Marketing skills": "Compétences en marketing",
+    "Presentation skills": "Capacités de présentation",
+    "Management skills": "Compétences de gestion",
+    "Project management": "Gestion de projet",
+    "Writing skills": "Compétences en écriture",
+    "Language skills": "Compétences linguistiques",
+    "Design skills": "Compétences en conception"
       },
 
   "softSkills": {
-    "Leadership Skills": "traduisez-moi s'il vous plaît",
-    "Teamwork": "traduisez-moi s'il vous plaît",
-    "Communication Skills": "traduisez-moi s'il vous plaît",
-    "Problem-Solving Skills": "traduisez-moi s'il vous plaît",
-    "Work Ethic": "traduisez-moi s'il vous plaît",
-    "Flexibility/Adaptability": "traduisez-moi s'il vous plaît",
-    "Interpersonal Skills": "traduisez-moi s'il vous plaît"
+    "Leadership Skills": "Compétences en leadership",
+    "Teamwork": "Travail en équipe",
+    "Communication Skills": "Compétences en communication",
+    "Problem-Solving Skills": "Des talents pour la résolution des problèmes",
+    "Work Ethic": "Éthique de travail",
+    "Flexibility/Adaptability": "Flexibilité / Adaptabilité",
+    "Interpersonal Skills": "Compétences personnelles"
   }
 }
+
+
+
+
+
+
+

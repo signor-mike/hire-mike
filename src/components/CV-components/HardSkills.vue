@@ -39,9 +39,7 @@
               }"
             >
               {{ $t(`hardSkills.${hardSkill.title}`) }}
-              <!-- {{ hardSkill.title }} -->
-              <!-- {{ $t("hardSkills." + hardSkill.title) }} -->
-              <!-- {{ $t("hardSkills.TechnicalSkills") }} -->
+            
             </v-col>
           </v-row>
         </div>

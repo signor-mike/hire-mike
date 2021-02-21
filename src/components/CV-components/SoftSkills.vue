@@ -27,7 +27,7 @@
                 { 'text-caption': $vuetify.breakpoint.smAndDown },
               ]"
             >
-              {{ softSkill.title }}
+              {{ $t(`softSkills.${softSkill.title}`) }}
             </v-col>
           </v-row>
         </div>
