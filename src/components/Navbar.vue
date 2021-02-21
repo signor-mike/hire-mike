@@ -5,13 +5,12 @@
         class="grey--text"
         @click="draw = !draw"
       ></v-app-bar-nav-icon>
-      <a href="/">
+      <a :href="`/${$i18n.locale}`">
         <v-toolbar-title class="text-uppercase grey--text">
           <span class="font-weight-light">itsa</span>
           <span>Mike</span>
-        </v-toolbar-title></a
-      >
-
+        </v-toolbar-title>
+      </a>
       <v-spacer></v-spacer>
 
       <!-- dropdown menu -->
@@ -28,38 +27,61 @@
               v-for="link in links"
               :key="link.text"
               router
-              :to="link.route"
+              :to="`/${$i18n.locale}${link.route}`"
             >
               <v-list-item-title>{{ link.text }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </div>
-      <!-- dropdown menu -->
+      <!-- end of dropdown menu -->
 
-      <!-- <v-btn text color="grey">
-        <span>sign out</span>
-        <v-icon>exit_to_app</v-icon>
-      </v-btn> -->
+      <!-- language switcher -->
+      <div class="text-center">
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn text color="grey" dark v-bind="attrs" v-on="on">
+              <v-icon left>expand_more</v-icon>
+              <span>{{ $i18n.locale.toUpperCase() }}</span>
+              <v-avatar size="25">
+                <img :src="`/flag_${$i18n.locale}.png`" alt="" />
+              </v-avatar>
+            </v-btn>
+          </template>
+          <ul>
+            <a href="#" @click="setLocale('en')">
+              <li>
+                <v-avatar size="25">
+                  <img :src="`/flag_en.png`" alt="" />
+                </v-avatar>
+                <span>EN</span>
+              </li>
+            </a>
+
+            <a href="#" @click="setLocale('fr')">
+              <li>
+                <v-avatar size="25">
+                  <img :src="`/flag_fr.png`" alt="" />
+                </v-avatar>
+                <span>FR</span>
+              </li>
+            </a>
+
+            <a href="#" @click="setLocale('it')">
+              <li>
+                <v-avatar size="25">
+                  <img :src="`/flag_it.png`" alt="" />
+                </v-avatar>
+                <span>IT</span>
+              </li>
+            </a>
+          </ul>
+        </v-menu>
+      </div>
+      <!-- end of language switcher -->
     </v-toolbar>
 
     <v-navigation-drawer app v-model="draw" class="primary py-3">
-      <!-- <v-row justify="space-between" no-gutters class=" pt-1">
-        <v-col class="" cols="2">
-          <v-btn dark icon @click="draw = !draw">
-            <v-icon x-large class="pl-1">highlight_off</v-icon>
-          </v-btn>
-        </v-col>
-        <v-col class="" cols="8"> -->
-      <!-- <popUp /> -->
-      <!-- </v-col>
-        <v-col class="" cols="2">
-          <v-avatar size="36" class="white my-photo" right>
-            <img src="/mike.jpg" alt="" class="" />
-          </v-avatar>
-        </v-col>
-      </v-row> -->
-
       <v-list dark>
         <v-list-item @click="draw = !draw">
           <v-list-item-action>
@@ -74,7 +96,7 @@
           v-for="link in links"
           :key="link.text"
           router
-          :to="link.route"
+          :to="`/${$i18n.locale}${link.route}`"
           @click="draw = !draw"
         >
           <v-list-item-action>
@@ -94,23 +116,19 @@
 export default {
   // components: { popUp },
 
+  methods: {
+    setLocale(locale) {
+      this.$i18n.locale = locale;
+      this.$router.push({
+        params: { lang: locale },
+      });
+    },
+  },
+
   data() {
     return {
       draw: false,
       links: [
-        // { icon: "dashboard", text: "Dashboard", route: "/" },
-        // { icon: "folder", text: "My projects", route: "/projects" },
-        // { icon: "person", text: "Team", route: "/team" },
-        // {
-        //   icon: "flight_takeoff",
-        //   text: "landing page",
-        //   route: "/landing-page",
-        // },
-        // {
-        //   icon: "pan_tool",
-        //   text: "Vuex Learning",
-        //   route: "/vuex-learning",
-        // },
         {
           icon: "home",
           text: "Home",

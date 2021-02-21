@@ -38,7 +38,8 @@
                 [hardSkill.mastery]: colorSwitch,
               }"
             >
-              {{ hardSkill.title }}
+              {{ $t(hardSkill.title) }}
+              <!-- {{ hardSkill.title }} -->
             </v-col>
           </v-row>
         </div>

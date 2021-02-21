@@ -1,0 +1,12 @@
+{
+  "message": "Pagina iniziale",
+  "home" : {
+    "message": "si prega di aprire il menu per navigare",
+    "messageTwo": "o fare clic sul pulsante per aprire il mio CV",
+    "button": "cliccami",
+    "nothing": "perché non c'è ancora nient'altro da vedere qui"
+  } ,
+  "hardSkills" : {
+  "TechnicalSkills" : "Abilità tecniche"
+}
+}

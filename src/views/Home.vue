@@ -1,37 +1,32 @@
 <template>
   <div>
     <div>
-      <v-divider />
-
       <!-- use div with background -->
-      <!-- <v-sparkline
-        :value="[0, 0, 0, 0]"
-        :gradient="gradient"
-        gradient-direction="left"
-        type="trend"
-        auto-draw
-      >
-      </v-sparkline> -->
-      <v-divider />
     </div>
     <div class="d-flex justify-center">
-      <h1>Home page, please open menu to navigate</h1>
+      <h1>{{ $t("message") }}</h1>
     </div>
     <div class="d-flex justify-center">
-      <h2>or click the button to open my CV</h2>
+      <h2>{{ $t("home.message") }}</h2>
     </div>
+
     <div class="d-flex justify-center">
-      <v-btn>
-        <a href="/cv-mike">
-          <span>click me</span>
-        </a>
+      <h3>{{ $t("home.messageTwo") }}</h3>
+    </div>
+
+    <div class="d-flex justify-center">
+      <v-btn router :to="`/${$i18n.locale}/cv-mike`">
+        <span>{{ $t("home.button") }}</span>
       </v-btn>
     </div>
+
     <div class="d-flex justify-center">
       <p class="text-caption font-weight-thin">
-        cos there's nothing else to see here yet
+        {{ $t("home.nothing") }}
       </p>
+      <p></p>
     </div>
+    <v-divider />
   </div>
 </template>
 

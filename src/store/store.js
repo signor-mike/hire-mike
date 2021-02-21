@@ -1,5 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import en from "../locales/en.json";
+import fr from "../locales/fr.json";
+import it from "../locales/it.json";
+
+// import { $i18n } from "../i18n";
+// import i18n from "../i18n";
+// title: `${fr.hardSkills.TechnicalSkills}`,
+// title: "Technical Skills",
 
 Vue.use(Vuex);
 
@@ -41,7 +49,12 @@ const store = new Vuex.Store({
       },
     ],
     skills: [
-      { id: "1", type: "hard", title: "Technical skills", mastery: "low" },
+      {
+        id: "1",
+        type: "hard",
+        title: `${fr.hardSkills.TechnicalSkills}`,
+        mastery: "low",
+      },
       {
         id: "2",
         type: "hard",
@@ -121,5 +134,18 @@ const store = new Vuex.Store({
 });
 
 export { store };
+
+// {
+//   i18n;
+// }
+{
+  en;
+}
+{
+  it;
+}
+{
+  fr;
+}
 
 //set it up in main.js
