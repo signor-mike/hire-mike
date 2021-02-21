@@ -7,9 +7,10 @@
     "nothing": "because there's nothing else to see here yet"
   } ,
   
-"hardSkills" : {
-       "TechnicalSkills" : "Technical skills1", "id": "1"
-      }
+
+       "TechnicalSkills" : "Technical skills-en",
+       "ComputerSkills" : "Computer skills-en" 
+
    
   
 

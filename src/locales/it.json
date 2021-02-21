@@ -6,7 +6,8 @@
     "button": "cliccami",
     "nothing": "perché non c'è ancora nient'altro da vedere qui"
   } ,
-  "hardSkills" : {
-  "TechnicalSkills" : "Abilità tecniche"
-}
+
+  "TechnicalSkills" : "Abilità tecniche",
+       "ComputerSkills" : "Computer skills-it" 
+
 }
