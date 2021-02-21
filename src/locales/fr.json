@@ -1,13 +1,29 @@
 {
   "message": "Page d'accueil",
-  "home" : {
+  "home": {
     "message": "veuillez ouvrir le menu pour naviguer",
     "messageTwo": "ou cliquez sur le bouton pour ouvrir mon CV",
     "button": "clique moi",
     "nothing": "car il n'y a encore rien d'autre à voir ici"
-  } ,
-
-  "TechnicalSkills" : "Compétences techniques",
-       "ComputerSkills" : "Computer skills-fr" 
-
+  },
+  "hardSkills": {
+    "Technical skills":  "Compétences techniques",
+    "Computer skills": "traduisez-moi s'il vous plaît",
+    "Microsoft skills": "traduisez-moi s'il vous plaît",
+    "Analytical skills": "traduisez-moi s'il vous plaît",
+    "Marketing skills": "traduisez-moi s'il vous plaît",
+    "Presentation skills": "traduisez-moi s'il vous plaît",
+    "Management skills": "traduisez-moi s'il vous plaît",
+    "Project management": "traduisez-moi s'il vous plaît",
+    "Writing skills": "traduisez-moi s'il vous plaît",
+    "Language skills": "traduisez-moi s'il vous plaît",
+    "Design skills": "traduisez-moi s'il vous plaît",
+    "Leadership Skills": "traduisez-moi s'il vous plaît",
+    "Teamwork": "traduisez-moi s'il vous plaît",
+    "Communication Skills": "traduisez-moi s'il vous plaît",
+    "Problem-Solving Skills": "traduisez-moi s'il vous plaît",
+    "Work Ethic": "traduisez-moi s'il vous plaît",
+    "Flexibility/Adaptability": "traduisez-moi s'il vous plaît",
+    "Interpersonal Skills": "traduisez-moi s'il vous plaît"
+  }
 }

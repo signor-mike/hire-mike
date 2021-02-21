@@ -1,21 +1,29 @@
 {
   "message": "Home page",
-  "home" : {
+  "home": {
     "message": "please open menu to navigate",
     "messageTwo": "or click the button to open my CV",
     "button": "click me",
     "nothing": "because there's nothing else to see here yet"
-  } ,
-  
-
-       "TechnicalSkills" : "Technical skills-en",
-       "ComputerSkills" : "Computer skills-en" 
-
-   
-  
-
- 
-
-
-  
+  },
+  "hardSkills": {
+    "Technical skills":  "Technical skills",
+    "Computer skills": "Computer skills",
+    "Microsoft skills":  "Microsoft skills",
+    "Analytical skills": "Analytical skills",
+    "Marketing skills":  "Marketing skills",
+    "Presentation skills": "Presentation skills",
+    "Management skills":  "Management skills",
+    "Project management": "Project management",
+    "Writing skills":  "Writing skills",
+    "Language skills": "Language skills",
+    "Design skills":  "Design skills",
+    "Leadership Skills": "Leadership Skills",
+    "Teamwork":  "Teamwork",
+    "Communication Skills": "Communication Skills",
+    "Problem-Solving Skills":  "Problem-Solving Skills",
+    "Work Ethic": "Work Ethic",
+    "Flexibility/Adaptability":  "Flexibility/Adaptability",
+    "Interpersonal Skills": "Interpersonal Skills"
+  }
 }
