@@ -6,6 +6,7 @@
     "button": "click me",
     "nothing": "because there's nothing else to see here yet"
   },
+
   "hardSkills": {
     "Technical skills":  "Technical skills",
     "Computer skills": "Computer skills",
@@ -17,7 +18,10 @@
     "Project management": "Project management",
     "Writing skills":  "Writing skills",
     "Language skills": "Language skills",
-    "Design skills":  "Design skills",
+    "Design skills":  "Design skills"
+  },
+
+  "softSkills": {
     "Leadership Skills": "Leadership Skills",
     "Teamwork":  "Teamwork",
     "Communication Skills": "Communication Skills",

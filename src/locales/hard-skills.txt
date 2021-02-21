@@ -1,46 +1,46 @@
 __________________________________
     hard skills in french
-Compétences techniques
-Compétences informatiques
-Compétences Microsoft
-Compétences analytiques
-Compétences en marketing
-Capacités de présentation
-Compétences de gestion
-Gestion de projet
-Compétences en écriture
-Compétences linguistiques
-Compétences en conception
+"Compétences techniques",
+"Compétences informatiques",
+"Compétences Microsoft",
+"Compétences analytiques",
+"Compétences en marketing",
+"Capacités de présentation",
+"Compétences de gestion",
+"Gestion de projet",
+"Compétences en écriture",
+"Compétences linguistiques",
+"Compétences en conception",
 __________________________________
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 __________________________________
     hard skills in itaian
-Abilità tecniche
-Competenze informatiche
-Competenze Microsoft
-Capacità analitiche
-Abilità di marketing
-Abilità di presentazione
-Abilità manageriali
-Gestione di progetto
-Capacità di scrittura
-Abilità linguistiche
-Capacità di progettazione
+"Abilità tecniche",
+"Competenze informatiche",
+"Competenze Microsoft",
+"Capacità analitiche",
+"Abilità di marketing",
+"Abilità di presentazione",
+"Abilità manageriali",
+"Gestione di progetto",
+"Capacità di scrittura",
+"Abilità linguistiche",
+"Capacità di progettazione",
 __________________________________
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 __________________________________
     hard skill in english
-Technical skills
-Computer skills
-Microsoft skills
-Analytical skills
-Marketing skills
-Presentation skills
-Management skills
-Project management
-Writing skills
-Language skills
-Design skills
+"Technical skills",
+"Computer skills",
+"Microsoft skills",
+"Analytical skills",
+"Marketing skills",
+"Presentation skills",
+"Management skills",
+"Project management",
+"Writing skills",
+"Language skills",
+"Design skills",
 __________________________________ 

@@ -6,6 +6,7 @@
     "button": "clique moi",
     "nothing": "car il n'y a encore rien d'autre à voir ici"
   },
+
   "hardSkills": {
     "Technical skills":  "Compétences techniques",
     "Computer skills": "traduisez-moi s'il vous plaît",
@@ -17,7 +18,10 @@
     "Project management": "traduisez-moi s'il vous plaît",
     "Writing skills": "traduisez-moi s'il vous plaît",
     "Language skills": "traduisez-moi s'il vous plaît",
-    "Design skills": "traduisez-moi s'il vous plaît",
+    "Design skills": "traduisez-moi s'il vous plaît"
+      },
+
+  "softSkills": {
     "Leadership Skills": "traduisez-moi s'il vous plaît",
     "Teamwork": "traduisez-moi s'il vous plaît",
     "Communication Skills": "traduisez-moi s'il vous plaît",

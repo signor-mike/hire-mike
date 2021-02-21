@@ -7,7 +7,27 @@
     "nothing": "perché non c'è ancora nient'altro da vedere qui"
   } ,
 
-  "TechnicalSkills" : "Abilità tecniche",
-       "ComputerSkills" : "Computer skills-it" 
+    "hardSkills": {
+"Technical skills":"Abilità tecniche",
+"Computer skills": "Competenze informatiche",
+"Microsoft skills":"Competenze Microsoft",
+"Analytical skills":"Capacità analitiche",
+"Marketing skills":"Abilità di marketing",
+"Presentation skills":"Abilità di presentazione",
+"Management skills":"Abilità manageriali",
+"Project management":"Gestione di progetto",
+"Writing skills":"Capacità di scrittura",
+"Language skills":"Abilità linguistiche",
+"Design skills":"Capacità di progettazione"
+  },
 
+  "softSkills": {
+"Leadership Skills":"Capacità di leadership",
+"Teamwork":"Lavoro di squadra",
+"Communication Skills":"Capacità di comunicazione",
+"Problem-Solving Skills":"Capacità di risoluzione dei problemi",
+"Work Ethic":"Lavoro etico",
+"Flexibility/Adaptability":"Flessibilità / adattabilità",
+"Interpersonal Skills":"Abilità interpersonali"
+  }
 }

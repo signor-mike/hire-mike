@@ -1,34 +1,34 @@
 __________________________________
     soft skills in french
-Compétences en leadership
-Travail en équipe
-Compétences en communication
-Des talents pour la résolution des problèmes
-Éthique de travail
-Flexibilité / Adaptabilité
-Compétences personnelles
+"Compétences en leadership",
+"Travail en équipe",
+"Compétences en communication",
+"Des talents pour la résolution des problèmes",
+"Éthique de travail",
+"Flexibilité / Adaptabilité",
+"Compétences personnelles"
 __________________________________
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 __________________________________
     soft skills in italian
-Capacità di leadership
-Lavoro di squadra
-Capacità di comunicazione
-Capacità di risoluzione dei problemi
-Lavoro etico
-Flessibilità / adattabilità
-Abilità interpersonali
+"Capacità di leadership",
+"Lavoro di squadra",
+"Capacità di comunicazione",
+"Capacità di risoluzione dei problemi",
+"Lavoro etico",
+"Flessibilità / adattabilità",
+"Abilità interpersonali"
 __________________________________
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 __________________________________
     soft skills in english
-Leadership Skills
-Teamwork
-Communication Skills
-Problem-Solving Skills
-Work Ethic
-Flexibility/Adaptability
-Interpersonal Skills
+"Leadership Skills",
+"Teamwork",
+"Communication Skills",
+"Problem-Solving Skills",
+"Work Ethic",
+"Flexibility/Adaptability",
+"Interpersonal Skills"
 __________________________________ 
