@@ -1,12 +1,12 @@
 <template>
-  <v-main>
+  <v-main class="pt-0">
     <v-row>
       <v-col
         no-gutters
         cols="12"
         class="d-none text-center pa-1"
         :class="{
-          'd-block ': $vuetify.breakpoint.smAndDown,
+          'd-block pt-1': $vuetify.breakpoint.smAndDown,
         }"
       >
         <v-btn x-small @click="toggle" class="my-n4">
@@ -14,14 +14,14 @@
         </v-btn>
       </v-col>
     </v-row>
-    <v-card class="mt-6" :class="{ 'mt-2': $vuetify.breakpoint.smAndDown }">
+    <v-card class="mt-6" :class="{ 'mt-0': $vuetify.breakpoint.smAndDown }">
       <SoftSkills v-if="replace" />
       <v-card-text v-if="!replace">
         <div class="gradient-line"></div>
-        <v-card-title class="justify-center">
-          {{ $t("skills.hardSkills") }}
+        <div class="d-flex justify-space-between mb-2">
+          <h2 class="pt-5 pl-4">{{ $t("skills.hardSkills") }}</h2>
           <v-switch v-model="colorSwitch"></v-switch>
-        </v-card-title>
+        </div>
 
         <div :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }">
           <v-row

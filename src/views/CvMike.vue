@@ -1,5 +1,5 @@
 <template>
-  <v-main>
+  <v-main class="pt-0 mt-2">
     <v-card class="my-2 px-2 ">
       <v-row class="justify-space-between">
         <v-col cols="8">
@@ -16,15 +16,15 @@
 
     <v-card class="my-5 px-2">
       <v-row class="justify-space-between">
-        <v-col cols="12" md="4" sm="3" class="d-flex justify-start">
+        <v-col cols="auto" md="4" sm="auto" class="d-flex justify-start">
           <HardSkills />
         </v-col>
 
-        <v-col cols="12" md="4" sm="3" class="d-flex justify-center">
+        <v-col cols="auto" md="4" sm="auto" class="d-flex justify-center">
           <Experience />
         </v-col>
 
-        <v-col cols="12" md="4" sm="3" class="d-flex  justify-end">
+        <v-col cols="auto" md="4" sm="auto" class="d-flex  justify-end">
           <SoftSkills
             :class="{
               'd-none': $vuetify.breakpoint.smAndDown,

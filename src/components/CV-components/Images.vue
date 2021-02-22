@@ -5,9 +5,6 @@
       <v-img
         :src="person.photo"
         :lazy-src="person.lazyPhoto"
-        aspect-ratio="0.75"
-        contain
-        :max-width="{ '10%': $vuetify.breakpoint.mdAndUp }"
         class="mr-1"
         alt="my photo"
       />

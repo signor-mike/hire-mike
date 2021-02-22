@@ -45,9 +45,6 @@ export default {
       });
     },
   },
-  mounted: function() {
-    console.log(this.$i18n.locale);
-  },
 };
 </script>
 

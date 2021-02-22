@@ -6,7 +6,7 @@
         @click="draw = !draw"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="text-uppercase grey--text">
+      <v-toolbar-title class="text-uppercase grey--text pl-0">
         <a :href="`/${$i18n.locale}`">
           <span class="font-weight-light">itsa</span>
           <span>Mike</span>

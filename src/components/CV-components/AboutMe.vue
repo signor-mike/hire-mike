@@ -1,29 +1,46 @@
 <template>
-  <v-div class="d-flex">
-    <v-row dense :no-gutters="$vuetify.breakpoint.smAndDown">
-      <v-col sm="6" md="8" v-for="contact in contacts" :key="contact.id">
+  <div>
+    <v-row
+      dense
+      :no-gutters="$vuetify.breakpoint.smAndDown"
+      :class="{
+        'd-flex flex-column justify-start': $vuetify.breakpoint.smAndDown,
+      }"
+    >
+      <v-col
+        cols="auto"
+        md="6"
+        v-for="contact in contacts"
+        :key="contact.id"
+        :class="{ 'pb-1': $vuetify.breakpoint.smAndDown }"
+      >
         <a :href="contact.link">
           <v-btn
-            :block="$vuetify.breakpoint.smAndDown"
+            block
+            rounded
             :large="$vuetify.breakpoint.mdAndUp"
             outlined
-            class="align-center"
             :x-small="$vuetify.breakpoint.smAndDown"
           >
-            <v-icon left> {{ contact.icon }} </v-icon>
+            <v-icon :small="$vuetify.breakpoint.smAndDown" left>
+              {{ contact.icon }}
+            </v-icon>
             <span> {{ $t(`contacts.${contact.title}`) }} </span>
+            <v-icon :class="{ 'd-none': $vuetify.breakpoint.smAndDown }" right>
+              {{ contact.icon }}
+            </v-icon>
           </v-btn>
         </a>
       </v-col>
     </v-row>
-    <ul>
+    <ul class="pt-1">
       <li class="d-none d-md-block font-weight-thin">
-        <v-text>{{ $t("disclaimers.one") }}</v-text> <br />
-        <v-text>{{ $t("disclaimers.two") }}</v-text> <br />
-        <v-text>{{ $t("disclaimers.mobile") }}</v-text>
+        <span>{{ $t("disclaimers.one") }}</span> <br />
+        <span>{{ $t("disclaimers.two") }}</span> <br />
+        <span class="primary--text">{{ $t("disclaimers.mobile") }}</span>
       </li>
     </ul>
-  </v-div>
+  </div>
 </template>
 
 <script>

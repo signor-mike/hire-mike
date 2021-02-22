@@ -2,8 +2,8 @@
   <footer class="parent">
     <div class="child">
       <span>
-        <v-text>{{ $t("disclaimers.one") }}</v-text> <br />
-        <v-text>{{ $t("disclaimers.two") }}</v-text> <br />
+        <span>{{ $t("disclaimers.one") }}</span> <br />
+        <span>{{ $t("disclaimers.two") }}</span> <br />
       </span>
     </div>
   </footer>

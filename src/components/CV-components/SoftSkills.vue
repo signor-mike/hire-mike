@@ -3,10 +3,10 @@
     <v-card>
       <v-card-text>
         <div class="gradient-line"></div>
-        <v-card-title class="justify-center"
-          >{{ $t("skills.softSkills") }}
+        <div class="d-flex justify-space-between mb-2">
+          <h2 class="pt-5 pl-4">{{ $t("skills.softSkills") }}</h2>
           <v-switch v-model="colorSwitch"></v-switch>
-        </v-card-title>
+        </div>
         <div
           class="d-flex justify-end"
           :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }"

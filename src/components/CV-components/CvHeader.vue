@@ -1,16 +1,20 @@
 <template>
-  <v-main>
+  <v-main class="pt-0">
     <v-row>
       <v-col>
-        <ul>
-          <li v-for="person in persons" :key="person.id">
-            <v-text class="text--primary text-md-h2 text-sm-h4">
-              {{ $t("person.position") }}
-            </v-text>
-            <br />
-            <v-text class="text--secondary">{{ $t("person.name") }}</v-text>
-          </li>
-        </ul>
+        <div
+          v-for="person in persons"
+          :key="person.id"
+          class="d-flex flex-column"
+        >
+          <span class="text--primary text-md-h2 text-sm-h4 text-center">
+            {{ $t("person.position") }}
+          </span>
+          <br />
+          <span class="text--secondary text-center">{{
+            $t("person.name")
+          }}</span>
+        </div>
       </v-col>
     </v-row>
   </v-main>
