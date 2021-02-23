@@ -13,27 +13,28 @@
   },
 
   "hardSkills": {
-    "Technical skills":"Abilità tecniche",
-    "Computer skills": "Competenze informatiche",
-    "Microsoft skills":"Competenze Microsoft",
-    "Analytical skills":"Capacità analitiche",
-    "Marketing skills":"Abilità di marketing",
-    "Presentation skills":"Abilità di presentazione",
-    "Management skills":"Abilità manageriali",
-    "Project management":"Gestione di progetto",
-    "Writing skills":"Capacità di scrittura",
-    "Language skills":"Abilità linguistiche",
-    "Design skills":"Capacità di progettazione"
+    "HTML5":"HTML5",
+    "CSS3": "CSS3",
+    "JavaScript":"JavaScript",
+    "GIT":"GIT",
+    "Responsive Design":"Design reattivo",
+    "Browser Developer Tools":"Strumenti per sviluppatori del browser",
+    "Vue":"Vue.js",
+    "Microsoft Office":"Microsoft Office",
+    "ImageMaSo":"Software di manipolazione delle immagini",
+    "Linux":"Linux",
+    "Design":"Capacità di progettazione",
+    "SQL" : "SQL"
   },
 
   "softSkills": {
-    "Leadership Skills":"Capacità di leadership",
-    "Teamwork":"Lavoro di squadra",
+    "Healthy skepticism":"Sano scetticismo",
+    "Excitement for learning":"Eccitazione per l'apprendimento",
     "Communication Skills":"Capacità di comunicazione",
     "Problem-Solving Skills":"Capacità di risoluzione dei problemi",
     "Work Ethic":"Lavoro etico",
-    "Flexibility/Adaptability":"Flessibilità / adattabilità",
-    "Interpersonal Skills":"Abilità interpersonali"
+    "Flexibility":"Flessibilità",
+    "Adaptability":"Adattabilità"
   },
   "person" : {
     "name": "Michele Litoris",
@@ -53,16 +54,51 @@
   },
   "experience" : {
     "expandAll" : "Espandi tutto",
-    "collapseAll" : "crolla tutto",
-    "aboutMe" : "Su di me",
-      "aboutMeContent" : "Età, lingue parlate, nazionalità, permessi blah blah",
+    "collapseAll" : "crolla tutto",         
     "myProjects" : "I miei progetti",
-      "myProjectsContent" : "Attualmente questo sito web è il mio unico progetto",
+      "myProjectsContent" : "Elenco delle dipendenze",
     "relevantExperience" : "Esperienza rilevante",
       "relevantExperienceContent": "Attualmente la mia unica esperienza rilevante è lo sviluppo di questo sito web",
     "irrelevantExperience" : "Esperienza irrilevante",
-      "irrelevantExperienceContent" : "Lavoravo da un venditore di componenti elettronici a un saldatore in cantiere. Da riparatore di veicoli a responsabile dell'ospitalità in ostello. Ma tutto questo è irrilevante.",
-    "education" : "Formazione scolastica",
-      "educationContent" : "Quei college loschi"
-  }
+      "irrelevantExperienceContent" : "Lavoravo da un venditore di componenti elettronici a un saldatore in cantiere. Da riparatore di veicoli a responsabile dell'ospitalità in ostello. Ma tutto questo è irrilevante."
+   
+  },
+   "education" : { 
+     "education": "Formazione scolastica",
+    "schoolName" : "Perm State Motor Transport College",
+    "spec" : "Meccanico del veicolo, 3 ° grado"
+   },
+
+  "gradientLine" : "questa linea rappresenta la maestria di un'abilità dal rosso (basso) al verde (alto)",
+    "aboutMe" : "Su di me",
+      "expAboutMe" : {
+        "dob" : "Data di nascita",
+        "dobDate" : "15 marzo 1994 (26 anni)",
+        "permits" : "Permessi",
+        "permitsAct" : "Permesso di soggiorno e permesso di lavoro in Italia",
+        "cityOfR": "Città di residenza",
+        "addr" : "73048, Nardo' (LE), Italia",
+        "languages" : "Le lingue",
+        "eng" : "Inglese",
+        "rus" : "Russo",
+        "ita" : "Italiano",
+        "esp" : "Spagnolo",
+        "lvFl" : "Fluente",
+        "lvNa" : "Madrelingua",
+        "lvBa" : "Di base"
+        },
+"months" : {
+  "january" : "Gennaio",
+  "february" : "Febbraio",
+  "march" : "Marzo",
+  "april" : "Aprile",
+  "may" : "Maggio",
+  "june" : "Giugno",
+  "july" : "Luglio",
+  "august" : "Agosto",
+  "september" : "Settembre",
+  "october" : "Ottobre",
+  "november" : "Novembre",
+  "december" : "Dicembre"
+}       
 }

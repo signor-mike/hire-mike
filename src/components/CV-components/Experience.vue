@@ -16,81 +16,35 @@
       </v-btn>
     </div>
     <v-expansion-panels accordion focusable popout v-model="panel" multiple>
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          {{ $t("experience.aboutMe") }}
-          <template v-slot:actions>
-            <v-icon color="primary">
-              $expand
-            </v-icon>
-          </template>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          {{ $t("experience.aboutMeContent") }}
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          {{ $t("experience.myProjects") }}
-          <template v-slot:actions>
-            <v-icon color="primary">
-              $expand
-            </v-icon>
-          </template>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          {{ $t("experience.myProjectsContent") }}
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          {{ $t("experience.relevantExperience") }}
-          <template v-slot:actions>
-            <v-icon color="primary">
-              $expand
-            </v-icon>
-          </template>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          {{ $t("experience.relevantExperienceContent") }}
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          {{ $t("experience.irrelevantExperience") }}
-          <template v-slot:actions>
-            <v-icon color="primary">
-              $expand
-            </v-icon>
-          </template>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          {{ $t("experience.irrelevantExperienceContent") }}
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          {{ $t("experience.education") }}
-          <template v-slot:actions>
-            <v-icon color="primary">
-              $expand
-            </v-icon>
-          </template>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          {{ $t("experience.educationContent") }}
-        </v-expansion-panel-content>
-      </v-expansion-panel>
+      <!-- about me -->
+      <ExpAboutMe />
+      <!-- my projects -->
+      <ExpMyProjects />
+      <!-- education -->
+      <Education />
+      <!-- relevant experience -->
+      <ExpRelevant class="secondary--text" />
+      <!-- irrelevant experience -->
+      <ExpIrrelevant class="secondary--text" />
     </v-expansion-panels>
   </v-main>
 </template>
 
 <script>
+import ExpAboutMe from "./ExpComponents/ExpAboutMe.vue";
+import ExpMyProjects from "./ExpComponents/ExpMyProjects.vue";
+import ExpRelevant from "./ExpComponents/ExpRelevant.vue";
+import ExpIrrelevant from "./ExpComponents/ExpIrrelevant.vue";
+import Education from "./ExpComponents/Education.vue";
+
 export default {
+  components: {
+    ExpAboutMe,
+    ExpMyProjects,
+    ExpRelevant,
+    ExpIrrelevant,
+    Education,
+  },
   data() {
     return {
       panel: [],

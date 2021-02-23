@@ -13,27 +13,28 @@
   },
 
   "hardSkills": {
-    "Technical skills":  "Technical skills",
-    "Computer skills": "Computer skills",
-    "Microsoft skills":  "Microsoft skills",
-    "Analytical skills": "Analytical skills",
-    "Marketing skills":  "Marketing skills",
-    "Presentation skills": "Presentation skills",
-    "Management skills":  "Management skills",
-    "Project management": "Project management",
-    "Writing skills":  "Writing skills",
-    "Language skills": "Language skills",
-    "Design skills":  "Design skills"
+    "HTML5":  "HTML5",
+    "CSS3": "CSS3",
+    "JavaScript":  "JavaScript",
+    "GIT": "GIT",
+    "Responsive Design":  "Responsive Design",
+    "Browser Developer Tools": "Browser Developer Tools",
+    "Vue":  "Vue.js",
+    "Microsoft Office": "Microsoft Office",
+    "ImageMaSo":  "Image manipulation software",
+    "Linux": "Linux",
+    "Design":  "Design",
+    "SQL" : "SQL"
   },
 
   "softSkills": {
-    "Leadership Skills": "Leadership Skills",
-    "Teamwork":  "Teamwork",
+    "Healthy skepticism": "Healthy skepticism",
+    "Excitement for learning":  "Excitement for learning",
     "Communication Skills": "Communication Skills",
     "Problem-Solving Skills":  "Problem-Solving Skills",
     "Work Ethic": "Work Ethic",
-    "Flexibility/Adaptability":  "Flexibility/Adaptability",
-    "Interpersonal Skills": "Interpersonal Skills"
+    "Flexibility":  "Flexibility",
+    "Adaptability": "Adaptability"
   },
   "person" : {
     "name": "Mike Litoris",
@@ -54,15 +55,52 @@
   "experience" : {
     "expandAll" : "expand all",
     "collapseAll" : "collapse all",
-    "aboutMe" : "About me",
-      "aboutMeContent" : "Age, languages spoken, nationality, permits blah blah ",
+    
     "myProjects" : "My projects",
-      "myProjectsContent" : "Currently this website is my only project",
+      "myProjectsContent" : "List of dependencies",
     "relevantExperience" : "Relevant experience",
       "relevantExperienceContent": "Currently my only relevant experience is developing this website",
     "irrelevantExperience" : "Irrelevant experience",
-      "irrelevantExperienceContent" : " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant.",
-    "education" : "Education",
-      "educationContent" : "Those dodgy college"
-  }
+      "irrelevantExperienceContent" : " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant."
+    
+  },
+  "education" : {
+    "education":"Education",
+    "schoolName" : "Perm State Motor Transport College",
+    "spec" : "Vehicle Mechanic, 3rd degree"
+  },
+
+"gradientLine" : "this line represent the mastery of a skill from red (low) to green (high)",
+    "aboutMe" : "About me",
+      "expAboutMe" : {
+        "dob" : "Date of birth",
+        "dobDate" : "March 15th, 1994 (26 years old)",
+        "permits" : "Permits",
+        "permitsAct" : "Residence permit and work permit in Italy",
+        "cityOfR": "City of residence",
+        "addr" : "73048, Nardo' (LE), Italy",
+        "languages" : "Languages",
+        "eng" : "English",
+        "rus" : "Russian",
+        "ita" : "Italian",
+        "esp" : "Spanish",
+        "lvFl" : "Fluent",
+        "lvNa" : "Native speaker",
+        "lvBa" : "Basic"
+        },
+"months" : {
+  "january" : "January",
+  "february" : "February",
+  "march" : "March",
+  "april" : "April",
+  "may" : "May",
+  "june" : "June",
+  "july" : "July",
+  "august" : "August",
+  "september" : "September",
+  "october" : "October",
+  "november" : "November",
+  "december" : "December"
+}
+        
 }

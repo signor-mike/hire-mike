@@ -73,28 +73,30 @@ ul {
 p {
   font-size: small;
 }
-.low {
+.a-low {
   color: Red;
 }
-.b-medium {
+.b-b-medium {
   color: orange;
 }
-.medium {
-  color: yellow;
+.c-medium {
+  color: rgb(180, 180, 7);
 }
-.ab-medium {
+.d-ab-medium {
   color: yellowgreen;
 }
-.high {
+.e-high {
   color: green;
 }
-.low,
-.b-medium,
-.medium,
-.ab-medium,
-.high {
-  -webkit-text-stroke: 0.025em black;
-  text-shadow: 3px 3px 15px black;
+.a-low,
+.b-b-medium,
+.c-medium,
+.d-ab-medium,
+.e-high {
+  /* -webkit-text-stroke: 0.03em black; */
+  letter-spacing: 0.05em;
+  font-weight: bolder;
+  /* text-shadow: 3px 3px 15px black; */
 }
 .gradient-line {
   background-image: linear-gradient(

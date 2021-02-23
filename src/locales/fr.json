@@ -13,27 +13,28 @@
   },
 
   "hardSkills": {
-    "Technical skills":  "Compétences techniques",
-    "Computer skills": "Compétences informatiques",
-    "Microsoft skills": "Compétences Microsoft",
-    "Analytical skills": "Compétences analytiques",
-    "Marketing skills": "Compétences en marketing",
-    "Presentation skills": "Capacités de présentation",
-    "Management skills": "Compétences de gestion",
-    "Project management": "Gestion de projet",
-    "Writing skills": "Compétences en écriture",
-    "Language skills": "Compétences linguistiques",
-    "Design skills": "Compétences en conception"
+    "HTML5":  "HTML5",
+    "CSS3": "CSS3",
+    "JavaScript": "JavaScript",
+    "GIT": "GIT",
+    "Responsive Design": "Conception réactive",
+    "Browser Developer Tools": "Outils de développement de navigateur",
+    "Vue": "Vue.js",
+    "Microsoft Office": "Microsoft Office",
+    "ImageMaSo": "Logiciel de manipulation d'images",
+    "Linux": "Linux",
+    "Design": "Compétences en conception",
+    "SQL" : "SQL"
       },
 
   "softSkills": {
-    "Leadership Skills": "Compétences en leadership",
-    "Teamwork": "Travail en équipe",
+    "Healthy skepticism": "Scepticisme sain",
+    "Excitement for learning": "Excitation d'apprendre",
     "Communication Skills": "Compétences en communication",
     "Problem-Solving Skills": "Des talents pour la résolution des problèmes",
     "Work Ethic": "Éthique de travail",
-    "Flexibility/Adaptability": "Flexibilité / Adaptabilité",
-    "Interpersonal Skills": "Compétences personnelles"
+    "Flexibility": "Flexibilité",
+    "Adaptability": "Adaptabilité"
   },
   "person" : {
     "name": "Michel Litoris",
@@ -53,18 +54,54 @@
   },
   "experience" : {
     "expandAll" : "développer tout",
-    "collapseAll" : "tout réduire",
-    "aboutMe" : "À propos de moi",
-      "aboutMeContent" : "Âge, langues parlées, nationalité, permet bla bla",
+    "collapseAll" : "tout réduire",    
     "myProjects" : "Mes projets",
-      "myProjectsContent" : "Actuellement, ce site est mon seul projet",
+      "myProjectsContent" : "Liste des dépendances",
     "relevantExperience" : "Expérience pertinente",
       "relevantExperienceContent": "Actuellement, ma seule expérience pertinente est le développement de ce site Web",
     "irrelevantExperience" : "Expérience non pertinente",
-      "irrelevantExperienceContent" : "J'avais l'habitude de travailler d'un vendeur de composants électroniques à un soudeur sur un chantier de construction. De réparateur de véhicules à un responsable de l'hôtellerie en auberge. Mais tout cela n'est pas pertinent.",
-    "education" : "Éducation",
-      "educationContent" : "Ces collège douteux"
-  }
+      "irrelevantExperienceContent" : "J'avais l'habitude de travailler d'un vendeur de composants électroniques à un soudeur sur un chantier de construction. De réparateur de véhicules à un responsable de l'hôtellerie en auberge. Mais tout cela n'est pas pertinent."
+    
+  },
+  "education" :  {
+    "education":"Éducation",
+    "schoolName" : "Collège d'État des transports automobiles de Perm",
+    "spec" : "Mécanicien de véhicules, 3e degré"
+  },
+
+  "gradientLine" : "cette ligne représente la maîtrise d'une compétence du rouge (faible) au vert (élevé)",
+    "aboutMe" : "À propos de moi",
+      "expAboutMe" : {
+        "dob" : "Date de naissance",
+        "dobDate" : "15 mars 1994 (26 ans)",
+        "permits" : "Permis",
+        "permitsAct" : "Permis de séjour et permis de travail en Italie",
+        "cityOfR": "Ville de résidence",
+        "addr" : "73048, Nardo' (LE), Italie",
+        "languages" : "Langues",
+        "eng" : "Anglais",
+        "rus" : "Russe",
+        "ita" : "Italien",
+        "esp" : "Espagnol",
+        "lvFl" : "Courant",
+        "lvNa" : "Locuteur natif",
+        "lvBa" : "De base"
+        },
+"months" : {
+  "january" : "Janvier",
+  "february" : "Février",
+  "march" : "Mars",
+  "april" : "Avril",
+  "may" : "Peut",
+  "june" : "Juin",
+  "july" : "Juillet",
+  "august" : "Août",
+  "september" : "Septembre",
+  "october" : "Octobre",
+  "november" : "Novembre",
+  "december" : "Décembre"
+}
+        
 }
 
 
