@@ -35,11 +35,29 @@
         <div class="gradient-line"></div>
         <div class="d-flex justify-space-between mb-2">
           <h2
-            class="pt-5 pl-0 primary--text"
+            class="my-auto pl-0 primary--text"
             :class="{ 'font-weight-black': colorSwitch }"
           >
             {{ $t("skills.hardSkills") }}
           </h2>
+
+          <v-btn
+            class="d-none"
+            :class="{
+              'my-auto d-inline': $vuetify.breakpoint.smAndDown && colorSwitch,
+            }"
+            small
+            text
+            color="grey"
+            @click.once="sortBy('mastery')"
+            v-on="on"
+          >
+            <v-icon small class="my-auto">sort</v-icon>
+            <span right class="caption text-lowercase pl-1 my-auto"
+              >by mastery</span
+            >
+          </v-btn>
+
           <v-switch v-model="colorSwitch"></v-switch>
         </div>
 
@@ -80,6 +98,9 @@ export default {
   methods: {
     toggle() {
       this.replace = !this.replace;
+    },
+    sortBy(prop) {
+      this.skills.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     },
   },
   components: { SoftSkills },

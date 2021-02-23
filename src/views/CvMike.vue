@@ -1,6 +1,20 @@
 <template>
   <v-main class="pt-0 mt-2">
     <v-card class="my-2 px-2 ">
+      <v-btn
+        v-scroll="onScroll"
+        v-show="fab"
+        fab
+        dark
+        fixed
+        bottom
+        right
+        color="primary"
+        @click="toTop"
+      >
+        <v-icon>keyboard_arrow_up</v-icon>
+      </v-btn>
+
       <v-row class="justify-space-between">
         <v-col cols="8">
           <CvHeader />
@@ -63,6 +77,21 @@ export default {
     Experience,
     Footer,
   },
+  data() {
+    return {
+      fab: false,
+    };
+  },
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    },
+  },
 };
 </script>
 
@@ -73,26 +102,26 @@ ul {
 p {
   font-size: small;
 }
-.a-low {
+.f-low {
   color: Red;
 }
-.b-b-medium {
+.d-medium {
   color: orange;
 }
 .c-medium {
   color: rgb(180, 180, 7);
 }
-.d-ab-medium {
+.b-medium {
   color: yellowgreen;
 }
-.e-high {
+.a-high {
   color: green;
 }
-.a-low,
-.b-b-medium,
+.f-low,
+.d-medium,
 .c-medium,
-.d-ab-medium,
-.e-high {
+.b-medium,
+.a-high {
   /* -webkit-text-stroke: 0.03em black; */
   letter-spacing: 0.05em;
   font-weight: bolder;

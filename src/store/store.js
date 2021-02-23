@@ -42,23 +42,23 @@ const store = new Vuex.Store({
       {
         type: "hard",
         title: "HTML5",
-        mastery: "d-ab-medium",
+        mastery: "d-medium",
       },
       {
         type: "hard",
         title: "CSS3",
         mastery: "c-medium",
       },
-      { type: "hard", title: "JavaScript", mastery: "b-b-medium" },
+      { type: "hard", title: "JavaScript", mastery: "d-medium" },
       {
         type: "hard",
         title: "GIT",
-        mastery: "d-ab-medium",
+        mastery: "d-medium",
       },
       {
         type: "hard",
         title: "Responsive Design",
-        mastery: "d-ab-medium",
+        mastery: "d-medium",
       },
       {
         type: "hard",
@@ -66,44 +66,44 @@ const store = new Vuex.Store({
         mastery: "c-medium",
       },
       { type: "hard", title: "Vue", mastery: "c-medium" },
-      { type: "hard", title: "Microsoft Office", mastery: "e-high" },
+      { type: "hard", title: "Microsoft Office", mastery: "a-high" },
       {
         type: "hard",
         title: "ImageMaSo",
-        mastery: "b-b-medium",
+        mastery: "d-medium",
       },
-      { type: "hard", title: "Linux", mastery: "b-b-medium" },
-      { type: "hard", title: "Design", mastery: "b-b-medium" },
-      { type: "hard", title: "SQL", mastery: "a-low" },
+      { type: "hard", title: "Linux", mastery: "d-medium" },
+      { type: "hard", title: "Design", mastery: "d-medium" },
+      { type: "hard", title: "SQL", mastery: "f-low" },
 
       // soft skills
       {
         type: "soft",
         title: "Healthy skepticism",
-        mastery: "d-ab-medium",
+        mastery: "d-medium",
       },
       {
         type: "soft",
         title: "Excitement for learning",
-        mastery: "e-high",
+        mastery: "a-high",
       },
       {
         type: "soft",
         title: "Communication Skills",
-        mastery: "d-ab-medium",
+        mastery: "d-medium",
       },
       {
         type: "soft",
         title: "Problem-Solving Skills",
-        mastery: "e-high",
+        mastery: "a-high",
       },
-      { type: "soft", title: "Work Ethic", mastery: "d-ab-medium" },
+      { type: "soft", title: "Work Ethic", mastery: "d-medium" },
       {
         type: "soft",
         title: "Flexibility",
-        mastery: "e-high",
+        mastery: "a-high",
       },
-      { type: "soft", title: "Adaptability", mastery: "d-ab-medium" },
+      { type: "soft", title: "Adaptability", mastery: "d-medium" },
     ],
     disclaimers: [
       {
@@ -128,8 +128,8 @@ const store = new Vuex.Store({
     techs: [
       {
         id: "cv",
-        techName: "Vue.js",
-        techIconSrc: "/vue-js.png",
+        techName: "Vue CLI",
+        techIconSrc: "/vue-cli.png",
       },
       {
         id: "cv",

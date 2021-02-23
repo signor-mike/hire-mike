@@ -19,12 +19,31 @@
             v-model="colorSwitch"
             :class="{ 'd-none': $vuetify.breakpoint.smAndDown }"
           ></v-switch>
+
           <h2
-            class="pt-5 pl-0 primary--text"
+            class="my-auto pl-0 primary--text"
             :class="{ 'font-weight-black': colorSwitch }"
           >
             {{ $t("skills.softSkills") }}
           </h2>
+
+          <v-btn
+            class="d-none"
+            :class="{
+              'my-auto d-inline': $vuetify.breakpoint.smAndDown && colorSwitch,
+            }"
+            small
+            text
+            color="grey"
+            @click.once="sortBy('mastery')"
+            v-on="on"
+          >
+            <v-icon small class="my-auto">sort</v-icon>
+            <span right class="caption text-lowercase pl-1 my-auto"
+              >by mastery</span
+            >
+          </v-btn>
+
           <v-switch
             v-model="colorSwitch"
             :class="{ 'd-none': $vuetify.breakpoint.mdAndUp }"
@@ -43,7 +62,7 @@
           >
             <v-col
               v-for="softSkill in softSkills"
-              :key="softSkill.i"
+              :key="softSkill.title"
               cols="auto"
               :class="[
                 colorSwitch ? softSkill.mastery : '',
@@ -65,6 +84,11 @@ export default {
     return {
       colorSwitch: false,
     };
+  },
+  methods: {
+    sortBy(prop) {
+      this.skills.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
+    },
   },
   computed: {
     skills() {
