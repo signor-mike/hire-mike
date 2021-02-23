@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style>
-h1 {
+.box h1 {
   color: red;
 }
 .main-container {
