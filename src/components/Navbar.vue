@@ -101,6 +101,11 @@ export default {
           text: "My CV",
           route: "/cv-mike",
         },
+        {
+          icon: "contact_page",
+          text: "CV for print",
+          route: "/print",
+        },
       ],
       // don't forget to set routes in ./router/index.js
     };

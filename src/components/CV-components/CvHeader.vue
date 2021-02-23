@@ -10,7 +10,7 @@
           <span class="text--primary text-md-h2 text-sm-h4 text-center">
             {{ $t("person.position") }}
           </span>
-          <br />
+
           <span class="text--secondary text-center">{{
             $t("person.name")
           }}</span>
