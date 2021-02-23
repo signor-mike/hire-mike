@@ -6,6 +6,7 @@ import vuetify from "./plugins/vuetify";
 import { store } from "./store/store";
 import i18n from "./i18n";
 import FlagIcon from "vue-flag-icon";
+import { jsPDF } from "jspdf";
 
 Vue.config.productionTip = false;
 
@@ -27,5 +28,6 @@ new Vue({
   vuetify,
   i18n,
   FlagIcon,
+  jsPDF,
   render: (h) => h(App),
 }).$mount("#app");

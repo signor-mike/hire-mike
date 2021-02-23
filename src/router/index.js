@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import i18n from "../i18n";
 import mikeCV from "../views/CvMike.vue";
 import Home from "../views/Home.vue";
-import i18n from "../i18n";
+import printing from "../views/Print.vue";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ const routes = [
         path: "cv-mike",
         name: "My CV",
         component: mikeCV,
+      },
+      {
+        path: "print",
+        name: "print",
+        component: printing,
       },
     ],
   },
