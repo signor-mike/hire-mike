@@ -1,45 +1,175 @@
 <template>
-  <div ref="Html2pdf" class="main-container">
-    <div class="box">
-      <h1>Some text</h1>
-      <h2>under construction</h2>
+  <div class="html" ref="document">
+    <div class="body">
+      <div class="upper-section">
+        <div class="name-and-contacts">
+          <h2>Mikhail Krivoshchekov (Mike)</h2>
+          <h3>{{ $t("person.position") }}</h3>
+          <p>{{ $t("expAboutMe.dobDate") }}</p>
+          <p>{{ $t("expAboutMe.addr") }}</p>
+          <ul>
+            <li v-for="contact in contacts" :key="contact.i">
+              {{ contact.addr }}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p></p>
+          <ul class="langs">
+            <h3>
+              {{ $t("expAboutMe.languages") }}
+            </h3>
+
+            <li>
+              <flag iso="gb" /> {{ $t("expAboutMe.eng") }}
+              <span class="secondary--text">{{ $t("expAboutMe.lvFl") }}</span>
+            </li>
+            <li>
+              <flag iso="ru" /> {{ $t("expAboutMe.rus") }}
+              <span class="secondary--text">{{ $t("expAboutMe.lvNa") }}</span>
+            </li>
+            <li>
+              <flag iso="it" /> {{ $t("expAboutMe.ita") }}
+              <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
+            </li>
+            <li>
+              <flag iso="es" /> {{ $t("expAboutMe.esp") }}
+              <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <v-avatar class="avatar" size="200">
+          <img src="/my-face.jpg" alt="alt" />
+        </v-avatar>
+      </div>
+      <hr />
+
+      <div class="bottom-section">
+        <div class="soft-skills">
+          <ul>
+            <li v-for="softSkill in softSkills" :key="softSkill.i">
+              {{ $t(`softSkills.${softSkill.title}`) }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-me">
+          <p>
+            This is a light version of my CV, <br />
+            please visit
+            <a href="https://hire-mike.web.app/en/cv-mike"
+              >https://hire-mike.web.app/en/cv-mike</a
+            >
+            <br />
+            or scan the QR code below.
+          </p>
+          <div class="qrcode">
+            <img src="/cv-qr.png" alt="" />
+          </div>
+
+          <p>Thank you!</p>
+        </div>
+
+        <div class="hard-skills">
+          <ul>
+            <li v-for="hardSkill in hardSkills" :key="hardSkill.i">
+              {{ $t(`hardSkills.${hardSkill.title}`) }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <v-btn class="primary " @click="generatePdf">
-      generate PDF
-    </v-btn>
   </div>
 </template>
 
 <script>
-import jsPDF from "jspdf";
+import html2pdf from "html2pdf.js";
 
 export default {
   data() {
-    return {};
+    return {
+      contacts: [
+        { name: "email", addr: "MikeLitoris34@icloud.com" },
+        { name: "phone", addr: "+39 351 0499 441" },
+      ],
+    };
   },
+
   methods: {
-    generatePdf() {
-      var pdf = new jsPDF("p", "pt", "A4");
-
-      pdf.fromHTML(this.$refs.Html2pdf);
-
-      pdf.save("test.pdf");
+    // exportToPDF() {
+    //   html2pdf(this.$refs.document, {
+    //     margin: 0,
+    //     filename: "document.pdf",
+    //     image: { type: "jpeg", quality: 0.98 },
+    //     html2canvas: { dpi: 192, letterRendering: true },
+    //     jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
+    //   });
+    // },
+  },
+  mounted: function() {
+    html2pdf(this.$refs.document, {
+      margin: 1,
+      filename: "document.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { dpi: 192, letterRendering: true },
+      jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
+    });
+  },
+  computed: {
+    skills() {
+      return this.$store.state.skills;
+    },
+    hardSkills() {
+      return this.skills.filter((skill) => skill.type === "hard");
+    },
+    softSkills() {
+      return this.skills.filter((skill) => skill.type === "soft");
     },
   },
 };
 </script>
 
 <style>
-.box h1 {
-  color: red;
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px 40px auto 100px;
 }
-.main-container {
-  width: "100%";
-  height: "100%";
-  background: green;
+.upper-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.box {
-  height: 100vh;
-  box-sizing: content-box;
+.avatar {
+  margin-bottom: 20px;
+}
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: solid grey 2px;
+}
+.hard-skills {
+  text-align: right;
+}
+.about-me {
+  border-right: solid grey 2px;
+  border-left: solid grey 2px;
+  padding: 0 5px 0 5px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.qrcode {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+.qrcode img {
+  width: 150px;
 }
 </style>

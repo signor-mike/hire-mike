@@ -1,4 +1,4 @@
-<template>
+<template ref="document">
   <v-main class="pt-0 mt-2">
     <v-card class="my-2 px-2 ">
       <v-btn
@@ -47,6 +47,7 @@
         </v-col>
       </v-row>
     </v-card>
+
     <div>
       <Footer
         class="d-none"
@@ -54,9 +55,8 @@
           'd-inline': $vuetify.breakpoint.smAndDown,
         }"
       />
-    </div>
-  </v-main>
-</template>
+    </div> </v-main
+></template>
 
 <script>
 import CvHeader from "@/components/CV-components/CvHeader.vue";
