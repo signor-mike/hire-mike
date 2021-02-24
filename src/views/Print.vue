@@ -14,32 +14,6 @@
           </ul>
         </div>
 
-        <div>
-          <p></p>
-          <ul class="langs">
-            <h3>
-              {{ $t("expAboutMe.languages") }}
-            </h3>
-
-            <li>
-              <flag iso="gb" /> {{ $t("expAboutMe.eng") }}
-              <span class="secondary--text">{{ $t("expAboutMe.lvFl") }}</span>
-            </li>
-            <li>
-              <flag iso="ru" /> {{ $t("expAboutMe.rus") }}
-              <span class="secondary--text">{{ $t("expAboutMe.lvNa") }}</span>
-            </li>
-            <li>
-              <flag iso="it" /> {{ $t("expAboutMe.ita") }}
-              <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
-            </li>
-            <li>
-              <flag iso="es" /> {{ $t("expAboutMe.esp") }}
-              <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
-            </li>
-          </ul>
-        </div>
-
         <v-avatar class="avatar" size="200">
           <img src="/my-face.jpg" alt="alt" />
         </v-avatar>
@@ -56,6 +30,30 @@
         </div>
 
         <div class="about-me">
+          <div class="langs">
+            <ul>
+              <h3>
+                {{ $t("expAboutMe.languages") }}
+              </h3>
+
+              <li>
+                <flag iso="gb" /> {{ $t("expAboutMe.eng") }}
+                <span class="secondary--text">{{ $t("expAboutMe.lvFl") }}</span>
+              </li>
+              <li>
+                <flag iso="ru" /> {{ $t("expAboutMe.rus") }}
+                <span class="secondary--text">{{ $t("expAboutMe.lvNa") }}</span>
+              </li>
+              <li>
+                <flag iso="it" /> {{ $t("expAboutMe.ita") }}
+                <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
+              </li>
+              <li>
+                <flag iso="es" /> {{ $t("expAboutMe.esp") }}
+                <span class="secondary--text">{{ $t("expAboutMe.lvBa") }}</span>
+              </li>
+            </ul>
+          </div>
           <p>
             This is a light version of my CV, <br />
             please visit
@@ -113,8 +111,8 @@ export default {
       margin: 1,
       filename: "document.pdf",
       image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { dpi: 192, letterRendering: true },
-      jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
+      html2canvas: { dpi: 292, letterRendering: true },
+      jsPDF: { unit: "in", format: "A4", orientation: "portrait" },
     });
   },
   computed: {
@@ -132,7 +130,11 @@ export default {
 </script>
 
 <style>
+.html {
+  height: 100%;
+}
 .body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
