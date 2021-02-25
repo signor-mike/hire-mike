@@ -97,7 +97,7 @@ export default {
   mounted: function() {
     html2pdf(this.$refs.document, {
       margin: 0,
-      filename: "document.pdf",
+      filename: `!CV-MIKE-${this.$i18n.locale.toUpperCase()}.pdf'`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { dpi: 292, letterRendering: true },
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
