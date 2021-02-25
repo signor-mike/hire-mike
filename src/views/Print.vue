@@ -96,7 +96,7 @@ export default {
   methods: {},
   mounted: function() {
     html2pdf(this.$refs.document, {
-      margin: 1,
+      margin: 0,
       filename: "document.pdf",
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { dpi: 292, letterRendering: true },
