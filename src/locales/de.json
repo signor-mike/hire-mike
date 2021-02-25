@@ -1,0 +1,119 @@
+{
+  "message": "Home page",
+  "home": {    
+    "button": "Lebenslauf öffnen",
+    "firstArticle" : "Das Erstellen von Websites ist nicht so schwierig, wie es aussehen mag. Jede Programmiersprache ist viel einfacher als jede menschliche Sprache. Und wenn Sie Ihre Sprache gelernt haben, können Sie jede Programmiersprache lernen. Diese Website sieht ziemlich abscheulich aus, aber es ist nur weil ich sehr schlecht im Design bin. Jeder kann lernen, wie man es macht. Glauben Sie mir. Noch vor 8 Wochen kannte ich den Unterschied zwischen div und span nicht. Und heute können Sie sehen, was ich getan habe. Es ist nicht so viel, aber es ist eine ehrliche Arbeit."    
+  },
+  "skills" : {
+    "hardSkills" : "Hard Skills",
+    "softSkills" : "Soft Skills",
+    "switch" : "zwischen Hard / Soft Skills wechseln"
+  },
+
+  "hardSkills": {
+    "HTML5":  "HTML5",
+    "CSS3": "CSS3",
+    "JavaScript":  "JavaScript",
+    "GIT": "GIT",
+    "Responsive Design":  "Sich anpassendes Design",
+    "Browser Developer Tools": "Browser-Entwicklertools",
+    "Vue":  "Vue.js",
+    "Microsoft Office": "Microsoft Office",
+    "ImageMaSo":  "Bildbearbeitungssoftware",
+    "Linux": "Linux",
+    "Design":  "Design",
+    "SQL" : "SQL"
+  },
+
+  "softSkills": {
+    "Healthy skepticism": "Gesunde Skepsis",
+    "Excitement for learning":  "Aufregung zum Lernen",
+    "Communication Skills": "Kommunikationsfähigkeiten",
+    "Problem-Solving Skills":  "Fähigkeiten zur Problemlösung",
+    "Work Ethic": "Arbeitsethik",
+    "Flexibility":  "Flexibilität",
+    "Adaptability": "Anpassungsfähigkeit"
+  },
+  "person" : {
+    "name": "Mikhail Krivoshchekov, aber nenn mich bitte Mike",
+    "position" :  "Front-End-Entwickle"
+  },
+  "contacts": {
+    "email me": "mailen Sie mir",
+    "WhatsApp":"Schreib mir auf Whatsapp",
+    "Telegram":"Schreib mir auf Telegram",
+    "Facebook":"Schreib mir auf Facebook"
+  },
+  "disclaimers" : {
+    "one" : "Gemäß der Allgemeinen Datenschutzverordnung (DSGVO) (EU) 2016/679. Die auf dieser Website enthaltenen Informationen können privilegiert oder vertraulich sein und sind ausschließlich für den ursprünglichen Empfänger bestimmt. Wenn Sie diese Website von besucht haben Fehler, bitte verlassen Sie die Website sofort und löschen Sie sie aus Ihrem Verlauf. ",
+    "two" : "Alle auf dieser Website enthaltenen Informationen sind vertraulich und ausschließlich für die Verwendung durch die Person oder Organisation bestimmt, an die sie gerichtet sind. Wenn Sie diese Website irrtümlich besucht haben, dürfen Sie die Informationen nicht kopieren, verbreiten oder offenlegen es beinhaltet. ",
+    "mobile" : "Und diese Website ist mobilfreundlich. Nehmen Sie sich eine Minute Zeit und besuchen Sie sie mit Ihrem Telefon oder Tablet. Danke."
+
+  },
+  "experience" : {
+    "expandAll" : "alle erweitern",
+    "collapseAll" : "alle kollabieren",
+    
+    "myProjects" : "Meine Projekte",
+      "myProjectsContent" : "Liste der Bibliotheken",
+    "relevantExperience" : "Relevante Erfahrung",
+      "relevantExperienceContent": "Derzeit ist meine einzige relevante Erfahrung die Entwicklung dieser Website",
+    "irrelevantExperience" : "irrelevante Erfahrung",
+      "irrelevantExperienceContent" : "Früher habe ich vom Verkäufer elektronischer Komponenten bis zum Schweißer auf dem Bauhof gearbeitet. Vom Fahrzeugreparaturmann bis zum Hotelmanager im Hostel. Aber all dies ist irrelevant."
+    
+  },
+  "education" : {
+    "education":"Bildung",
+    "schoolName" : "Perm State Motor Transport College",
+    "spec" : "Fahrzeugmechaniker, 3. Grad"
+  },
+
+"gradientLine" : "Diese Linie repräsentiert die Beherrschung einer Fertigkeit von rot (niedrig) bis grün (hoch)",
+    "aboutMe" : "Über mich",
+      "expAboutMe" : {
+        "dob" : "Geburtsdatum",
+        "dobDate" : "15. März 1994 (26 Jahre alt)",
+        "permits" : "Genehmigungen",
+        "permitsAct" : "Aufenthaltserlaubnis und Arbeitserlaubnis in Italien",
+        "cityOfR": "Wohnort",
+        "addr" : "73048, Nardo' (LE), Italien",
+        "languages" : "Sprachen",
+        "eng" : "Englisch",
+        "rus" : "Russisch",
+        "ita" : "Italienisch",
+        "esp" : "Spanisch",
+        "lvFl" : "Fließend",
+        "lvNa" : "Muttersprachler",
+        "lvBa" : "Basisch"
+        },
+"months" : {
+  "january" : "Januar",
+  "february" : "Februar",
+  "march" : "März",
+  "april" : "April",
+  "may" : "Mai",
+  "june" : "Juni",
+  "july" : "Juli",
+  "august" : "August",
+  "september" : "September",
+  "october" : "Oktober",
+  "november" : "November",
+  "december" : "Dezember"
+},
+"lightCv" : {
+  "thisIs" : "Dies ist eine leichte Version meines Lebenslaufs,",
+  "visitThis": "bitte besuchen",
+  "scanThis": "oder scannen Sie den folgenden QR-Code.",
+  "ty" : "Danke!",
+  "alert" : "Wenn PDF-Dateien fehlerhaft gerendert wurden, aktualisieren Sie die Seite und versuchen Sie es erneut. Vielen Dank."
+},
+"tributes" : {
+  "header": "Vielen Dank an: ",
+  "subscribe" : "Abonnieren",
+  "visit" : "Besuch",
+  "netninja" : "Für seine erstaunlichen Tutorials",
+  "goit" : "Für die Einführung von HTML und CSS",
+  "community": "Für eine tolle Community"
+} 
+        
+}

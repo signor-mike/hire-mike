@@ -1,20 +1,6 @@
 <template ref="document">
   <v-main class="pt-0 mt-2">
     <v-card class="my-2 px-2 ">
-      <v-btn
-        v-scroll="onScroll"
-        v-show="fab"
-        fab
-        dark
-        fixed
-        bottom
-        right
-        color="primary"
-        @click="toTop"
-      >
-        <v-icon>keyboard_arrow_up</v-icon>
-      </v-btn>
-
       <v-row class="justify-space-between">
         <v-col cols="8">
           <CvHeader />

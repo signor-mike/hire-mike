@@ -35,10 +35,7 @@
           <v-col cols="12">
             <div class="justify-center">
               <p class="font-weight-bold text-subtitle-1 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum consectetur vitae incidunt adipisci possimus eveniet
-                qui mollitia, numquam libero quibusdam optio ducimus assumenda,
-                aspernatur, quod corporis modi quidem a aut.
+                {{ $t("home.firstArticle") }}
               </p>
             </div>
           </v-col>

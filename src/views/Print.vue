@@ -57,9 +57,7 @@
           <p>
             {{ $t("lightCv.thisIs") }}<br />
             {{ $t("lightCv.visitThis") }}
-            <a href="https://hire-mike.web.app/en/cv-mike"
-              >https://hire-mike.web.app/en/cv-mike</a
-            >
+            <a href="https://hire-mike.web.app/en/cv-mike">hire-mike.web.app</a>
             <br />
             {{ $t("lightCv.scanThis") }}
           </p>
@@ -105,6 +103,7 @@ export default {
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
     }),
       this.$router.go(-1);
+    alert(`${this.$t("lightCv.alert")}`);
   },
 
   computed: {

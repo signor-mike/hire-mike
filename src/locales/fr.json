@@ -1,10 +1,8 @@
 {
   "message": "Page d'accueil",
   "home": {
-    "message": "veuillez ouvrir le menu pour naviguer",
-    "messageTwo": "ou cliquez sur le bouton pour ouvrir mon CV",
     "button": "cv ouvert",
-    "nothing": "car il n'y a encore rien d'autre à voir ici"
+    "firstArticle" : "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus facile que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux, mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. Il y a à peine 8 semaines, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir ce que j'ai fait. Ce n'est pas grand-chose mais c'est un travail honnête." 
   },
    "skills" : {
     "hardSkills" : "Hard Skills",
@@ -105,7 +103,16 @@
   "thisIs" : "Ceci est une version allégée de mon CV,",
   "visitThis": "veuillez visiter",
   "scanThis": "ou scannez le code QR ci-dessous.",
-  "ty" : "Merci!"
+  "ty" : "Merci!",
+  "alert" : "Si le PDF a été rendu avec des erreurs, actualisez la page et réessayez. Merci."
+} ,
+"tributes" : {
+  "header": "Un grand merci à:",
+  "subscribe" : "S'abonner",
+  "visit" : "Visite",
+  "netninja" : "Pour ses incroyables tutoriels",
+  "goit" : "Pour m'avoir présenté HTML et CSS",
+  "community": "Pour une communauté incroyable"
 } 
         
 }

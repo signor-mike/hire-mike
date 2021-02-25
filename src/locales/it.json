@@ -1,10 +1,8 @@
 {
   "message": "Pagina iniziale",
   "home" : {
-    "message": "si prega di aprire il menu per navigare",
-    "messageTwo": "o fare clic sul pulsante per aprire il mio CV",
     "button": "apri cv",
-    "nothing": "perché non c'è ancora nient'altro da vedere qui"
+    "firstArticle" : "Realizzare siti web non è così difficile come potrebbe sembrare. Qualsiasi linguaggio di programmazione è molto molto più semplice di qualsiasi linguaggio umano. E se hai imparato la tua lingua puoi imparare qualsiasi linguaggio di programmazione. Questo sito web sembra piuttosto orribile, ma è solo perché sono pessimo nel design. Tutti possono imparare a farlo. Mi creda. Solo 8 settimane fa non conoscevo la differenza tra div e span. E oggi puoi vedere cosa ho fatto. Non è molto ma è un lavoro onesto." 
   } ,
    "skills" : {
     "hardSkills" : "Hard Skills",
@@ -105,6 +103,15 @@
   "thisIs" : "Questa è una versione leggera del mio CV,",
   "visitThis": "per favore visita",
   "scanThis": "o scansiona il codice QR qui sotto.",
-  "ty" : "Grazie!"
-}       
+  "ty" : "Grazie!",
+  "alert" : "Se il PDF viene visualizzato con errori, aggiorna la pagina e riprova. Grazie."
+}  ,
+"tributes" : {
+  "header": "Mille grazie a:",
+  "subscribe" : "sottoscrivi",
+  "visit" : "Visitare",
+  "netninja" : "Per i suoi fantastici tutorial",
+  "goit" : "Per avermi presentato HTML e CSS",
+  "community": "Per una community straordinaria"
+}      
 }

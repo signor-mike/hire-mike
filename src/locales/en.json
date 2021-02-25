@@ -1,10 +1,8 @@
 {
   "message": "Home page",
-  "home": {
-    "message": "please open menu to navigate",
-    "messageTwo": "or click the button to open my CV",
+  "home": {    
     "button": "open cv",
-    "nothing": "because there's nothing else to see here yet"
+    "firstArticle" : "Making websites is not as hard as it might look. Any programming language is much much easier than any of human languages. And if you learned your language you can learn any programming language. This website looks quite hideous but it's only because I am very bad at design. Everybody can learn how to do it. Believe me. Just 8 weeks ago I didn't know the difference between div and span. And today you can see what I've done. It ain't much but it's a honest work."    
   },
   "skills" : {
     "hardSkills" : "Hard Skills",
@@ -106,7 +104,16 @@
   "thisIs" : "This is a light version of my CV,",
   "visitThis": "please visit",
   "scanThis": "or scan the QR code below.",
-  "ty" : "Thank you!"
+  "ty" : "Thank you!",
+  "alert" : "If PDF rendered with errors please refresh the page and try again. Thank you."
+},
+"tributes" : {
+  "header": "Many thanks to: ",
+  "subscribe" : "Subscribe",
+  "visit" : "Visit",
+  "netninja" : "For his amazing tutorials",
+  "goit" : "For introducing me HTML and CSS",
+  "community": "For an amazing community"
 } 
         
 }
