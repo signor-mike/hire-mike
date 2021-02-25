@@ -22,7 +22,7 @@
             <AboutMe />
           </v-col>
         </v-col>
-        <v-col cols="4" lg="3" xl="1">
+        <v-col cols="4" lg="4" xl="2">
           <Images />
         </v-col>
       </v-row>
@@ -30,15 +30,15 @@
 
     <v-card class="my-5 px-2">
       <v-row class="justify-space-between">
-        <v-col cols="auto" md="4" sm="auto" class="d-flex justify-start">
+        <v-col cols="auto" sm="auto" md="4" class="d-flex justify-start">
           <HardSkills />
         </v-col>
 
-        <v-col cols="auto" md="4" sm="auto" class="d-flex justify-center">
+        <v-col cols="auto" sm="auto" md="4" class="d-flex justify-center">
           <Experience />
         </v-col>
 
-        <v-col cols="auto" md="4" sm="auto" class="d-flex  justify-end">
+        <v-col cols="auto" sm="auto" md="4" class="d-flex  justify-end">
           <SoftSkills
             :class="{
               'd-none': $vuetify.breakpoint.smAndDown,

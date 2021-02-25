@@ -59,7 +59,6 @@
           :key="link.text"
           router
           :to="`/${$i18n.locale}${link.route}`"
-          @click="draw = !draw"
         >
           <v-list-item-action>
             <v-icon>{{ link.icon }}</v-icon>
@@ -102,9 +101,9 @@ export default {
           route: "/cv-mike",
         },
         {
-          icon: "contact_page",
-          text: "CV for print",
-          route: "/print",
+          icon: "star",
+          text: "Tributes",
+          route: "/tributes",
         },
       ],
       // don't forget to set routes in ./router/index.js

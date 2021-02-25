@@ -4,6 +4,7 @@ import i18n from "../i18n";
 import mikeCV from "../views/CvMike.vue";
 import Home from "../views/Home.vue";
 import printing from "../views/Print.vue";
+import tributes from "../views/Tributes.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
         path: "cv-mike",
         name: "My CV",
         component: mikeCV,
+      },
+      {
+        path: "tributes",
+        name: "tributes",
+        component: tributes,
       },
       {
         path: "print",

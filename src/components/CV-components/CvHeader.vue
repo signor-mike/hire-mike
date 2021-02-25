@@ -3,6 +3,14 @@
     <v-row>
       <v-col>
         <div
+          class="button ma-2"
+          :class="{ 'd-none': $vuetify.breakpoint.smAndDown }"
+        >
+          <v-btn text router :to="`/${$i18n.locale}/print`">
+            <v-icon>print</v-icon>
+          </v-btn>
+        </div>
+        <div
           v-for="person in persons"
           :key="person.id"
           class="d-flex flex-column"
@@ -30,4 +38,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.button {
+  position: absolute;
+}
+</style>

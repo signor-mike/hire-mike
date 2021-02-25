@@ -100,5 +100,11 @@
   "october" : "Ottobre",
   "november" : "Novembre",
   "december" : "Dicembre"
+},
+"lightCv" : {
+  "thisIs" : "Questa è una versione leggera del mio CV,",
+  "visitThis": "per favore visita",
+  "scanThis": "o scansiona il codice QR qui sotto.",
+  "ty" : "Grazie!"
 }       
 }
