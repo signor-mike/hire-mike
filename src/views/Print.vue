@@ -1,5 +1,5 @@
 <template>
-  <div class="html" ref="document">
+  <div class="html d-none" ref="document">
     <div class="body">
       <div class="upper-section">
         <div class="name-and-contacts">
@@ -55,19 +55,19 @@
             </ul>
           </div>
           <p>
-            This is a light version of my CV, <br />
-            please visit
+            {{ $t("lightCv.thisIs") }}<br />
+            {{ $t("lightCv.visitThis") }}
             <a href="https://hire-mike.web.app/en/cv-mike"
               >https://hire-mike.web.app/en/cv-mike</a
             >
             <br />
-            or scan the QR code below.
+            {{ $t("lightCv.scanThis") }}
           </p>
           <div class="qrcode">
             <img src="/cv-qr.png" alt="" />
           </div>
 
-          <p>Thank you!</p>
+          <p>{{ $t("lightCv.ty") }}</p>
         </div>
 
         <div class="hard-skills">
@@ -95,26 +95,18 @@ export default {
     };
   },
 
-  methods: {
-    // exportToPDF() {
-    //   html2pdf(this.$refs.document, {
-    //     margin: 0,
-    //     filename: "document.pdf",
-    //     image: { type: "jpeg", quality: 0.98 },
-    //     html2canvas: { dpi: 192, letterRendering: true },
-    //     jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
-    //   });
-    // },
-  },
+  methods: {},
   mounted: function() {
     html2pdf(this.$refs.document, {
       margin: 1,
       filename: "document.pdf",
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { dpi: 292, letterRendering: true },
-      jsPDF: { unit: "in", format: "A4", orientation: "portrait" },
-    });
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    }),
+      this.$router.go(-1);
   },
+
   computed: {
     skills() {
       return this.$store.state.skills;
@@ -173,5 +165,12 @@ export default {
 }
 .qrcode img {
   width: 150px;
+  height: 150px;
+}
+.hard-skills li,
+.soft-skills li {
+  margin-top: 5px;
+  padding-bottom: 2px;
+  border-bottom: dashed #808080a9 0.5px;
 }
 </style>

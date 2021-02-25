@@ -3,7 +3,7 @@
   "home": {
     "message": "veuillez ouvrir le menu pour naviguer",
     "messageTwo": "ou cliquez sur le bouton pour ouvrir mon CV",
-    "button": "clique moi",
+    "button": "cv ouvert",
     "nothing": "car il n'y a encore rien d'autre à voir ici"
   },
    "skills" : {

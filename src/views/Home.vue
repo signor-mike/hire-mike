@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div>
-      <!-- blah blah blah  -->
-      <!-- use div with background -->
-    </div>
-    <div class="d-flex justify-center">
+    <!-- <div class="d-flex justify-center">
       <h1>{{ $t("message") }}</h1>
     </div>
     <div class="d-flex justify-center">
@@ -26,7 +22,34 @@
         {{ $t("home.nothing") }}
       </p>
     </div>
-    <v-divider />
+    <v-divider /> -->
+
+    <v-container class="d-flex">
+      <div class="">
+        <v-row class="flex-column">
+          <v-spacer />
+          <v-col cols="12" justify-center>
+            <v-img src="/vue-cool.png" alt="vue" contain></v-img>
+          </v-col>
+          <v-spacer />
+          <v-col cols="12">
+            <div class="justify-center">
+              <p class="font-weight-bold text-subtitle-1 text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum consectetur vitae incidunt adipisci possimus eveniet
+                qui mollitia, numquam libero quibusdam optio ducimus assumenda,
+                aspernatur, quod corporis modi quidem a aut.
+              </p>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+    </v-container>
+    <div class="d-flex justify-center">
+      <v-btn router :to="`/${$i18n.locale}/cv-mike`">
+        <span>{{ $t("home.button") }}</span>
+      </v-btn>
+    </div>
   </div>
 </template>
 
