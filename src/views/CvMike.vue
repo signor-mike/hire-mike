@@ -41,17 +41,18 @@
           'd-inline': $vuetify.breakpoint.smAndDown,
         }"
       />
-    </div> </v-main
-></template>
+    </div>
+  </v-main>
+</template>
 
 <script>
 import CvHeader from "@/components/CV-components/CvHeader.vue";
-import AboutMe from "@/components/CV-components/AboutMe.vue";
-import Images from "@/components/CV-components/Images.vue";
-import HardSkills from "@/components/CV-components/HardSkills.vue";
-import SoftSkills from "@/components/CV-components/SoftSkills.vue";
-import Experience from "@/components/CV-components/Experience.vue";
-import Footer from "@/components/CV-components/Footer.vue";
+import AboutMe from "../components/CV-components/AboutMe.vue";
+import Images from "../components/CV-components/Images.vue";
+import HardSkills from "../components/CV-components/HardSkills.vue";
+import SoftSkills from "../components/CV-components/SoftSkills.vue";
+import Experience from "../components/CV-components/Experience.vue";
+import Footer from "../components/CV-components/Footer.vue";
 
 export default {
   components: {
