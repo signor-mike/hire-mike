@@ -55,7 +55,7 @@
       <!-- end of language switcher -->
     </v-app-bar>
 
-    <v-navigation-drawer src="/outer-space-hd.jpg" lazy-src="/outer-space.jpg"
+    <v-navigation-drawer src="/outer-space.jpg"
      temporary bottom app v-model="draw" class="primary py-3">
       <v-list dark>
         <!-- <v-list-item @click="draw = !draw">
