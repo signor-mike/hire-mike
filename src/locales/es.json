@@ -1,119 +1,115 @@
 {
   "message": "Página de inicio",
-  "home": {    
+  "home": {
     "button": "abrir cv",
-    "firstArticle" : "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendiste tu idioma, puedes aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero solo porque soy muy malo en el diseño. Todo el mundo puede aprender a hacerlo. Créanme. Hace solo 8 semanas no sabía la diferencia entre div y span. Y hoy puedes ver lo que he hecho. No es mucho pero es un trabajo honesto."    
+    "firstArticle": "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendiste tu idioma, puedes aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero solo porque soy muy malo en el diseño. Todo el mundo puede aprender a hacerlo. Créanme. Hace solo 8 semanas no sabía la diferencia entre div y span. Y hoy puedes ver lo que he hecho. No es mucho pero es un trabajo honesto."
   },
-  "skills" : {
-    "hardSkills" : "Hard Skills",
-    "softSkills" : "Soft Skills",
-    "switch" : "cambiar entre hard/soft habilidades"
+  "skills": {
+    "hardSkills": "Hard Skills",
+    "softSkills": "Soft Skills",
+    "switch": "cambiar entre hard/soft habilidades"
   },
 
   "hardSkills": {
-    "HTML5":  "HTML5",
+    "HTML5": "HTML5",
     "CSS3": "CSS3",
-    "JavaScript":  "JavaScript",
+    "JavaScript": "JavaScript",
     "GIT": "GIT",
-    "Responsive Design":  "Diseño de respuesta",
+    "Responsive Design": "Diseño de respuesta",
     "Browser Developer Tools": "Herramientas para desarrolladores del navegador",
-    "Vue":  "Vue.js",
+    "Vue": "Vue.js",
     "Microsoft Office": "Microsoft Office",
-    "ImageMaSo":  "Software de manipulación de imágenes",
+    "ImageMaSo": "Software de manipulación de imágenes",
     "Linux": "Linux",
-    "Design":  "Design",
-    "SQL" : "SQL"
+    "Design": "Design",
+    "SQL": "SQL"
   },
 
   "softSkills": {
-    "Healthy skepticism": "Escepticismo saludable",
-    "Excitement for learning":  "Emoción por aprender",
+    "Excitement for learning": "Emoción por aprender",
     "Communication Skills": "Habilidades de comunicación",
-    "Problem-Solving Skills":  "Habilidades para resolver problemas",
+    "Problem-Solving Skills": "Habilidades para resolver problemas",
     "Work Ethic": "Ética laboral",
-    "Flexibility":  "Flexibilidad",
+    "Flexibility": "Flexibilidad",
     "Adaptability": "Adaptabilidad"
   },
-  "person" : {
+  "person": {
     "name": "Mikhail Krivoshchekov, pero llámame Mike, por favor",
-    "position" :  "Desarrollador front-end"
+    "position": "Desarrollador front-end"
   },
   "contacts": {
     "email me": "Enviarme un email",
-    "WhatsApp":"Escríbeme en Whatsapp",
-    "Telegram":"Escríbeme en Telegram",
-    "Facebook":"Escríbeme en Facebook"
+    "WhatsApp": "Escríbeme en Whatsapp",
+    "Telegram": "Escríbeme en Telegram",
+    "Facebook": "Escríbeme en Facebook"
   },
-  "disclaimers" : {
-    "one" : "De acuerdo con el Reglamento General de Protección de Datos (GDPR) (UE) 2016/679. La información contenida en este sitio web puede ser privilegiada o confidencial y está destinada al uso exclusivo del destinatario original. Si ha visitado este sitio web por error, abandone el sitio web inmediatamente y elimínelo de su historial. ",
-    "two" : "Cualquier información contenida en este sitio web es confidencial y está destinada únicamente para el uso de la persona o entidad a la que está dirigida. Si visitó este sitio web por error, no debe copiar, distribuir o divulgar la información contiene. ",
-    "mobile" : "Y este sitio web es compatible con dispositivos móviles. Espera un minuto y visítalo con tu teléfono o tableta. Gracias."
+  "disclaimers": {
+    "one": "De acuerdo con el Reglamento General de Protección de Datos (GDPR) (UE) 2016/679. La información contenida en este sitio web puede ser privilegiada o confidencial y está destinada al uso exclusivo del destinatario original. Si ha visitado este sitio web por error, abandone el sitio web inmediatamente y elimínelo de su historial. ",
+    "two": "Cualquier información contenida en este sitio web es confidencial y está destinada únicamente para el uso de la persona o entidad a la que está dirigida. Si visitó este sitio web por error, no debe copiar, distribuir o divulgar la información contiene. ",
+    "mobile": "Y este sitio web es compatible con dispositivos móviles. Espera un minuto y visítalo con tu teléfono o tableta. Gracias."
+  },
+  "experience": {
+    "expandAll": "expandir todo",
+    "collapseAll": "contraer todo",
 
+    "myProjects": "Mis proyectos",
+    "myProjectsContent": "Lista de bibliotecas",
+    "relevantExperience": "Experiencia relevante",
+    "relevantExperienceContent": "Actualmente, mi única experiencia relevante es desarrollar este sitio web",
+    "irrelevantExperience": "Experiencia irrelevante",
+    "irrelevantExperienceContent": "Solía ​​trabajar de vendedor de componentes electrónicos a soldador en un patio de construcción. De reparador de vehículos a gerente de hospitalidad en un albergue. Pero todo esto es irrelevante."
   },
-  "experience" : {
-    "expandAll" : "expandir todo",
-    "collapseAll" : "contraer todo",
-    
-    "myProjects" : "Mis proyectos",
-      "myProjectsContent" : "Lista de bibliotecas",
-    "relevantExperience" : "Experiencia relevante",
-      "relevantExperienceContent": "Actualmente, mi única experiencia relevante es desarrollar este sitio web",
-    "irrelevantExperience" : "Experiencia irrelevante",
-      "irrelevantExperienceContent" : "Solía ​​trabajar de vendedor de componentes electrónicos a soldador en un patio de construcción. De reparador de vehículos a gerente de hospitalidad en un albergue. Pero todo esto es irrelevante."
-    
-  },
-  "education" : {
-    "education":"Educación",
-    "schoolName" : "Universidad Estatal de Transporte Motorizado de Perm",
-    "spec" : "Mecánico de vehículos, tercer grado"
+  "education": {
+    "education": "Educación",
+    "schoolName": "Universidad Estatal de Transporte Motorizado de Perm",
+    "spec": "Mecánico de vehículos, tercer grado"
   },
 
-"gradientLine" : "esta línea representa el dominio de una habilidad de rojo (bajo) a verde (alto)",
-    "aboutMe" : "Acerca de mí",
-      "expAboutMe" : {
-        "dob" : "Fecha de nacimiento",
-        "dobDate" : "15 de marzo de 1994 (26 años)",
-        "permits" : "Permisos",
-        "permitsAct" : "Permiso de residencia y permiso de trabajo en Italia",
-        "cityOfR": "Ciudad de residencia",
-        "addr" : "73048, Nardo' (LE), Italia",
-        "languages" : "Idiomas",
-        "eng": "Inglés",
-        "rus": "Ruso",
-        "ita": "Italiano",
-        "esp": "Español",
-        "lvFl": "Fluido",
-        "lvNa": "Hablante nativo",
-        "lvBa": "Básico"
-        },
-"months" : {
-  "january" : "Enero",
-  "february" : "Febrero",
-  "march" : "Marzo",
-  "april" : "Abril",
-  "may" : "Mayo",
-  "june" : "Junio",
-  "july" : "Julio",
-  "august" : "Agosto",
-  "september" : "Septiembre",
-  "october" : "Octubre",
-  "november" : "Noviembre",
-  "december" : "Diciembre"
-},
-"lightCv" : {
-  "thisIs" : "Esta es una versión ligera de mi CV",
-  "visitThis": "por favor visite",
-  "scanThis": "o escanee el código QR a continuación.",
-  "ty": "¡Gracias!",
-  "alert" : "Si el PDF presenta errores, actualice la página y vuelva a intentarlo. Gracias."
-},
-"tributes" : {
-  "header": "Muchas gracias a: ",
-  "subscribe" : "Suscribirse",
-  "visit" : "Visita",
-  "netninja" : "Por sus increíbles tutoriales",
-  "goit" : "Por presentarme HTML y CSS",
-  "community": "Para una comunidad increíble"
-} 
-        
+  "gradientLine": "esta línea representa el dominio de una habilidad de rojo (bajo) a verde (alto)",
+  "aboutMe": "Acerca de mí",
+  "expAboutMe": {
+    "dob": "Fecha de nacimiento",
+    "dobDate": "15 de marzo de 1994 (26 años)",
+    "permits": "Permisos",
+    "permitsAct": "Permiso de residencia y permiso de trabajo en Italia",
+    "cityOfR": "Ciudad de residencia",
+    "addr": "73048, Nardo' (LE), Italia",
+    "languages": "Idiomas",
+    "eng": "Inglés",
+    "rus": "Ruso",
+    "ita": "Italiano",
+    "esp": "Español",
+    "lvFl": "Fluido",
+    "lvNa": "Hablante nativo",
+    "lvBa": "Básico"
+  },
+  "months": {
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre"
+  },
+  "lightCv": {
+    "thisIs": "Esta es una versión ligera de mi CV",
+    "visitThis": "por favor visite",
+    "scanThis": "o escanee el código QR a continuación.",
+    "ty": "¡Gracias!",
+    "alert": "Si el PDF presenta errores, actualice la página y vuelva a intentarlo. Gracias."
+  },
+  "tributes": {
+    "header": "Muchas gracias a: ",
+    "subscribe": "Suscribirse",
+    "visit": "Visita",
+    "netninja": "Por sus increíbles tutoriales",
+    "goit": "Por presentarme HTML y CSS",
+    "community": "Para una comunidad increíble"
+  }
 }

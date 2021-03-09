@@ -1,119 +1,115 @@
 {
   "message": "Home page",
-  "home": {    
+  "home": {
     "button": "open cv",
-    "firstArticle" : "Making websites is not as hard as it might look. Any programming language is much much easier than any of human languages. And if you learned your language you can learn any programming language. This website looks quite hideous but it's only because I am very bad at design. Everybody can learn how to do it. Believe me. Just 8 weeks ago I didn't know the difference between div and span. And today you can see what I've done. It ain't much but it's a honest work."    
+    "firstArticle": "Making websites is not as hard as it might look. Any programming language is much much easier than any of human languages. And if you learned your language you can learn any programming language. This website looks quite hideous but it's only because I am very bad at design. Everybody can learn how to do it. Believe me. Just 8 weeks ago I didn't know the difference between div and span. And today you can see what I've done. It ain't much but it's a honest work."
   },
-  "skills" : {
-    "hardSkills" : "Hard Skills",
-    "softSkills" : "Soft Skills",
-    "switch" : "switch between hard/soft skills"
+  "skills": {
+    "hardSkills": "Hard Skills",
+    "softSkills": "Soft Skills",
+    "switch": "switch between hard/soft skills"
   },
 
   "hardSkills": {
-    "HTML5":  "HTML5",
+    "HTML5": "HTML5",
     "CSS3": "CSS3",
-    "JavaScript":  "JavaScript",
+    "JavaScript": "JavaScript",
     "GIT": "GIT",
-    "Responsive Design":  "Responsive Design",
+    "Responsive Design": "Responsive Design",
     "Browser Developer Tools": "Browser Developer Tools",
-    "Vue":  "Vue.js",
+    "Vue": "Vue.js",
     "Microsoft Office": "Microsoft Office",
-    "ImageMaSo":  "Image manipulation software",
+    "ImageMaSo": "Image manipulation software",
     "Linux": "Linux",
-    "Design":  "Design",
-    "SQL" : "SQL"
+    "Design": "Design",
+    "SQL": "SQL"
   },
 
   "softSkills": {
-    "Healthy skepticism": "Healthy skepticism",
-    "Excitement for learning":  "Excitement for learning",
+    "Excitement for learning": "Excitement for learning",
     "Communication Skills": "Communication Skills",
-    "Problem-Solving Skills":  "Problem-Solving Skills",
+    "Problem-Solving Skills": "Problem-Solving Skills",
     "Work Ethic": "Work Ethic",
-    "Flexibility":  "Flexibility",
+    "Flexibility": "Flexibility",
     "Adaptability": "Adaptability"
   },
-  "person" : {
+  "person": {
     "name": "Mikhail Krivoshchekov, but call me Mike please",
-    "position" :  "Front End developer"
+    "position": "Front End developer"
   },
   "contacts": {
     "email me": "email me",
-    "WhatsApp":"Write me on Whatsapp",
-    "Telegram":"Write me on Telegram",
-    "Facebook":"Write me on Facebook"
+    "WhatsApp": "Write me on Whatsapp",
+    "Telegram": "Write me on Telegram",
+    "Facebook": "Write me on Facebook"
   },
-  "disclaimers" : {
-    "one" : "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history.",
-    "two" : "Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains. ",
-    "mobile" : "And this website is mobile friendly, give it a minute and visit it with your phone or tablet. Thanks."
+  "disclaimers": {
+    "one": "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history.",
+    "two": "Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains. ",
+    "mobile": "And this website is mobile friendly, give it a minute and visit it with your phone or tablet. Thanks."
+  },
+  "experience": {
+    "expandAll": "expand all",
+    "collapseAll": "collapse all",
 
+    "myProjects": "My projects",
+    "myProjectsContent": "List of libraries",
+    "relevantExperience": "Relevant experience",
+    "relevantExperienceContent": "Currently my only relevant experience is developing this website",
+    "irrelevantExperience": "Irrelevant experience",
+    "irrelevantExperienceContent": " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant."
   },
-  "experience" : {
-    "expandAll" : "expand all",
-    "collapseAll" : "collapse all",
-    
-    "myProjects" : "My projects",
-      "myProjectsContent" : "List of libraries",
-    "relevantExperience" : "Relevant experience",
-      "relevantExperienceContent": "Currently my only relevant experience is developing this website",
-    "irrelevantExperience" : "Irrelevant experience",
-      "irrelevantExperienceContent" : " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant."
-    
-  },
-  "education" : {
-    "education":"Education",
-    "schoolName" : "Perm State Motor Transport College",
-    "spec" : "Vehicle Mechanic, 3rd degree"
+  "education": {
+    "education": "Education",
+    "schoolName": "Perm State Motor Transport College",
+    "spec": "Vehicle Mechanic, 3rd degree"
   },
 
-"gradientLine" : "this line represent the mastery of a skill from red (low) to green (high)",
-    "aboutMe" : "About me",
-      "expAboutMe" : {
-        "dob" : "Date of birth",
-        "dobDate" : "March 15th, 1994 (26 years old)",
-        "permits" : "Permits",
-        "permitsAct" : "Residence permit and work permit in Italy",
-        "cityOfR": "City of residence",
-        "addr" : "73048, Nardo' (LE), Italy",
-        "languages" : "Languages",
-        "eng" : "English",
-        "rus" : "Russian",
-        "ita" : "Italian",
-        "esp" : "Spanish",
-        "lvFl" : "Fluent",
-        "lvNa" : "Native speaker",
-        "lvBa" : "Basic"
-        },
-"months" : {
-  "january" : "January",
-  "february" : "February",
-  "march" : "March",
-  "april" : "April",
-  "may" : "May",
-  "june" : "June",
-  "july" : "July",
-  "august" : "August",
-  "september" : "September",
-  "october" : "October",
-  "november" : "November",
-  "december" : "December"
-},
-"lightCv" : {
-  "thisIs" : "This is a light version of my CV,",
-  "visitThis": "please visit",
-  "scanThis": "or scan the QR code below.",
-  "ty" : "Thank you!",
-  "alert" : "If PDF rendered with errors please refresh the page and try again. Thank you."
-},
-"tributes" : {
-  "header": "Many thanks to: ",
-  "subscribe" : "Subscribe",
-  "visit" : "Visit",
-  "netninja" : "For his amazing tutorials",
-  "goit" : "For introducing me HTML and CSS",
-  "community": "For an amazing community"
-} 
-        
+  "gradientLine": "this line represent the mastery of a skill from red (low) to green (high)",
+  "aboutMe": "About me",
+  "expAboutMe": {
+    "dob": "Date of birth",
+    "dobDate": "March 15th, 1994 (26 years old)",
+    "permits": "Permits",
+    "permitsAct": "Residence permit and work permit in Italy",
+    "cityOfR": "City of residence",
+    "addr": "73048, Nardo' (LE), Italy",
+    "languages": "Languages",
+    "eng": "English",
+    "rus": "Russian",
+    "ita": "Italian",
+    "esp": "Spanish",
+    "lvFl": "Fluent",
+    "lvNa": "Native speaker",
+    "lvBa": "Basic"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "lightCv": {
+    "thisIs": "This is a light version of my CV,",
+    "visitThis": "please visit",
+    "scanThis": "or scan the QR code below.",
+    "ty": "Thank you!",
+    "alert": "If PDF rendered with errors please refresh the page and try again. Thank you."
+  },
+  "tributes": {
+    "header": "Many thanks to: ",
+    "subscribe": "Subscribe",
+    "visit": "Visit",
+    "netninja": "For his amazing tutorials",
+    "goit": "For introducing me HTML and CSS",
+    "community": "For an amazing community"
+  }
 }

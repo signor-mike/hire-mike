@@ -2,16 +2,16 @@
   "message": "Page d'accueil",
   "home": {
     "button": "cv ouvert",
-    "firstArticle" : "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus facile que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux, mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. Il y a à peine 8 semaines, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir ce que j'ai fait. Ce n'est pas grand-chose mais c'est un travail honnête." 
+    "firstArticle": "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus facile que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux, mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. Il y a à peine 8 semaines, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir ce que j'ai fait. Ce n'est pas grand-chose mais c'est un travail honnête."
   },
-   "skills" : {
-    "hardSkills" : "Hard Skills",
-    "softSkills" : "Soft Skills",
-    "switch" : "basculer entre les compétences hard / soft"
+  "skills": {
+    "hardSkills": "Hard Skills",
+    "softSkills": "Soft Skills",
+    "switch": "basculer entre les compétences hard / soft"
   },
 
   "hardSkills": {
-    "HTML5":  "HTML5",
+    "HTML5": "HTML5",
     "CSS3": "CSS3",
     "JavaScript": "JavaScript",
     "GIT": "GIT",
@@ -22,11 +22,10 @@
     "ImageMaSo": "Logiciel de manipulation d'images",
     "Linux": "Linux",
     "Design": "Compétences en conception",
-    "SQL" : "SQL"
-      },
+    "SQL": "SQL"
+  },
 
   "softSkills": {
-    "Healthy skepticism": "Scepticisme sain",
     "Excitement for learning": "Excitation d'apprendre",
     "Communication Skills": "Compétences en communication",
     "Problem-Solving Skills": "Des talents pour la résolution des problèmes",
@@ -34,92 +33,82 @@
     "Flexibility": "Flexibilité",
     "Adaptability": "Adaptabilité"
   },
-  "person" : {
+  "person": {
     "name": "Mikhail Krivoshchekov, mais appelle moi Mike s'il te plait",
-    "position" :  "Développeur frontal"
+    "position": "Développeur frontal"
   },
   "contacts": {
     "email me": "Envoyez moi un email",
-    "WhatsApp":"Écrivez-moi sur WhatsApp",
-    "Telegram":"Écrivez-moi sur Telegram",
-    "Facebook":"Écrivez-moi sur Facebook"
+    "WhatsApp": "Écrivez-moi sur WhatsApp",
+    "Telegram": "Écrivez-moi sur Telegram",
+    "Facebook": "Écrivez-moi sur Facebook"
   },
-  "disclaimers" : {
-    "one" : "Conformément au règlement général sur la protection des données (RGPD) (UE) 2016/679. Les informations contenues sur ce site peuvent être privilégiées ou confidentielles et destinées à l'usage exclusif du destinataire d'origine. Si vous avez visité ce site Web par erreur, veuillez quitter le site Web immédiatement et le supprimer de votre historique.",
-    "two" : "Toutes les informations contenues sur ce site sont confidentielles et sont destinées uniquement à l'usage de l'individu ou de l'entité à qui elles sont adressées. Si vous avez visité ce site Web par erreur, vous ne devez pas copier, distribuer ou divulguer les informations qu'il contient.",
-    "mobile" : "Et ce site Web est adapté aux mobiles, donnez-lui une minute et visitez-le avec votre téléphone ou votre tablette. Merci."
-
+  "disclaimers": {
+    "one": "Conformément au règlement général sur la protection des données (RGPD) (UE) 2016/679. Les informations contenues sur ce site peuvent être privilégiées ou confidentielles et destinées à l'usage exclusif du destinataire d'origine. Si vous avez visité ce site Web par erreur, veuillez quitter le site Web immédiatement et le supprimer de votre historique.",
+    "two": "Toutes les informations contenues sur ce site sont confidentielles et sont destinées uniquement à l'usage de l'individu ou de l'entité à qui elles sont adressées. Si vous avez visité ce site Web par erreur, vous ne devez pas copier, distribuer ou divulguer les informations qu'il contient.",
+    "mobile": "Et ce site Web est adapté aux mobiles, donnez-lui une minute et visitez-le avec votre téléphone ou votre tablette. Merci."
   },
-  "experience" : {
-    "expandAll" : "développer tout",
-    "collapseAll" : "tout réduire",    
-    "myProjects" : "Mes projets",
-      "myProjectsContent" : "Liste des bibliothèques",
-    "relevantExperience" : "Expérience pertinente",
-      "relevantExperienceContent": "Actuellement, ma seule expérience pertinente est le développement de ce site Web",
-    "irrelevantExperience" : "Expérience non pertinente",
-      "irrelevantExperienceContent" : "J'avais l'habitude de travailler d'un vendeur de composants électroniques à un soudeur sur un chantier de construction. De réparateur de véhicules à un responsable de l'hôtellerie en auberge. Mais tout cela n'est pas pertinent."
-    
+  "experience": {
+    "expandAll": "développer tout",
+    "collapseAll": "tout réduire",
+    "myProjects": "Mes projets",
+    "myProjectsContent": "Liste des bibliothèques",
+    "relevantExperience": "Expérience pertinente",
+    "relevantExperienceContent": "Actuellement, ma seule expérience pertinente est le développement de ce site Web",
+    "irrelevantExperience": "Expérience non pertinente",
+    "irrelevantExperienceContent": "J'avais l'habitude de travailler d'un vendeur de composants électroniques à un soudeur sur un chantier de construction. De réparateur de véhicules à un responsable de l'hôtellerie en auberge. Mais tout cela n'est pas pertinent."
   },
-  "education" :  {
-    "education":"Éducation",
-    "schoolName" : "Collège d'État des transports automobiles de Perm",
-    "spec" : "Mécanicien de véhicules, 3e degré"
+  "education": {
+    "education": "Éducation",
+    "schoolName": "Collège d'État des transports automobiles de Perm",
+    "spec": "Mécanicien de véhicules, 3e degré"
   },
 
-  "gradientLine" : "cette ligne représente la maîtrise d'une compétence du rouge (faible) au vert (élevé)",
-    "aboutMe" : "À propos de moi",
-      "expAboutMe" : {
-        "dob" : "Date de naissance",
-        "dobDate" : "15 mars 1994 (26 ans)",
-        "permits" : "Permis",
-        "permitsAct" : "Permis de séjour et permis de travail en Italie",
-        "cityOfR": "Ville de résidence",
-        "addr" : "73048, Nardo' (LE), Italie",
-        "languages" : "Langues",
-        "eng" : "Anglais",
-        "rus" : "Russe",
-        "ita" : "Italien",
-        "esp" : "Espagnol",
-        "lvFl" : "Courant",
-        "lvNa" : "Locuteur natif",
-        "lvBa" : "De base"
-        },
-"months" : {
-  "january" : "Janvier",
-  "february" : "Février",
-  "march" : "Mars",
-  "april" : "Avril",
-  "may" : "Peut",
-  "june" : "Juin",
-  "july" : "Juillet",
-  "august" : "Août",
-  "september" : "Septembre",
-  "october" : "Octobre",
-  "november" : "Novembre",
-  "december" : "Décembre"
-},
-"lightCv" : {
-  "thisIs" : "Ceci est une version allégée de mon CV,",
-  "visitThis": "veuillez visiter",
-  "scanThis": "ou scannez le code QR ci-dessous.",
-  "ty" : "Merci!",
-  "alert" : "Si le PDF a été rendu avec des erreurs, actualisez la page et réessayez. Merci."
-} ,
-"tributes" : {
-  "header": "Un grand merci à:",
-  "subscribe" : "S'abonner",
-  "visit" : "Visite",
-  "netninja" : "Pour ses incroyables tutoriels",
-  "goit" : "Pour m'avoir présenté HTML et CSS",
-  "community": "Pour une communauté incroyable"
-} 
-        
+  "gradientLine": "cette ligne représente la maîtrise d'une compétence du rouge (faible) au vert (élevé)",
+  "aboutMe": "À propos de moi",
+  "expAboutMe": {
+    "dob": "Date de naissance",
+    "dobDate": "15 mars 1994 (26 ans)",
+    "permits": "Permis",
+    "permitsAct": "Permis de séjour et permis de travail en Italie",
+    "cityOfR": "Ville de résidence",
+    "addr": "73048, Nardo' (LE), Italie",
+    "languages": "Langues",
+    "eng": "Anglais",
+    "rus": "Russe",
+    "ita": "Italien",
+    "esp": "Espagnol",
+    "lvFl": "Courant",
+    "lvNa": "Locuteur natif",
+    "lvBa": "De base"
+  },
+  "months": {
+    "january": "Janvier",
+    "february": "Février",
+    "march": "Mars",
+    "april": "Avril",
+    "may": "Peut",
+    "june": "Juin",
+    "july": "Juillet",
+    "august": "Août",
+    "september": "Septembre",
+    "october": "Octobre",
+    "november": "Novembre",
+    "december": "Décembre"
+  },
+  "lightCv": {
+    "thisIs": "Ceci est une version allégée de mon CV,",
+    "visitThis": "veuillez visiter",
+    "scanThis": "ou scannez le code QR ci-dessous.",
+    "ty": "Merci!",
+    "alert": "Si le PDF a été rendu avec des erreurs, actualisez la page et réessayez. Merci."
+  },
+  "tributes": {
+    "header": "Un grand merci à:",
+    "subscribe": "S'abonner",
+    "visit": "Visite",
+    "netninja": "Pour ses incroyables tutoriels",
+    "goit": "Pour m'avoir présenté HTML et CSS",
+    "community": "Pour une communauté incroyable"
+  }
 }
-
-
-
-
-
-
-

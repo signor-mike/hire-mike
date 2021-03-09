@@ -77,11 +77,7 @@ const store = new Vuex.Store({
       { type: "hard", title: "SQL", mastery: "f-low" },
 
       // soft skills
-      {
-        type: "soft",
-        title: "Healthy skepticism",
-        mastery: "d-medium",
-      },
+      
       {
         type: "soft",
         title: "Excitement for learning",

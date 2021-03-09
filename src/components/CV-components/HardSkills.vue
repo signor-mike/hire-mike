@@ -18,7 +18,7 @@
       class="mt-6 "
       :class="{
         'mt-0 ': $vuetify.breakpoint.smAndDown,
-        'grey lighten-2': colorSwitch,
+        'default-dark-color': colorSwitch,
       }"
       :title="[$t('gradientLine')]"
     >
@@ -50,7 +50,7 @@
             text
             color="grey"
             @click.once="sortBy('mastery')"
-            v-on="on"
+            
           >
             <v-icon small class="my-auto">sort</v-icon>
             <span right class="caption text-lowercase pl-1 my-auto"
@@ -121,4 +121,7 @@ export default {
   line-height: 1;
   font-size: xx-small;
 }
+.default-dark-color {
+  background-color: #1e1e1e;
+} 
 </style>

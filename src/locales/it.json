@@ -1,117 +1,114 @@
 {
   "message": "Pagina iniziale",
-  "home" : {
+  "home": {
     "button": "apri cv",
-    "firstArticle" : "Realizzare siti web non è così difficile come potrebbe sembrare. Qualsiasi linguaggio di programmazione è molto molto più semplice di qualsiasi linguaggio umano. E se hai imparato la tua lingua puoi imparare qualsiasi linguaggio di programmazione. Questo sito web sembra piuttosto orribile, ma è solo perché sono pessimo nel design. Tutti possono imparare a farlo. Mi creda. Solo 8 settimane fa non conoscevo la differenza tra div e span. E oggi puoi vedere cosa ho fatto. Non è molto ma è un lavoro onesto." 
-  } ,
-   "skills" : {
-    "hardSkills" : "Hard Skills",
-    "softSkills" : "Soft Skills",
-    "switch" : "passare da abilità hard / soft"
+    "firstArticle": "Realizzare siti web non è così difficile come potrebbe sembrare. Qualsiasi linguaggio di programmazione è molto molto più semplice di qualsiasi linguaggio umano. E se hai imparato la tua lingua puoi imparare qualsiasi linguaggio di programmazione. Questo sito web sembra piuttosto orribile, ma è solo perché sono pessimo nel design. Tutti possono imparare a farlo. Mi creda. Solo 8 settimane fa non conoscevo la differenza tra div e span. E oggi puoi vedere cosa ho fatto. Non è molto ma è un lavoro onesto."
+  },
+  "skills": {
+    "hardSkills": "Hard Skills",
+    "softSkills": "Soft Skills",
+    "switch": "passare da abilità hard / soft"
   },
 
   "hardSkills": {
-    "HTML5":"HTML5",
+    "HTML5": "HTML5",
     "CSS3": "CSS3",
-    "JavaScript":"JavaScript",
-    "GIT":"GIT",
-    "Responsive Design":"Design reattivo",
-    "Browser Developer Tools":"Strumenti per sviluppatori del browser",
-    "Vue":"Vue.js",
-    "Microsoft Office":"Microsoft Office",
-    "ImageMaSo":"Software di manipolazione delle immagini",
-    "Linux":"Linux",
-    "Design":"Capacità di progettazione",
-    "SQL" : "SQL"
+    "JavaScript": "JavaScript",
+    "GIT": "GIT",
+    "Responsive Design": "Design reattivo",
+    "Browser Developer Tools": "Strumenti per sviluppatori del browser",
+    "Vue": "Vue.js",
+    "Microsoft Office": "Microsoft Office",
+    "ImageMaSo": "Software di manipolazione delle immagini",
+    "Linux": "Linux",
+    "Design": "Capacità di progettazione",
+    "SQL": "SQL"
   },
 
   "softSkills": {
-    "Healthy skepticism":"Sano scetticismo",
-    "Excitement for learning":"Eccitazione per l'apprendimento",
-    "Communication Skills":"Capacità di comunicazione",
-    "Problem-Solving Skills":"Capacità di risoluzione dei problemi",
-    "Work Ethic":"Lavoro etico",
-    "Flexibility":"Flessibilità",
-    "Adaptability":"Adattabilità"
+    "Excitement for learning": "Eccitazione per l'apprendimento",
+    "Communication Skills": "Capacità di comunicazione",
+    "Problem-Solving Skills": "Capacità di risoluzione dei problemi",
+    "Work Ethic": "Lavoro etico",
+    "Flexibility": "Flessibilità",
+    "Adaptability": "Adattabilità"
   },
-  "person" : {
+  "person": {
     "name": "Mikhail Krivoshchekov, ma chiamami Mike per favore",
-    "position" :  "Sviluppatore Front End"
+    "position": "Sviluppatore Front End"
   },
   "contacts": {
     "email me": "mandami un'email",
-    "WhatsApp":"Scrivimi su Whatsapp",
-    "Telegram":"Scrivimi su Telegram",
-    "Facebook":"Scrivimi su Facebook"
+    "WhatsApp": "Scrivimi su Whatsapp",
+    "Telegram": "Scrivimi su Telegram",
+    "Facebook": "Scrivimi su Facebook"
   },
-  "disclaimers" : {
-    "one" : "Secondo il Regolamento generale sulla protezione dei dati (GDPR) (UE) 2016/679. Le informazioni contenute in questo sito Web possono essere privilegiate o riservate e destinate all'uso esclusivo del destinatario originale. Se hai visitato questo sito per errore, lascia il sito immediatamente ed eliminalo dalla cronologia.",
-    "two" : "Tutte le informazioni contenute in questo sito Web sono riservate e sono destinate esclusivamente all'uso della persona o dell'entità a cui sono indirizzate. Se hai visitato questo sito per errore, non devi copiare, distribuire o divulgare le informazioni in esso contenute.",
-    "mobile" : "E questo sito web è ottimizzato per i dispositivi mobili, dagli un minuto e visitalo con il tuo telefono o tablet. Grazie."
+  "disclaimers": {
+    "one": "Secondo il Regolamento generale sulla protezione dei dati (GDPR) (UE) 2016/679. Le informazioni contenute in questo sito Web possono essere privilegiate o riservate e destinate all'uso esclusivo del destinatario originale. Se hai visitato questo sito per errore, lascia il sito immediatamente ed eliminalo dalla cronologia.",
+    "two": "Tutte le informazioni contenute in questo sito Web sono riservate e sono destinate esclusivamente all'uso della persona o dell'entità a cui sono indirizzate. Se hai visitato questo sito per errore, non devi copiare, distribuire o divulgare le informazioni in esso contenute.",
+    "mobile": "E questo sito web è ottimizzato per i dispositivi mobili, dagli un minuto e visitalo con il tuo telefono o tablet. Grazie."
+  },
+  "experience": {
+    "expandAll": "Espandi tutto",
+    "collapseAll": "crolla tutto",
+    "myProjects": "I miei progetti",
+    "myProjectsContent": "Elenco delle biblioteche",
+    "relevantExperience": "Esperienza rilevante",
+    "relevantExperienceContent": "Attualmente la mia unica esperienza rilevante è lo sviluppo di questo sito web",
+    "irrelevantExperience": "Esperienza irrilevante",
+    "irrelevantExperienceContent": "Lavoravo da un venditore di componenti elettronici a un saldatore in cantiere. Da riparatore di veicoli a responsabile dell'ospitalità in ostello. Ma tutto questo è irrilevante."
+  },
+  "education": {
+    "education": "Formazione scolastica",
+    "schoolName": "Perm State Motor Transport College",
+    "spec": "Meccanico del veicolo, 3 ° grado"
+  },
 
+  "gradientLine": "questa linea rappresenta la maestria di un'abilità dal rosso (basso) al verde (alto)",
+  "aboutMe": "Su di me",
+  "expAboutMe": {
+    "dob": "Data di nascita",
+    "dobDate": "15 marzo 1994 (26 anni)",
+    "permits": "Permessi",
+    "permitsAct": "Permesso di soggiorno e permesso di lavoro in Italia",
+    "cityOfR": "Città di residenza",
+    "addr": "73048, Nardo' (LE), Italia",
+    "languages": "Le lingue",
+    "eng": "Inglese",
+    "rus": "Russo",
+    "ita": "Italiano",
+    "esp": "Spagnolo",
+    "lvFl": "Fluente",
+    "lvNa": "Madrelingua",
+    "lvBa": "Di base"
   },
-  "experience" : {
-    "expandAll" : "Espandi tutto",
-    "collapseAll" : "crolla tutto",         
-    "myProjects" : "I miei progetti",
-      "myProjectsContent" : "Elenco delle biblioteche",
-    "relevantExperience" : "Esperienza rilevante",
-      "relevantExperienceContent": "Attualmente la mia unica esperienza rilevante è lo sviluppo di questo sito web",
-    "irrelevantExperience" : "Esperienza irrilevante",
-      "irrelevantExperienceContent" : "Lavoravo da un venditore di componenti elettronici a un saldatore in cantiere. Da riparatore di veicoli a responsabile dell'ospitalità in ostello. Ma tutto questo è irrilevante."
-   
+  "months": {
+    "january": "Gennaio",
+    "february": "Febbraio",
+    "march": "Marzo",
+    "april": "Aprile",
+    "may": "Maggio",
+    "june": "Giugno",
+    "july": "Luglio",
+    "august": "Agosto",
+    "september": "Settembre",
+    "october": "Ottobre",
+    "november": "Novembre",
+    "december": "Dicembre"
   },
-   "education" : { 
-     "education": "Formazione scolastica",
-    "schoolName" : "Perm State Motor Transport College",
-    "spec" : "Meccanico del veicolo, 3 ° grado"
-   },
-
-  "gradientLine" : "questa linea rappresenta la maestria di un'abilità dal rosso (basso) al verde (alto)",
-    "aboutMe" : "Su di me",
-      "expAboutMe" : {
-        "dob" : "Data di nascita",
-        "dobDate" : "15 marzo 1994 (26 anni)",
-        "permits" : "Permessi",
-        "permitsAct" : "Permesso di soggiorno e permesso di lavoro in Italia",
-        "cityOfR": "Città di residenza",
-        "addr" : "73048, Nardo' (LE), Italia",
-        "languages" : "Le lingue",
-        "eng" : "Inglese",
-        "rus" : "Russo",
-        "ita" : "Italiano",
-        "esp" : "Spagnolo",
-        "lvFl" : "Fluente",
-        "lvNa" : "Madrelingua",
-        "lvBa" : "Di base"
-        },
-"months" : {
-  "january" : "Gennaio",
-  "february" : "Febbraio",
-  "march" : "Marzo",
-  "april" : "Aprile",
-  "may" : "Maggio",
-  "june" : "Giugno",
-  "july" : "Luglio",
-  "august" : "Agosto",
-  "september" : "Settembre",
-  "october" : "Ottobre",
-  "november" : "Novembre",
-  "december" : "Dicembre"
-},
-"lightCv" : {
-  "thisIs" : "Questa è una versione leggera del mio CV,",
-  "visitThis": "per favore visita",
-  "scanThis": "o scansiona il codice QR qui sotto.",
-  "ty" : "Grazie!",
-  "alert" : "Se il PDF viene visualizzato con errori, aggiorna la pagina e riprova. Grazie."
-}  ,
-"tributes" : {
-  "header": "Mille grazie a:",
-  "subscribe" : "sottoscrivi",
-  "visit" : "Visitare",
-  "netninja" : "Per i suoi fantastici tutorial",
-  "goit" : "Per avermi presentato HTML e CSS",
-  "community": "Per una community straordinaria"
-}      
+  "lightCv": {
+    "thisIs": "Questa è una versione leggera del mio CV,",
+    "visitThis": "per favore visita",
+    "scanThis": "o scansiona il codice QR qui sotto.",
+    "ty": "Grazie!",
+    "alert": "Se il PDF viene visualizzato con errori, aggiorna la pagina e riprova. Grazie."
+  },
+  "tributes": {
+    "header": "Mille grazie a:",
+    "subscribe": "sottoscrivi",
+    "visit": "Visitare",
+    "netninja": "Per i suoi fantastici tutorial",
+    "goit": "Per avermi presentato HTML e CSS",
+    "community": "Per una community straordinaria"
+  }
 }

@@ -2,7 +2,7 @@
   <v-main class="pt-0">
     <v-card
       :title="[$t('gradientLine')]"
-      :class="{ 'grey lighten-2': colorSwitch }"
+      :class="{ 'default-dark-color': colorSwitch }"
     >
       <v-card-text class="pt-1">
         <div class="parent d-flex justify-center">
@@ -36,7 +36,7 @@
             text
             color="grey"
             @click.once="sortBy('mastery')"
-            v-on="on"
+            
           >
             <v-icon small class="my-auto">sort</v-icon>
             <span right class="caption text-lowercase pl-1 my-auto"
@@ -107,4 +107,7 @@ export default {
   line-height: 1;
   font-size: xx-small;
 }
+.default-dark-color {
+  background-color: #1e1e1e !important;
+} 
 </style>

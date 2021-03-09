@@ -1,7 +1,7 @@
 <template class>
   <v-app class="">
     <navBar />
-    <v-main class="  mx-4 px-3 mb-4">
+    <v-main class=" mx-4 px-3 mb-4">
       <router-view> </router-view>
       <v-btn
         v-scroll="onScroll"
@@ -22,13 +22,34 @@
 
 <script>
 import navBar from "./components/Navbar";
+
+var today = new Date ();
+var date = (today.getMonth()+1)
+var time = today.getHours()
+
+
 export default {
   name: "App",
 
   components: { navBar },
-
+mounted: function () {
+  
+  if ((date >= 11 && date <= 3) &&  (time <= 7 && time >=19 )) {
+    this.$vuetify.theme.dark = true
+  } else if ((date < 11 && date > 3) && (time <=5 && time >= 21)) {
+    this.$vuetify.theme.dark = true
+  }
+  else {
+    this.$vuetify.theme.dark = false
+  }
+  console.log("dark theme is: " + this.$vuetify.theme.dark + " because " + 
+  "the months is: " + date + " and its type is: " + typeof date + " |AND|" +
+  " the hour is: " +  time + " and its type is: " + typeof time +
+  " perhaps it's not dark yet :(")
+},
   data: () => ({
     fab: false,
+    
     //
   }),
   methods: {
