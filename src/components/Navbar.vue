@@ -2,6 +2,7 @@
   <nav>
     <v-app-bar flat app>
       <v-app-bar-nav-icon
+        xLarge
         class="grey--text"
         @click="draw = !draw"
       >
@@ -28,7 +29,7 @@
 
 
       <!-- dropdown menu -->
-      <div class="text-center">
+      <div class="text-center" v-if="$vuetify.breakpoint.mdAndUp">
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
             <v-btn text color="grey" dark v-bind="attrs" v-on="on">

@@ -1,6 +1,7 @@
 <template ref="document">
   <v-main class="pt-0 mt-2"
-  :class="{'thiner mx-auto':$vuetify.breakpoint.lgAndUp}">
+  :class="{'thiner mx-auto':$vuetify.breakpoint.lgAndUp,
+  'even-thiner' : $vuetify.breakpoint.xlAndUp}">
     <v-card class="my-2 px-2 ">
       <v-row class="justify-space-between">
         <v-col cols="8">
@@ -85,7 +86,10 @@ export default {
 
 <style>
 .thiner {  
-  width: 70%;
+  width: 60%;
+}
+.even-thiner {
+  width: 45%;
 }
 ul {
   list-style-type: none;

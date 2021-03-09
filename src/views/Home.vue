@@ -25,8 +25,12 @@
     <v-divider /> -->
       <div class="class"
       :class="{ 'dark-mode' : $vuetify.theme.dark}">
-        <h1 class="text-uppercase mb-1">Hire mike</h1> <br />
-        <h3>today please</h3>   
+        <h1 class="text-uppercase mb-1"
+        :class="{'black--text' : $vuetify.theme.dark === false}"
+        >Hire mike</h1> <br />
+        <h3 
+        :class="{'black--text' : $vuetify.theme.dark === false}"
+        >today please</h3>   
             <div class="button-box">
               <v-row
               dense
@@ -47,8 +51,9 @@
                     :large="$vuetify.breakpoint.mdAndUp"            
                     :x-small="$vuetify.breakpoint.smAndDown"
                     > 
-                    <a :href="contact.link">
-                        <v-icon  :small="$vuetify.breakpoint.smAndDown">
+                    <a :href="contact.link"  >
+                        <v-icon 
+                        :small="$vuetify.breakpoint.smAndDown">
                         {{ contact.icon }}
                         </v-icon>
                     </a>
@@ -89,7 +94,7 @@ export default {
     top: calc(40% - 15px);
     left: calc(25% - 20px);
 }
-.dark-mode {
+.dark-mode a, h1, h3 {
   color: #41b883;
 }
 .button-box {

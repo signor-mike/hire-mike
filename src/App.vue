@@ -34,12 +34,11 @@ export default {
   components: { navBar },
 mounted: function () {
   
-  if ((date >= 11 && date <= 3) &&  (time <= 7 && time >=19 )) {
+  if ((date >= 11 || date <= 3) &&  (time <= 7 || time >=19 )) {
     this.$vuetify.theme.dark = true
-  } else if ((date < 11 && date > 3) && (time <=5 && time >= 21)) {
+  } else if ((date < 11 || date > 3) && (time <=5 || time >= 21)) {
     this.$vuetify.theme.dark = true
-  }
-  else {
+  } else {  
     this.$vuetify.theme.dark = false
   }
   console.log("dark theme is: " + this.$vuetify.theme.dark + " because " + 
