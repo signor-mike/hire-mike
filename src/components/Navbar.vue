@@ -105,6 +105,11 @@ export default {
           text: "Tributes",
           route: "/tributes",
         },
+         {
+          icon: "flutter_dash",
+          text: "Something",
+          route: "/something",
+        },
       ],
       // don't forget to set routes in ./router/index.js
     };

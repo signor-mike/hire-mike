@@ -5,6 +5,7 @@ import mikeCV from "../views/CvMike.vue";
 import Home from "../views/Home.vue";
 import printing from "../views/Print.vue";
 import tributes from "../views/Tributes.vue";
+import something from "../views/Something.vue";
 
 Vue.use(VueRouter);
 
@@ -41,6 +42,11 @@ const routes = [
         path: "print",
         name: "print",
         component: printing,
+      },
+       {
+        path: "something",
+        name: "something",
+        component: something,
       },
     ],
   },
