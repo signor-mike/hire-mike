@@ -25,7 +25,7 @@
     <v-divider /> -->
       <div class="class"
       :class="{ 'dark-mode' : $vuetify.theme.dark}">
-        <h1 class="text-uppercase">Hire mike</h1> <br />
+        <h1 class="text-uppercase mb-1">Hire mike</h1> <br />
         <h3>today please</h3>   
             <div class="button-box">
               <v-row
