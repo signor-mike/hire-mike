@@ -78,11 +78,6 @@ export default {
       return this.$store.state.contacts;
     },
   }
-  // mounted: function () {
-  //   if (this.$vuetify.theme.dark) {
-
-  //   }
-  // }
 };
 </script>
 
@@ -94,8 +89,8 @@ export default {
     top: calc(40% - 15px);
     left: calc(25% - 20px);
 }
-.dark-mode a, h1, h3 {
-  color: #41b883;
+.dark-mode, a, h1, h3 {
+  color: #41b883 !important;
 }
 .button-box {
   position: relative;

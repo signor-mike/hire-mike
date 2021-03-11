@@ -1,5 +1,4 @@
 {
-  "message": "Home page",
   "home": {
     "button": "Lebenslauf öffnen",
     "firstArticle": "Das Erstellen von Websites ist nicht so schwierig, wie es aussehen mag. Jede Programmiersprache ist viel einfacher als jede menschliche Sprache. Und wenn Sie Ihre Sprache gelernt haben, können Sie jede Programmiersprache lernen. Diese Website sieht ziemlich abscheulich aus, aber es ist nur weil ich sehr schlecht im Design bin. Jeder kann lernen, wie man es macht. Glauben Sie mir. Noch vor 8 Wochen kannte ich den Unterschied zwischen div und span nicht. Und heute können Sie sehen, was ich getan habe. Es ist nicht so viel, aber es ist eine ehrliche Arbeit."
@@ -103,13 +102,5 @@
     "scanThis": "oder scannen Sie den folgenden QR-Code.",
     "ty": "Danke!",
     "alert": "Wenn PDF-Dateien fehlerhaft gerendert wurden, aktualisieren Sie die Seite und versuchen Sie es erneut. Vielen Dank."
-  },
-  "tributes": {
-    "header": "Vielen Dank an: ",
-    "subscribe": "Abonnieren",
-    "visit": "Besuch",
-    "netninja": "Für seine erstaunlichen Tutorials",
-    "goit": "Für die Einführung von HTML und CSS",
-    "community": "Für eine tolle Community"
   }
 }

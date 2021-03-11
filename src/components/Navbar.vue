@@ -59,15 +59,6 @@
     <v-navigation-drawer src="/outer-space.jpg"
      temporary bottom app v-model="draw" class="primary py-3">
       <v-list dark>
-        <!-- <v-list-item @click="draw = !draw">
-          <v-list-item-action>
-            <v-icon class="">highlight_off</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Close the menu </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item> -->
-
         <v-list-item
           v-for="link in links"
           :key="link.text"

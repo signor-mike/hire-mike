@@ -19,7 +19,7 @@
     <v-card class="my-5 px-2">
       <v-row class="justify-space-between">
         <v-col cols="auto" sm="auto" md="4" class="d-flex justify-start">
-          <HardSkills />
+          <HardSkills  />
         </v-col>
 
         <v-col cols="auto" sm="auto" md="4" class="d-flex justify-center">
@@ -27,7 +27,7 @@
         </v-col>
 
         <v-col cols="auto" sm="auto" md="4" class="d-flex  justify-end">
-          <SoftSkills
+          <SoftSkills 
             :class="{
               'd-none': $vuetify.breakpoint.smAndDown,
             }"
@@ -69,6 +69,7 @@ export default {
   data() {
     return {
       fab: false,
+     
     };
   },
   methods: {
@@ -80,7 +81,9 @@ export default {
     toTop() {
       this.$vuetify.goTo(0);
     },
+  
   },
+ 
 };
 </script>
 

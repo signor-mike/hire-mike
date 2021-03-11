@@ -41,10 +41,12 @@ mounted: function () {
   } else {  
     this.$vuetify.theme.dark = false
   }
-  console.log("dark theme is: " + this.$vuetify.theme.dark + " because " + 
-  "the months is: " + date + " and its type is: " + typeof date + " |AND|" +
-  " the hour is: " +  time + " and its type is: " + typeof time +
-  " perhaps it's not dark yet :(")
+  if (!this.$vuetify.theme.dark) {
+    console.log("The dark theme is off by default, perhaps it's not dark yet")
+  } else {
+    console.log("The dark theme is ON by default, perhaps it's really dark")
+  }
+  
 },
   data: () => ({
     fab: false,

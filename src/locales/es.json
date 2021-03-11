@@ -1,5 +1,4 @@
 {
-  "message": "Página de inicio",
   "home": {
     "button": "abrir cv",
     "firstArticle": "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendiste tu idioma, puedes aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero solo porque soy muy malo en el diseño. Todo el mundo puede aprender a hacerlo. Créanme. Hace solo 8 semanas no sabía la diferencia entre div y span. Y hoy puedes ver lo que he hecho. No es mucho pero es un trabajo honesto."
@@ -103,13 +102,5 @@
     "scanThis": "o escanee el código QR a continuación.",
     "ty": "¡Gracias!",
     "alert": "Si el PDF presenta errores, actualice la página y vuelva a intentarlo. Gracias."
-  },
-  "tributes": {
-    "header": "Muchas gracias a: ",
-    "subscribe": "Suscribirse",
-    "visit": "Visita",
-    "netninja": "Por sus increíbles tutoriales",
-    "goit": "Por presentarme HTML y CSS",
-    "community": "Para una comunidad increíble"
   }
 }

@@ -18,47 +18,36 @@
       class="mt-6 "
       :class="{
         'mt-0 ': $vuetify.breakpoint.smAndDown,
-        'default-dark-color': colorSwitch,
+        'default-dark-color': $vuetify.theme.dark,
       }"
-      :title="[$t('gradientLine')]"
+     
     >
       <SoftSkills v-if="replace" />
       <v-card-text v-if="!replace" class="pt-1">
         <div class="parent d-flex justify-center">
           <span
             class="child text-center mx-n3 "
-            :class="{ 'primary--text font-weight-regular': colorSwitch }"
+            :class="{ 'primary--text font-weight-regular': $vuetify.theme.dark, 
+                      'd-none': !$vuetify.theme.dark }"
           >
             {{ $t("gradientLine") }}
           </span>
         </div>
-        <div class="gradient-line"></div>
-        <div class="d-flex justify-space-between mb-2">
+        <div class="gradient-line" :class="{'d-none':   !$vuetify.theme.dark }"></div>
+        <div class="d-flex justify-space-between mb-2"
+              :class="{'d-flex justify-space-around' : $vuetify.breakpoint.smAndDown }">
           <h2
-            class="my-auto pl-0 primary--text"
-            :class="{ 'font-weight-black': colorSwitch }"
+            class="my-auto pl-0 primary--text mt-1"
+            :class="{ 'font-weight-black mt-2': $vuetify.theme.dark,
+            'mb-3' : !$vuetify.theme.dark,
+            'mb-3' : $vuetify.theme.dark && $vuetify.breakpoint.smAndDown,
+            'mb-3' : $vuetify.breakpoint.smAndDown }"
           >
             {{ $t("skills.hardSkills") }}
           </h2>
 
-          <v-btn
-            class="d-none"
-            :class="{
-              'my-auto d-inline': $vuetify.breakpoint.smAndDown && colorSwitch,
-            }"
-            small
-            text
-            color="grey"
-            @click.once="sortBy('mastery')"
-            
-          >
-            <v-icon small class="my-auto">sort</v-icon>
-            <span right class="caption text-lowercase pl-1 my-auto"
-              >by mastery</span
-            >
-          </v-btn>
-
-          <v-switch v-model="colorSwitch"></v-switch>
+         
+          
         </div>
 
         <div :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }">
@@ -71,12 +60,14 @@
               v-for="hardSkill in hardSkills"
               :key="hardSkill.i"
               cols="auto"
+              class="font-weight-bold"
               :class="{
-                'font-weight-500': $vuetify.breakpoint.smAndDown,
-                [hardSkill.mastery]: colorSwitch,
+                'font-weight-500': $vuetify.breakpoint.smAndDown,                                
               }"
             >
-              {{ $t(`hardSkills.${hardSkill.title}`) }}
+              <span :class="{[hardSkill.mastery]: $vuetify.theme.dark}"> 
+                {{ $t(`hardSkills.${hardSkill.title}`) }} 
+              </span>
             </v-col>
           </v-row>
         </div>
@@ -89,10 +80,10 @@
 import SoftSkills from "@/components/CV-components/SoftSkills.vue";
 
 export default {
+   props: {},
   data() {
     return {
       replace: false,
-      colorSwitch: false,
     };
   },
   methods: {
@@ -110,7 +101,7 @@ export default {
     },
     hardSkills() {
       return this.skills.filter((skill) => skill.type === "hard");
-    },
+    },    
   },
 };
 </script>

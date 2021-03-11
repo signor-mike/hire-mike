@@ -148,8 +148,62 @@ const store = new Vuex.Store({
         techIconSrc: "/vue-i18n.png",
       },
     ],
+    tributes: [
+      {
+        img: '/goit-logo.png',
+        title: 'GoIT',
+        subtitle: 'For introducing basics of HTML and CSS to me.',
+        text: 'I begun with them. Of course they showed me just basics of HTML and CSS, but it was more than enough for me to get inspired and continue my education on my own.',
+        linkOne: 'https://goit.ua/',
+        iconOne: 'http',
+        linkTwo: 'mailto:info@goit.ua',
+        iconTwo: 'email'
+      },
+      {
+        img: '/net-ninja-logo.png',
+        title: 'Shaun the Net Ninja',
+        subtitle: 'For his awesome tutorials.',
+        text: 'His YouTube channel has some fantastic tutorials. I believe he really has a talent for teaching. I wish I had teachers like him in my school.',
+        linkOne: 'https://www.thenetninja.co.uk/',
+        iconOne: 'http',
+        linkTwo: 'https://www.youtube.com/c/TheNetNinja/playlists',
+        iconTwo: 'subscriptions'
+      },
+      {
+        img: '/stOv-logo.png',
+        title: 'Stack Overflow',
+        subtitle: 'For its amazing community.',
+        text: 'They helped me learn, to understand and even find a clue when I was completely lost.',
+        linkOne: 'https://stackoverflow.com/',
+        iconOne: 'http',
+        linkTwo: 'https://stackoverflow.com/users',
+        iconTwo: 'people'
+      },
+      {
+        img: '/reddit-logo.png',
+        title: 'Reddit',
+        subtitle: 'For its awesome community.',
+        text: 'Reddit is absolutely the best. Unfortunately some communities are not as big as on Stack Overflow, but people there are totally willing to help.',
+        linkOne: 'https://www.reddit.com/',
+        iconOne: 'http',
+        linkTwo: 'https://www.reddit.com/r/vuejs',
+        iconTwo: 'language'
+      },
+      {
+        img: '/question.jpg',
+        title: 'And...',
+        subtitle: 'Of course you! My dear visitor!',
+        text: "It wouldn't really make any sense if this page weren't seen by anybody else expect me? Isn't it? Thank you very much for visiting my website!",
+        linkOne: 'mailto:mikelitoris34@icloud.com',
+        iconOne: 'email',
+        linkTwo: '/en/mike-cv',
+        iconTwo: 'contact_page'
+      },
+    ]
   },
-  getters: {},
+  getters: {
+    
+  },
   mutations: {},
 });
 
