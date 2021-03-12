@@ -1,21 +1,41 @@
 <template>
   <v-main class="pt-0 px-1">
     <div class="text-center d-flex pb-2 justify-space-around">
-      <v-btn small @click="all">
-        <v-icon :small="$vuetify.breakpoint.smAndDown" medium color="primary">
+      <v-btn
+        small
+        @click="all"
+      >
+        <v-icon
+          :small="$vuetify.breakpoint.smAndDown"
+          medium
+          color="primary"
+        >
           unfold_more
         </v-icon>
         {{ $t("experience.expandAll") }}
       </v-btn>
 
-      <v-btn small @click="none">
-        <v-icon :small="$vuetify.breakpoint.smAndDown" medium color="primary">
+      <v-btn
+        small
+        @click="none"
+      >
+        <v-icon
+          :small="$vuetify.breakpoint.smAndDown"
+          medium
+          color="primary"
+        >
           unfold_less
         </v-icon>
         {{ $t("experience.collapseAll") }}
       </v-btn>
     </div>
-    <v-expansion-panels accordion focusable popout v-model="panel" multiple>
+    <v-expansion-panels
+      v-model="panel"
+      accordion
+      focusable
+      popout
+      multiple
+    >
       <!-- about me -->
       <ExpAboutMe />
       <!-- my projects -->

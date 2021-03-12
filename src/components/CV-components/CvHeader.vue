@@ -6,7 +6,11 @@
           class="button ma-2"
           :class="{ 'd-none': $vuetify.breakpoint.smAndDown }"
         >
-          <v-btn text router :to="`/${$i18n.locale}/print`">
+          <v-btn
+            text
+            router
+            :to="`/${$i18n.locale}/print`"
+          >
             <v-icon>print</v-icon>
           </v-btn>
         </div>

@@ -22,17 +22,23 @@
                   <v-list-item-title
                     class="primary--text"
                     v-text="$t('experience.myProjectsContent')"
-                  ></v-list-item-title>
+                  />
                 </v-list-item-content>
               </template>
-              <v-list-item v-for="tech in techs" :key="tech.id">
+              <v-list-item
+                v-for="tech in techs"
+                :key="tech.id"
+              >
                 <!-- cycle through data over here -->
                 <v-list-item-title>
                   {{ tech.techName }}
                 </v-list-item-title>
                 <v-list-item-subtitle>
                   <v-avatar size="25">
-                    <img :src="tech.techIconSrc" alt="icon" />
+                    <img
+                      :src="tech.techIconSrc"
+                      alt="icon"
+                    >
                   </v-avatar>
                 </v-list-item-subtitle>
               </v-list-item>

@@ -11,9 +11,9 @@
         <p>The name of the person, Antonio I guess</p>
         <p>The positon, let's call it CEO</p>
         <p>
-          Phone number (clickable):<a href="tel:+39blahblah"
-            >+355 blah blah blah</a
-          >
+          Phone number (clickable):<a
+            href="tel:+39blahblah"
+          >+355 blah blah blah</a>
         </p>
         <p>
           WhatsApp (clickable link to WhatsApp):
@@ -23,8 +23,12 @@
           email (clickable to send an email):
           <a href="mailto:someone@exp.com">example@exp.com</a>
         </p>
-        <p caption>And there's something else whatever the hell you want</p>
-        <p class="font-weight-thin">And something thin as fuck</p>
+        <p caption>
+          And there's something else whatever the hell you want
+        </p>
+        <p class="font-weight-thin">
+          And something thin as fuck
+        </p>
       </div>
       <div class="image">
         <v-img

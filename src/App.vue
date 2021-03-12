@@ -2,10 +2,10 @@
   <v-app class="">
     <navBar />
     <v-main class=" mx-4 px-3 mb-4">
-      <router-view> </router-view>
+      <router-view />
       <v-btn
-        v-scroll="onScroll"
         v-show="fab"
+        v-scroll="onScroll"
         fab
         dark
         fixed
@@ -32,6 +32,12 @@ export default {
   name: "App",
 
   components: { navBar },
+  data: () => ({
+    fab: false,
+    
+    //
+  }),
+  
 mounted: function () {
   
   if ((date >= 11 || date <= 3) &&  (time <= 7 || time >=19 )) {
@@ -48,11 +54,6 @@ mounted: function () {
   }
   
 },
-  data: () => ({
-    fab: false,
-    
-    //
-  }),
   methods: {
     onScroll(e) {
       if (typeof window === "undefined") return;

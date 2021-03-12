@@ -11,8 +11,8 @@
     <v-expansion-panel-content class="py-3 font-weight-thin">
       {{ $t("experience.relevantExperienceContent") }}
     </v-expansion-panel-content>
-  </v-expansion-panel></template
->
+  </v-expansion-panel>
+</template>
 
 <script>
 export default {};

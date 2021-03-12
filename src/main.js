@@ -8,6 +8,7 @@ import i18n from "./i18n";
 import FlagIcon from "vue-flag-icon";
 import jsPDF from "jspdf";
 import html2PDF from "jspdf-html2canvas";
+import VueTypedJs from 'vue-typed-js'
 
 Vue.config.productionTip = false;
 
@@ -20,7 +21,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-Vue.use(FlagIcon);
+Vue.use(FlagIcon, VueTypedJs);
 
 new Vue({
   Vuex,

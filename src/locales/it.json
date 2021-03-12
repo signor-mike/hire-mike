@@ -67,7 +67,8 @@
   "aboutMe": "Su di me",
   "expAboutMe": {
     "dob": "Data di nascita",
-    "dobDate": "15 marzo 1994 (26 anni)",
+    "dobDate": "15 marzo 1994 (",
+    "yearsOld": " anni)",
     "permits": "Permessi",
     "permitsAct": "Permesso di soggiorno e permesso di lavoro in Italia",
     "cityOfR": "Città di residenza",

@@ -1,6 +1,8 @@
 <template>
   <div class="dashboard">
-    <h1 class="subheading grey--text">This is a dashboard</h1>
+    <h1 class="subheading grey--text">
+      This is a dashboard
+    </h1>
     <v-container class="my-5">
       <!-- <v-row>
 
@@ -67,12 +69,29 @@
         </v-col>
       </v-row> -->
 
-      <v-row class="mb-3 pa-5" justify="space-between">
+      <v-row
+        class="mb-3 pa-5"
+        justify="space-between"
+      >
         <v-tooltip top>
           <template v-slot:activator="{ on }">
-            <v-btn small text color="grey" @click="sortBy('title')" v-on="on">
-              <v-icon left small>folder</v-icon>
-              <span right class="caption text-lowercase">by project name</span>
+            <v-btn
+              small
+              text
+              color="grey"
+              @click="sortBy('title')"
+              v-on="on"
+            >
+              <v-icon
+                left
+                small
+              >
+                folder
+              </v-icon>
+              <span
+                right
+                class="caption text-lowercase"
+              >by project name</span>
             </v-btn>
           </template>
           <span>Sorts projects by name</span>
@@ -80,9 +99,23 @@
 
         <v-tooltip top>
           <template v-slot:activator="{ on }">
-            <v-btn small text color="grey" @click="sortBy('person')" v-on="on">
-              <v-icon left small>person</v-icon>
-              <span right class="caption text-lowercase">by person</span>
+            <v-btn
+              small
+              text
+              color="grey"
+              @click="sortBy('person')"
+              v-on="on"
+            >
+              <v-icon
+                left
+                small
+              >
+                person
+              </v-icon>
+              <span
+                right
+                class="caption text-lowercase"
+              >by person</span>
             </v-btn>
           </template>
           <span>Sorts projects by person</span>
@@ -98,28 +131,59 @@
         </v-tooltip> -->
       </v-row>
 
-      <v-card flat v-for="project in projects" :key="project.title">
+      <v-card
+        v-for="project in projects"
+        :key="project.title"
+        flat
+      >
         <v-row :class="`ma-1 pa-3 project ${project.status}`">
-          <v-col cols="12" md="6" :title="project.content">
-            <div class="caption grey--text">Project title</div>
+          <v-col
+            cols="12"
+            md="6"
+            :title="project.content"
+          >
+            <div class="caption grey--text">
+              Project title
+            </div>
             <div>{{ project.title }}</div>
           </v-col>
 
-          <v-col cols="12" sm="4" md="2" :title="project.content">
-            <div class="caption grey--text">Person</div>
+          <v-col
+            cols="12"
+            sm="4"
+            md="2"
+            :title="project.content"
+          >
+            <div class="caption grey--text">
+              Person
+            </div>
             <div>{{ project.person }}</div>
           </v-col>
 
-          <v-col cols="12" sm="4" md="2" :title="project.content">
-            <div class="caption grey--text">Due by</div>
+          <v-col
+            cols="12"
+            sm="4"
+            md="2"
+            :title="project.content"
+          >
+            <div class="caption grey--text">
+              Due by
+            </div>
             <div>{{ project.due }}</div>
           </v-col>
 
-          <v-col cols="12" sm="4" md="2" :title="project.content">
+          <v-col
+            cols="12"
+            sm="4"
+            md="2"
+            :title="project.content"
+          >
             <div class="text-right">
-              <v-chip :class="`${project.status} white--text caption my-2 `">{{
-                project.status
-              }}</v-chip>
+              <v-chip :class="`${project.status} white--text caption my-2 `">
+                {{
+                  project.status
+                }}
+              </v-chip>
             </div>
           </v-col>
         </v-row>
@@ -133,6 +197,7 @@
 // @ is an alias to /src
 
 export default {
+  components: {},
   data() {
     return {
       projects: [
@@ -184,7 +249,6 @@ export default {
       this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     },
   },
-  components: {},
 };
 </script>
 

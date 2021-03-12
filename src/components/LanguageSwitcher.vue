@@ -3,10 +3,20 @@
     <div class="d-flex justify-center">
       <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on" text class="grey--text">
-            <v-icon left>expand_more</v-icon>
+          <v-btn
+            v-bind="attrs"
+            text
+            class="grey--text"
+            v-on="on"
+          >
+            <v-icon left>
+              expand_more
+            </v-icon>
             <v-avatar size="25">
-              <img :src="`/flag_${$i18n.locale}.png`" alt="" />
+              <img
+                :src="`/flag_${$i18n.locale}.png`"
+                alt=""
+              >
             </v-avatar>
             <!-- <flag :iso="$i18n.locale" /> -->
             <span class="ml-1">{{ $i18n.locale.toUpperCase() }}</span>
@@ -21,7 +31,10 @@
             <!-- <flag :iso="lang" /> -->
 
             <v-avatar size="25">
-              <img :src="`/flag_${lang}.png`" alt="" />
+              <img
+                :src="`/flag_${lang}.png`"
+                alt=""
+              >
             </v-avatar>
             <v-list-item-title>
               <span class="ml-2">

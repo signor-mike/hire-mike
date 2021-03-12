@@ -2,36 +2,36 @@
   <v-main class="pt-0">
     <v-card
       
-      :class="{ 'default-dark-color': $vuetify.theme.dark  }"
+      :class="{ 'default-dark-color': $vuetify.theme.dark }"
     >
       <v-card-text class="pt-1">
         <div class="parent d-flex justify-center">
           <span
             class="child text-center mx-n3"
             :class="{ 'primary--text font-weight-regular': $vuetify.theme.dark , 
-            'd-none': !$vuetify.theme.dark  }"
+                      'd-none': !$vuetify.theme.dark }"
           >
             {{ $t("gradientLine") }}
           </span>
         </div>
-        <div class="gradient-line" :class="{ 'd-none': !$vuetify.theme.dark }"></div>
-        <div class="d-flex justify-space-between mb-2"
-        :class="{ 'd-flex text-right flex-row-reverse mb-4' : $vuetify.breakpoint.mdAndUp,
-                  'd-flex justify-space-around' : $vuetify.breakpoint.smAndDown }">
-         
-
+        <div
+          class="gradient-line"
+          :class="{ 'd-none': !$vuetify.theme.dark }"
+        />
+        <div
+          class="d-flex justify-space-between mb-2"
+          :class="{ 'd-flex text-right flex-row-reverse mb-4' : $vuetify.breakpoint.mdAndUp,
+                    'd-flex justify-space-around' : $vuetify.breakpoint.smAndDown }"
+        >
           <h2
             class="my-auto pl-0 primary--text mt-1"
             :class="{ 'font-weight-black mt-2': $vuetify.theme.dark,
-            'mb-3' : !$vuetify.theme.dark,
-            'mb-3' : $vuetify.theme.dark && $vuetify.breakpoint.smAndDown,
-            'mb-3' : $vuetify.breakpoint.smAndDown }"
+                      'mb-3' : !$vuetify.theme.dark,
+                      'mb-3' : $vuetify.theme.dark && $vuetify.breakpoint.smAndDown,
+                      'mb-3' : $vuetify.breakpoint.smAndDown }"
           >
             {{ $t("skills.softSkills") }}
           </h2>
-
-          
-          
         </div>
         <div
           class="d-flex justify-end"
@@ -72,17 +72,17 @@ export default {
     return {
      };
   },
-  methods: {
-    sortBy(prop) {
-      this.skills.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
-    },
-  },
   computed: {
     skills() {
       return this.$store.state.skills;
     },
     softSkills() {
       return this.skills.filter((skill) => skill.type === "soft");
+    },
+  },
+  methods: {
+    sortBy(prop) {
+      this.skills.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     },
   },    
 };

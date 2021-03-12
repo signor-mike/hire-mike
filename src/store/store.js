@@ -153,7 +153,7 @@ const store = new Vuex.Store({
         img: '/goit-logo.png',
         title: 'GoIT',
         subtitle: 'For introducing basics of HTML and CSS to me.',
-        text: 'I begun with them. Of course they showed me just basics of HTML and CSS, but it was more than enough for me to get inspired and continue my education on my own.',
+        text: 'I began with them. Of course they showed me just basics of HTML and CSS, but it was more than enough for me to get inspired and continue my education on my own.',
         linkOne: 'https://goit.ua/',
         iconOne: 'http',
         linkTwo: 'mailto:info@goit.ua',
@@ -196,7 +196,7 @@ const store = new Vuex.Store({
         text: "It wouldn't really make any sense if this page weren't seen by anybody else expect me? Isn't it? Thank you very much for visiting my website!",
         linkOne: 'mailto:mikelitoris34@icloud.com',
         iconOne: 'email',
-        linkTwo: '/en/mike-cv',
+        linkTwo: '/en/cv-mike',
         iconTwo: 'contact_page'
       },
     ]

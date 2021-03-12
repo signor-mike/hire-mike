@@ -1,6 +1,8 @@
 <template>
   <div class="projects">
-    <h1 class="subheading grey--text">This is a projects page</h1>
+    <h1 class="subheading grey--text">
+      This is a projects page
+    </h1>
 
     <!-- <v-expansion-panels class="mb-5">
       <v-expansion-panel>
@@ -17,14 +19,19 @@
     </v-expansion-panels> -->
 
     <v-expansion-panels multiple>
-      <v-expansion-panel v-for="project in myProjects" :key="project.title">
+      <v-expansion-panel
+        v-for="project in myProjects"
+        :key="project.title"
+      >
         <v-expansion-panel-header>
           {{ project.title }}
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-card>
             <v-card-text class="px-4 grey--text">
-              <div class="font-weight-bold">Due by {{ project.due }}</div>
+              <div class="font-weight-bold">
+                Due by {{ project.due }}
+              </div>
               <div>
                 {{ project.content }}
               </div>
@@ -34,7 +41,7 @@
       </v-expansion-panel>
     </v-expansion-panels>
 
-    <v-container class="my-5"> </v-container>
+    <v-container class="my-5" />
   </div>
 </template>
 

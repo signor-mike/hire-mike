@@ -1,9 +1,16 @@
 <template>
   <!-- dialog / popup -->
   <div>
-    <v-dialog v-model="dialog" max-width="50%">
+    <v-dialog
+      v-model="dialog"
+      max-width="50%"
+    >
       <template v-slot:activator="{ on }">
-        <v-btn v-on="on" text class="success px-2">
+        <v-btn
+          text
+          class="success px-2"
+          v-on="on"
+        >
           Add new project
         </v-btn>
       </template>

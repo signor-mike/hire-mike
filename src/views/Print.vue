@@ -1,29 +1,44 @@
 <template>
-  <div class="html d-none" ref="document">
+  <div
+    ref="document"
+    class="html d-none"
+  >
     <div class="body">
       <div class="upper-section">
         <div class="name-and-contacts">
           <h2>Mikhail Krivoshchekov (Mike)</h2>
           <h3>{{ $t("person.position") }}</h3>
-          <p>{{ $t("expAboutMe.dobDate") }}</p>
+          <p>{{ $t("expAboutMe.dobDate") }}{{ currentAge }}{{ $t("expAboutMe.yearsOld") }} </p>
           <p>{{ $t("expAboutMe.addr") }}</p>
           <ul>
-            <li v-for="contact in contacts" :key="contact.i">
+            <li
+              v-for="contact in contacts"
+              :key="contact.i"
+            >
               {{ contact.addr }}
             </li>
           </ul>
         </div>
 
-        <v-avatar class="avatar" size="200">
-          <img src="/my-face.jpg" alt="alt" />
+        <v-avatar
+          class="avatar"
+          size="200"
+        >
+          <img
+            src="/my-face.jpg"
+            alt="alt"
+          >
         </v-avatar>
       </div>
-      <hr />
+      <hr>
 
       <div class="bottom-section">
         <div class="soft-skills">
           <ul>
-            <li v-for="softSkill in softSkills" :key="softSkill.i">
+            <li
+              v-for="softSkill in softSkills"
+              :key="softSkill.i"
+            >
               {{ $t(`softSkills.${softSkill.title}`) }}
             </li>
           </ul>
@@ -55,14 +70,17 @@
             </ul>
           </div>
           <p>
-            {{ $t("lightCv.thisIs") }}<br />
+            {{ $t("lightCv.thisIs") }}<br>
             {{ $t("lightCv.visitThis") }}
             <a href="https://hire-mike.web.app/en/cv-mike">hire-mike.web.app</a>
-            <br />
+            <br>
             {{ $t("lightCv.scanThis") }}
           </p>
           <div class="qrcode">
-            <img src="/cv-qr.png" alt="" />
+            <img
+              src="/cv-qr.png"
+              alt=""
+            >
           </div>
 
           <p>{{ $t("lightCv.ty") }}</p>
@@ -70,7 +88,10 @@
 
         <div class="hard-skills">
           <ul>
-            <li v-for="hardSkill in hardSkills" :key="hardSkill.i">
+            <li
+              v-for="hardSkill in hardSkills"
+              :key="hardSkill.i"
+            >
               {{ $t(`hardSkills.${hardSkill.title}`) }}
             </li>
           </ul>
@@ -90,20 +111,8 @@ export default {
         { name: "email", addr: "MikeLitoris34@icloud.com" },
         { name: "phone", addr: "+39 351 0499 441" },
       ],
+      currentAge: '',
     };
-  },
-
-  methods: {},
-  mounted: function() {
-    html2pdf(this.$refs.document, {
-      margin: 0,
-      filename: `!CV-MIKE-${this.$i18n.locale.toUpperCase()}.pdf'`,
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { dpi: 292, letterRendering: true },
-      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-    }),
-      this.$router.go(-1);
-    alert(`${this.$t("lightCv.alert")}`);
   },
 
   computed: {
@@ -117,10 +126,42 @@ export default {
       return this.skills.filter((skill) => skill.type === "soft");
     },
   },
+beforeMount: function () {
+    this.getAge("1994/03/15");
+},
+  mounted: function() { 
+    html2pdf(this.$refs.document, {
+      margin: 0,
+      filename: `!CV-MIKE-${this.$i18n.locale.toUpperCase()}.pdf'`,
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { dpi: 292, letterRendering: true },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    }),
+      this.$router.go(-1);
+    alert(`${this.$t("lightCv.alert")}`);
+  },
+
+  methods: {
+    getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+    {
+        age--;
+    }
+    return this.currentAge = age,
+    console.log("age: " + this.currentAge + ' ' + typeof this.currentAge);   
+    }
+  },
 };
 </script>
 
 <style>
+li {
+  margin: 5px 0 5px 0;
+}
 .html {
   height: 100%;
 }
