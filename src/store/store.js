@@ -74,7 +74,7 @@ const store = new Vuex.Store({
       },
       { type: "hard", title: "Linux", mastery: "d-medium" },
       { type: "hard", title: "Design", mastery: "d-medium" },
-      { type: "hard", title: "php", mastery: "f-low" },
+      { type: "hard", title: "Nuxt", mastery: "f-low" },
 
       // soft skills
 
