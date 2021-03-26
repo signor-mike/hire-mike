@@ -15,7 +15,7 @@
           </span>
         </div>
         <div
-          class="gradient-line"
+          class="gradient-line my-1"
           :class="{ 'd-none': !$vuetify.theme.dark }"
         />
         <div

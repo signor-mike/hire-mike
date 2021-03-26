@@ -84,7 +84,9 @@
       :src="spacePicture"
       class="py-3"
     >
-      <v-list dark>
+      <v-list
+        dark
+      >
         <v-list-item
           v-for="link in links"
           :key="link.text"
