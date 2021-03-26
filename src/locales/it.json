@@ -21,7 +21,7 @@
     "ImageMaSo": "Software di manipolazione delle immagini",
     "Linux": "Linux",
     "Design": "Capacità di progettazione",
-    "SQL": "SQL"
+    "php": "php"
   },
 
   "softSkills": {
@@ -67,10 +67,11 @@
   "aboutMe": "Su di me",
   "expAboutMe": {
     "dob": "Data di nascita",
-    "dobDate": "15 marzo 1994 (",
-    "yearsOld": " anni)",
+    "dobDate": "15 marzo 1994 ",
+    "yearsOld": " anni",
     "permits": "Permessi",
-    "permitsAct": "Permesso di soggiorno e permesso di lavoro in Italia",
+    "permitsAct": "Permesso di soggiorno in Italia",
+    "permitTwo": "Permesso di lavoro in Italia",
     "cityOfR": "Città di residenza",
     "addr": "73048, Nardo' (LE), Italia",
     "languages": "Le lingue",

@@ -8,7 +8,7 @@
         <div class="name-and-contacts">
           <h2>Mikhail Krivoshchekov (Mike)</h2>
           <h3>{{ $t("person.position") }}</h3>
-          <p>{{ $t("expAboutMe.dobDate") }}{{ currentAge }}{{ $t("expAboutMe.yearsOld") }} </p>
+          <p>{{ $t("expAboutMe.dobDate") }}({{ currentAge }}{{ $t("expAboutMe.yearsOld") }}) </p>
           <p>{{ $t("expAboutMe.addr") }}</p>
           <ul>
             <li
@@ -97,6 +97,9 @@
           </ul>
         </div>
       </div>
+      <div class="bottom-disclaimer">
+        <p>The PDF created at {{ todays }} </p>
+      </div> 
     </div>
   </div>
 </template>
@@ -112,6 +115,7 @@ export default {
         { name: "phone", addr: "+39 351 0499 441" },
       ],
       currentAge: '',
+      todays: '',
     };
   },
 
@@ -152,7 +156,8 @@ beforeMount: function () {
         age--;
     }
     return this.currentAge = age,
-    console.log("age: " + this.currentAge + ' ' + typeof this.currentAge);   
+          this.todays = today,
+    console.log("age: " + this.currentAge + ' ' + typeof this.currentAge);
     }
   },
 };
@@ -212,5 +217,10 @@ li {
   margin-top: 5px;
   padding-bottom: 2px;
   border-bottom: dashed #808080a9 0.5px;
+}
+.bottom-disclaimer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: right; 
 }
 </style>

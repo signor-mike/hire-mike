@@ -77,11 +77,12 @@
 
     <v-navigation-drawer
       v-model="draw"
-      src="/outer-space.jpg"
+      color="#272727"
       temporary
       bottom
       app
-      class="primary py-3"
+      :src="spacePicture"
+      class="py-3"
     >
       <v-list dark>
         <v-list-item
@@ -92,13 +93,18 @@
           @click="refresh"
         >
           <v-list-item-action>
-            <v-icon color="#8ae0e9">
+            <v-icon
+              dark
+            >
               {{ link.icon }}
             </v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
-              <h2 class="font-weight-black black--text class text-uppercase">
+              <h2
+                :class="{'dark-theme': $vuetify.theme.dark}"
+                class="font-weight-black  class text-uppercase"
+              >
                 {{ link.text }}
               </h2>
             </v-list-item-title>
@@ -146,6 +152,9 @@ export default {
     customColor () {
       return this.$vuetify.theme.dark? '#41b883': 'primary'
     },
+    spacePicture () {
+      return this.$vuetify.theme.dark? '/outer-space.jpg':'null';
+    }
   },
 
   methods: {
@@ -179,9 +188,12 @@ a {
   text-decoration: none;
 }
 .class {
-   -webkit-text-stroke: 0.7px white;
-   font-family: 'Fira Sans';
    
+   font-family: 'Fira Sans';   
+}
+.dark-theme {
+-webkit-text-stroke: 0.7px black;
+color: white;
 }
 
 

@@ -21,7 +21,7 @@
     "ImageMaSo": "Image manipulation software",
     "Linux": "Linux",
     "Design": "Design",
-    "SQL": "SQL"
+    "php": "php"
   },
 
   "softSkills": {
@@ -68,10 +68,11 @@
   "aboutMe": "About me",
   "expAboutMe": {
     "dob": "Date of birth",
-    "dobDate": "March 15th, 1994 (",
-    "yearsOld": " years old)",
+    "dobDate": "March 15th, 1994 ",
+    "yearsOld": " years old",
     "permits": "Permits",
-    "permitsAct": "Residence permit and work permit in Italy",
+    "permitsAct": "Residence permit in Italy",
+    "permitTwo": "Work permit in Italy",
     "cityOfR": "City of residence",
     "addr": "73048, Nardo' (LE), Italy",
     "languages": "Languages",

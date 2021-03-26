@@ -26,9 +26,6 @@ export default {
       return this.$store.state.persons;
     },
   },
-  mounted: function () {
-    console.log(this.$vuetify.breakpoint.xl)
-  },
 };
 </script>
 

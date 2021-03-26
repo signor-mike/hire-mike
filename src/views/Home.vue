@@ -97,7 +97,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: calc(40% - 15px);
+    top: calc(30% + 15px);
     left: calc(25% - 20px);
 }
 
