@@ -46,16 +46,16 @@ export default {
     return {
       items: [
           {
-            src: 'https://cdn.pixabay.com/photo/2016/03/18/15/02/ufo-1265186_960_720.jpg',
+            src: 'https://picsum.photos/800/600?random=1',
           },
           {
-            src: 'https://cdn.pixabay.com/photo/2012/08/25/22/22/saturn-54999_960_720.jpg',
+            src: 'https://picsum.photos/800/600?random=2',
           },
           {
-            src: 'https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_960_720.jpg',
+            src: 'https://picsum.photos/800/600?random=3',
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: 'https://picsum.photos/800/600?random=4',
           },
         ],
     };

@@ -1,7 +1,7 @@
 {
   "home": {
     "button": "abrir cv",
-    "firstArticle": "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendiste tu idioma, puedes aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero solo porque soy muy malo en el diseño. Todo el mundo puede aprender a hacerlo. Créanme. Hace solo 8 semanas no sabía la diferencia entre div y span. Y hoy puedes ver lo que he hecho. No es mucho pero es un trabajo honesto."
+    "firstArticle": "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendió su idioma, puede aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero es solo porque soy muy malo en el diseño. Todos pueden aprender a hacerlo. Créame. En 2020 no conocía la diferencia entre div y span. Y hoy puedes ver mi primer sitio web."
   },
   "skills": {
     "hardSkills": "Hard Skills",
@@ -37,9 +37,9 @@
     "position": "Desarrollador front-end"
   },
   "contacts": {
-    "email me": "Enviarme un email",
-    "WhatsApp": "Escríbeme en Whatsapp",
-    "Telegram": "Escríbeme en Telegram",
+    "email me": "email",
+    "WhatsApp": "mi Whatsapp",
+    "Telegram": "mi Telegram",
     "Linkedin": "Linkedin"
   },
   "disclaimers": {
@@ -61,7 +61,8 @@
   "education": {
     "education": "Educación",
     "schoolName": "Universidad Estatal de Transporte Motorizado de Perm",
-    "spec": "Mecánico de vehículos, tercer grado"
+    "spec": "Mecánico de vehículos, tercer grado",
+    "fullstack" : "Ingeniero Web Full Stack"
   },
 
   "gradientLine": "esta línea representa el dominio de una habilidad de rojo (bajo) a verde (alto)",
@@ -104,5 +105,22 @@
     "scanThis": "o escanee el código QR a continuación.",
     "ty": "¡Gracias!",
     "alert": "Si el PDF presenta errores, actualice la página y vuelva a intentarlo. Gracias."
+  },
+  "tributes": {
+    "goit title": "GoIT",
+    "goit text" : "Empecé con ellos. Por supuesto, me mostraron solo los conceptos básicos de HTML y CSS, pero fue más que suficiente para inspirarme y continuar mi educación por mi cuenta.",
+    "goit subtitle": "Por presentarme los conceptos básicos de HTML y CSS.",
+    "netninja title": "Shaun the Net Ninja",
+    "netninja subtitle":"Por sus increíbles tutoriales.",
+    "netninja text": "Su canal de YouTube tiene fantásticos tutoriales. Creo que realmente tiene talento para la enseñanza. Ojalá tuviera maestros como él en mi escuela.",
+    "stack overflow title": "Stack Overflow",
+    "stack overflow subtitle": "Por su increíble comunidad.",
+    "stack overflow text": "Me ayudaron a aprender, a comprender e incluso a encontrar una pista cuando estaba completamente perdido.",
+    "reddit title": "Reddit",
+    "reddit subtitle": "Por su increíble comunidad.",
+    "reddit text": "Reddit es absolutamente el mejor. Desafortunadamente, algunas comunidades no son tan grandes como en Stack Overflow, pero la gente está totalmente dispuesta a ayudar.",
+    "visitor title": "Y...",
+    "visitor subtitle" : "¡Por supuesto tú! ¡Mi querido visitante!",
+    "visitor text": "Realmente no tendría ningún sentido si esta página no fuera vista por nadie más, ¿me esperas? ¿No es así? ¡Muchas gracias por visitar mi sitio web!"
   }
 }

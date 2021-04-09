@@ -11,6 +11,7 @@
       />
       <v-toolbar-title class="text-uppercase grey--text pl-0">
         <a
+          :class="{'dark-theme': $vuetify.theme.dark}"
           :href="`/${$i18n.locale}`"
         >
           <span class="font-weight-light">itsa</span>
@@ -62,6 +63,7 @@
               :key="link.text"
               router
               :to="`/${$i18n.locale}${link.route}`"
+              exact
             >
               <v-list-item-title>{{ link.text }}</v-list-item-title>
             </v-list-item>
@@ -80,11 +82,69 @@
       color="#272727"
       temporary
       bottom
-      app
+      app 
       :src="spacePicture"
       class="py-3"
     >
-      <v-list
+      <v-row
+        class="mt-5 mx-3"
+        justify="center"
+        :class="{'pt-5':$vuetify.breakpoint.lgAndUp}"
+      >
+        <v-col
+          v-for="link in links"
+          :key="link.text"
+            
+          sm="6"
+          md="4"
+          lg="12"
+        >
+          <v-card
+            router
+            :to="`/${$i18n.locale}${link.route}`"
+          >
+            <v-list>
+              <v-list-item 
+                
+                exact
+                @click="refresh"
+              >
+                <v-list-item-action class="ma-0">
+                  <v-icon
+                    left
+                    :color="customColor"
+                  >
+                    {{ link.icon }}
+                  </v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                  <v-list-item-title>
+                    <h3
+                      :class="{'dark-theme': $vuetify.theme.dark}"
+                      class="text-center font-weight-black  class text-uppercase "
+                    >
+                      {{ link.text }}
+                    </h3>
+                  </v-list-item-title>
+                </v-list-item-content>
+                <v-list-item-action class="ma-0">
+                  <v-icon
+                    right
+                    :color="customColor"
+                  >
+                    {{ link.icon }}
+                  </v-icon>
+                </v-list-item-action>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+      </v-row>
+     
+      
+      
+      
+      <!-- <v-list
         dark
       >
         <v-list-item
@@ -92,6 +152,7 @@
           :key="link.text"
           router
           :to="`/${$i18n.locale}${link.route}`"
+          exact
           @click="refresh"
         >
           <v-list-item-action>
@@ -112,7 +173,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-      </v-list>
+      </v-list> -->
     </v-navigation-drawer>
   </nav>
 </template>
@@ -152,7 +213,7 @@ export default {
   },
   computed: {
     customColor () {
-      return this.$vuetify.theme.dark? '#41b883': 'primary'
+      return this.$vuetify.theme.dark? '#41b883': 'black'
     },
     spacePicture () {
       return this.$vuetify.theme.dark? '/outer-space.jpg':'null';
@@ -181,7 +242,9 @@ export default {
 </script>
 
 <style scoped>
-
+  /* .dark-mode {
+  color: #41b883 !important;
+ } */
 
 .my-photo {
   border: 0.12em solid white;
@@ -194,8 +257,8 @@ a {
    font-family: 'Fira Sans';   
 }
 .dark-theme {
--webkit-text-stroke: 0.7px black;
-color: white;
+/* -webkit-text-stroke: 0.7px black; */
+color: #41b883 
 }
 
 

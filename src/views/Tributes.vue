@@ -21,13 +21,15 @@
             :src="tribute.img"
           />
           <v-card-title>  
-            {{ tribute.title }}
+            {{ $t(`tributes.${tribute.title}`) }}
           </v-card-title>
           <v-card-subtitle>
-            {{ tribute.subtitle }}
+            {{ $t(`tributes.${tribute.subtitle}`) }}
+            
           </v-card-subtitle>
           <v-card-text>
-            {{ tribute.text }}
+            {{ $t(`tributes.${tribute.text}`) }}  
+            
           </v-card-text>
           <v-card-actions class="d-flex justify-space-around">
             <v-btn
@@ -74,12 +76,7 @@ export default {
       return this.$store.state.tributes;
     },
   },
-  created: function () {
-    console.log(this.$i18n.locale + ' ' + typeof this.$i18n.locale)
-    if (this.$i18n.locale !== 'en') {
-alert("Sorry, but this page is not translated yet, and it's available only in English.")
-    }    
-  },
+ 
 };
 </script>
 

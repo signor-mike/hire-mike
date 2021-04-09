@@ -2,7 +2,7 @@
   <v-main class="pt-0">
     <v-row>
       <v-col>
-        <div
+        <!-- <div
           class="button ma-2"
           :class="{ 'd-none': $vuetify.breakpoint.smAndDown }"
         >
@@ -13,7 +13,7 @@
           >
             <v-icon>print</v-icon>
           </v-btn>
-        </div>
+        </div> -->
         <div
           v-for="person in persons"
           :key="person.id"

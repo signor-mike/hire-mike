@@ -1,7 +1,7 @@
 {
   "home": {
     "button": "open cv",
-    "firstArticle": "Making websites is not as hard as it might look. Any programming language is much much easier than any of human languages. And if you learned your language you can learn any programming language. This website looks quite hideous but it's only because I am very bad at design. Everybody can learn how to do it. Believe me. Just 8 weeks ago I didn't know the difference between div and span. And today you can see what I've done. It ain't much but it's a honest work."
+    "firstArticle": "Making websites is not as hard as it might look. Any programming language is much much easier than any of human languages. And if you learned your language you can learn any programming language. This website looks quite hideous but it's only because I am very bad at design. Everybody can learn how to do it. Believe me. In 2020 I didn't know the difference between div and span. And today you can see my very own and very first website."
   },
   "skills": {
     "hardSkills": "Hard Skills",
@@ -38,8 +38,8 @@
   },
   "contacts": {
     "email me": "email me",
-    "WhatsApp": "Write me on Whatsapp",
-    "Telegram": "Write me on Telegram",
+    "WhatsApp": "my Whatsapp",
+    "Telegram": "my Telegram",
     "Linkedin": "Linkedin"
   },
   "disclaimers": {
@@ -61,7 +61,8 @@
   "education": {
     "education": "Education",
     "schoolName": "Perm State Motor Transport College",
-    "spec": "Vehicle Mechanic, 3rd degree"
+    "spec": "Vehicle Mechanic, 3rd degree",
+    "fullstack" : "Full Stack Web Engineer"
   },
 
   "gradientLine": "this line represent the mastery of a skill from red (low) to green (high)",
@@ -104,5 +105,22 @@
     "scanThis": "or scan the QR code below.",
     "ty": "Thank you!",
     "alert": "If PDF rendered with errors please refresh the page and try again. Thank you."
+  },
+  "tributes": {
+    "goit title": "GoIT",
+    "goit text" : "I began with them. Of course they showed me just basics of HTML and CSS, but it was more than enough for me to get inspired and continue my education on my own.",
+    "goit subtitle": "For introducing basics of HTML and CSS to me.",
+    "netninja title": "Shaun the Net Ninja",
+    "netninja subtitle":"For his awesome tutorials.",
+    "netninja text": "His YouTube channel has some fantastic tutorials. I believe he really has a talent for teaching. I wish I had teachers like him in my school.",
+    "stack overflow title": "Stack Overflow",
+    "stack overflow subtitle": "For its amazing community.",
+    "stack overflow text": "They helped me learn, to understand and even find a clue when I was completely lost.",
+    "reddit title": "Reddit",
+    "reddit subtitle": "For its awesome community.",
+    "reddit text": "Reddit is absolutely the best. Unfortunately some communities are not as big as on Stack Overflow, but people there are totally willing to help.",
+    "visitor title": "And...",
+    "visitor subtitle" : "Of course you! My dear visitor!",
+    "visitor text": "It wouldn't really make any sense if this page weren't seen by anybody else expect me? Isn't it? Thank you very much for visiting my website!"
   }
 }

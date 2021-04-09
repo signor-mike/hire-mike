@@ -1,7 +1,7 @@
 {
   "home": {
     "button": "cv ouvert",
-    "firstArticle": "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus facile que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux, mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. Il y a à peine 8 semaines, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir ce que j'ai fait. Ce n'est pas grand-chose mais c'est un travail honnête."
+    "firstArticle": "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus simple que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. En 2020, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir mon propre et tout premier site Web."
   },
   "skills": {
     "hardSkills": "Hard Skills",
@@ -37,9 +37,9 @@
     "position": "Développeur frontal"
   },
   "contacts": {
-    "email me": "Envoyez moi un email",
-    "WhatsApp": "Écrivez-moi sur WhatsApp",
-    "Telegram": "Écrivez-moi sur Telegram",
+    "email me": "email",
+    "WhatsApp": "mon WhatsApp",
+    "Telegram": "mon Telegram",
     "Linkedin": "Linkedin"
   },
   "disclaimers": {
@@ -60,7 +60,8 @@
   "education": {
     "education": "Éducation",
     "schoolName": "Collège d'État des transports automobiles de Perm",
-    "spec": "Mécanicien de véhicules, 3e degré"
+    "spec": "Mécanicien de véhicules, 3e degré",
+    "fullstack" : "Ingénieur Web Full Stack"
   },
 
   "gradientLine": "cette ligne représente la maîtrise d'une compétence du rouge (faible) au vert (élevé)",
@@ -103,5 +104,22 @@
     "scanThis": "ou scannez le code QR ci-dessous.",
     "ty": "Merci!",
     "alert": "Si le PDF a été rendu avec des erreurs, actualisez la page et réessayez. Merci."
+  },
+  "tributes": {
+    "goit title": "GoIT",
+    "goit text" : "J'ai commencé avec eux. Bien sûr, ils ne m'ont montré que les bases du HTML et du CSS, mais c'était plus que suffisant pour que je sois inspiré et que je continue mes études par moi-même.",
+    "goit subtitle": "Pour m'avoir présenté les bases du HTML et du CSS.",
+    "netninja title": "Shaun the Net Ninja",
+    "netninja subtitle":"Pour ses super tutoriels.",
+    "netninja text": "Sa chaîne YouTube propose des tutoriels fantastiques. Je pense qu'il a vraiment un talent pour l'enseignement. J'aurais aimé avoir des professeurs comme lui dans mon école.",
+    "stack overflow title": "Stack Overflow",
+    "stack overflow subtitle": "Pour sa formidable communauté.",
+    "stack overflow text": "Ils m'ont aidé à apprendre, à comprendre et même à trouver un indice lorsque j'étais complètement perdu.",
+    "reddit title": "Reddit",
+    "reddit subtitle": "Pour sa formidable communauté.",
+    "reddit text": "Reddit est absolument le meilleur. Malheureusement, certaines communautés ne sont pas aussi grandes que celles de Stack Overflow, mais les gens là-bas sont tout à fait disposés à aider.",
+    "visitor title": "Et...",
+    "visitor subtitle" : "Bien sûr toi! Mon cher visiteur!",
+    "visitor text": "Cela n'aurait pas vraiment de sens si cette page n'était pas vue par quelqu'un d'autre, attendez-vous de moi? N'est-ce pas? Merci beaucoup d'avoir visité mon site Web!"
   }
 }
