@@ -11,7 +11,8 @@
         fixed
         bottom
         right
-        color="primary"
+        :color="customColor"
+        class="to-top-button"
         @click="toTop"
       >
         <v-icon>keyboard_arrow_up</v-icon>
@@ -37,6 +38,11 @@ export default {
     
     //
   }),
+  computed: {
+       customColor () {
+      return this.$vuetify.theme.dark? '#41b883': 'primary'
+    },
+  },
   beforeMount: function () {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       this.$vuetify.theme.dark = true,
@@ -67,12 +73,12 @@ export default {
     onScroll(e) {
       if (typeof window === "undefined") return;
       const top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > 20;
+      this.fab = top > 200;
     },
     toTop() {
       this.$vuetify.goTo(0);
     },
-  },
+  }
   
 };
 </script>
@@ -80,4 +86,5 @@ export default {
 a {
   text-decoration: none;
 }
+
 </style>

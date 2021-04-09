@@ -6,7 +6,7 @@
     >
       {{ $t("experience.relevantExperience") }}
       <template v-slot:actions>
-        <v-icon color="primary">
+        <v-icon :color="customColor">
           $expand
         </v-icon>
       </template>
@@ -21,7 +21,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+   props: {    
+      customColor: {
+        required: true,  
+        type: String,      
+      }
+  },
+};
 </script>
 
 <style></style>

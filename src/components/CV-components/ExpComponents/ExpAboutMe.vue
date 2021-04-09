@@ -3,7 +3,7 @@
     <v-expansion-panel-header class="font-weight-bold">
       {{ $t("aboutMe") }}
       <template v-slot:actions>
-        <v-icon color="primary">
+        <v-icon :color="customColor">
           $expand
         </v-icon>
       </template>
@@ -50,7 +50,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-group>
+        <v-list-group :color="customColor">
           <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title
@@ -98,7 +98,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {    
+      customColor: {
+        required: true,  
+        type: String,      
+      }
+  },
+};
 </script>
 
 <style></style>

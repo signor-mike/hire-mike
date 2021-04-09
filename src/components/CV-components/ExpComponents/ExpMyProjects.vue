@@ -3,7 +3,7 @@
     <v-expansion-panel-header class="font-weight-bold">
       {{ $t("experience.myProjects") }}
       <template v-slot:actions>
-        <v-icon color="primary">
+        <v-icon :color="customColor">
           $expand
         </v-icon>
       </template>
@@ -16,11 +16,14 @@
               <a href="https://hire-mike.web.app">https://hire-mike.web.app</a>
             </v-list-item-title>
             <v-list-item-subtitle>2021 ~ present</v-list-item-subtitle>
-            <v-list-group>
-              <template v-slot:activator>
+            <v-list-group :color="customColor">
+              <template
+                v-slot:activator
+              >
                 <v-list-item-content>
                   <v-list-item-title
                     class="primary--text"
+                    
                     v-text="$t('experience.myProjectsContent')"
                   />
                 </v-list-item-content>
@@ -52,6 +55,12 @@
 
 <script>
 export default {
+   props: {    
+      customColor: {
+        required: true,  
+        type: String,      
+      }
+  },
   computed: {
     techs() {
       return this.$store.state.techs;

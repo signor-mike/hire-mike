@@ -1,14 +1,15 @@
 <template>
   <v-main class="pt-0 px-1">
-    <div class="text-center d-flex pb-2 justify-space-around">
+    <div class="text-center d-flex pb-3 justify-space-around">
       <v-btn
+        v-if="!expander"
         small
         @click="all"
       >
         <v-icon
           :small="$vuetify.breakpoint.smAndDown"
           medium
-          color="primary"
+          :color="customColor"
         >
           unfold_more
         </v-icon>
@@ -16,13 +17,14 @@
       </v-btn>
 
       <v-btn
+        v-if="expander"
         small
         @click="none"
       >
         <v-icon
           :small="$vuetify.breakpoint.smAndDown"
           medium
-          color="primary"
+          :color="customColor"
         >
           unfold_less
         </v-icon>
@@ -37,15 +39,21 @@
       multiple
     >
       <!-- about me -->
-      <ExpAboutMe />
+      <ExpAboutMe :custom-color="customColor" />
       <!-- my projects -->
-      <ExpMyProjects />
+      <ExpMyProjects :custom-color="customColor" />
       <!-- education -->
-      <Education />
+      <Education :custom-color="customColor" />
       <!-- relevant experience -->
-      <ExpRelevant class="secondary--text" />
+      <ExpRelevant
+        :custom-color="customColor"
+        class="secondary--text"
+      />
       <!-- irrelevant experience -->
-      <ExpIrrelevant class="secondary--text" />
+      <ExpIrrelevant
+        :custom-color="customColor"
+        class="secondary--text"
+      />
     </v-expansion-panels>
   </v-main>
 </template>
@@ -69,17 +77,27 @@ export default {
     return {
       panel: [],
       items: 5,
+      expander: false,
     };
+  },
+  computed: {
+       customColor () {
+      return this.$vuetify.theme.dark? '#41b883': 'primary'
+    },
   },
   methods: {
     // Create an array the length of our items
     // with all values as true
     all() {
-      this.panel = [...Array(this.items).keys()].map((k, i) => i);
+      this.panel = [...Array(this.items).keys()].map((k, i) => i),
+      this.expander = !this.expander;
+      console.log(typeof this.customColor)
+      
     },
     // Reset the panel
     none() {
-      this.panel = [];
+      this.panel = [],
+      this.expander = !this.expander;
     },
   },
 };

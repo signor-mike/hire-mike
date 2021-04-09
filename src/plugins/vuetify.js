@@ -3,13 +3,16 @@ import Vuetify from "vuetify/lib/framework";
 
 Vue.use(Vuetify, { iconfont: "md" });
 
-export default new Vuetify({
-    themes: {
-        light: {
-            primary: '#41B883'
-        },
-        dark: {
-            primary: '#34495E'
-        }
+const vuetify = new Vuetify({
+    theme: {
+      themes: {
+    light: {
+        primary: '#2196f3'
+    },
+    dark: {
+        primary: '#41B883'
     }
-});
+}
+    },
+  })
+  export default vuetify
