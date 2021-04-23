@@ -27,7 +27,7 @@ const store = new Vuex.Store({
       {
         id: "4",
         title: "Linkedin",
-        link: "https://www.linkedin.com/in/mikhail-k-874a3a207/",
+        link: "https://www.linkedin.com/in/mike-litoris/",
         icon: "mdi-linkedin",
       },
     ],

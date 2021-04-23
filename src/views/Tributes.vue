@@ -25,11 +25,9 @@
           </v-card-title>
           <v-card-subtitle>
             {{ $t(`tributes.${tribute.subtitle}`) }}
-            
           </v-card-subtitle>
           <v-card-text>
-            {{ $t(`tributes.${tribute.text}`) }}  
-            
+            {{ $t(`tributes.${tribute.text}`) }}
           </v-card-text>
           <v-card-actions class="d-flex justify-space-around">
             <v-btn
