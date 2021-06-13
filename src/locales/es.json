@@ -6,10 +6,8 @@
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
-    "switch": "cambiar entre hard/soft habilidades"
-  },
+    "switch": "cambiar entre hard/soft habilidades",
 
-  "hardSkills": {
     "HTML5": "HTML5",
     "CSS3": "CSS3",
     "JavaScript": "JavaScript",
@@ -21,10 +19,8 @@
     "ImageMaSo": "Software de manipulación de imágenes",
     "Linux": "Linux",
     "Design": "Design",
-    "Nuxt": "Nuxt.js"
-  },
+    "Nuxt": "Nuxt.js",
 
-  "softSkills": {
     "Excitement for learning": "Emoción por aprender",
     "Communication Skills": "Habilidades de comunicación",
     "Problem-Solving Skills": "Habilidades para resolver problemas",
@@ -62,7 +58,7 @@
     "education": "Educación",
     "schoolName": "Universidad Estatal de Transporte Motorizado de Perm",
     "spec": "Mecánico de vehículos, tercer grado",
-    "fullstack" : "Ingeniero Web Full Stack"
+    "fullstack": "Ingeniero Web Full Stack"
   },
 
   "gradientLine": "esta línea representa el dominio de una habilidad de rojo (bajo) a verde (alto)",
@@ -108,10 +104,10 @@
   },
   "tributes": {
     "goit title": "GoIT",
-    "goit text" : "Empecé con ellos. Por supuesto, me mostraron solo los conceptos básicos de HTML y CSS, pero fue más que suficiente para inspirarme y continuar mi educación por mi cuenta.",
+    "goit text": "Empecé con ellos. Por supuesto, me mostraron solo los conceptos básicos de HTML y CSS, pero fue más que suficiente para inspirarme y continuar mi educación por mi cuenta.",
     "goit subtitle": "Por presentarme los conceptos básicos de HTML y CSS.",
     "netninja title": "Shaun the Net Ninja",
-    "netninja subtitle":"Por sus increíbles tutoriales.",
+    "netninja subtitle": "Por sus increíbles tutoriales.",
     "netninja text": "Su canal de YouTube tiene fantásticos tutoriales. Creo que realmente tiene talento para la enseñanza. Ojalá tuviera maestros como él en mi escuela.",
     "stack overflow title": "Stack Overflow",
     "stack overflow subtitle": "Por su increíble comunidad.",
@@ -120,7 +116,7 @@
     "reddit subtitle": "Por su increíble comunidad.",
     "reddit text": "Reddit es absolutamente el mejor. Desafortunadamente, algunas comunidades no son tan grandes como en Stack Overflow, pero la gente está totalmente dispuesta a ayudar.",
     "visitor title": "Y...",
-    "visitor subtitle" : "¡Por supuesto tú! ¡Mi querido visitante!",
+    "visitor subtitle": "¡Por supuesto tú! ¡Mi querido visitante!",
     "visitor text": "Realmente no tendría ningún sentido si esta página no fuera vista por nadie más, ¿me esperas? ¿No es así? ¡Muchas gracias por visitar mi sitio web!"
   }
 }

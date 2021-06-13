@@ -6,10 +6,8 @@
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
-    "switch": "basculer entre les compétences hard / soft"
-  },
+    "switch": "basculer entre les compétences hard / soft",
 
-  "hardSkills": {
     "HTML5": "HTML5",
     "CSS3": "CSS3",
     "JavaScript": "JavaScript",
@@ -21,10 +19,8 @@
     "ImageMaSo": "Logiciel de manipulation d'images",
     "Linux": "Linux",
     "Design": "Compétences en conception",
-    "Nuxt": "Nuxt.js"
-  },
+    "Nuxt": "Nuxt.js",
 
-  "softSkills": {
     "Excitement for learning": "Excitation d'apprendre",
     "Communication Skills": "Compétences en communication",
     "Problem-Solving Skills": "Des talents pour la résolution des problèmes",
@@ -61,7 +57,7 @@
     "education": "Éducation",
     "schoolName": "Collège d'État des transports automobiles de Perm",
     "spec": "Mécanicien de véhicules, 3e degré",
-    "fullstack" : "Ingénieur Web Full Stack"
+    "fullstack": "Ingénieur Web Full Stack"
   },
 
   "gradientLine": "cette ligne représente la maîtrise d'une compétence du rouge (faible) au vert (élevé)",
@@ -107,10 +103,10 @@
   },
   "tributes": {
     "goit title": "GoIT",
-    "goit text" : "J'ai commencé avec eux. Bien sûr, ils ne m'ont montré que les bases du HTML et du CSS, mais c'était plus que suffisant pour que je sois inspiré et que je continue mes études par moi-même.",
+    "goit text": "J'ai commencé avec eux. Bien sûr, ils ne m'ont montré que les bases du HTML et du CSS, mais c'était plus que suffisant pour que je sois inspiré et que je continue mes études par moi-même.",
     "goit subtitle": "Pour m'avoir présenté les bases du HTML et du CSS.",
     "netninja title": "Shaun the Net Ninja",
-    "netninja subtitle":"Pour ses super tutoriels.",
+    "netninja subtitle": "Pour ses super tutoriels.",
     "netninja text": "Sa chaîne YouTube propose des tutoriels fantastiques. Je pense qu'il a vraiment un talent pour l'enseignement. J'aurais aimé avoir des professeurs comme lui dans mon école.",
     "stack overflow title": "Stack Overflow",
     "stack overflow subtitle": "Pour sa formidable communauté.",
@@ -119,7 +115,7 @@
     "reddit subtitle": "Pour sa formidable communauté.",
     "reddit text": "Reddit est absolument le meilleur. Malheureusement, certaines communautés ne sont pas aussi grandes que celles de Stack Overflow, mais les gens là-bas sont tout à fait disposés à aider.",
     "visitor title": "Et...",
-    "visitor subtitle" : "Bien sûr toi! Mon cher visiteur!",
+    "visitor subtitle": "Bien sûr toi! Mon cher visiteur!",
     "visitor text": "Cela n'aurait pas vraiment de sens si cette page n'était pas vue par quelqu'un d'autre, attendez-vous de moi? N'est-ce pas? Merci beaucoup d'avoir visité mon site Web!"
   }
 }

@@ -28,9 +28,28 @@
           cols="auto"
           sm="auto"
           md="4"
-          class="d-flex justify-start"
+          class="d-flex justify-start flex-column"
         >
-          <HardSkills />
+          <v-btn
+            class="d-none text-center pa-1 "
+            :class="{
+              'd-block pt-1': $vuetify.breakpoint.smAndDown,
+            }"
+            x-small            
+            @click="toggle"
+          >
+            <span>{{ $t("skills.switch") }}</span>
+          </v-btn>
+          
+
+          <Skills
+            v-if="!replace"
+            :skills="hardSkills"
+          />
+          <Skills
+            v-if="replace"
+            :skills="softSkills"
+          />
         </v-col>
 
         <v-col
@@ -48,7 +67,8 @@
           md="4"
           class="d-flex  justify-end"
         >
-          <SoftSkills 
+          <Skills
+            :skills="softSkills"
             :class="{
               'd-none': $vuetify.breakpoint.smAndDown,
             }"
@@ -72,8 +92,7 @@
 import CvHeader from "@/components/CV-components/CvHeader.vue";
 import AboutMe from "../components/CV-components/AboutMe.vue";
 import Images from "../components/CV-components/Images.vue";
-import HardSkills from "../components/CV-components/HardSkills.vue";
-import SoftSkills from "../components/CV-components/SoftSkills.vue";
+import Skills from "../components/CV-components/Skills.vue";
 import Experience from "../components/CV-components/Experience.vue";
 import Footer from "../components/CV-components/Footer.vue";
 
@@ -82,16 +101,23 @@ export default {
     CvHeader,
     AboutMe,
     Images,
-    HardSkills,
-    SoftSkills,
     Experience,
     Footer,
+    Skills
   },
   data() {
     return {
       fab: false,
-     
+     replace: false,
     };
+  },
+  computed: {
+    hardSkills() {
+      return this.$store.state.skills.filter((skill) => skill.type === "hard");
+    },   
+    softSkills() {
+      return this.$store.state.skills.filter((skill) => skill.type === "soft");
+    }, 
   },
   methods: {
     onScroll(e) {
@@ -101,8 +127,10 @@ export default {
     },
     toTop() {
       this.$vuetify.goTo(0);
+    },  
+    toggle() {
+      this.replace = !this.replace;
     },
-  
   },
  
 };
