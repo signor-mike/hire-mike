@@ -225,6 +225,7 @@
           <div class="name-and-contacts">
             <h2>Mikhail Krivoshchekov (Mike)</h2>
             <h3>{{ $t("person.position") }}</h3>
+
             <p>
               {{ $t("expAboutMe.dobDate") }}({{ currentAge
               }}{{ $t("expAboutMe.yearsOld") }})
@@ -311,8 +312,6 @@
 
 <script>
 import html2pdf from "html2pdf.js";
-// import { jsPDF } from "jspdf";
-// import html2canvas from "html2canvas"
 
 export default {
   data() {
@@ -331,9 +330,11 @@ export default {
     skills() {
       return this.$store.state.skills;
     },
+
     hardSkills() {
       return this.skills.filter((skill) => skill.type === "hard");
     },
+
     softSkills() {
       return this.skills.filter((skill) => skill.type === "soft");
     },
