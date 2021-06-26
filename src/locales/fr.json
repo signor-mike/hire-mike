@@ -29,7 +29,7 @@
     "Adaptability": "Adaptabilité"
   },
   "person": {
-    "name": "Mikhail Krivoshchekov, mais appelle moi Mike s'il te plait",
+    "name": "Mikhail (Mike) Krivoshchekov",
     "position": "Développeur frontal"
   },
   "contacts": {
@@ -47,11 +47,7 @@
     "expandAll": "développer tout",
     "collapseAll": "tout réduire",
     "myProjects": "Mes projets",
-    "myProjectsContent": "Liste des bibliothèques",
-    "relevantExperience": "Expérience pertinente",
-    "relevantExperienceContent": "Actuellement, ma seule expérience pertinente est le développement de ce site Web",
-    "irrelevantExperience": "Expérience non pertinente",
-    "irrelevantExperienceContent": "J'avais l'habitude de travailler d'un vendeur de composants électroniques à un soudeur sur un chantier de construction. De réparateur de véhicules à un responsable de l'hôtellerie en auberge. Mais tout cela n'est pas pertinent."
+    "myProjectsContent": "Liste des bibliothèques"
   },
   "education": {
     "education": "Éducation",

@@ -47,12 +47,10 @@
       <!-- relevant experience -->
       <ExpRelevant
         :custom-color="customColor"
-        class="secondary--text"
       />
       <!-- irrelevant experience -->
       <ExpIrrelevant
         :custom-color="customColor"
-        class="secondary--text"
       />
     </v-expansion-panels>
   </v-main>

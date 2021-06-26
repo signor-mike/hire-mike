@@ -29,7 +29,7 @@
     "Adaptability": "Adaptability"
   },
   "person": {
-    "name": "Mikhail Krivoshchekov, but call me Mike please",
+    "name": "Mikhail (Mike) Krivoshchekov",
     "position": "Front End developer"
   },
   "contacts": {
@@ -48,11 +48,7 @@
     "collapseAll": "collapse all",
 
     "myProjects": "My projects",
-    "myProjectsContent": "List of libraries",
-    "relevantExperience": "Relevant experience",
-    "relevantExperienceContent": "Currently my only relevant experience is developing this website",
-    "irrelevantExperience": "Irrelevant experience",
-    "irrelevantExperienceContent": " I used to work from a seller of electronic components to a welder on construction yard. From vehicle repairman to a hospitality manager in hostel. But all of these is irrelevant."
+    "myProjectsContent": "List of libraries"
   },
   "education": {
     "education": "Education",

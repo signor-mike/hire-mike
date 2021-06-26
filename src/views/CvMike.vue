@@ -1,8 +1,11 @@
 <template ref="document">
   <v-main
     class="pt-0 mt-2"
-    :class="{'thiner mx-auto':$vuetify.breakpoint.lgAndUp,
-             'even-thiner' : $vuetify.breakpoint.xlAndUp}"
+    :class="{
+      'normal-thin mx-auto': $vuetify.breakpoint.mdAndUp,
+      'thiner mx-auto': $vuetify.breakpoint.lgAndUp,
+      'even-thiner mx-auto': $vuetify.breakpoint.xlAndUp,
+    }"
   >
     <v-card class="my-2 px-2 ">
       <v-row class="justify-space-between">
@@ -35,12 +38,11 @@
             :class="{
               'd-block pt-1': $vuetify.breakpoint.smAndDown,
             }"
-            x-small            
+            x-small
             @click="toggle"
           >
             <span>{{ $t("skills.switch") }}</span>
           </v-btn>
-          
 
           <Skills
             v-if="!replace"
@@ -103,21 +105,21 @@ export default {
     Images,
     Experience,
     Footer,
-    Skills
+    Skills,
   },
   data() {
     return {
       fab: false,
-     replace: false,
+      replace: false,
     };
   },
   computed: {
     hardSkills() {
       return this.$store.state.skills.filter((skill) => skill.type === "hard");
-    },   
+    },
     softSkills() {
       return this.$store.state.skills.filter((skill) => skill.type === "soft");
-    }, 
+    },
   },
   methods: {
     onScroll(e) {
@@ -127,17 +129,19 @@ export default {
     },
     toTop() {
       this.$vuetify.goTo(0);
-    },  
+    },
     toggle() {
       this.replace = !this.replace;
     },
   },
- 
 };
 </script>
 
 <style>
-.thiner {  
+.normal-thin {
+  width: 80%;
+}
+.thiner {
   width: 60%;
 }
 .even-thiner {

@@ -29,7 +29,7 @@
     "Adaptability": "Anpassungsfähigkeit"
   },
   "person": {
-    "name": "Mikhail Krivoshchekov, aber nenn mich bitte Mike",
+    "name": "Mikhail (Mike) Krivoshchekov",
     "position": "Front-End-Entwickle"
   },
   "contacts": {
@@ -48,11 +48,7 @@
     "collapseAll": "alle kollabieren",
 
     "myProjects": "Meine Projekte",
-    "myProjectsContent": "Liste der Bibliotheken",
-    "relevantExperience": "Relevante Erfahrung",
-    "relevantExperienceContent": "Derzeit ist meine einzige relevante Erfahrung die Entwicklung dieser Website",
-    "irrelevantExperience": "irrelevante Erfahrung",
-    "irrelevantExperienceContent": "Früher habe ich vom Verkäufer elektronischer Komponenten bis zum Schweißer auf dem Bauhof gearbeitet. Vom Fahrzeugreparaturmann bis zum Hotelmanager im Hostel. Aber all dies ist irrelevant."
+    "myProjectsContent": "Liste der Bibliotheken"
   },
   "education": {
     "education": "Bildung",

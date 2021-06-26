@@ -14,9 +14,9 @@ const store = new Vuex.Store({
       },
       {
         id: "2",
-        title: "WhatsApp",
-        link: "https://wa.me/34657722396",
-        icon: "mdi-whatsapp",
+        title: "GitHub",
+        link: "https://github.com/Mike-OxHuge",
+        icon: "mdi-github",
       },
       {
         id: "3",
@@ -153,8 +153,7 @@ const store = new Vuex.Store({
         img: "/goit-logo.png",
         title: "goit title",
         subtitle: "goit subtitle",
-        text:
-          "goit text",
+        text: "goit text",
         linkOne: "https://goit.ua/",
         iconOne: "http",
         linkTwo: "mailto:info@goit.ua",
@@ -164,8 +163,7 @@ const store = new Vuex.Store({
         img: "/net-ninja-logo.png",
         title: "netninja title",
         subtitle: "netninja subtitle",
-        text:
-          "netninja text",
+        text: "netninja text",
         linkOne: "https://www.thenetninja.co.uk/",
         iconOne: "http",
         linkTwo: "https://www.youtube.com/c/TheNetNinja/playlists",
@@ -175,8 +173,7 @@ const store = new Vuex.Store({
         img: "/stOv-logo.png",
         title: "stack overflow title",
         subtitle: "stack overflow subtitle",
-        text:
-          "stack overflow text",
+        text: "stack overflow text",
         linkOne: "https://stackoverflow.com/",
         iconOne: "http",
         linkTwo: "https://stackoverflow.com/users",
@@ -186,8 +183,7 @@ const store = new Vuex.Store({
         img: "/reddit-logo.png",
         title: "reddit title",
         subtitle: "reddit subtitle",
-        text:
-          "reddit text",
+        text: "reddit text",
         linkOne: "https://www.reddit.com/",
         iconOne: "http",
         linkTwo: "https://www.reddit.com/r/vuejs",
@@ -197,8 +193,7 @@ const store = new Vuex.Store({
         img: "/question.jpg",
         title: "visitor title",
         subtitle: "visitor subtitle",
-        text:
-          "visitor text",
+        text: "visitor text",
         linkOne: "mailto:mikelitoris34@icloud.com",
         iconOne: "email",
         linkTwo: "/en/cv-mike",
