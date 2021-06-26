@@ -100,9 +100,7 @@
 </i18n>
 <template>
   <v-expansion-panel>
-    <v-expansion-panel-header
-      class="font-weight-bold"
-    >
+    <v-expansion-panel-header class="font-weight-bold">
       {{ $t("relevantExperience") }}
       <template v-slot:actions>
         <v-icon :color="customColor">
@@ -110,22 +108,20 @@
         </v-icon>
       </template>
     </v-expansion-panel-header>
-    <v-expansion-panel-content
-      class="py-3"
-    >
+    <v-expansion-panel-content class="py-3">
       <v-list dense>
         <v-list-item three-line>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              {{ $t('titleFreelance') }}
+              {{ $t("titleFreelance") }}
             </v-list-item-title>
             <v-list-item-subtitle>
-              2013 ~  2018
+              2013 ~ 2018
             </v-list-item-subtitle>
             <v-list-item-subtitle>
               <v-expansion-panel>
                 <v-expansion-panel-header class="mb-2">
-                  {{ $t('header') }}
+                  {{ $t("header") }}
                   <template v-slot:actions>
                     <v-icon :color="customColor">
                       $expand
@@ -133,19 +129,13 @@
                   </template>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceFreelance.line1") }}
                   </p>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceFreelance.line2") }}
                   </p>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceFreelance.line3") }}
                   </p>
                 </v-expansion-panel-content>
@@ -159,16 +149,16 @@
         <v-list-item three-line>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              {{ $t('titleAsoik') }}  <br>
+              {{ $t("titleAsoik") }} <br />
               Russia, Perm
             </v-list-item-title>
             <v-list-item-subtitle>
-              2012 ~  2013
+              2012 ~ 2013
             </v-list-item-subtitle>
             <v-list-item-subtitle>
               <v-expansion-panel>
                 <v-expansion-panel-header class="mb-2">
-                  {{ $t('header') }}
+                  {{ $t("header") }}
                   <template v-slot:actions>
                     <v-icon :color="customColor">
                       $expand
@@ -176,19 +166,13 @@
                   </template>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceAsoik.line1") }}
                   </p>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceAsoik.line2") }}
                   </p>
-                  <p
-                    class="text-caption"
-                  >
+                  <p class="text-caption">
                     {{ $t("relevantExperienceAsoik.line3") }}
                   </p>
                 </v-expansion-panel-content>
@@ -197,18 +181,17 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      {{ $t("experience.relevantExperienceContent") }}
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>
 
 <script>
 export default {
-   props: {    
-      customColor: {
-        required: true,  
-        type: String,      
-      }
+  props: {
+    customColor: {
+      required: true,
+      type: String,
+    },
   },
 };
 </script>
@@ -218,4 +201,3 @@ p {
   line-height: 0.8rem !important;
 }
 </style>
-
