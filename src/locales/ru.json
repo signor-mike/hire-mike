@@ -6,27 +6,7 @@
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
-    "switch": "переключение между hard/soft skills",
-
-    "HTML5": "HTML5",
-    "CSS3": "CSS3",
-    "JavaScript": "JavaScript",
-    "GIT": "GIT",
-    "Responsive Design": "Адаптивный дизайн",
-    "Browser Developer Tools": "Инструменты разработчика браузера",
-    "Vue": "Vue.js",
-    "Microsoft Office": "Microsoft Office",
-    "ImageMaSo": "Программа для обработки изображений",
-    "Linux": "Linux",
-    "Design": "Дизайн",
-    "Nuxt": "Nuxt.js",
-
-    "Excitement for learning": "Желание к обучению",
-    "Communication Skills": "Навыки общения",
-    "Problem-Solving Skills": "Навыки решения проблем",
-    "Work Ethic": "Рабочая этика",
-    "Flexibility": "Гибкость",
-    "Adaptability": "Адаптивность"
+    "switch": "переключение между hard/soft skills"
   },
   "person": {
     "name": "Михаил Кривощеков",

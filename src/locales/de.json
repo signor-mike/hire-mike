@@ -6,27 +6,7 @@
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
-    "switch": "zwischen Hard / Soft Skills wechseln",
-
-    "HTML5": "HTML5",
-    "CSS3": "CSS3",
-    "JavaScript": "JavaScript",
-    "GIT": "GIT",
-    "Responsive Design": "Sich anpassendes Design",
-    "Browser Developer Tools": "Browser-Entwicklertools",
-    "Vue": "Vue.js",
-    "Microsoft Office": "Microsoft Office",
-    "ImageMaSo": "Bildbearbeitungssoftware",
-    "Linux": "Linux",
-    "Design": "Design",
-    "Nuxt": "Nuxt.js",
-
-    "Excitement for learning": "Aufregung zum Lernen",
-    "Communication Skills": "Kommunikationsfähigkeiten",
-    "Problem-Solving Skills": "Fähigkeiten zur Problemlösung",
-    "Work Ethic": "Arbeitsethik",
-    "Flexibility": "Flexibilität",
-    "Adaptability": "Anpassungsfähigkeit"
+    "switch": "zwischen Hard / Soft Skills wechseln"
   },
   "person": {
     "name": "Mikhail (Mike) Krivoshchekov",

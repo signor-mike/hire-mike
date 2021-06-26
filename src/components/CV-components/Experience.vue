@@ -38,6 +38,7 @@
       popout
       multiple
     >
+      <Bio :custom-color="customColor" />
       <!-- about me -->
       <ExpAboutMe :custom-color="customColor" />
       <!-- my projects -->
@@ -62,6 +63,7 @@ import ExpMyProjects from "./ExpComponents/ExpMyProjects.vue";
 import ExpRelevant from "./ExpComponents/ExpRelevant.vue";
 import ExpIrrelevant from "./ExpComponents/ExpIrrelevant.vue";
 import Education from "./ExpComponents/Education.vue";
+import Bio from './ExpComponents/Bio.vue'
 
 export default {
   components: {
@@ -69,7 +71,7 @@ export default {
     ExpMyProjects,
     ExpRelevant,
     ExpIrrelevant,
-    Education,
+    Education, Bio
   },
   data() {
     return {

@@ -39,33 +39,54 @@ const store = new Vuex.Store({
       },
     ],
     skills: [
+      { type: "hard", title: "Vue", mastery: "b-medium" },
+      {
+        type: "hard",
+        title: "React",
+        mastery: "b-medium",
+      },
+      {
+        type: "hard",
+        title: "Bootstrap",
+        mastery: "d-medium",
+      },
+      {
+        type: "hard",
+        title: "MaterialDesign",
+        mastery: "d-medium",
+      },
+      {
+        type: "hard",
+        title: "Next",
+        mastery: "c-medium",
+      },
+      { type: "hard", title: "Nuxt", mastery: "c-medium" },
       {
         type: "hard",
         title: "HTML5",
-        mastery: "d-medium",
+        mastery: "a-high",
       },
       {
         type: "hard",
         title: "CSS3",
-        mastery: "c-medium",
+        mastery: "b-medium",
       },
-      { type: "hard", title: "JavaScript", mastery: "d-medium" },
+      { type: "hard", title: "JavaScript", mastery: "b-medium" },
       {
         type: "hard",
         title: "GIT",
-        mastery: "d-medium",
+        mastery: "b-medium",
       },
       {
         type: "hard",
         title: "Responsive Design",
-        mastery: "d-medium",
+        mastery: "a-high",
       },
       {
         type: "hard",
         title: "Browser Developer Tools",
-        mastery: "c-medium",
+        mastery: "a-high",
       },
-      { type: "hard", title: "Vue", mastery: "b-medium" },
       { type: "hard", title: "Microsoft Office", mastery: "a-high" },
       {
         type: "hard",
@@ -74,7 +95,17 @@ const store = new Vuex.Store({
       },
       { type: "hard", title: "Linux", mastery: "d-medium" },
       { type: "hard", title: "Design", mastery: "d-medium" },
-      { type: "hard", title: "Nuxt", mastery: "c-medium" },
+
+      {
+        type: "hard",
+        title: "Express",
+        mastery: "f-low",
+      },
+      {
+        type: "hard",
+        title: "Node",
+        mastery: "f-low",
+      },
 
       // soft skills
 
