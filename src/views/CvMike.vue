@@ -15,11 +15,7 @@
             <AboutMe />
           </v-col>
         </v-col>
-        <v-col
-          cols="4"
-          lg="4"
-          xl="2"
-        >
+        <v-col cols="4" lg="4" xl="2">
           <Images />
         </v-col>
       </v-row>
@@ -44,31 +40,15 @@
             <span>{{ $t("skills.switch") }}</span>
           </v-btn>
 
-          <Skills
-            v-if="!replace"
-            :skills="hardSkills"
-          />
-          <Skills
-            v-if="replace"
-            :skills="softSkills"
-          />
+          <Skills v-if="!replace" :skills="hardSkills" />
+          <Skills v-if="replace" :skills="softSkills" />
         </v-col>
 
-        <v-col
-          cols="auto"
-          sm="auto"
-          md="4"
-          class="d-flex justify-center"
-        >
+        <v-col cols="auto" sm="auto" md="4" class="d-flex justify-center">
           <Experience />
         </v-col>
 
-        <v-col
-          cols="auto"
-          sm="auto"
-          md="4"
-          class="d-flex  justify-end"
-        >
+        <v-col cols="auto" sm="auto" md="4" class="d-flex  justify-end">
           <Skills
             :skills="softSkills"
             :class="{
@@ -142,7 +122,7 @@ export default {
   width: 80%;
 }
 .thiner {
-  width: 60%;
+  width: 65%;
 }
 .even-thiner {
   width: 45%;
