@@ -346,7 +346,7 @@ export default {
     var element = document.getElementById("document");
     var opt = {
       margin: 0,
-      filename: `!CV-MIKE-${this.$i18n.locale.toUpperCase()}.pdf'`,
+      filename: `!CV-MIKE-${this.$i18n.locale.toUpperCase()}.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 3 },
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
