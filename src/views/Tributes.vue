@@ -1,5 +1,5 @@
 <template>
-  <v-main>
+  <v-main class="px-3">
     <v-row>
       <v-col
         v-for="tribute in tributes"
@@ -10,17 +10,9 @@
         lg="3"
         xl="2"
       >
-        <v-card 
-       
-          elevation="5"
-          shaped
-          outlined
-        >
-          <v-img
-            class="ma-1"
-            :src="tribute.img"
-          />
-          <v-card-title>  
+        <v-card elevation="5" shaped outlined>
+          <v-img class="ma-1" :src="tribute.img" />
+          <v-card-title>
             {{ $t(`tributes.${tribute.title}`) }}
           </v-card-title>
           <v-card-subtitle>
@@ -30,26 +22,21 @@
             {{ $t(`tributes.${tribute.text}`) }}
           </v-card-text>
           <v-card-actions class="d-flex justify-space-around">
-            <v-btn
-              text
-              color="#41b883"               
-            >
+            <v-btn text color="#41b883">
               <a
-                :href="tribute.linkOne" 
-                :class="{'dark-mode' : $vuetify.theme.dark}"
+                :href="tribute.linkOne"
+                :class="{ 'dark-mode': $vuetify.theme.dark }"
               >
-                <v-icon x-large> {{ tribute.iconOne }} </v-icon> 
+                <v-icon x-large> {{ tribute.iconOne }} </v-icon>
               </a>
             </v-btn>
 
-            <v-btn
-              text                  
-            >
+            <v-btn text>
               <a
                 :href="tribute.linkTwo"
-                :class="{'dark-mode' : $vuetify.theme.dark}"
+                :class="{ 'dark-mode': $vuetify.theme.dark }"
               >
-                <v-icon x-large> {{ tribute.iconTwo }} </v-icon> 
+                <v-icon x-large> {{ tribute.iconTwo }} </v-icon>
               </a>
             </v-btn>
           </v-card-actions>
@@ -60,21 +47,15 @@
 </template>
 
 <script>
-
 export default {
-
-
-  data () {
-    return {
-     
-    }
+  data() {
+    return {};
   },
   computed: {
     tributes() {
       return this.$store.state.tributes;
     },
   },
- 
 };
 </script>
 

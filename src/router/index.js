@@ -5,7 +5,7 @@ import mikeCV from "../views/CvMike.vue";
 import Home from "../views/Home.vue";
 import printing from "../views/Print.vue";
 import tributes from "../views/Tributes.vue";
-import something from "../views/Something.vue";
+import feedback from "../views/Feedback.vue";
 
 Vue.use(VueRouter);
 
@@ -43,10 +43,10 @@ const routes = [
         name: "print",
         component: printing,
       },
-       {
-        path: "something",
-        name: "something",
-        component: something,
+      {
+        path: "contact",
+        name: "contact me",
+        component: feedback,
       },
     ],
   },

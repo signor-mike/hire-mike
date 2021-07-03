@@ -1,8 +1,4 @@
 {
-  "home": {
-    "button": "abrir cv",
-    "firstArticle": "Crear sitios web no es tan difícil como parece. Cualquier lenguaje de programación es mucho más fácil que cualquiera de los lenguajes humanos. Y si aprendió su idioma, puede aprender cualquier lenguaje de programación. Este sitio web se ve bastante horrible, pero es solo porque soy muy malo en el diseño. Todos pueden aprender a hacerlo. Créame. En 2020 no conocía la diferencia entre div y span. Y hoy puedes ver mi primer sitio web."
-  },
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",

@@ -1,8 +1,4 @@
 {
-  "home": {
-    "button": "Lebenslauf öffnen",
-    "firstArticle": "Das Erstellen von Websites ist nicht so schwierig, wie es aussehen mag. Jede Programmiersprache ist viel einfacher als jede menschliche Sprache. Und wenn Sie Ihre Sprache gelernt haben, können Sie jede Programmiersprache lernen. Diese Website sieht ziemlich abscheulich aus, aber nur, weil ich sehr schlecht im Design bin. Jeder kann lernen, wie es geht. Glaub mir. Im Jahr 2020 kannte ich den Unterschied zwischen div und span nicht. Und heute können Sie meine eigene und allererste Website sehen."
-  },
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
