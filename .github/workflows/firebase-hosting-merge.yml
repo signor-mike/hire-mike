@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
-        env:
-          FIREBASE_TOKEN: "${{ secrets.FIREBASE_TOKEN }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HIRE_MIKE }}"
           channelId: live
           projectId: hire-mike
+          env:
+          FIREBASE_TOKEN: "${{ secrets.FIREBASE_TOKEN }}"
