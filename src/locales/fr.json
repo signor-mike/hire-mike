@@ -1,8 +1,5 @@
 {
-  "home": {
-    "button": "cv ouvert",
-    "firstArticle": "Créer des sites Web n'est pas aussi difficile qu'il y paraît. Tout langage de programmation est beaucoup plus simple que n'importe quel langage humain. Et si vous avez appris votre langue, vous pouvez apprendre n'importe quel langage de programmation. Ce site Web a l'air assez hideux mais c'est uniquement parce que je suis très mauvais en conception. Tout le monde peut apprendre à le faire. Crois-moi. En 2020, je ne connaissais pas la différence entre div et span. Et aujourd'hui, vous pouvez voir mon propre et tout premier site Web."
-  },
+  
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
