@@ -16,6 +16,8 @@ jobs:
       - run: npm run build
         env:
           VUE_APP_BACKEND_URL: "${{secrets.BACKEND_URL}}"
+          VUE_APP_I18N_LOCALE: "${{secrets.VUE_APP_I18N_LOCALE}}"
+          VUE_APP_I18N_FALLBACK_LOCALE: "${{secrets.VUE_APP_I18N_FALLBACK_LOCALE}}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
