@@ -1,6 +1,6 @@
 <template ref="document">
   <v-main
-    class="pt-0 mt-2"
+    class="pt-0 mt-2  px-3 "
     :class="{
       'normal-thin mx-auto': $vuetify.breakpoint.mdAndUp,
       'thiner mx-auto': $vuetify.breakpoint.lgAndUp,

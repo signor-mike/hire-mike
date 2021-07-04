@@ -1,17 +1,10 @@
 <template>
   <nav>
-    <v-app-bar
-      flat
-      app
-    >
-      <v-app-bar-nav-icon
-        x-large
-        class="grey--text"
-        @click="draw = !draw"
-      />
+    <v-app-bar flat app>
+      <v-app-bar-nav-icon x-large class="grey--text" @click="draw = !draw" />
       <v-toolbar-title class="text-uppercase grey--text pl-0">
         <a
-          :class="{'dark-theme': $vuetify.theme.dark}"
+          :class="{ 'dark-theme': $vuetify.theme.dark }"
           :href="`/${$i18n.locale}`"
         >
           <span class="font-weight-light">itsa</span>
@@ -20,37 +13,23 @@
       </v-toolbar-title>
 
       <v-spacer />
-      <div class="text-center grey--text"> 
-        <v-btn
-          text
-          rounded
-          @click="toggleTheme"
-        >
+      <div class="text-center grey--text">
+        <v-btn text rounded @click="toggleTheme">
           <span v-if="!this.$vuetify.theme.dark">
             <v-icon>dark_mode</v-icon>
           </span>
 
           <span v-else>
-            <v-icon>light_mode</v-icon>                  
+            <v-icon>light_mode</v-icon>
           </span>
         </v-btn>
-      </div>       
-
+      </div>
 
       <!-- dropdown menu -->
-      <div
-        v-if="$vuetify.breakpoint.mdAndUp"
-        class="text-center"
-      >
+      <div v-if="$vuetify.breakpoint.mdAndUp" class="text-center">
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              text
-              color="grey"
-              dark
-              v-bind="attrs"
-              v-on="on"
-            >
+            <v-btn text color="grey" dark v-bind="attrs" v-on="on">
               <v-icon left>
                 expand_more
               </v-icon>
@@ -82,45 +61,28 @@
       color="#272727"
       temporary
       bottom
-      app 
+      app
       :src="spacePicture"
       class="py-3"
     >
       <v-row
         class="mt-5 mx-3"
         justify="center"
-        :class="{'pt-5':$vuetify.breakpoint.lgAndUp}"
+        :class="{ 'pt-5': $vuetify.breakpoint.lgAndUp }"
       >
-        <v-col
-          v-for="link in links"
-          :key="link.text"
-            
-          sm="6"
-          md="4"
-          lg="12"
-        >
-          <v-card
-            router
-            :to="`/${$i18n.locale}${link.route}`"
-          >
+        <v-col v-for="link in links" :key="link.text" sm="6" md="4" lg="12">
+          <v-card router :to="`/${$i18n.locale}${link.route}`">
             <v-list>
-              <v-list-item 
-                
-                exact
-                @click="refresh"
-              >
+              <v-list-item exact @click="refresh">
                 <v-list-item-action class="ma-0">
-                  <v-icon
-                    left
-                    :color="customColor"
-                  >
+                  <v-icon left :color="customColor">
                     {{ link.icon }}
                   </v-icon>
                 </v-list-item-action>
                 <v-list-item-content>
                   <v-list-item-title>
                     <h3
-                      :class="{'dark-theme': $vuetify.theme.dark}"
+                      :class="{ 'dark-theme': $vuetify.theme.dark }"
                       class="text-center font-weight-black  class text-uppercase "
                     >
                       {{ link.text }}
@@ -128,10 +90,7 @@
                   </v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-action class="ma-0">
-                  <v-icon
-                    right
-                    :color="customColor"
-                  >
+                  <v-icon right :color="customColor">
                     {{ link.icon }}
                   </v-icon>
                 </v-list-item-action>
@@ -140,10 +99,7 @@
           </v-card>
         </v-col>
       </v-row>
-     
-      
-      
-      
+
       <!-- <v-list
         dark
       >
@@ -202,22 +158,22 @@ export default {
           text: "Tributes",
           route: "/tributes",
         },
-         {
+        {
           icon: "flutter_dash",
-          text: "Something",
-          route: "/something",
+          text: "contact me",
+          route: "/contact",
         },
       ],
       // don't forget to set routes in ./router/index.js
     };
   },
   computed: {
-    customColor () {
-      return this.$vuetify.theme.dark? '#41b883': 'black'
+    customColor() {
+      return this.$vuetify.theme.dark ? "#41b883" : "black";
     },
-    spacePicture () {
-      return this.$vuetify.theme.dark? '/outer-space.jpg':'null';
-    }
+    spacePicture() {
+      return this.$vuetify.theme.dark ? "/outer-space.jpg" : "null";
+    },
   },
 
   methods: {
@@ -228,21 +184,20 @@ export default {
       });
     },
     toggleTheme() {
-      this.$vuetify.theme.themes.dark.anchor = '#41B883'
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      this.$vuetify.theme.themes.dark.anchor = "#41B883";
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
-    refresh () {
-     if (this.draw) {
-       this.draw = !this.draw
-     }
+    refresh() {
+      if (this.draw) {
+        this.draw = !this.draw;
+      }
     },
-    
-  }
+  },
 };
 </script>
 
 <style scoped>
-  /* .dark-mode {
+/* .dark-mode {
   color: #41b883 !important;
  } */
 
@@ -253,13 +208,10 @@ a {
   text-decoration: none;
 }
 .class {
-   
-   font-family: 'Fira Sans';   
+  font-family: "Fira Sans";
 }
 .dark-theme {
-/* -webkit-text-stroke: 0.7px black; */
-color: #41b883 
+  /* -webkit-text-stroke: 0.7px black; */
+  color: #41b883;
 }
-
-
 </style>

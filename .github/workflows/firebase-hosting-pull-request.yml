@@ -12,6 +12,8 @@ jobs:
       - run: /usr/bin/git config --global url."https://".insteadOf ssh://
       - run: npm ci
       - run: npm run build
+        env:
+          VUE_APP_BACKEND_URL: "${{secrets.BACKEND_URL}}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
