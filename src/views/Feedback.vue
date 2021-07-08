@@ -12,6 +12,7 @@
                 label="Your name"
                 required
                 placeholder="Your name"
+                clearable
               ></v-text-field>
             </v-col>
             <v-col cols="12" md="4" lg="3" xl="2">
@@ -22,6 +23,7 @@
                 label="Your company"
                 required
                 placeholder="Your company"
+                clearable
               ></v-text-field>
             </v-col>
             <v-col cols="12" md="4" lg="3" xl="2">
@@ -31,7 +33,7 @@
                 label="E-mail"
                 required
                 placeholder="E-mail"
-                autocomplete="email"
+                clearable
               ></v-text-field>
             </v-col>
           </v-row>
@@ -44,7 +46,6 @@
                 label="Your message to me"
                 placeholder="Your message to me"
                 hint="Spill it, my dear visitor!"
-                autocomplete="message"
                 v-model="message"
                 :counter="1000"
                 :rules="messageRules"
@@ -123,17 +124,9 @@ export default {
     };
   },
   computed: {
-    customHeight() {
-      return this.$vuetify.breakpoint.smAndDown
-        ? "30vh"
-        : this.$vuetify.breakpoint.md
-        ? "40vh"
-        : this.$vuetify.breakpoint.lg
-        ? "50vh"
-        : "60vh";
-    },
+    //
   },
-  mounted: function () {
+  mounted: function() {
     let body = document.getElementById("body");
     body.style.height = window.innerHeight + "px";
     this.wakeUp();
@@ -183,9 +176,7 @@ export default {
       }, this.n * 1000);
     },
     async wakeUp() {
-      await fetch(`${process.env.VUE_APP_BACKEND_URL}/wakeup`)
-        .then((res) => res.json())
-        .then((data) => console.log(data));
+      await fetch(`${process.env.VUE_APP_BACKEND_URL}/wakeup`);
     },
   },
 };
@@ -197,8 +188,6 @@ export default {
   max-width: 100%;
   z-index: 3;
   position: absolute;
-  /* top: 20%; */
-  /* left: 50%; */
 }
 .alert-wrapper {
   overflow-y: hidden;
