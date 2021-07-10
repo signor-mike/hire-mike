@@ -70,6 +70,14 @@ export default {
       draw: false,
     };
   },
+  mounted: function() {
+    this.wakeUp();
+  },
+  methods: {
+    async wakeUp() {
+      await fetch(`${process.env.VUE_APP_BACKEND_URL}/wakeup`);
+    },
+  },
   computed: {
     customColor() {
       return this.$vuetify.theme.dark ? "#41b883" : "primary";

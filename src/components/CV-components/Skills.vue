@@ -185,7 +185,12 @@
         'default-dark-color': $vuetify.theme.dark,
       }"
     >
-      <v-card-text class="pt-1">
+      <v-skeleton-loader
+        v-if="isLoading"
+        type="article@2"
+        class="mx-auto"
+      ></v-skeleton-loader>
+      <v-card-text class="pt-1" v-else>
         <div class="parent d-flex justify-center">
           <span
             class="child text-center mx-n3 "
@@ -255,14 +260,21 @@ export default {
       required: true,
     },
   },
+  watch: {
+    skills: function(newVal, oldVal) {
+      if (oldVal !== newVal) {
+        this.isLoading = false;
+      }
+    },
+  },
   data() {
     return {
-      //
+      isLoading: true,
     };
   },
   computed: {
     title() {
-      return this.skills[0].type === "soft"
+      return this.skills[0]?.type === "soft"
         ? this.$t("skills.softSkills")
         : this.$t("skills.hardSkills");
     },

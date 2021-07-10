@@ -219,6 +219,7 @@
         </router-link>
       </h3>
     </div>
+
     <div id="document" ref="document" class="html d-none">
       <div class="body">
         <div class="upper-section">
@@ -323,13 +324,14 @@ export default {
       currentAge: "",
       todays: "",
       n: 5,
+      skills: [],
     };
   },
 
   computed: {
-    skills() {
-      return this.$store.state.skills;
-    },
+    // skills() {
+    //   return this.$store.state.skills;
+    // },
 
     hardSkills() {
       return this.skills.filter((skill) => skill.type === "hard");
@@ -342,7 +344,8 @@ export default {
   beforeMount: function() {
     this.getAge("1994/03/15");
   },
-  mounted: function() {
+  mounted: async function() {
+    await this.getSkills();
     var element = document.getElementById("document");
     var opt = {
       margin: 0,
@@ -351,10 +354,12 @@ export default {
       html2canvas: { scale: 3 },
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
     };
+
     html2pdf()
       .from(element)
       .set(opt)
       .save();
+
     this.countdown();
     setTimeout(() => {
       this.$router.go(-1);
@@ -380,6 +385,40 @@ export default {
       setInterval(() => {
         this.n -= 1;
       }, 1000);
+    },
+    async getSkills() {
+      const request = await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`);
+      const response = await request.json();
+      this.skills = await response;
+    },
+    async addSkill(a, b, c) {
+      await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          type: a,
+          title: b,
+          mastery: c,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    },
+    async moveSkills() {
+      for (let i = 0; i < this.skills.length; i++) {
+        this.addSkill(
+          this.skills[i].type,
+          this.skills[i].title,
+          this.skills[i].mastery
+        );
+        // console.log(
+        //   this.skills[i].type,
+        //   this.skills[i].title,
+        //   this.skills[i].mastery
+        // );
+      }
     },
   },
 };

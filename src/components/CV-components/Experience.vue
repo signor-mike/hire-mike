@@ -1,11 +1,7 @@
 <template>
   <v-main class="pt-0 px-1">
-    <div class="text-center d-flex pb-3 justify-space-around">
-      <v-btn
-        v-if="!expander"
-        small
-        @click="all"
-      >
+    <div class="text-center d-flex py-2 justify-space-around">
+      <v-btn v-if="!expander" small @click="all">
         <v-icon
           :small="$vuetify.breakpoint.smAndDown"
           medium
@@ -16,11 +12,7 @@
         {{ $t("experience.expandAll") }}
       </v-btn>
 
-      <v-btn
-        v-if="expander"
-        small
-        @click="none"
-      >
+      <v-btn v-if="expander" small @click="none">
         <v-icon
           :small="$vuetify.breakpoint.smAndDown"
           medium
@@ -31,13 +23,7 @@
         {{ $t("experience.collapseAll") }}
       </v-btn>
     </div>
-    <v-expansion-panels
-      v-model="panel"
-      accordion
-      focusable
-      popout
-      multiple
-    >
+    <v-expansion-panels v-model="panel" accordion focusable popout multiple>
       <Bio :custom-color="customColor" />
       <!-- about me -->
       <ExpAboutMe :custom-color="customColor" />
@@ -46,13 +32,9 @@
       <!-- education -->
       <Education :custom-color="customColor" />
       <!-- relevant experience -->
-      <ExpRelevant
-        :custom-color="customColor"
-      />
+      <ExpRelevant :custom-color="customColor" />
       <!-- irrelevant experience -->
-      <ExpIrrelevant
-        :custom-color="customColor"
-      />
+      <ExpIrrelevant :custom-color="customColor" />
     </v-expansion-panels>
   </v-main>
 </template>
@@ -63,7 +45,7 @@ import ExpMyProjects from "./ExpComponents/ExpMyProjects.vue";
 import ExpRelevant from "./ExpComponents/ExpRelevant.vue";
 import ExpIrrelevant from "./ExpComponents/ExpIrrelevant.vue";
 import Education from "./ExpComponents/Education.vue";
-import Bio from './ExpComponents/Bio.vue'
+import Bio from "./ExpComponents/Bio.vue";
 
 export default {
   components: {
@@ -71,7 +53,8 @@ export default {
     ExpMyProjects,
     ExpRelevant,
     ExpIrrelevant,
-    Education, Bio
+    Education,
+    Bio,
   },
   data() {
     return {
@@ -81,23 +64,21 @@ export default {
     };
   },
   computed: {
-       customColor () {
-      return this.$vuetify.theme.dark? '#41b883': 'primary'
+    customColor() {
+      return this.$vuetify.theme.dark ? "#41b883" : "primary";
     },
   },
   methods: {
     // Create an array the length of our items
     // with all values as true
     all() {
-      this.panel = [...Array(this.items).keys()].map((k, i) => i),
-      this.expander = !this.expander;
-      console.log(typeof this.customColor)
-      
+      (this.panel = [...Array(this.items).keys()].map((k, i) => i)),
+        (this.expander = !this.expander);
+      console.log(typeof this.customColor);
     },
     // Reset the panel
     none() {
-      this.panel = [],
-      this.expander = !this.expander;
+      (this.panel = []), (this.expander = !this.expander);
     },
   },
 };

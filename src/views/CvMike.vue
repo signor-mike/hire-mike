@@ -22,11 +22,11 @@
     </v-card>
 
     <v-card class="my-5 px-2">
-      <v-row class="justify-space-between">
+      <v-row class="justify-space-between" no-gutters>
         <v-col
           cols="auto"
           sm="auto"
-          md="4"
+          md="3"
           class="d-flex justify-start flex-column"
         >
           <v-btn
@@ -39,16 +39,15 @@
           >
             <span>{{ $t("skills.switch") }}</span>
           </v-btn>
-
           <Skills v-if="!replace" :skills="hardSkills" />
           <Skills v-if="replace" :skills="softSkills" />
         </v-col>
 
-        <v-col cols="auto" sm="auto" md="4" class="d-flex justify-center">
+        <v-col cols="auto" sm="auto" md="6" class="d-flex justify-center">
           <Experience />
         </v-col>
 
-        <v-col cols="auto" sm="auto" md="4" class="d-flex  justify-end">
+        <v-col cols="auto" sm="auto" md="3" class="d-flex  justify-end">
           <Skills
             :skills="softSkills"
             :class="{
@@ -91,16 +90,23 @@ export default {
     return {
       fab: false,
       replace: false,
+      skills: [],
     };
   },
+
   computed: {
     hardSkills() {
-      return this.$store.state.skills.filter((skill) => skill.type === "hard");
+      return this.skills.filter((skill) => skill.type === "hard");
     },
     softSkills() {
-      return this.$store.state.skills.filter((skill) => skill.type === "soft");
+      return this.skills.filter((skill) => skill.type === "soft");
     },
   },
+  mounted: async function() {
+    await this.getSkills();
+    console.log(this.skills);
+  },
+
   methods: {
     onScroll(e) {
       if (typeof window === "undefined") return;
@@ -112,6 +118,11 @@ export default {
     },
     toggle() {
       this.replace = !this.replace;
+    },
+    async getSkills() {
+      const request = await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`);
+      const response = await request.json();
+      this.skills = await response;
     },
   },
 };

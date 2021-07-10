@@ -129,7 +129,6 @@ export default {
   mounted: function() {
     let body = document.getElementById("body");
     body.style.height = window.innerHeight + "px";
-    this.wakeUp();
   },
   methods: {
     async handleSubmit() {
@@ -174,9 +173,6 @@ export default {
       setTimeout(() => {
         this.$router.go(-1);
       }, this.n * 1000);
-    },
-    async wakeUp() {
-      await fetch(`${process.env.VUE_APP_BACKEND_URL}/wakeup`);
     },
   },
 };
