@@ -31,7 +31,13 @@
       "Work Ethic": "Work Ethic",
       "Flexibility": "Flexibility",
       "Adaptability": "Adaptability"
-    }
+    },
+    "bioHeader" : "From Customer Service to Full stack Developer.",
+      "bioSubHeader" : "That's how all began:",
+      "bioP1" : "After working for several years among Customer Service Assistance and then in Sales Management, famous events happened in my birthplace brought me away and took me to change my personal priorities.",
+      "bioP2" : "I traveled around Europe, Volunteering in a Hostel in Tenerife where I became Hospitality Assistant Manager and it was one of the most incredible experience of my life.",
+      "bioP3" : "Finally able to settle in Italy, I decided to try to be accepted in a Highly Selective, Intensive program to effectively learn topics I was working with previously in my life as self-taught, and finally turn myself into a professional Web Developer."
+  , "ongoing" : "Under development"
   },
   "de" : {
     "header" : "Der Download sollte sehr bald beginnen.",
@@ -64,7 +70,13 @@
       "Work Ethic": "Arbeitsethik",
       "Flexibility": "Flexibilität",
       "Adaptability": "Anpassungsfähigkeit"
-    }
+    ,"ongoing" : "In Entwicklung"
+    },
+    "bioHeader" : "Vom Kundenservice zum Full-stack-Entwickler.",
+      "bioSubHeader" : "So fing alles an:",
+      "bioP1" : "Nachdem ich mehrere Jahre in der Kundenbetreuung und dann im Vertriebsmanagement gearbeitet habe, haben mich berühmte Ereignisse in meinem Geburtsort mitgenommen und mich dazu gebracht, meine persönlichen Prioritäten zu ändern.",
+      "bioP2" : "Ich bin durch Europa gereist und habe in einem Hostel auf Teneriffa ehrenamtlich gearbeitet, wo ich Hospitality Assistant Manager wurde und es war eine der unglaublichsten Erfahrungen meines Lebens.",
+      "bioP3" : "Nachdem ich mich endlich in Italien niederlassen konnte, beschloss ich zu versuchen, in ein hochselektives, intensives Programm aufgenommen zu werden, um Themen, mit denen ich zuvor in meinem Leben als Autodidakt gearbeitet hatte, effektiv zu erlernen und mich schließlich zu einem professionellen Webentwickler zu entwickeln. "
   },
   "es" : {
     "header" : "La descarga debería comenzar muy pronto.",
@@ -97,7 +109,13 @@
       "Work Ethic": "Ética laboral",
       "Flexibility": "Flexibilidad",
       "Adaptability": "Adaptabilidad"
-    }
+    },
+    "bioHeader" : "Desde el servicio al cliente hasta el desarrollador Full stack.",
+      "bioSubHeader" : "Así empezó todo:",
+      "bioP1" : "Después de trabajar durante varios años en Asistencia al cliente y luego en Gestión de ventas, eventos famosos que sucedieron en mi lugar de nacimiento me llevaron a cambiar mis prioridades personales.",
+      "bioP2" : "Viajé por Europa, haciendo voluntariado en un albergue en Tenerife donde me convertí en subdirector de hospitalidad y fue una de las experiencias más increíbles de mi vida.",
+      "bioP3" : "Finalmente, capaz de instalarme en Italia, decidí intentar ser aceptado en un programa intensivo altamente selectivo para aprender de manera efectiva los temas con los que estaba trabajando anteriormente en mi vida como autodidacta y finalmente convertirme en un desarrollador web profesional. "
+  ,"ongoing" : "En desarrollo"
   },
   "fr" : {
     "header" : "Le téléchargement devrait commencer très bientôt.",
@@ -130,7 +148,13 @@
       "Work Ethic": "Éthique de travail",
       "Flexibility": "Flexibilité",
       "Adaptability": "Adaptabilité"
-    }
+    },
+    "bioHeader" : "Du service client au développeur Full stack.",
+      "bioSubHeader" : "C'est ainsi que tout a commencé :",
+      "bioP1" : "Après avoir travaillé plusieurs années dans l'Assistance Client puis dans la Direction Commerciale, des événements célèbres survenus dans ma ville natale m'ont éloigné et m'ont amené à changer mes priorités personnelles.",
+      "bioP2" : "J'ai voyagé à travers l'Europe, faisant du bénévolat dans une auberge de jeunesse à Tenerife où je suis devenu Hospitality Assistant Manager et ce fut l'une des expériences les plus incroyables de ma vie.",
+      "bioP3" : "Enfin capable de m'installer en Italie, j'ai décidé d'essayer d'être accepté dans un programme hautement sélectif et intensif pour apprendre efficacement des sujets sur lesquels je travaillais auparavant dans ma vie en tant qu'autodidacte, et enfin me transformer en développeur Web professionnel. "
+  , "ongoing" : "En cours de développement"
   },
   "it" : {
     "header" : "Il download dovrebbe iniziare molto presto.",
@@ -163,7 +187,13 @@
       "Work Ethic": "Lavoro etico",
       "Flexibility": "Flessibilità",
       "Adaptability": "Adattabilità"
-    }
+    },
+    "bioHeader" : "Dal servizio clienti allo sviluppatore Full stack.",
+      "bioSubHeader" : "È così che è iniziato tutto:",
+      "bioP1" : "Dopo aver lavorato per diversi anni nell'Assistenza Clienti e poi nella Direzione Vendite, eventi famosi accaduti nella mia città mi hanno portato via e portato a cambiare le mie priorità personali.",
+      "bioP2" : "Ho viaggiato in giro per l'Europa, facendo volontariato in un ostello a Tenerife dove sono diventato Hospitality Assistant Manager ed è stata una delle esperienze più incredibili della mia vita.",
+      "bioP3" : "Finalmente in grado di stabilirmi in Italia, ho deciso di provare ad essere accettato in un programma altamente selettivo e intensivo per apprendere efficacemente argomenti con cui stavo lavorando in precedenza nella mia vita da autodidatta, e infine trasformarmi in un Web Developer professionista. "
+  , "ongoing" : "In fase di sviluppo"
   },
   "ru" : {
     "header" : "Загрузка должна начаться очень скоро.",
@@ -196,7 +226,13 @@
       "Work Ethic": "Рабочая этика",
       "Flexibility": "Гибкость",
       "Adaptability": "Адаптивность"
-    }
+    },
+     "bioHeader" : "От службы поддержки до разработчика.",
+      "bioSubHeader" : "Как все и началось:",
+      "bioP1" : "После нескольких лет работы в службе поддержки клиентов, а затем в управлении продажами, известные события, произошедшие на моей родине, заставили меня изменить свои личные приоритеты.",
+      "bioP2" : "Я путешествовал по Европе, работал волонтером в хостеле на Тенерифе, где я стал помощником менеджера по гостеприимству, и это был один из самых невероятных событий в моей жизни.",
+      "bioP3" : "Наконец, получив возможность обосноваться в Италии, я решил попробовать поступить на высокоселективную интенсивную программу, чтобы эффективно изучать темы, с которыми я работал ранее в своей жизни как самоучка, и наконец стать профессиональным веб-разработчиком. "
+  , "ongoing" : "В разработке"
   }
 }
 </i18n>
@@ -219,94 +255,169 @@
         </router-link>
       </h3>
     </div>
-
     <div id="document" ref="document" class="html d-none">
-      <div class="body">
-        <div class="upper-section">
-          <div class="name-and-contacts">
-            <h2>Mikhail Krivoshchekov (Mike)</h2>
-            <h3>{{ $t("person.position") }}</h3>
+      <body class="body">
+        <header>
+          <section
+            style="flex-direction: column; justify-content: space-between"
+          >
+            <div>
+              <h2>Mikhail (Mike) Krivoshchekov</h2>
+              <h3>{{ $t("person.position") }}</h3>
+              <p>{{ $t("expAboutMe.addr") }}</p>
+            </div>
+            <div>
+              <p>
+                <a href="https://hire-mike.web.app"
+                  >https://hire-mike.web.app</a
+                >
+              </p>
+            </div>
+          </section>
 
-            <p>
-              {{ $t("expAboutMe.dobDate") }}({{ currentAge
-              }}{{ $t("expAboutMe.yearsOld") }})
-            </p>
-            <p>{{ $t("expAboutMe.addr") }}</p>
-            <ul>
-              <li v-for="contact in contacts" :key="contact.i">
-                {{ contact.addr }}
-              </li>
-            </ul>
-          </div>
-          <img src="/my-face.jpg" alt="alt" class="avatar" />
-        </div>
-        <hr />
-        <div class="bottom-section">
-          <div class="soft-skills">
-            <ul>
-              <li v-for="softSkill in softSkills" :key="softSkill.i">
-                {{ $t(`skills.${softSkill.title}`) }}
-              </li>
-            </ul>
-          </div>
-          <div class="about-me">
-            <div class="langs">
+          <img src="/cv-qr.png" alt="" />
+        </header>
+
+        <content>
+          <aside>
+            <div>
+              <h4>Contacts:</h4>
               <ul>
-                <h3>
-                  {{ $t("expAboutMe.languages") }}
-                </h3>
-                <li>
-                  <flag iso="gb" /> {{ $t("expAboutMe.eng") }}
-                  <span class="secondary--text">{{
-                    $t("expAboutMe.lvFl")
-                  }}</span>
-                </li>
-                <li>
-                  <flag iso="ru" /> {{ $t("expAboutMe.rus") }}
-                  <span class="secondary--text">{{
-                    $t("expAboutMe.lvNa")
-                  }}</span>
-                </li>
-                <li>
-                  <flag iso="it" /> {{ $t("expAboutMe.ita") }}
-                  <span class="secondary--text">{{
-                    $t("expAboutMe.lvBa")
-                  }}</span>
-                </li>
-                <li>
-                  <flag iso="es" /> {{ $t("expAboutMe.esp") }}
-                  <span class="secondary--text">{{
-                    $t("expAboutMe.lvBa")
-                  }}</span>
+                <li v-for="contact in contacts" :key="contact.i">
+                  {{ contact.addr }}
                 </li>
               </ul>
             </div>
-            <p>
-              {{ $t("lightCv.thisIs") }}<br />
-              {{ $t("lightCv.visitThis") }}
-              <a href="https://hire-mike.web.app/en/cv-mike"
-                >hire-mike.web.app</a
-              >
-              <br />
-              {{ $t("lightCv.scanThis") }}
-            </p>
-            <div class="qrcode">
-              <img src="/cv-qr.png" alt="" />
-            </div>
-            <p>{{ $t("lightCv.ty") }}</p>
-          </div>
-          <div class="hard-skills">
-            <ul>
-              <li v-for="hardSkill in hardSkills" :key="hardSkill.i">
-                {{ $t(`skills.${hardSkill.title}`) }}
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="bottom-disclaimer">
-          <p>The PDF created at {{ todays }}</p>
-        </div>
-      </div>
+            <section>
+              <h4>Hard Skills:</h4>
+              <ul>
+                <li v-for="hardSkill in hardSkills" :key="hardSkill.i">
+                  {{ $t(`skills.${hardSkill.title}`) }}
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>Soft Skills:</h4>
+              <ul>
+                <li v-for="softSkill in softSkills" :key="softSkill.i">
+                  {{ $t(`skills.${softSkill.title}`) }}
+                </li>
+              </ul>
+            </section>
+          </aside>
+          <main>
+            <section>
+              <h4>Bio:</h4>
+              <h5>
+                {{ $t("bioHeader") }}
+              </h5>
+              <h6>
+                {{ $t("bioSubHeader") }}
+              </h6>
+              <p>{{ $t("bioP1") }}</p>
+              <p>{{ $t("bioP2") }}</p>
+              <p>{{ $t("bioP3") }}</p>
+            </section>
+
+            <section>
+              <h4>{{ $t("education.education") }}:</h4>
+              <article>
+                <a href="https://strive.school/">
+                  <h5>Strive.School</h5>
+                </a>
+                <h5>{{ $t("education.fullstack") }}</h5>
+                <h6>
+                  {{ $t("months.april") }} 2021 -
+                  {{ $t("months.september") }} 2021
+                </h6>
+              </article>
+
+              <article>
+                <a href="http://пгатк.рф/">
+                  <h5>{{ $t("education.schoolName") }}</h5>
+                </a>
+                <h5>{{ $t("education.spec") }}</h5>
+                <h6>
+                  {{ $t("months.september") }} 2009 -
+                  {{ $t("months.july") }} 2012
+                </h6>
+              </article>
+            </section>
+
+            <section>
+              <h4>{{ $t("experience.myProjects") }}:</h4>
+              <div class="projects">
+                <div class="left-projects">
+                  <div class="project">
+                    <a href="https://hire-mike.web.app">
+                      <h5>https://hire-mike.web.app</h5>
+                    </a>
+                    <span>My personal website</span>
+                    <ul>
+                      <li>Vue.js</li>
+                      <li>Node.js</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+
+                  <div class="project">
+                    <a href="https://fns-accessories.web.app/">
+                      <h5>https://fns-accessories.web.app/</h5>
+                    </a>
+                    <span>e-commerce |</span><span> {{ $t("ongoing") }}</span>
+                    <ul>
+                      <li>Nuxt.js</li>
+                      <li>Node.js</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+
+                  <div class="project">
+                    <a href="https://kui-s-nami-nuxt.web.app/">
+                      <h5>https://kui-s-nami-nuxt.web.app/</h5>
+                    </a>
+                    <span>Brand website |</span
+                    ><span> {{ $t("ongoing") }}</span>
+                    <ul>
+                      <li>Nuxt.js</li>
+                      <li>Node.js</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="right-projects">
+                  <div class="project">
+                    <a href="https://mikes.netlify.app/">
+                      <h5>https://mikes.netlify.app/</h5>
+                    </a>
+                    <span>Just for fun</span>
+                    <ul>
+                      <li>ES6 JavaScript</li>
+                      <li>Plain CSS</li>
+                      <li>Semantic HTML</li>
+                    </ul>
+                  </div>
+
+                  <div class="project">
+                    <a href="https://strive-m3-playground.netlify.app/">
+                      <h5>https://strive-m3-playground.netlify.app/</h5>
+                    </a>
+                    <span>Number guesser game</span>
+                    <ul>
+                      <li>ES6 JavaScript</li>
+                      <li>Plain CSS</li>
+                      <li>Semantic HTML</li>
+                      <li>A little bit of Bootstrap</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </content>
+      </body>
+      <p style="text-align: center">The PDF created at {{ todays }}</p>
     </div>
   </div>
 </template>
@@ -329,10 +440,6 @@ export default {
   },
 
   computed: {
-    // skills() {
-    //   return this.$store.state.skills;
-    // },
-
     hardSkills() {
       return this.skills.filter((skill) => skill.type === "hard");
     },
@@ -375,11 +482,7 @@ export default {
       if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
       }
-      return (
-        (this.currentAge = age),
-        (this.todays = today),
-        console.log("age: " + this.currentAge + " " + typeof this.currentAge)
-      );
+      return (this.currentAge = age), (this.todays = today);
     },
     countdown() {
       setInterval(() => {
@@ -391,98 +494,92 @@ export default {
       const response = await request.json();
       this.skills = await response;
     },
-    async addSkill(a, b, c) {
-      await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          type: a,
-          title: b,
-          mastery: c,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-    },
-    async moveSkills() {
-      for (let i = 0; i < this.skills.length; i++) {
-        this.addSkill(
-          this.skills[i].type,
-          this.skills[i].title,
-          this.skills[i].mastery
-        );
-        // console.log(
-        //   this.skills[i].type,
-        //   this.skills[i].title,
-        //   this.skills[i].mastery
-        // );
-      }
-    },
   },
 };
 </script>
 
 <style>
-li {
-  margin: 5px 0 5px 0;
-}
 .html {
   height: 100%;
 }
 .body {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5px 40px auto 100px;
 }
-.upper-section {
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-right: 2px solid #025a02;
+  border-bottom: 2px solid #025a02;
+  padding: 0 15px 15px 0;
+  border-radius: 0 0 25px 10px;
+  /* top-left corner, top-right, bottom-right, bottom-left  */
+}
+header > section {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: end;
+}
+header > img {
+  max-width: 150px;
+  max-height: 150px;
+  padding: 10px;
+}
+content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
-.avatar {
-  margin-bottom: 20px;
-  max-width: 200px;
-}
-.bottom-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-bottom: solid grey 2px;
-}
-.hard-skills {
-  text-align: right;
-}
-.about-me {
-  border-right: solid grey 2px;
-  border-left: solid grey 2px;
-  padding: 0 5px 0 5px;
-  width: 400px;
+aside {
   display: flex;
   flex-direction: column;
+  border-right: 2px solid #025a02;
+  border-left: 2px solid #025a02;
+  border-radius: 0 0 25px 0;
+  background: rgba(57, 221, 7, 0.274);
+  width: 30%;
+  padding: 5px 10px 5px 5px;
+  margin-left: 10px;
+}
+aside section {
+  margin: 10px 0 10px 0;
+}
+aside section ul li {
+  padding: 3px 2px 3px 2px;
+}
+aside ul li {
+  font-size: 0.7rem;
+}
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px 20px 0;
+}
+.project {
+  border-bottom: 1px dotted grey;
+  padding-bottom: 10px;
+}
+.project span:nth-of-type(2) {
+  font-size: 0.7rem;
+}
+content main section {
+  border-bottom: 2px solid #025a02;
+  padding: 0 0 0 10px;
+  border-radius: 0 0 25px 0;
+}
+main section h4 {
   text-align: center;
 }
-.qrcode {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0 10px 0;
+main section article {
+  border-bottom: 2px solid #025a02;
+  border-radius: 0 0 25px 0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
-.qrcode img {
-  width: 150px;
-  height: 150px;
-}
-.hard-skills li,
-.soft-skills li {
-  margin-top: 5px;
-  padding-bottom: 2px;
-  border-bottom: dashed #808080a9 0.5px;
-}
-.bottom-disclaimer {
-  margin-top: 40px;
-  display: flex;
-  justify-content: right;
+main section article:last-of-type {
+  border: none;
 }
 </style>

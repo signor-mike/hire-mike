@@ -1,5 +1,4 @@
 {
-  
   "skills": {
     "hardSkills": "Hard Skills",
     "softSkills": "Soft Skills",
@@ -7,7 +6,7 @@
   },
   "person": {
     "name": "Mikhail (Mike) Krivoshchekov",
-    "position": "Développeur frontal"
+    "position": "Développeur Full stack"
   },
   "contacts": {
     "email me": "email",
