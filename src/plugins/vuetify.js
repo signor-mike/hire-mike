@@ -4,15 +4,17 @@ import Vuetify from "vuetify/lib/framework";
 Vue.use(Vuetify, { iconfont: "md" });
 
 const vuetify = new Vuetify({
-    theme: {
-      themes: {
-    light: {
-        primary: '#2196f3'
+  theme: {
+    themes: {
+      light: {
+        primary: "#2196f3",
+        secondary: "#bababa",
+      },
+      dark: {
+        primary: "#41B883",
+        secondary: "#1e1e1e",
+      },
     },
-    dark: {
-        primary: '#41B883'
-    }
-}
-    },
-  })
-  export default vuetify
+  },
+});
+export default vuetify;

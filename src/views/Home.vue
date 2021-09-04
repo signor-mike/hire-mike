@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <div class="class" :class="{ 'dark-mode': $vuetify.theme.dark }">
+  <div class="primary--text">
+    <div class="class">
       <vue-typed-js
         :strings="['Hire mike']"
         :type-speed="50"
         :start-delay="700"
         :show-cursor="false"
       >
-        <h1
-          class="text-uppercase mb-1 typing"
-          :class="{ 'black--text': $vuetify.theme.dark === false }"
-        />
+        <h1 class="text-uppercase mb-1 typing" />
       </vue-typed-js>
       <br />
       <vue-typed-js
@@ -19,39 +16,13 @@
         :cursor-char="'_'"
         @onComplete="draw = !draw"
       >
-        <h3
-          class="typing"
-          :class="{ 'black--text': $vuetify.theme.dark === false }"
-        />
+        <h3 class="typing" />
       </vue-typed-js>
 
       <div v-show="draw" class="button-box">
-        <v-row
-          dense
-          :no-gutters="$vuetify.breakpoint.smAndDown"
-          :class="{ 'ml-5': $vuetify.breakpoint.smAndDown }"
-        >
-          <v-col
-            v-for="contact in contacts"
-            :key="contact.id"
-            cols="2"
-            :class="{ 'pb-1': $vuetify.breakpoint.smAndDown }"
-          >
-            <v-btn
-              text
-              :large="$vuetify.breakpoint.mdAndUp"
-              :x-small="$vuetify.breakpoint.smAndDown"
-            >
-              <a :href="contact.link" target="_blank">
-                <v-icon
-                  :color="customColor"
-                  :medium="$vuetify.breakpoint.smAndDown"
-                  :class="{ 'mr-5': $vuetify.breakpoint.smAndDown }"
-                >
-                  {{ contact.icon }}
-                </v-icon>
-              </a>
-            </v-btn>
+        <v-row dense :no-gutters="$vuetify.breakpoint.smAndDown">
+          <v-col v-for="contact in contacts" :key="contact.i" cols="auto">
+            <Contacts :contact="contact" />
           </v-col>
         </v-row>
       </div>
@@ -64,7 +35,9 @@ import Vue from "vue";
 import VueTypedJs from "vue-typed-js";
 Vue.use(VueTypedJs);
 
+import Contacts from "../components/Contacts.vue";
 export default {
+  components: { Contacts },
   data() {
     return {
       draw: false,
@@ -79,15 +52,9 @@ export default {
     },
   },
   computed: {
-    customColor() {
-      return this.$vuetify.theme.dark ? "#41b883" : "primary";
-    },
     contacts() {
       return this.$store.state.contacts;
     },
-  },
-  beforeMount: function() {
-    this.customColor;
   },
 };
 </script>
@@ -99,10 +66,6 @@ export default {
   position: absolute;
   top: calc(30% + 15px);
   left: calc(25% - 20px);
-}
-
-.dark-mode {
-  color: #41b883 !important;
 }
 
 .button-box {

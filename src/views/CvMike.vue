@@ -1,4 +1,4 @@
-<template ref="document">
+<template>
   <v-main
     class="pt-0 mt-2  px-3 "
     :class="{
@@ -37,7 +37,7 @@
             x-small
             @click="toggle"
           >
-            <span>{{ $t("skills.switch") }}</span>
+            <span>switch between hard/soft skills</span>
           </v-btn>
           <Skills v-if="!replace" :skills="hardSkills" />
           <Skills v-if="replace" :skills="softSkills" />

@@ -1,46 +1,39 @@
 <template class>
-  <v-app class="">
-    <navBar />
+  <v-app>
+    <NavBar />
     <v-main class="mb-4">
       <router-view />
       <v-btn
         v-show="fab"
         v-scroll="onScroll"
         fab
-        dark
         fixed
         bottom
         right
-        :color="customColor"
+        color="secondary"
         class="to-top-button"
         @click="toTop"
       >
-        <v-icon>keyboard_arrow_up</v-icon>
+        <v-icon color="primary" large>keyboard_arrow_up</v-icon>
       </v-btn>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import navBar from "./components/Navbar";
-
-// var today = new Date ();
-// var date = (today.getMonth()+1)
-// var time = today.getHours()
+import NavBar from "./components/Navbar";
 
 export default {
   name: "App",
 
-  components: { navBar },
+  components: { NavBar },
   data: () => ({
     fab: false,
 
     //
   }),
   computed: {
-    customColor() {
-      return this.$vuetify.theme.dark ? "#41b883" : "primary";
-    },
+    //
   },
   beforeMount: function() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -55,23 +48,6 @@ export default {
         );
     }
   },
-
-  // this one sucks, I guess user preference is better than the sun
-  // mounted: function () {
-  //   if ((date >= 11 || date <= 3) &&  (time <= 7 || time >=19 )) {
-  //     this.$vuetify.theme.dark = true
-  //   } else if ((date < 11 || date > 3) && (time <=5 || time >= 21)) {
-  //     this.$vuetify.theme.dark = true
-  //   } else {
-  //     this.$vuetify.theme.dark = false
-  //   }
-  //   if (!this.$vuetify.theme.dark) {
-  //     console.log("The dark theme is off by default, perhaps it's not dark yet")
-  //   } else {
-  //     console.log("The dark theme is ON by default, perhaps it's really dark")
-  //   }
-  // },
-
   methods: {
     onScroll(e) {
       if (typeof window === "undefined") return;
