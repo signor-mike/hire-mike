@@ -7,7 +7,7 @@
       <h1 class="mx-auto">My projects</h1>
     </div>
     <v-row justify="center" dense>
-      <v-col v-for="item in portfolio" :key="item.i" cols="12" md="6">
+      <v-col v-for="item in portfolio" :key="item.i" cols="12" sm="12" md="6">
         <PortfolioItem :item="item" />
       </v-col>
     </v-row>
@@ -15,27 +15,74 @@
 </template>
 
 <script>
-import PortfolioItem from "../components/PortfolioItem.vue";
+import PortfolioItem from "../components/My-CV/PortfolioItem.vue";
 export default {
   components: { PortfolioItem },
   data() {
     return {
       portfolio: [
         {
-          name: "hire mike",
+          name: "Hire Mike",
+          image: "/projects/hm.png",
           url: "https://hire-mike.web.app",
-          description: "My first webapp",
+          description: "My very own corner in the worldwide web",
           specification:
-            "Here I did implement many of reusable components. I like reusing the same code many times.",
-          techs: ["/techs/vue-js.png", "/techs/vuetify.png"],
+            "Doing stuff here and there. This is my place and I am doing whatever I want ;)",
+          techs: [
+            "/techs/vue-js.png",
+            "/techs/vuetify.png",
+            "/techs/node.png",
+            "/techs/mongo.png",
+          ],
         },
         {
-          name: "fns",
+          name: "F'n'S Handmade accessories",
+          image: "/projects/fns.png",
           url: "https://fns-accessories.web.app",
           description: "e-commerce website",
           specification:
-            "Still unfinished due lack of time, the hardest part was to implement a way of accepting payments.",
-          techs: ["/techs/nuxt.png", "/techs/vuetify.png"],
+            "The webstore for my wife. Still unfinished. One day we will launch it.",
+          techs: [
+            "/techs/nuxt.png",
+            "/techs/vuetify.png",
+            "/techs/node.png",
+            "/techs/mongo.png",
+          ],
+        },
+        {
+          name: "Benchmark checker",
+          image: "/projects/pain.png",
+          url: "https://strivenator.vercel.app/",
+          description: "A small app to check exam results.",
+          specification:
+            "The purpose of this app is to help fellow students of Strive school. After each benchmark students could see what exact questions they've answered wrong. But unfortunately the idea was ditched because Strive school decided to remove the 'isCorrect' property from the database. And so from now on every answer is marked as incorrect.",
+          techs: ["/techs/vue-js.png", "/techs/vuetify.png"],
+        },
+        {
+          name: "Mikes",
+          image: "/projects/mikes.png",
+          url: "https://mikes.netlify.app/",
+          description: "Just fooling around.",
+          specification:
+            "I was playing around with DOM-manipulations and a little bit of animations. Sorta playground.",
+          techs: [
+            "/techs/plain-html.png",
+            "/techs/plain-css.png",
+            "/techs/plain-js.png",
+          ],
+        },
+        {
+          name: "Guess a number",
+          image: "/projects/guesser.png",
+          url: "https://strive-m3-playground.netlify.app/",
+          description: "A very simple number guessing game.",
+          specification:
+            "If you win, your prize will amaze you. Trust me. It definetely worth it!",
+          techs: [
+            "/techs/plain-html.png",
+            "/techs/plain-css.png",
+            "/techs/plain-js.png",
+          ],
         },
       ],
     };

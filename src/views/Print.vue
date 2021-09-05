@@ -17,77 +17,113 @@
         </router-link>
       </h3>
     </div>
-    <div id="document" ref="document" class="html d-none">
+    <div id="document" class="d-none">
+      <div id="top-triangle"></div>
+      <div id="bottom-triangle"></div>
       <body class="body">
         <header>
-          <section
-            style="flex-direction: column; justify-content: space-between"
-          >
-            <div>
-              <h2>Mikhail (Mike) Krivoshchekov</h2>
-              <h3>Fullstack developer</h3>
-              <p>Nardo' (LE), Italy</p>
-            </div>
-            <div>
-              <p>
-                <a href="https://hire-mike.web.app"
-                  >https://hire-mike.web.app</a
-                >
-              </p>
-            </div>
-          </section>
-
-          <img src="/cv-qr.png" alt="" />
+          <div class="image-wrapper">
+            <img
+              @click="printTheShit()"
+              src="/cv-qr.png"
+              alt="scan to visit my website"
+            />
+          </div>
+          <div>
+            <h1>
+              Mikhail (Mike) <br />
+              Krivoshchekov
+            </h1>
+            <h3 class="fancy-font">Fullstack developer</h3>
+          </div>
         </header>
 
-        <content>
+        <main>
           <aside>
-            <div>
-              <h4>Contacts:</h4>
-              <ul>
-                <li v-for="contact in contacts" :key="contact.i">
-                  {{ contact.addr }}
-                </li>
-              </ul>
-            </div>
-            <section>
-              <h4>Hard Skills:</h4>
-              <ul>
-                <li v-for="hardSkill in hardSkills" :key="hardSkill.i">
-                  {{ hardSkill.title }}
-                </li>
-              </ul>
+            <div id="aside-bg"></div>
+            <section class="contacts">
+              <h2>Contacts:</h2>
+              <p>
+                <v-icon light>mdi-email</v-icon>
+                <a href="mailto:mikelitoris34@icloud.com">
+                  mikelitoris34@icloud.com
+                </a>
+              </p>
+              <p>
+                <v-icon light>mdi-web</v-icon>
+                <a href="https://hire-mike.web.app">
+                  hire-mike.web.app
+                </a>
+              </p>
+              <p>
+                <v-icon light>mdi-home</v-icon>
+                <a href="https://goo.gl/maps/ANqCQfcNCJE3htFy5">
+                  Nardo (LE), Italy
+                </a>
+              </p>
+              <p>
+                <v-icon light>mdi-github</v-icon>
+                <a href="https://github.com/Mike-OxHuge">
+                  github.com/Mike-OxHuge
+                </a>
+              </p>
             </section>
-            <section>
-              <h4>Soft Skills:</h4>
-              <ul>
-                <li v-for="softSkill in softSkills" :key="softSkill.i">
-                  {{ softSkill.title }}
-                </li>
-              </ul>
+            <section class="education">
+              <h2>Education:</h2>
+              <p style="font-size: 0.5rem;">FULL STACK DEVELOPMENT PROGRAM</p>
+              <br />
+              <p>2021 - Strive School - YC(S20)</p>
+              <br />
+              <p>
+                Strive is a selective, six-month-long, online course, to learn
+                Full Stack Web Development and kickstart a successful career in
+                tech. <br />The opportunity to work together with people from
+                all over the world, integrating the theory with practical work
+                on real projects from the industry, makes the skills learned
+                easily applicable in every environment.
+              </p>
+            </section>
+            <section class="hard-skills">
+              <h2>Hard Skills:</h2>
+              <p>HTML5 / CSS3</p>
+              <p>JavaScript</p>
+              <p>TypeScript</p>
+              <p>Git</p>
+              <p>Agile methodologies</p>
+
+              <h4>Frontend:</h4>
+              <p>Vue.js</p>
+              <p>Nuxt.js</p>
+              <p>React.js</p>
+              <p>Next.js</p>
+
+              <h4>Backend:</h4>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+
+              <h4>Extra:</h4>
+              <p>UX/UI design skills</p>
+              <p>GIMP</p>
+              <p>PostgreSQL</p>
             </section>
           </aside>
-          <main>
-            <section>
-              <h4>Bio:</h4>
+          <content>
+            <section class="about-me">
+              <h4>
+                ABOUT ME
+              </h4>
               <h5>
                 From Customer Service to Full stack Developer.
               </h5>
-              <h6>
-                That's how all began:
-              </h6>
               <p>
                 After working for several years among Customer Service
                 Assistance and then in Sales Management, famous events happened
                 in my birthplace brought me away and took me to change my
-                personal priorities.
-              </p>
-              <p>
+                personal priorities. <br />
                 I traveled around Europe, Volunteering in a Hostel in Tenerife
                 where I became Hospitality Assistant Manager and it was one of
-                the most incredible experience of my life.
-              </p>
-              <p>
+                the most incredible experience of my life. <br />
                 Finally able to settle in Italy, I decided to try to be accepted
                 in a Highly Selective, Intensive program to effectively learn
                 topics I was working with previously in my life as self-taught,
@@ -95,100 +131,63 @@
               </p>
             </section>
 
-            <section>
-              <h4>Education:</h4>
-              <article>
-                <a href="https://strive.school/">
-                  <h5>Strive.School</h5>
-                </a>
-                <h5>Fullstack Web Engineer</h5>
-                <h6>
-                  April 2021 - October 2021
-                </h6>
-              </article>
+            <section class="projects">
+              <h4>MY PROJECTS</h4>
+              <div class="project">
+                <h5>PERSONAL PORTFOLIO</h5>
+                <p>
+                  <a href="https://hire-mike.web.app/"
+                    >https://hire-mike.web.app/
+                  </a>
+                </p>
+                <ul>
+                  <li>
+                    I've developed my personal website using Vue.js, Node.js,
+                    and MongoDB
+                  </li>
+                  <li>
+                    Every time I learn something new I am looking for a way to
+                    implement it over there.
+                  </li>
+                </ul>
+              </div>
 
-              <article>
-                <a href="http://пгатк.рф/">
-                  <h5>Perm State Motor Transport College</h5>
-                </a>
-                <h5>Vehicle Mechanic, 3rd degree</h5>
-                <h6>
-                  September 2009 - July 2012
-                </h6>
-              </article>
-            </section>
-
-            <section>
-              <h4>My projects:</h4>
-              <div class="projects">
-                <div class="left-projects">
-                  <div class="project">
-                    <a href="https://hire-mike.web.app">
-                      <h5>https://hire-mike.web.app</h5>
-                    </a>
-                    <span>My personal website</span>
-                    <ul>
-                      <li>Vue.js</li>
-                      <li>Node.js</li>
-                      <li>MongoDB</li>
-                    </ul>
-                  </div>
-
-                  <div class="project">
-                    <a href="https://fns-accessories.web.app/">
-                      <h5>https://fns-accessories.web.app/</h5>
-                    </a>
-                    <span>e-commerce |</span><span> Under development</span>
-                    <ul>
-                      <li>Nuxt.js</li>
-                      <li>Node.js</li>
-                      <li>MongoDB</li>
-                    </ul>
-                  </div>
-
-                  <div class="project">
-                    <a href="https://kui-s-nami-nuxt.web.app/">
-                      <h5>https://kui-s-nami-nuxt.web.app/</h5>
-                    </a>
-                    <span>Brand website |</span><span> Under development</span>
-                    <ul>
-                      <li>Nuxt.js</li>
-                      <li>Node.js</li>
-                      <li>MongoDB</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="right-projects">
-                  <div class="project">
-                    <a href="https://mikes.netlify.app/">
-                      <h5>https://mikes.netlify.app/</h5>
-                    </a>
-                    <span>Just for fun</span>
-                    <ul>
-                      <li>ES6 JavaScript</li>
-                      <li>Plain CSS</li>
-                      <li>Semantic HTML</li>
-                    </ul>
-                  </div>
-
-                  <div class="project">
-                    <a href="https://strive-m3-playground.netlify.app/">
-                      <h5>https://strive-m3-playground.netlify.app/</h5>
-                    </a>
-                    <span>Number guesser game</span>
-                    <ul>
-                      <li>ES6 JavaScript</li>
-                      <li>Plain CSS</li>
-                      <li>Semantic HTML</li>
-                      <li>A little bit of Bootstrap</li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="project">
+                <h5>E-COMMERCE</h5>
+                <p>
+                  <a href="https://fns-accessories.web.app/"
+                    >https://fns-accessories.web.app/
+                  </a>
+                </p>
+                <ul>
+                  <li>
+                    When I have free time I am developing this store for my wife
+                  </li>
+                  <li>
+                    It is still under construction...
+                  </li>
+                </ul>
               </div>
             </section>
-          </main>
-        </content>
+
+            <section class="experience">
+              <div class="project">
+                <h4>RELEVANT WORKING EXPERIENCE</h4>
+                <h5>WEB DEVELOPER - FREELANCE</h5>
+                <p>Jan 2021 ~ present</p>
+                <ul>
+                  <li>
+                    Created appealing designs, developing and mantaining
+                    different clients website and e-commerce.
+                  </li>
+                  <li>
+                    Dunno, I didn't expect anybody would read my CV that far...
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </content>
+        </main>
       </body>
       <p style="text-align: center">The PDF created at {{ todays }}</p>
     </div>
@@ -223,13 +222,14 @@ export default {
   },
   beforeMount: function() {
     this.getAge("1994/03/15");
+    this.getSkills();
   },
   mounted: async function() {
     await this.getSkills();
     var element = document.getElementById("document");
     var opt = {
       margin: 0,
-      filename: `!CV-MIKE.pdf`,
+      filename: `!CV-FullStack-Developer-Mike.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 3 },
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
@@ -271,91 +271,122 @@ export default {
 };
 </script>
 
-<style>
-ul {
-  list-style: none;
+<style scoped>
+/* ~~~~~ general stuff ~~~~~ */
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Hina+Mincho&display=swap");
+* {
+  font-family: "Hina Mincho";
 }
-.html {
+main {
+  display: flex;
+  flex-direction: row;
+}
+a {
+  color: black;
+}
+#document {
   height: 100%;
+}
+#top-triangle,
+#bottom-triangle,
+#aside-bg {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  z-index: -1;
+}
+
+#top-triangle {
+  border-width: 250px 700px 0 0;
+  border-color: #41b883 transparent transparent transparent;
+  top: -40px;
+  left: -40px;
+}
+#bottom-triangle {
+  border-width: 0 0 250px 700px;
+  border-color: transparent transparent #41b883 transparent;
+  bottom: -40px;
+  right: -40px;
 }
 .body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 5px 40px auto 100px;
-}
-header {
-  display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
-  border-right: 2px solid #025a02;
-  border-bottom: 2px solid #025a02;
-  padding: 0 15px 15px 0;
-  border-radius: 0 0 25px 10px;
-  /* top-left corner, top-right, bottom-right, bottom-left  */
+  margin: 0;
 }
-header > section {
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: end;
-}
-header > img {
-  max-width: 150px;
-  max-height: 150px;
-  padding: 10px;
-}
-content {
+
+/* ~~~~~~~~~~~~ header styles ~~~~~~~~~~~~ */
+header {
+  margin-top: 5%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
 }
+header .image-wrapper > img {
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+  align-self: center;
+}
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+}
+.fancy-font {
+  font-family: "Allison";
+  margin-top: 15px;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+}
+
+/* ~~~~~~~~~~~~ ASIDE ~~~~~~~~~~~~ */
 aside {
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #025a02;
-  border-left: 2px solid #025a02;
-  border-radius: 0 0 25px 0;
-  background: rgba(57, 221, 7, 0.274);
-  width: 30%;
-  padding: 5px 10px 5px 5px;
-  margin-left: 10px;
+  width: 650px;
+  margin-bottom: 0.3rem;
 }
 aside section {
-  margin: 10px 0 10px 0;
+  padding-left: 2px;
 }
-aside section ul li {
-  padding: 3px 2px 3px 2px;
+#aside-bg {
+  border-width: 2000px 0 0 280px;
+  border-color: #2196f3 #2196f3 #2196f3 #2196f3;
+  z-index: -1;
+  top: 0;
+  left: -15px;
 }
-aside ul li {
-  font-size: 0.7rem;
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
 }
-.projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 10px 20px 0;
+aside p {
+  letter-spacing: 0.1rem;
+  line-height: 1rem;
+}
+.hard-skills h4 {
+  margin-left: 10px;
+}
+
+/* ~~~~~~~~~~~~ CONTENT ~~~~~~~~~~~~ */
+content {
+  margin: 0 40px;
+}
+content h4 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 .project {
-  border-bottom: 1px dotted grey;
-  padding-bottom: 10px;
-}
-.project span:nth-of-type(2) {
-  font-size: 0.7rem;
-}
-content main section {
-  border-bottom: 2px solid #025a02;
-  padding: 0 0 0 10px;
-  border-radius: 0 0 25px 0;
-}
-main section h4 {
-  text-align: center;
-}
-main section article {
-  border-bottom: 2px solid #025a02;
-  border-radius: 0 0 25px 0;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-}
-main section article:last-of-type {
-  border: none;
+  margin: 5px 0 0 10px;
 }
 </style>
