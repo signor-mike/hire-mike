@@ -7,13 +7,7 @@
       <v-col cols="12" sm="12" md="8">
         <v-container pt-0 fluid style="height: 100%">
           <v-row justify="space-between" dense style="height: 100%">
-            <v-col
-              v-for="lang in languages"
-              :key="lang.i"
-              cols="auto"
-              sm="6"
-              md="3"
-            >
+            <v-col v-for="lang in languages" :key="lang.i" cols="6" md="3">
               <flag :iso="lang.flag" />
               <span class="primary--text">
                 {{ lang.lang }}
@@ -193,6 +187,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    console.log(this.$vuetify.breakpoint);
   },
 };
 /*
