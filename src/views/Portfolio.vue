@@ -62,7 +62,7 @@
 						url: "https://fns-accessories.web.app",
 						description: "e-commerce website",
 						specification:
-							"The webstore for my wife. Still unfinished. One day we will launch it.",
+							"Soon to reach production shiny e-commerce with handcrafted CMS",
 						techs: [
 							"/techs/nuxt.png",
 							"/techs/vuetify.png",
