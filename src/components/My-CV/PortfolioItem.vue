@@ -14,7 +14,7 @@
 				<v-img :src="i" width="50"></v-img>
 			</v-col>
 		</v-row>
-		<v-divider v-if="$vuetify.breakpoint.smAndDown"></v-divider>
+		<v-divider class="my-2" v-if="$vuetify.breakpoint.smAndDown"></v-divider>
 	</v-main>
 </template>
 
