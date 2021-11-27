@@ -1,25 +1,24 @@
 import { auth } from "@/plugins/fbase.js";
 import { store } from "@/store/store";
 import {
-	createUserWithEmailAndPassword,
+	// createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
-	// onAuthStateChanged,
 } from "firebase/auth";
 
 export default function authService() {
-	const createUser = async (email, password) => {
-		console.log(auth);
-		try {
-			const user = await createUserWithEmailAndPassword(
-				auth,
-				email,
-				password
-			);
-			return user;
-		} catch (error) {
-			console.log(`${error.code} | ${error.message}`);
-		}
-	};
+	// const createUser = async (email, password) => {
+	// 	console.log(auth);
+	// 	try {
+	// 		const user = await createUserWithEmailAndPassword(
+	// 			auth,
+	// 			email,
+	// 			password
+	// 		);
+	// 		return user;
+	// 	} catch (error) {
+	// 		console.log(`${error.code} | ${error.message}`);
+	// 	}
+	// };
 
 	const signIn = async (email, password) => {
 		const loggedUser = await signInWithEmailAndPassword(
@@ -47,7 +46,7 @@ export default function authService() {
 	};
 
 	return {
-		createUser,
+		// createUser,
 		signIn,
 		authCheck,
 		signOut,

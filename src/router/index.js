@@ -37,9 +37,9 @@ const routes = [
 		path: "/db",
 		name: "db",
 		component: () => import("../views/db.vue"),
-		meta: {
-			authRequired: true,
-		},
+		// meta: {
+		// 	authRequired: true,
+		// },
 	},
 	{
 		path: "/auth",
@@ -70,45 +70,6 @@ const router = new VueRouter({
 // 				path: "/auth",
 // 			});
 // 		}
-// 	} else {
-// 		next();
-// 	}
-// });
-
-// import authService from "@/utils/auth.js";
-// const { authCheck } = authService();
-
-// // import { store } from "@/store/store";
-
-// router.beforeEach(async (to, from, next) => {
-// 	if (to.matched.some(async (record) => record.meta.authRequired)) {
-// 		const currentUser = await authCheck();
-// 		if (currentUser) {
-// 			console.log("currentUser in middleware: ", currentUser);
-// 			next();
-// 		} else {
-// 			console.log("You must be logged in to see this page", currentUser);
-// 			router.push("/auth");
-// 		}
-// 		// await authCheck()
-// 		// 	.then((currentUser) => {
-// 		// 		if (currentUser) {
-// 		// 			console.log("currentUser: ", currentUser);
-// 		// 			next();
-// 		// 		} else {
-// 		// 			console.log(
-// 		// 				"You must be logged in to see this page",
-// 		// 				currentUser
-// 		// 			);
-// 		// 			next({
-// 		// 				path: "/auth",
-// 		// 			});
-// 		// 		}
-// 		// 	})
-// 		// 	.catch((error) => {
-// 		// 		console.log(`${error.code} | ${error.message}`);
-// 		// 	});
-// 		// console.log(currentUser);
 // 	} else {
 // 		next();
 // 	}
