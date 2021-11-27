@@ -3,6 +3,7 @@
 		<h1 v-if="skills.length < 1">
 			db's loading...
 		</h1>
+		<!-- TODO: add admnin handlers for skill list and portfolio projects. -->
 		<v-container d-flex v-else>
 			<ul v-if="users.length > 0">
 				<li v-for="u in users" :key="u.id">
@@ -66,8 +67,6 @@
 			if (this.skills.length < 1) {
 				getSkills().then((skills) => (this.skills = skills));
 			}
-			const { user, currentUser } = this.$store.state;
-			console.log(user.data.email, currentUser.email, user.loggedIn);
 		},
 		computed: {
 			skillTypes() {
@@ -86,7 +85,9 @@
 			},
 			isAdmin() {
 				const { user, currentUser } = this.$store.state;
-				return user.data.email === currentUser.email && user.loggedIn;
+				return user.data && currentUser.email
+					? user.data.email === currentUser.email && user.loggedIn
+					: false;
 			},
 		},
 		methods: {
