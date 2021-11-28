@@ -1,80 +1,72 @@
 <template>
 	<v-main>
-		<h1 v-if="skills.length < 1">
-			db's loading...
-		</h1>
+		<v-row style="max-width:100%">
+			<v-row justify="center">
+				<v-col cols="5">
+					<p v-if="$store.state.currentUser">
+						{{ $store.state.currentUser.email.split("@")[0] }}
+					</p>
+					<v-btn
+						color="error"
+						@click="logout"
+						v-if="$store.state.user.loggedIn"
+						>logout</v-btn
+					>
+
+					<p v-else>please <a href="/auth">login</a></p>
+				</v-col>
+				<v-col cols="5">
+					<v-select
+						:items="stages.stages"
+						label="select action"
+						v-model="stages.currentStage"
+					></v-select>
+				</v-col>
+			</v-row>
+			<v-container v-if="isAdmin">
+				<p class="text-center" v-if="stages.currentStage === ''">
+					Please select something.
+				</p>
+				<SkillsEditor
+					:isAdmin="isAdmin"
+					v-if="stages.currentStage === 'skills'"
+				/>
+				<p v-if="stages.currentStage === 'projects'">
+					projects display component
+				</p>
+			</v-container>
+			<v-container v-else>
+				<h1>401 Unathorized!</h1>
+			</v-container>
+		</v-row>
 		<!-- TODO: add admnin handlers for skill list and portfolio projects. -->
-		<v-container d-flex v-else>
-			<ul v-if="users.length > 0">
-				<li v-for="u in users" :key="u.id">
-					{{ `${u.first} ${u.last} was born in ${u.born}` }}
-				</li>
-			</ul>
-			<ul v-if="skills.length > 0">
-				<li v-for="s in skills" :key="s.id">
-					{{ `${s.title} is a ${s.type} with ${s.mastery}` }}
-				</li>
-			</ul>
-			<v-form @submit.prevent="handleSubmit(skill)" v-if="isAdmin">
-				<v-text-field
-					:placeholder="skillSchema.title"
-					v-model="skill.title"
-				></v-text-field>
-				<v-autocomplete
-					auto-select-first
-					:items="skillTypes"
-					hide-no-data
-					v-model="skill.type"
-				></v-autocomplete>
-				<v-autocomplete
-					auto-select-first
-					:items="masteries"
-					hide-no-data
-					v-model="skill.mastery"
-				></v-autocomplete>
-				<v-btn :disabled="!isValid" :loading="isLoading" type="submit"
-					>add</v-btn
-				>
-			</v-form>
-		</v-container>
-		<v-btn @click="logout" v-if="$store.state.user.loggedIn">logout</v-btn>
 	</v-main>
 </template>
 
 <script>
-	import { getUsers } from "../utils/useUsers";
-	import useSkills from "../utils/useSkills";
-	const { getSkills, addSkill, skillSchema, skills } = useSkills();
+	import SkillsEditor from "@/components/admin/SkillsEditor";
+
 	import authService from "../utils/auth.js";
 	const { signOut } = authService();
 
 	export default {
 		data() {
 			return {
-				skillSchema,
 				isLoading: false,
-				users: [],
-				skills,
-				skill: {
-					title: "",
-					type: "hard",
-					mastery: "",
+				stages: {
+					currentStage: "",
+					stages: ["skills", "projects"],
 				},
 			};
 		},
-		mounted() {
-			getUsers().then((users) => (this.users = users));
-			if (this.skills.length < 1) {
-				getSkills().then((skills) => (this.skills = skills));
-			}
-		},
+
 		computed: {
-			skillTypes() {
-				return this.skillSchema.type.split("/");
-			},
-			masteries() {
-				return this.skillSchema.mastery.split("/");
-			},
+			// skillTypes() {
+			// 	return this.skillSchema.type.split("/");
+			// },
+			// masteries() {
+			// 	return this.skillSchema.mastery.split("/");
+			// },
 			isValid() {
 				let { title, type, mastery } = this.skill;
 				return (
@@ -91,17 +83,12 @@
 			},
 		},
 		methods: {
-			async handleSubmit(param) {
-				this.isLoading = true;
-				await addSkill(param);
-				this.skills.push(param);
-				this.isLoading = false;
-			},
 			async logout() {
 				await signOut();
 				this.$router.push("/auth");
 			},
 		},
+		components: { SkillsEditor },
 	};
 </script>
 

@@ -63,20 +63,31 @@
 </template>
 
 <script>
+	import useSkills from "@/utils/useSkills";
+	const { getSkills, skills } = useSkills();
+
 	export default {
-		mounted() {
-			this.getSkills();
-		},
-		watch: {
-			skills: function(newVal, oldVal) {
-				if (oldVal !== newVal) {
-					this.isLoading = false;
-				}
+		props: {
+			isAdmin: {
+				type: Boolean,
+				default: false,
 			},
 		},
+		async created() {
+			await getSkills();
+			this.isLoading = false;
+			console.log(this.isAdmin);
+		},
+		// watch: {
+		// 	skills: function(newVal, oldVal) {
+		// 		if (oldVal !== newVal) {
+		// 			this.isLoading = false;
+		// 		}
+		// 	},
+		// },
 		data() {
 			return {
-				skills: [],
+				skills,
 				isLoading: true,
 				skillList: "hard",
 				isHard: true,
@@ -98,11 +109,6 @@
 			},
 		},
 		methods: {
-			async getSkills() {
-				await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`)
-					.then((res) => res.json())
-					.then((data) => (this.skills = data));
-			},
 			flip(type) {
 				this.skillList = type;
 				if (type === "hard") {
@@ -114,12 +120,23 @@
 				}
 			},
 			toggleSwitch() {
-				this.skillList === "hard"
-					? ((this.skillList = "soft"), (this.switcherSkills = "hard"))
-					: ((this.skillList = "hard"), (this.switcherSkills = "soft"));
+				// this.skillList === "hard"
+				// 	? (this.skillList = "soft"),
+				// (this.switcherSkills = "hard")
+				// 	: (this.skillList = "hard"),
+				// (this.switcherSkills = "soft");
+				if (this.skillList === "hard") {
+					this.skillList = "soft";
+					this.switcherSkills = "hard";
+				} else {
+					this.skillList = "hard";
+					this.switcherSkills = "soft";
+				}
 			},
 		},
 	};
 </script>
 
-<style></style>
+<style>
+	@import url("../../assets/global.css");
+</style>

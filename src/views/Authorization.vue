@@ -1,7 +1,7 @@
 <template>
 	<v-main>
 		<v-container d-flex flex-column style="max-width: 80vw">
-			<h1 v-if="currentUser">current user: {{ currentUser }}</h1>
+			<!-- <h1 v-if="currentUser">current user: {{ currentUser }}</h1> -->
 			<p
 				v-if="error.isError && error.status && error.text"
 				:class="{ 'error--text': $vuetify.theme.dark }"

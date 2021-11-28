@@ -42,6 +42,7 @@ export default function authService() {
 	};
 
 	const signOut = async () => {
+		store.commit("SET_CURRENT_USER", null);
 		await auth.signOut();
 	};
 
