@@ -41,10 +41,14 @@ const store = new Vuex.Store({
 			data: null,
 		},
 		currentUser: null,
+		skills: [],
 	},
 	getters: {
 		user(state) {
 			return state.user;
+		},
+		skills(state) {
+			return state.skills;
 		},
 	},
 	mutations: {
@@ -57,13 +61,23 @@ const store = new Vuex.Store({
 		SET_CURRENT_USER(state, data) {
 			state.currentUser = data;
 		},
+		SET_SKILLS(state, payload) {
+			state.skills = payload;
+		},
+		ADD_SKILL(state, payload) {
+			state.skills.push(payload);
+		},
+		DELETE_SKILL(state, payload) {
+			state.skills = state.skills.filter(
+				(skill) => skill.id !== payload.id
+			);
+		},
 	},
 	actions: {
 		fetchUser({ commit }, user) {
 			commit("SET_LOGGED_IN", user !== null);
 			if (user) {
 				commit("SET_USER", {
-					displayName: user.displayName,
 					email: user.email,
 				});
 			} else {

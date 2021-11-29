@@ -61,20 +61,6 @@
 		},
 
 		computed: {
-			// skillTypes() {
-			// 	return this.skillSchema.type.split("/");
-			// },
-			// masteries() {
-			// 	return this.skillSchema.mastery.split("/");
-			// },
-			isValid() {
-				let { title, type, mastery } = this.skill;
-				return (
-					title.length >= 2 &&
-					(type === "hard" || type === "soft") &&
-					this.masteries.indexOf(mastery) > -1
-				);
-			},
 			isAdmin() {
 				const { user, currentUser } = this.$store.state;
 				return user.data && currentUser.email
