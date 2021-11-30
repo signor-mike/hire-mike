@@ -5,9 +5,9 @@ const firebaseConfig = {
 	authDomain: "hire-mike.firebaseapp.com",
 	// databaseURL: "https://hire-mike.firebaseio.com",
 	projectId: "hire-mike",
-	// storageBucket: "hire-mike.appspot.com",
+	storageBucket: "hire-mike.appspot.com",
 	// messagingSenderId: "312088735594",
-	// appId: "1:312088735594:web:3e8a41b0a41ca8c67e7f13",
+	appId: "1:312088735594:web:3e8a41b0a41ca8c67e7f13",
 	// measurementId: "G-0KLBPTLTW8",
 };
 
@@ -23,3 +23,7 @@ import { store } from "@/store/store";
 auth.onAuthStateChanged((user) => {
 	store.dispatch("fetchUser", user);
 });
+
+import { getStorage, ref } from "firebase/storage";
+export const storage = getStorage();
+export const sRef = ref(storage);

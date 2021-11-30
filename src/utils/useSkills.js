@@ -1,11 +1,9 @@
-/* eslint-disable no-unused-vars */
 import { db } from "@/plugins/fbase.js";
 import {
 	collection,
 	getDocs,
 	addDoc,
 	doc,
-	setDoc,
 	updateDoc,
 	deleteDoc,
 } from "firebase/firestore";
@@ -23,10 +21,6 @@ export default function useSkills() {
 	/* GET SKILLS */
 	const getSkills = async () => {
 		const querySnapshot = await getDocs(collection(db, "skills"));
-		// skills = querySnapshot.map((doc) => ({ id: doc.id, ...doc.data() }));
-		// querySnapshot.forEach((doc) =>
-		// 	skills.push({ id: doc.id, ...doc.data() })
-		// );
 		let skillsArray = [];
 		querySnapshot.forEach((doc) =>
 			skillsArray.push({

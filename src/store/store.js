@@ -42,6 +42,7 @@ const store = new Vuex.Store({
 		},
 		currentUser: null,
 		skills: [],
+		techs: [],
 	},
 	getters: {
 		user(state) {
@@ -50,8 +51,12 @@ const store = new Vuex.Store({
 		skills(state) {
 			return state.skills;
 		},
+		techs(state) {
+			return state.techs;
+		},
 	},
 	mutations: {
+		/* users */
 		SET_LOGGED_IN(state, value) {
 			state.user.loggedIn = value;
 		},
@@ -61,6 +66,8 @@ const store = new Vuex.Store({
 		SET_CURRENT_USER(state, data) {
 			state.currentUser = data;
 		},
+
+		/* skills */
 		SET_SKILLS(state, payload) {
 			state.skills = payload;
 		},
@@ -71,6 +78,17 @@ const store = new Vuex.Store({
 			state.skills = state.skills.filter(
 				(skill) => skill.id !== payload.id
 			);
+		},
+
+		/* techs */
+		SET_TECHS(state, payload) {
+			state.techs = payload;
+		},
+		ADD_TECH(state, payload) {
+			state.techs.push(payload);
+		},
+		DELETE_TECH(state, payload) {
+			state.techs = state.techs.filter((tech) => tech.id !== payload.id);
 		},
 	},
 	actions: {

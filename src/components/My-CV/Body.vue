@@ -7,11 +7,18 @@
 			<v-col cols="12" sm="12" md="8">
 				<v-container pt-0 fluid style="height: 100%">
 					<v-row justify="space-between" dense style="height: 100%">
-						<v-col v-for="lang in languages" :key="lang.i" cols="6" md="3">
+						<v-col
+							v-for="lang in languages"
+							:key="lang.i"
+							cols="6"
+							md="3"
+						>
 							<flag :iso="lang.flag" />
 							<span class="primary--text">
 								{{ lang.lang }}
-								<span class="text--secondary">{{ lang.level }}</span>
+								<span class="text--secondary">{{
+									lang.level
+								}}</span>
 							</span>
 						</v-col>
 
@@ -175,7 +182,12 @@
 
 					voluntering: {
 						title: "Voluntering",
-						preview: [{ name: "Hospitality manager assistant", date: "2019" }],
+						preview: [
+							{
+								name: "Hospitality manager assistant",
+								date: "2019",
+							},
+						],
 						full: [
 							{
 								name: "Granadilla Hostel (Spain, Tenerife)",
@@ -217,7 +229,7 @@
 			};
 		},
 		mounted() {
-			console.log(this.$vuetify.breakpoint);
+			// console.log(this.$vuetify.breakpoint);
 		},
 	};
 	/*

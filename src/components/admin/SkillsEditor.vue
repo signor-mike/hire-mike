@@ -57,7 +57,6 @@
 		editSkill,
 		deleteSkill,
 		skillSchema,
-		// skills,
 	} = useSkills();
 	export default {
 		props: {
@@ -74,7 +73,6 @@
 					currentStage: "",
 					stages: ["skills", "projects"],
 				},
-				// skills,
 				skill: {
 					title: "",
 					type: "hard",

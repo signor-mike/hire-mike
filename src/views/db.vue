@@ -31,9 +31,14 @@
 					:isAdmin="isAdmin"
 					v-if="stages.currentStage === 'skills'"
 				/>
-				<p v-if="stages.currentStage === 'projects'">
-					projects display component
-				</p>
+				<ProjectEditor
+					v-if="stages.currentStage === 'projects'"
+					:isAdmin="isAdmin"
+				/>
+				<TechsEditor
+					v-if="stages.currentStage === 'techs'"
+					:isAdmin="isAdmin"
+				/>
 			</v-container>
 			<v-container v-else>
 				<h1>401 Unathorized!</h1>
@@ -45,6 +50,8 @@
 
 <script>
 	import SkillsEditor from "@/components/admin/SkillsEditor";
+	import ProjectEditor from "../components/admin/ProjectEditor";
+	import TechsEditor from "../components/admin/TechsEditor.vue";
 
 	import authService from "../utils/auth.js";
 	const { signOut } = authService();
@@ -55,7 +62,7 @@
 				isLoading: false,
 				stages: {
 					currentStage: "",
-					stages: ["skills", "projects"],
+					stages: ["skills", "projects", "techs"],
 				},
 			};
 		},
@@ -74,7 +81,7 @@
 				this.$router.push("/auth");
 			},
 		},
-		components: { SkillsEditor },
+		components: { SkillsEditor, ProjectEditor, TechsEditor },
 	};
 </script>
 
