@@ -23,6 +23,7 @@
 			<v-btn :loading="isLoading" @click="uploaderMini"
 				>upload small PNG</v-btn
 			>
+			<v-btn :loading="isLoading" @click="deleter">delete image</v-btn>
 		</div>
 	</v-container>
 </template>
@@ -31,7 +32,13 @@
 	/* eslint-disable no-unused-vars */
 	import PortfolioItem from "../My-CV/PortfolioItem";
 	import filesUpload from "@/utils/filesUpload";
-	const { getAll, uploader, compressor, imageUploader } = filesUpload();
+	const {
+		getAll,
+		uploader,
+		compressor,
+		imageUploader,
+		deleteImage,
+	} = filesUpload();
 	// import useSkills from "@/utils/useSkills";
 	// const { getSkills } = useSkills();
 	export default {
@@ -48,6 +55,9 @@
 			getAll();
 		},
 		methods: {
+			async deleter() {
+				await deleteImage(this.img1); // passing url
+			},
 			async uploader() {
 				this.isLoading = true;
 				this.img1 = await imageUploader(this.imageData, "large", "");

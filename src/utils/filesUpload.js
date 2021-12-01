@@ -1,6 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { sRef, storage } from "@/plugins/fbase.js";
-import { listAll, uploadBytes, ref, getDownloadURL } from "firebase/storage";
+import {
+	listAll,
+	uploadBytes,
+	ref,
+	getDownloadURL,
+	refFromURL,
+	deleteObject,
+} from "firebase/storage";
 import imageCompression from "browser-image-compression";
 import uniqid from "uniqid";
 
@@ -84,11 +91,26 @@ export default function filesUpload() {
 			console.log(error);
 		}
 	};
+
+	const deleteImage = async (url) => {
+		try {
+			const fileRef = url.split("/o/")[1];
+			const imageRef = ref(
+				storage,
+				fileRef.split("?")[0].replace("%2F", "/")
+			);
+			await deleteObject(imageRef);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 	return {
 		getAll,
 		uploader,
 		compressor,
 		imageUploader,
+		deleteImage,
 	};
 }
 // getDownloadURL(ref(storage, 'images/stars.jpg'))
+//  https://firebasestorage.googleapis.com/v0/b/hire-mike.appspot.com/o/techs%2Fvuex-1kwmefd20.png?alt=media&token=6a3a1e7b-e5de-414c-8793-52d87fffc8a0
