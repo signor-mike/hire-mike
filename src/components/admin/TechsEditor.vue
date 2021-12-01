@@ -6,11 +6,11 @@
 			<v-file-input truncate-length="15" v-model="img"></v-file-input>
 			<v-btn :loading="isLoading" type="submit">save</v-btn>
 		</v-form>
-		<ul v-if="$store.state.techs.length > 0">
-			<li v-for="tech in $store.state.techs" :key="tech.i">
-				{{ tech.name }} <img :src="tech.image" />
-			</li>
-		</ul>
+		<v-row>
+			<v-col v-for="tech in $store.state.techs" :key="tech.i">
+				<TechItem :tech="tech" :isAdmin="isAdmin" />
+			</v-col>
+		</v-row>
 	</v-container>
 </template>
 
@@ -20,7 +20,10 @@
 	import filesUpload from "@/utils/filesUpload";
 	const { imageUploader, deleteImage } = filesUpload();
 	const { techs, techSchema, getTechs, addTech, deleteTech } = useTechs();
+
+	import TechItem from "@/components/TechItem.vue";
 	export default {
+		components: { TechItem },
 		props: {
 			isAdmin: {
 				type: Boolean,
