@@ -44,7 +44,6 @@
 				<h1>401 Unathorized!</h1>
 			</v-container>
 		</v-row>
-		<!-- TODO: add admnin handlers for skill list and portfolio projects. -->
 	</v-main>
 </template>
 

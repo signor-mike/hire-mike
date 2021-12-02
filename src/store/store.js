@@ -43,6 +43,7 @@ const store = new Vuex.Store({
 		currentUser: null,
 		skills: [],
 		techs: [],
+		projects: [],
 	},
 	getters: {
 		user(state) {
@@ -53,6 +54,9 @@ const store = new Vuex.Store({
 		},
 		techs(state) {
 			return state.techs;
+		},
+		projects(state) {
+			return state.projects;
 		},
 	},
 	mutations: {
@@ -89,6 +93,19 @@ const store = new Vuex.Store({
 		},
 		DELETE_TECH(state, payload) {
 			state.techs = state.techs.filter((tech) => tech.id !== payload.id);
+		},
+
+		/* projects */
+		SET_PROJECTS(state, payload) {
+			state.projects = payload;
+		},
+		ADD_PROJECT(state, payload) {
+			state.projects.push(payload);
+		},
+		DELETE_PROJECT(state, payload) {
+			state.projects = state.projects.filter(
+				(project) => project.id !== payload.id
+			);
 		},
 	},
 	actions: {
