@@ -34,8 +34,9 @@
 								class="my-auto"
 								color="error"
 								@click="deleteImage"
-								>delete image</v-btn
 							>
+								delete image
+							</v-btn>
 						</v-container>
 					</v-form>
 				</v-container>
