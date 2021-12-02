@@ -5,6 +5,7 @@ import {
 	addDoc,
 	doc,
 	deleteDoc,
+	updateDoc,
 } from "firebase/firestore";
 import { store } from "@/store/store";
 
@@ -46,6 +47,12 @@ export default function useTechs() {
 		}
 	};
 
+	/* UPDATE SKILL */
+	const editTech = async (tech) => {
+		await updateDoc(doc(db, "techs", tech.id), tech);
+		console.log("updated tech: ", tech.id);
+	};
+
 	/* DELETE TECH */
 	const deleteTech = async (tech) => {
 		try {
@@ -61,6 +68,7 @@ export default function useTechs() {
 		techSchema,
 		getTechs,
 		addTech,
+		editTech,
 		deleteTech,
 	};
 }

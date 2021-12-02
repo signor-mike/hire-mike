@@ -10,7 +10,7 @@
 		<v-dialog v-model="dialog" width="500">
 			<v-card>
 				<v-card-title class="text-h5 primary lighten-1">
-					Add new skill
+					{{ skill.title === "" ? "Add new " : "Edit " }} skill
 				</v-card-title>
 
 				<v-container>

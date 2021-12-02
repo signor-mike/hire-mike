@@ -39,8 +39,8 @@
 		imageUploader,
 		deleteImage,
 	} = filesUpload();
-	// import useSkills from "@/utils/useSkills";
-	// const { getSkills } = useSkills();
+	import useTechs from "@/utils/useTechs";
+	const { getTechs, techs } = useTechs();
 	export default {
 		components: {
 			PortfolioItem,
@@ -52,7 +52,8 @@
 			},
 		},
 		mounted() {
-			getAll();
+			getTechs().then((techs) => (this.techs = techs));
+			console.log(this.techs);
 		},
 		methods: {
 			async deleter() {
@@ -116,6 +117,7 @@
 				img1: "",
 				isLoading: false,
 				portfolio: [],
+				techs,
 				project: {
 					name: "project name",
 					date: "some date",
