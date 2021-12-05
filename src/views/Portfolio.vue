@@ -8,7 +8,7 @@
 		</div>
 		<v-row justify="center" dense>
 			<v-col
-				v-for="item in portfolio"
+				v-for="item in projects"
 				:key="item.i"
 				cols="12"
 				sm="12"
@@ -24,10 +24,13 @@
 
 <script>
 	import PortfolioItem from "../components/My-CV/PortfolioItem.vue";
+	import useProjects from "@/utils/useProjects";
+	const { projects } = useProjects();
 	export default {
 		components: { PortfolioItem },
 		data() {
 			return {
+				projects,
 				portfolio: [
 					{
 						name: "Hire Mike",
@@ -109,7 +112,7 @@
 			};
 		},
 		mounted() {
-			console.log(this.$router.history);
+			// console.log(this.$router.history);
 		},
 		methods: {
 			backwards() {

@@ -6,7 +6,7 @@
 		<v-dialog v-model="dialog" width="500">
 			<v-card>
 				<v-card-title class="text-h5 primary lighten-1">
-					{{ tech.name === "" ? "Add" : "Edit" }} tech
+					{{ isEdit ? "Edit" : "Add" }} tech
 				</v-card-title>
 
 				<v-container>
@@ -101,6 +101,7 @@
 				},
 				img: null,
 				isLoading: false,
+				isEdit: false,
 				dialog: false,
 			};
 		},
@@ -138,6 +139,7 @@
 				this.isLoading = false;
 			},
 			async addTech() {
+				this.isEdit = false;
 				this.tech = {
 					name: "",
 					image: "",
@@ -146,6 +148,7 @@
 			},
 
 			async editTech(tech) {
+				this.isEdit = true;
 				this.tech = tech;
 				this.img = null;
 				this.dialog = true;

@@ -39,6 +39,14 @@
 					v-if="stages.currentStage === 'techs'"
 					:isAdmin="isAdmin"
 				/>
+				<EveEditor
+					v-if="
+						stages.currentStage ===
+							'education/experience/voluntering'
+					"
+					:isAdmin="isAdmin"
+					:list="stages.stages[0]"
+				/>
 			</v-container>
 			<v-container v-else>
 				<h1>401 Unathorized!</h1>
@@ -51,6 +59,7 @@
 	import SkillsEditor from "@/components/admin/SkillsEditor";
 	import ProjectEditor from "../components/admin/ProjectEditor";
 	import TechsEditor from "../components/admin/TechsEditor.vue";
+	import EveEditor from "../components/admin/EveEditor.vue";
 
 	import authService from "../utils/auth.js";
 	const { signOut } = authService();
@@ -61,7 +70,12 @@
 				isLoading: false,
 				stages: {
 					currentStage: "",
-					stages: ["skills", "projects", "techs"],
+					stages: [
+						"education/experience/voluntering",
+						"skills",
+						"projects",
+						"techs",
+					],
 				},
 			};
 		},
@@ -80,7 +94,7 @@
 				this.$router.push("/auth");
 			},
 		},
-		components: { SkillsEditor, ProjectEditor, TechsEditor },
+		components: { SkillsEditor, ProjectEditor, TechsEditor, EveEditor },
 	};
 </script>
 

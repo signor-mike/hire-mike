@@ -20,11 +20,11 @@
 		<v-dialog v-model="dialog" width="500">
 			<v-card>
 				<v-card-title class="text-h5 primary lighten-1">
-					{{ project.name === "" ? "Add" : "Edit" }} project
+					{{ isEdit ? "Edit" : "Add" }} project
 				</v-card-title>
 
 				<v-container>
-					<v-form>
+					<v-form class="d-flex flex-column">
 						<v-text-field
 							v-model="project.name"
 							label="name"
@@ -57,10 +57,19 @@
 							</v-btn>
 						</v-container>
 						<v-date-picker
+							class="mx-auto"
 							v-model="date"
 							type="month"
 							@change="dateConverter"
+							v-if="project.date === null"
 						></v-date-picker>
+						<v-btn
+							v-else
+							color="warning"
+							@click="project.date = null"
+							>date is {{ project.date }}, click to set
+							different</v-btn
+						>
 						<v-textarea
 							v-model="project.description"
 							label="description"
@@ -69,9 +78,28 @@
 							v-model="project.specification"
 							label="specification"
 						></v-textarea>
+						<div
+							class="d-flex justify-space-around"
+							v-if="project.techs.length > 0 && !isNew"
+						>
+							<ul>
+								<li v-for="t in techsInEdit" :key="t.i">
+									{{ t }}
+								</li>
+							</ul>
+							<v-btn
+								class="my-auto"
+								@click="setNewTechs"
+								color="warning"
+								>click to reset list</v-btn
+							>
+						</div>
 						<v-select
+							v-else
 							:items="techNames"
 							multiple
+							clearable
+							chips
 							label="select techs"
 							@change="(data) => pushIDs(data)"
 						></v-select>
@@ -173,10 +201,13 @@
 				this.isLoading = false;
 			},
 			async addProject() {
+				this.isEdit = false;
+				this.isNew = true;
 				this.project = projectSchema;
 				this.dialog = true;
 			},
 			async editProject(project) {
+				this.isEdit = true;
 				this.dialog = true;
 				this.project = project;
 			},
@@ -188,6 +219,10 @@
 				await deleteImage(this.project.image);
 				this.project.image = "";
 			},
+			setNewTechs() {
+				this.project.techs = [];
+				this.isNew = true;
+			},
 		},
 		data() {
 			return {
@@ -195,24 +230,30 @@
 				imageData: null,
 				img1: "",
 				isLoading: false,
+				isEdit: false,
 				date: null,
 				techs,
 				projects,
 				project: {
-					name: "project name",
+					name: "",
 					date: null,
-					url: "url to access the project",
-					// preview separator
-					image: "", // url to image
-					description: "", // about the project
-					specification: "", // the purpose of the project
-					techs: [], // IDs
+					url: "",
+					image: "",
+					description: "",
+					specification: "",
+					techs: [],
 				},
+				isNew: false,
 			};
 		},
 		computed: {
 			techNames() {
 				return this.techs.map((tech) => tech.name);
+			},
+			techsInEdit() {
+				return this.project.techs.map((id) => {
+					return this.techs.find((tech) => tech.id === id).name;
+				});
 			},
 			isValid() {
 				return true;

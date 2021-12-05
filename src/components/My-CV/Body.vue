@@ -24,16 +24,29 @@
 
 						<v-row class="my-auto">
 							<v-col cols="6">
-								<DetailedView :details="details.portfolio" />
+								<DetailedView
+									:details="$store.state.projects"
+									title="Portfolio"
+									link="/portfolio"
+								/>
 							</v-col>
 							<v-col cols="6">
-								<DetailedView :details="details.education" />
+								<DetailedView
+									:details="education"
+									title="Education"
+								/>
 							</v-col>
 							<v-col cols="6">
-								<DetailedView :details="details.experience" />
+								<DetailedView
+									:details="experience"
+									title="Experience"
+								/>
 							</v-col>
 							<v-col cols="6">
-								<DetailedView :details="details.voluntering" />
+								<DetailedView
+									:details="voluntering"
+									title="Voluntering"
+								/>
 							</v-col>
 						</v-row>
 					</v-row>
@@ -46,6 +59,10 @@
 <script>
 	import Skills from "./Skills.vue";
 	import DetailedView from "./DetailedView.vue";
+	import useProjects from "@/utils/useProjects";
+	const { getProjects } = useProjects();
+	import useEVE from "@/utils/useEVE";
+	const { getEves } = useEVE();
 
 	export default {
 		components: { Skills, DetailedView },
@@ -55,23 +72,7 @@
 					portfolio: {
 						title: "Portfolio",
 						link: "/portfolio",
-						preview: [
-							{
-								name: "Hire Mike",
-								date: "2021~",
-								url: "https://hire-mike.web.app",
-							},
-							{
-								name: "Shopping list",
-								date: "2021~",
-								url: "https://shopass.vercel.app/",
-							},
-							{
-								name: "Handmade accessories",
-								date: "2021~",
-								url: "https://fns-accessories.web.app",
-							},
-						],
+						preview: [],
 						full: [],
 					},
 
@@ -226,15 +227,27 @@
 						level: "Native",
 					},
 				],
+				projects: [],
+				education: [],
+				experience: [],
+				voluntering: [],
 			};
 		},
 		mounted() {
-			// console.log(this.$vuetify.breakpoint);
+			getProjects().then((projects) => {
+				this.projects = projects;
+			});
+			getEves("education").then((education) => {
+				this.education = education;
+			});
+			getEves("voluntering").then((voluntering) => {
+				this.voluntering = voluntering;
+			});
+			getEves("experience").then((experience) => {
+				this.experience = experience;
+			});
 		},
 	};
-	/*
-	portfolio, education, experience, volunteering
-	*/
 </script>
 
 <style>

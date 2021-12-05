@@ -14,14 +14,13 @@ export default function useProjects() {
 	let project = {};
 	let projects = store.state.projects;
 	const projectSchema = {
-		name: "project name",
+		name: "",
 		date: null,
-		url: "url to access the project",
-		// preview separator
+		url: "",
 		image: "",
-		description: "about the project",
-		specification: "the purpose of the project",
-		techs: [], // IDs
+		description: "",
+		specification: "",
+		techs: [],
 	};
 
 	/* GET PROJECTS */
@@ -36,11 +35,12 @@ export default function useProjects() {
 		);
 		store.commit("SET_PROJECTS", projectsArray);
 
-		return projects.sort((a, b) => {
-			if (a.mastery < b.mastery) return -1;
-			if (a.mastery > b.mastery) return 1;
-			return 0;
-		});
+		return projects;
+		// .sort((a, b) => {
+		// 	if (a.mastery < b.mastery) return -1;
+		// 	if (a.mastery > b.mastery) return 1;
+		// 	return 0;
+		// });
 	};
 
 	/* ADD PROJECT */

@@ -10,7 +10,7 @@
 		<v-dialog v-model="dialog" width="500">
 			<v-card>
 				<v-card-title class="text-h5 primary lighten-1">
-					{{ skill.title === "" ? "Add new " : "Edit " }} skill
+					{{ isEdit ? "Edit" : "Add" }} skill
 				</v-card-title>
 
 				<v-container>
@@ -79,6 +79,7 @@
 					mastery: "a-high",
 				},
 				dialog: false,
+				isEdit: false,
 			};
 		},
 		mounted() {
@@ -116,6 +117,7 @@
 				this.isLoading = false;
 			},
 			async addSkill() {
+				this.isEdit = false;
 				let randomIndex = (arr) => {
 					return Math.floor(Math.random() * arr.length);
 				};
@@ -127,6 +129,7 @@
 				};
 			},
 			async editSkill(skill) {
+				this.isEdit = true;
 				this.dialog = true;
 				this.skill = skill;
 			},

@@ -24,7 +24,7 @@
 		<p>{{ item.description }}</p>
 		<p>{{ item.specification }}</p>
 		<v-row justify="space-around">
-			<v-col v-for="t in mappedTechs" :key="t.id" cols="auto">
+			<v-col v-for="t in mappedTechs" :key="t.i" cols="auto">
 				<TechItem :tech="t" />
 			</v-col>
 		</v-row>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+	/* eslint-disable vue/no-unused-components */
+
 	import TechItem from "@/components/TechItem.vue";
 	import useTechs from "@/utils/useTechs";
 	const { techs } = useTechs();

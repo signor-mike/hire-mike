@@ -7,16 +7,16 @@
 				v-if="isAdmin"
 				color="success"
 				@click="$emit('editTech', tech)"
-				>edit</v-icon
-			>
+				>edit
+			</v-icon>
 			{{ tech.name }}
 			<v-icon
 				small
 				v-if="isAdmin"
 				color="error"
 				@click="$emit('deleteTech', tech)"
-				>close</v-icon
-			>
+				>close
+			</v-icon>
 		</p>
 	</v-container>
 </template>
