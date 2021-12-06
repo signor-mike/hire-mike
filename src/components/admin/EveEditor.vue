@@ -21,6 +21,9 @@
 			@editEve="editEve"
 			@deleteEve="deleteEve"
 		/>
+		<p class="text-center text--primary" v-else-if="selection">
+			Loading...
+		</p>
 
 		<v-dialog v-model="dialog" width="500">
 			<v-form @submit.prevent="handleSubmit">
@@ -35,6 +38,7 @@
 							label="name"
 							placeholder="school/job/place"
 						></v-text-field>
+						<!-- DON'T CHANGE FORMAT! (type='month'), it'll affect dateConverter in @/utils/useEVE -->
 						<v-date-picker
 							class="mx-auto"
 							v-model="date"

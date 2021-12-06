@@ -27,6 +27,9 @@
 				<p class="text-center" v-if="stages.currentStage === ''">
 					Please select something.
 				</p>
+				<p class="text-center primary--text" v-else>
+					Data will be automatically sorted in descending order (by date)
+				</p>
 				<SkillsEditor
 					:isAdmin="isAdmin"
 					v-if="stages.currentStage === 'skills'"

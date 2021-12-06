@@ -5,7 +5,7 @@
 		<v-expansion-panels v-if="projects.length > 0" class="mt-5">
 			<v-expansion-panel v-for="project in projects" :key="project.id">
 				<v-expansion-panel-header>
-					{{ project.name }}
+					{{ `${project.name} @ ${project.url}` }}
 				</v-expansion-panel-header>
 				<v-expansion-panel-content>
 					<PortfolioItem

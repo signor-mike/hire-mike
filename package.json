@@ -10,7 +10,7 @@
   "dependencies": {
     "browser-image-compression": "^1.0.17",
     "core-js": "^3.6.5",
-    "firebaseui": "^6.0.0",
+    "firebase": "^9.6.0",
     "html2pdf.js": "^0.9.3",
     "jspdf": ">=2.3.1",
     "jspdf-html2canvas": "^1.4.9",

@@ -25,7 +25,7 @@
 <script>
 	import PortfolioItem from "../components/My-CV/PortfolioItem.vue";
 	import useProjects from "@/utils/useProjects";
-	const { projects } = useProjects();
+	const { projects, getProjects } = useProjects();
 	export default {
 		components: { PortfolioItem },
 		data() {
@@ -112,6 +112,7 @@
 			};
 		},
 		mounted() {
+			getProjects().then((projects) => (this.projects = projects));
 			// console.log(this.$router.history);
 		},
 		methods: {

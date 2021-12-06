@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { db } from "@/plugins/fbase.js";
 import {
 	collection,
@@ -8,7 +7,7 @@ import {
 	updateDoc,
 	deleteDoc,
 } from "firebase/firestore";
-import { store } from "@/store/store";
+import { dateConverter } from "@/utils/dateConverter";
 
 export default function useEVE() {
 	let eve = {};
@@ -28,6 +27,9 @@ export default function useEVE() {
 		querySnapshot.forEach((doc) => {
 			data.push({ id: doc.id, ...doc.data() });
 		});
+		data.sort((a, b) => {
+			return dateConverter(b.date[1]) - dateConverter(a.date[1]);
+		});
 		eves = data;
 		return eves;
 	};
@@ -38,7 +40,6 @@ export default function useEVE() {
 		console.log("eve to add: ", eve);
 		try {
 			const newEve = await addDoc(collection(db, collectionName), eve);
-			// eves.push({ id: newEve.id, ...newEve.data() });
 			return newEve;
 		} catch (error) {
 			console.log(error);

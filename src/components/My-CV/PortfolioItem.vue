@@ -40,7 +40,7 @@
 
 	import TechItem from "@/components/TechItem.vue";
 	import useTechs from "@/utils/useTechs";
-	const { techs } = useTechs();
+	const { techs, getTechs } = useTechs();
 	export default {
 		components: { TechItem },
 		data() {
@@ -49,7 +49,7 @@
 			};
 		},
 		mounted() {
-			//
+			getTechs().then((techs) => (this.techs = techs));
 		},
 		props: {
 			item: {
