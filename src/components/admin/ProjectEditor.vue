@@ -3,9 +3,12 @@
 		<p>projects display component, isAdmin: {{ isAdmin }}</p>
 		<v-btn v-if="isAdmin" @click="addProject">Add project</v-btn>
 		<v-expansion-panels v-if="projects.length > 0" class="mt-5">
-			<v-expansion-panel v-for="project in projects" :key="project.id">
+			<v-expansion-panel
+				v-for="project in $store.state.projects"
+				:key="project.id"
+			>
 				<v-expansion-panel-header>
-					{{ `${project.name} @ ${project.url}` }}
+					{{ `${project.name} @ ${project.url} || ${project.date}` }}
 				</v-expansion-panel-header>
 				<v-expansion-panel-content>
 					<PortfolioItem
@@ -32,6 +35,10 @@
 						<v-text-field
 							v-model="project.url"
 							label="link to the project"
+						></v-text-field>
+						<v-text-field
+							v-model="project.github"
+							label="link to the repo"
 						></v-text-field>
 						<v-file-input
 							v-if="project.image === ''"
@@ -242,6 +249,7 @@
 					description: "",
 					specification: "",
 					techs: [],
+					github: "",
 				},
 				isNew: false,
 			};

@@ -7,15 +7,7 @@
 			<h1 class="mx-auto">My projects</h1>
 		</div>
 		<v-row justify="center" dense>
-			<v-col
-				v-for="item in projects"
-				:key="item.i"
-				cols="12"
-				sm="12"
-				md="6"
-				lg="4"
-				xl="3"
-			>
+			<v-col v-for="item in projects" :key="item.i" cols="12">
 				<PortfolioItem :item="item" />
 			</v-col>
 		</v-row>

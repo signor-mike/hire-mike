@@ -9,6 +9,7 @@ import {
 	deleteDoc,
 } from "firebase/firestore";
 import { store } from "@/store/store";
+import { dateConverter } from "@/utils/dateConverter";
 
 export default function useProjects() {
 	let project = {};
@@ -21,6 +22,7 @@ export default function useProjects() {
 		description: "",
 		specification: "",
 		techs: [],
+		github: "",
 	};
 
 	/* GET PROJECTS */
@@ -33,9 +35,12 @@ export default function useProjects() {
 				...doc.data(),
 			})
 		);
+		projectsArray.sort((a, b) => {
+			return dateConverter(b.date) - dateConverter(a.date);
+		});
 		store.commit("SET_PROJECTS", projectsArray);
 
-		return projects;
+		return projectsArray;
 		// .sort((a, b) => {
 		// 	if (a.mastery < b.mastery) return -1;
 		// 	if (a.mastery > b.mastery) return 1;
