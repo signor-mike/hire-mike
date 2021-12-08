@@ -23,6 +23,7 @@
 				@change="toggleSwitch()"
 				:label="`Toggle to see ${switcherSkills} skills`"
 			></v-switch>
+			<v-btn v-if="isAdmin" @click="$emit('addSkill')">Add skill</v-btn>
 			<v-tooltip bottom>
 				<template v-slot:activator="{ on, attrs }">
 					<v-btn
@@ -56,27 +57,55 @@
 				cols="auto"
 				v-for="skill in skillsToShow"
 				:key="skill.i"
-				>{{ skill.title }}
+			>
+				<v-icon
+					small
+					v-if="isAdmin"
+					color="success"
+					@click="$emit('editSkill', skill)"
+					>edit</v-icon
+				>
+				{{ skill.title }}
+				<v-icon
+					small
+					v-if="isAdmin"
+					color="error"
+					@click="$emit('deleteSkill', skill)"
+					>close</v-icon
+				>
 			</v-col>
 		</v-row>
 	</v-main>
 </template>
 
 <script>
+	import useSkills from "@/utils/useSkills";
+	const {
+		getSkills,
+		// skills
+	} = useSkills();
+
 	export default {
-		mounted() {
-			this.getSkills();
-		},
-		watch: {
-			skills: function(newVal, oldVal) {
-				if (oldVal !== newVal) {
-					this.isLoading = false;
-				}
+		props: {
+			isAdmin: {
+				type: Boolean,
+				default: false,
 			},
 		},
+		async created() {
+			await getSkills();
+			this.isLoading = false;
+		},
+		// watch: {
+		// 	skills: function(newVal, oldVal) {
+		// 		if (oldVal !== newVal) {
+		// 			console.log(oldVal, newVal);
+		// 		}
+		// 	},
+		// },
 		data() {
 			return {
-				skills: [],
+				// skills,
 				isLoading: true,
 				skillList: "hard",
 				isHard: true,
@@ -96,13 +125,11 @@
 					.filter((skill) => skill.type === this.skillList)
 					.sort((a, b) => a.mastery > b.mastery);
 			},
+			skills() {
+				return this.$store.state.skills;
+			},
 		},
 		methods: {
-			async getSkills() {
-				await fetch(`${process.env.VUE_APP_BACKEND_URL}/skills`)
-					.then((res) => res.json())
-					.then((data) => (this.skills = data));
-			},
 			flip(type) {
 				this.skillList = type;
 				if (type === "hard") {
@@ -114,12 +141,18 @@
 				}
 			},
 			toggleSwitch() {
-				this.skillList === "hard"
-					? ((this.skillList = "soft"), (this.switcherSkills = "hard"))
-					: ((this.skillList = "hard"), (this.switcherSkills = "soft"));
+				if (this.skillList === "hard") {
+					this.skillList = "soft";
+					this.switcherSkills = "hard";
+				} else {
+					this.skillList = "hard";
+					this.switcherSkills = "soft";
+				}
 			},
 		},
 	};
 </script>
 
-<style></style>
+<style>
+	@import url("../../assets/global.css");
+</style>
