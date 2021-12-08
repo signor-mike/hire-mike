@@ -1,7 +1,6 @@
 <template>
-	<!-- add project.github and project.date of start // both Strings -->
 	<v-container fluid d-flex flex-column>
-		<v-row style="width: 100%" class="mx-auto">
+		<v-row style="width: 100%" class="mx-auto" v-if="!isLoading">
 			<v-col cols="auto" sm="12" md="6">
 				<v-container d-flex justify-space-between px-0>
 					<span class="text-overline">
@@ -39,6 +38,7 @@
 					</v-card-title>
 
 					<v-card-text class="text-center">
+						<p>{{ item.date }}</p>
 						<p>{{ item.description }}</p>
 						<p>{{ item.specification }}</p>
 					</v-card-text>
@@ -70,6 +70,7 @@
 				</v-card>
 			</v-col>
 		</v-row>
+		<v-skeleton-loader v-else type="paragraph@2"></v-skeleton-loader>
 		<v-dialog v-model="dialog">
 			<v-img :src="item.image" contain></v-img>
 		</v-dialog>
@@ -93,46 +94,9 @@
 			v-if="$vuetify.breakpoint.smAndDown"
 		></v-divider>
 	</v-container>
-
-	<!-- <v-main class="mx-2">
-		<h2>
-			<v-icon
-				small
-				v-if="isAdmin"
-				color="success"
-				@click="$emit('editProject', item)"
-				>edit</v-icon
-			>
-			{{ item.name }}
-			<v-icon
-				small
-				v-if="isAdmin"
-				color="error"
-				@click="$emit('deleteProject', item)"
-				>close</v-icon
-			>
-		</h2>
-		<v-img width="500" height="300" :src="item.image" contain></v-img>
-		<h3>
-			<a :href="item.url">{{ item.url }}</a>
-		</h3>
-		<p>{{ item.description }}</p>
-		<p>{{ item.specification }}</p>
-		<v-row justify="space-around">
-			<v-col v-for="t in mappedTechs" :key="t.i" cols="auto">
-				<TechItem :tech="t" />
-			</v-col>
-		</v-row>
-		<v-divider
-			class="my-2"
-			v-if="$vuetify.breakpoint.smAndDown"
-		></v-divider>
-	</v-main> -->
 </template>
 
 <script>
-	/* eslint-disable vue/no-unused-components */
-
 	import TechItem from "@/components/TechItem.vue";
 	import useTechs from "@/utils/useTechs";
 	const { techs, getTechs } = useTechs();
@@ -143,10 +107,12 @@
 				techs,
 				dialog: false,
 				techDialog: false,
+				isLoading: true,
 			};
 		},
-		mounted() {
-			getTechs().then((techs) => (this.techs = techs));
+		async mounted() {
+			await getTechs();
+			this.isLoading = false;
 		},
 		props: {
 			item: {
@@ -166,12 +132,18 @@
 		computed: {
 			mappedTechs() {
 				let array = [];
-				for (let i = 0; i < this.item.techs.length; i++) {
-					let tech;
-					tech = this.techs.find((t) => t.id === this.item.techs[i]);
-					array.push(tech);
+				if (this.$store.state.techs.length > 0) {
+					for (let i = 0; i < this.item.techs.length; i++) {
+						let tech;
+						tech = this.$store.state.techs.find(
+							(t) => t.id === this.item.techs[i]
+						);
+						array.push(tech);
+					}
+					return array;
+				} else {
+					return [];
 				}
-				return array;
 			},
 		},
 	};
