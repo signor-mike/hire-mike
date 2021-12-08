@@ -26,11 +26,16 @@
 						<v-icon color="primary">mdi-github</v-icon>
 					</v-btn>
 				</v-container>
-				<v-img @click="expandImage" :src="item.image" contain></v-img>
+				<v-img
+					@click="expandImage"
+					max-height="500"
+					:src="item.image"
+					contain
+				></v-img>
 			</v-col>
 
 			<v-col cols="auto" sm="12" md="6" align-self="center">
-				<v-card>
+				<v-card class="my-auto">
 					<v-card-title>
 						<a class="text-overline mx-auto" :href="item.url">{{
 							item.url
