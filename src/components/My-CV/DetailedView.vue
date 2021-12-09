@@ -15,15 +15,7 @@
 			:key="detail.id"
 		>
 			<span>
-				{{
-					detail.role
-						? detail.role.length > 9 &&
-						  !isAdmin &&
-						  $vuetify.breakpoint.lgAndDown
-							? `${detail.role.slice(0, 10)}... `
-							: `${detail.role} `
-						: ""
-				}}
+				{{ slicedString(detail.role) }}
 			</span>
 			<a
 				:class="{ 'ml-auto pr-2': !link, 'mr-auto': link }"
@@ -31,23 +23,21 @@
 				:href="detail.url"
 				target="_blank"
 			>
-				{{
-					detail.name.length > 14 &&
-					!isAdmin &&
-					$vuetify.breakpoint.lgAndDown
-						? link
-							? detail.name
-							: `${detail.name.slice(0, 15)}...`
-						: detail.name
-				}}
+				{{ slicedString(detail.name) }}
 			</a>
 
-			<span class="text-right">
+			<span class="text-center">
 				{{
 					detail.date.length === 2
 						? detail.date[0] === detail.date[1]
-							? `${detail.date[1]}~`
-							: detail.date[1]
+							? `${detail.date[1].slice(
+									0,
+									4
+							  )} '${detail.date[1].slice(
+									-2,
+									detail.date[1].length
+							  )}~`
+							: `${detail.date[1]}`
 						: detail.date
 				}}
 			</span>
@@ -178,6 +168,61 @@
 				if (this.link) {
 					this.$router.push(this.link);
 				}
+			},
+			slicedString(string) {
+				let modified;
+				let result;
+				if (string) {
+					switch (this.customBreakpoint) {
+						case "mobile":
+							string.length <= 9
+								? (modified = string)
+								: (modified = string.slice(0, 10));
+							break;
+						case "tablet":
+							string.length <= 30
+								? (modified = string)
+								: (modified = string.slice(0, 31));
+							break;
+						case "laptop":
+							string.length <= 10
+								? (modified = string)
+								: (modified = string.slice(0, 11));
+							break;
+						case "desktop":
+							string.length <= 20
+								? (modified = string)
+								: (modified = string.slice(0, 21));
+							break;
+						default:
+							modified = string;
+							break;
+					}
+					if (modified !== string) {
+						modified.charAt(modified.length - 1) === " "
+							? (result = modified.slice(0, -1) + "...")
+							: (result = modified + "...");
+					} else {
+						result = modified;
+					}
+				}
+				return result;
+			},
+		},
+		computed: {
+			customBreakpoint() {
+				let px = window.innerWidth;
+				let bp;
+				if (px < 500) {
+					bp = "mobile";
+				} else if (px < 961) {
+					bp = "tablet";
+				} else if (px < 1281) {
+					bp = "laptop";
+				} else {
+					bp = "desktop";
+				}
+				return bp;
 			},
 		},
 	};

@@ -68,30 +68,6 @@
 		components: { Skills, DetailedView },
 		data() {
 			return {
-				details: {
-					voluntering: {
-						title: "Voluntering",
-						preview: [
-							{
-								name: "Hospitality manager assistant",
-								date: "2019",
-							},
-						],
-						full: [
-							{
-								name: "Granadilla Hostel (Spain, Tenerife)",
-								date: "2018 - 2019",
-								url: "",
-								role: "Hospitality manager assistant",
-								things: [
-									"Meet & Greet Customers",
-									"Housekeeping",
-									"Customers Complaints",
-								],
-							},
-						],
-					},
-				},
 				languages: [
 					{
 						lang: "ENG",
