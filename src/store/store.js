@@ -44,6 +44,7 @@ const store = new Vuex.Store({
 		skills: [],
 		techs: [],
 		projects: [],
+		cvData: {},
 	},
 	getters: {
 		user(state) {
@@ -107,6 +108,11 @@ const store = new Vuex.Store({
 				(project) => project.id !== payload.id
 			);
 		},
+
+		/* cv */
+		// SET_CV_DATA(state, payload) {
+		// 	state.cvData = payload;
+		// },
 	},
 	actions: {
 		fetchUser({ commit }, user) {
