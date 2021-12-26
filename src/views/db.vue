@@ -28,7 +28,8 @@
 					Please select something.
 				</p>
 				<p class="text-center primary--text" v-else>
-					Data will be automatically sorted in descending order (by date)
+					Data will be automatically sorted in descending order (by
+					date)
 				</p>
 				<SkillsEditor
 					:isAdmin="isAdmin"
@@ -50,6 +51,10 @@
 					:isAdmin="isAdmin"
 					:list="stages.stages[0]"
 				/>
+				<CvEditor
+					v-if="stages.currentStage === 'cv data'"
+					:isAdmin="isAdmin"
+				/>
 			</v-container>
 			<v-container v-else>
 				<h1>401 Unathorized!</h1>
@@ -63,6 +68,7 @@
 	import ProjectEditor from "../components/admin/ProjectEditor";
 	import TechsEditor from "../components/admin/TechsEditor.vue";
 	import EveEditor from "../components/admin/EveEditor.vue";
+	import CvEditor from "../components/admin/CvEditor.vue";
 
 	import authService from "../utils/auth.js";
 	const { signOut } = authService();
@@ -78,6 +84,7 @@
 						"skills",
 						"projects",
 						"techs",
+						"cv data",
 					],
 				},
 			};
@@ -97,7 +104,13 @@
 				this.$router.push("/auth");
 			},
 		},
-		components: { SkillsEditor, ProjectEditor, TechsEditor, EveEditor },
+		components: {
+			SkillsEditor,
+			ProjectEditor,
+			TechsEditor,
+			EveEditor,
+			CvEditor,
+		},
 	};
 </script>
 

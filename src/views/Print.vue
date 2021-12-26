@@ -1,15 +1,19 @@
 <template>
 	<div>
 		<div>
-			<h2>The download should begin very soon.</h2>
-			<p>
-				<span>You'll be redirected back in</span> <span>{{ n }} </span
-				><span>seconds</span>...
+			<h2 @click="printTheShit">{{ message }}</h2>
+			<p v-if="isDone">
+				{{ `You'll be redirected back in ${n} seconds...` }}
 			</p>
+			<v-skeleton-loader
+				v-else
+				type="text"
+				max-width="500"
+			></v-skeleton-loader>
 			<p>
 				P.S: This feature may not be working on some OS. Sorry for the
-				inconvenience. And it also might render the PDF in a dodgy way. If it
-				happens please try again and it'll be okay.
+				inconvenience. And it also might render the PDF in a dodgy way.
+				If it happens please try again and it'll be okay.
 			</p>
 			<h3>
 				Back to
@@ -18,7 +22,7 @@
 				</router-link>
 			</h3>
 		</div>
-		<div id="document" class="d-none">
+		<div id="document" class="d-none" v-if="isLoaded">
 			<div id="top-triangle"></div>
 			<div id="bottom-triangle"></div>
 			<body class="body">
@@ -71,42 +75,49 @@
 						</section>
 						<section class="education">
 							<h2>Education:</h2>
-							<p style="font-size: 0.5rem;">FULL STACK DEVELOPMENT PROGRAM</p>
+							<p style="font-size: 0.5rem;">
+								{{ cvData["bootcamp"].spec }}
+							</p>
 							<br />
-							<p>2021 - Strive School - YC(S20)</p>
+							<p>{{ cvData["bootcamp"].title }}</p>
 							<br />
 							<p>
-								Strive is a selective, six-month-long, online course, to learn
-								Full Stack Web Development and kickstart a successful career in
-								tech. <br />The opportunity to work together with people from
-								all over the world, integrating the theory with practical work
-								on real projects from the industry, makes the skills learned
-								easily applicable in every environment.
+								{{ cvData["bootcamp"].description }}
 							</p>
 						</section>
 						<section class="hard-skills">
 							<h2>Skills:</h2>
-							<p>HTML5 / CSS3</p>
-							<p>JavaScript / TypeScript</p>
-							<p>Git</p>
-							<p>Agile / Scrum</p>
-							<p>Jira</p>
+							<p
+								v-for="geSkill in cvData['general-skills']
+									.skills"
+								:key="geSkill.i"
+							>
+								{{ geSkill }}
+							</p>
 
 							<h4>Frontend:</h4>
-							<p>Vue.js / Nuxt.js</p>
-							<p>React.js / Next.js</p>
-							<p>SCSS / SASS</p>
-							<p>MUI / Bootstrap</p>
+							<p
+								v-for="feSkill in cvData['frontend'].skills"
+								:key="feSkill.i"
+							>
+								{{ feSkill }}
+							</p>
 
 							<h4>Backend:</h4>
-							<p>Node.js</p>
-							<p>Express.js</p>
-							<p>NoSQL / SQL DBs</p>
+							<p
+								v-for="beSkill in cvData['backend'].skills"
+								:key="beSkill.i"
+							>
+								{{ beSkill }}
+							</p>
 
 							<h4>Extra:</h4>
-							<p>UX/UI design skills</p>
-							<p>GIMP</p>
-							<p>Figma</p>
+							<p
+								v-for="eSkill in cvData['general-skills'].extra"
+								:key="eSkill.i"
+							>
+								{{ eSkill }}
+							</p>
 						</section>
 					</aside>
 					<content>
@@ -114,90 +125,87 @@
 							<h4>
 								ABOUT ME
 							</h4>
-							<h5>
-								From Customer Service to Full stack Developer.
+							<h5 id="bioHeader">
+								{{ cvData.bio["title"] }}
 							</h5>
-							<p>
-								After working for several years among Customer Service
-								Assistance and then in Sales Management, famous events happened
-								in my birthplace brought me away and took me to change my
-								personal priorities. <br />
-								I traveled around Europe, Volunteering in a Hostel in Tenerife
-								where I became Hospitality Assistant Manager and it was one of
-								the most incredible experience of my life. <br />
-								Finally able to settle in Italy, I decided to try to be accepted
-								in a Highly Selective, Intensive program to effectively learn
-								topics I was working with previously in my life as self-taught,
-								and finally turn myself into a professional Web Developer.
+							<p
+								class="bio"
+								v-for="(text, i) in textToParagraph"
+								:key="text.i"
+							>
+								{{
+									i === textToParagraph.length - 1
+										? text
+										: `${text}.`
+								}}
 							</p>
+							<br />
 						</section>
 
 						<section class="projects">
 							<h4>MY PROJECTS</h4>
 							<div class="project">
-								<h5>PERSONAL PORTFOLIO</h5>
+								<h5>{{ cvData["projects"].newest.title }}</h5>
 								<p>
-									<a href="https://hire-mike.web.app/"
-										>https://hire-mike.web.app/
+									<a :href="cvData.projects.newest.url">
+										{{ cvData["projects"].newest.url }}
 									</a>
 								</p>
 								<ul>
-									<li>
-										I've developed my personal website using Vue.js, Node.js,
-										and MongoDB
-									</li>
-									<li>
-										Every time I learn something new I am looking for a way to
-										implement it over there.
+									<li
+										v-for="d in cvData.projects.newest
+											.details"
+										:key="d.i"
+									>
+										{{ d }}
 									</li>
 								</ul>
 							</div>
 
 							<div class="project">
-								<h5>E-COMMERCE</h5>
+								<h5>{{ cvData["projects"].second.title }}</h5>
 								<p>
-									<a href="https://fns-accessories.web.app/"
-										>https://fns-accessories.web.app/
+									<a :href="cvData.projects.second.url"
+										>{{ cvData.projects.second.url }}
 									</a>
 								</p>
 								<ul>
-									<li>
-										My capstone project as
-										<a href="https://strive.school">Strive School</a> alumni.
-									</li>
-									<li>
-										Created from a scratch with a handcrafted CMS, soon to hit
-										production
+									<li
+										v-for="d in cvData.projects.second
+											.details"
+										:key="d.i"
+									>
+										{{ d }}
 									</li>
 								</ul>
 							</div>
 						</section>
 
 						<section class="experience">
-							<h4>RELEVANT WORKING EXPERIENCE</h4>
+							<h4>WORKING EXPERIENCE</h4>
 							<div class="project">
-								<h5>WEB DEVELOPER - FREELANCE</h5>
-								<p>Jan 2021 ~ present</p>
+								<h5>{{ cvData.experience.newest.title }}</h5>
+								<p>{{ cvData.experience.newest.dates }}</p>
 								<ul>
-									<li>
-										Created appealing designs, developing and mantaining
-										different clients website and e-commerce.
-									</li>
-									<li>
-										Aboslutely demolished coffee supplies
+									<li
+										v-for="d in cvData.experience.newest
+											.details"
+										:key="d.i"
+									>
+										{{ d }}
 									</li>
 								</ul>
 							</div>
 							<div class="project">
-								<h5>WEB DEVELOPER - <a href="https://unagi.media">UNAGI</a></h5>
-								<p>Sep 2021 - Oct 2021</p>
+								<h5>{{ cvData.experience.second.title }}</h5>
+								<p>{{ cvData.experience.second.dates }}</p>
 								<ul>
-									<li>
-										Created reusable components following Figma prototypes
-									</li>
-									<li>
-										Assisted other delevopers by guidance through pair
-										programming sessions
+									<li
+										v-for="d in cvData.experience.second
+											.details"
+										:key="d.i"
+									>
+										{{ d }}
 									</li>
 								</ul>
 							</div>
@@ -212,7 +220,8 @@
 
 <script>
 	import html2pdf from "html2pdf.js";
-
+	import useCV from "@/utils/useCV.js";
+	const { getData, cvData } = useCV();
 	export default {
 		data() {
 			return {
@@ -220,70 +229,62 @@
 					{ name: "email", addr: "MikeLitoris34@icloud.com" },
 					{ name: "phone", addr: "+39 351 0499 441" },
 				],
-				currentAge: "",
-				todays: "",
-				n: 5,
-				skills: [],
+				n: 10,
+				cvData,
+				todays: new Date(),
+				isLoaded: false,
+				isDone: false,
+				message: "",
 			};
 		},
 
 		computed: {
-			hardSkills() {
-				return this.skills.filter((skill) => skill.type === "hard");
-			},
-
-			softSkills() {
-				return this.skills.filter((skill) => skill.type === "soft");
+			textToParagraph() {
+				return this.cvData.bio["text"].split(".");
 			},
 		},
-		beforeMount: function() {
-			this.getAge("1994/03/15");
-			this.getSkills();
-		},
-		mounted: async function() {
-			await this.getSkills();
-			var element = document.getElementById("document");
-			var opt = {
-				margin: 0,
-				filename: `!CV-FullStack-Developer-Mike.pdf`,
-				image: { type: "jpeg", quality: 0.98 },
-				html2canvas: { scale: 3 },
-				jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-			};
-
-			html2pdf()
-				.from(element)
-				.set(opt)
-				.save();
-
-			this.countdown();
-			setTimeout(() => {
-				this.$router.go(-1);
-			}, this.n * 1000);
+		mounted() {
+			this.init();
 		},
 
 		methods: {
-			getAge(dateString) {
-				var today = new Date();
-				var birthDate = new Date(dateString);
-				var age = today.getFullYear() - birthDate.getFullYear();
-				var m = today.getMonth() - birthDate.getMonth();
-				if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-					age--;
-				}
-				return (this.currentAge = age), (this.todays = today);
+			async init() {
+				this.message = "Fetching data from a server...";
+				this.cvData = await getData();
+				this.isLoaded = true;
+				this.message = "Generating pdf...";
+				setTimeout(() => this.printTheShit(), 1000);
 			},
 			countdown() {
 				setInterval(() => {
 					this.n -= 1;
 				}, 1000);
 			},
-			async getSkills() {
-				const request = await fetch(
-					`${process.env.VUE_APP_BACKEND_URL}/skills`
-				);
-				const response = await request.json();
-				this.skills = await response;
+			printTheShit() {
+				const element = document.getElementById("document");
+				const opt = {
+					margin: 0,
+					filename: `!CV-FullStack-Developer-Mike.pdf`,
+					image: { type: "jpeg", quality: 0.98 },
+					html2canvas: { scale: 3 },
+					jsPDF: {
+						unit: "in",
+						format: "letter",
+						orientation: "portrait",
+					},
+				};
+				html2pdf()
+					.from(element)
+					.set(opt)
+					.save()
+					.then(() => (this.message = "PDF is generated. Hit Save."))
+					.then(() => (this.message = `Thank you!`))
+					.then(() => (this.isDone = true));
+
+				this.countdown();
+				setTimeout(() => {
+					this.$router.go(-1);
+				}, this.n * 1000);
 			},
 		},
 	};
@@ -411,9 +412,9 @@
 		margin: 5px 0 0 10px;
 	}
 	.project h5 {
-		background: #2196f3;
+		background: #8e9191;
 		text-align: center;
-		border-radius: 20px;
+		border-radius: 20px 0 20px 0;
 		padding: 3px;
 		margin: 0;
 	}
