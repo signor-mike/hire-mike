@@ -279,7 +279,10 @@
 					.save()
 					.then(() => (this.message = "PDF is generated. Hit Save."))
 					.then(() => (this.message = `Thank you!`))
-					.then(() => (this.isDone = true));
+					.then(() => (this.isDone = true))
+					.finally(() => {
+						this.$anaLogger(this.$anal, "my CV printed");
+					});
 
 				this.countdown();
 				setTimeout(() => {
