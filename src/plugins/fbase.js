@@ -8,7 +8,7 @@ const firebaseConfig = {
 	storageBucket: "hire-mike.appspot.com",
 	// messagingSenderId: "312088735594",
 	appId: "1:312088735594:web:3e8a41b0a41ca8c67e7f13",
-	// measurementId: "G-0KLBPTLTW8",
+	measurementId: "G-0KLBPTLTW8",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -41,3 +41,8 @@ export const appCheck = initializeAppCheck(app, {
 	// tokens as needed.
 	isTokenAutoRefreshEnabled: true,
 });
+
+import Vue from "vue";
+import { getAnalytics, logEvent } from "firebase/analytics";
+Vue.prototype.$anal = getAnalytics();
+Vue.prototype.$anaLogger = logEvent;
