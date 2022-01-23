@@ -51,6 +51,11 @@ const routes = [
 		name: "Not Found",
 		component: NotFound,
 	},
+	{
+		path: "/faq",
+		name: "FAQ",
+		component: () => import("../views/faq.vue"),
+	},
 ];
 const router = new VueRouter({
 	mode: "history",
