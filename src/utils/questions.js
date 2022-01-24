@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import uniqid from "uniqid";
 
 export default function() {
@@ -12,6 +11,7 @@ export default function() {
 	};
 
 	const fiveYears = (input) => {
+		input = input.toLowerCase();
 		if (input === "true" || input === "false") {
 			// console.log(input);
 			const today = `${new Date().getFullYear()}`;
@@ -24,6 +24,8 @@ export default function() {
 	};
 
 	const whyHire = (input) => {
+		input = input.toLowerCase();
+
 		if (input === "true" || input === "false") {
 			if (input === "true")
 				return `That's why. You're hiring and I am available.`;
