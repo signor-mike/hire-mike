@@ -72,6 +72,7 @@
 		methods: {
 			handleExecute(questionId) {
 				this.isResolved = true;
+				this.inputValue = this.inputValue.replaceAll(" ", "");
 				switch (questionId) {
 					case "uniqueness":
 						this.output = uniqueApplicant(this.inputValue);

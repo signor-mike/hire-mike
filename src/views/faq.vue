@@ -34,7 +34,7 @@
 						id: "uniqueness",
 						header: "what makes you unique?",
 						answer: "/faq/unique.png",
-						hint: "any name",
+						hint: "any name, one word",
 					},
 					{
 						id: "fiveYears",
