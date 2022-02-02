@@ -75,11 +75,13 @@
 						</section>
 						<section class="education">
 							<h2>Education:</h2>
-							<p style="font-size: 0.5rem;">
+							<p style="font-size: 0.7rem; font-weight: bold;">
 								{{ cvData["bootcamp"].spec }}
 							</p>
 							<br />
-							<p>{{ cvData["bootcamp"].title }}</p>
+							<p style="font-size: 0.7rem; font-weight: bold;">
+								{{ cvData["bootcamp"].title }}
+							</p>
 							<br />
 							<p>
 								{{ cvData["bootcamp"].description }}
@@ -157,6 +159,9 @@
 											.details"
 										:key="d.i"
 									>
+										<v-icon light small left class="li-icon"
+											>mdi-battery-charging-50
+										</v-icon>
 										{{ d }}
 									</li>
 								</ul>
@@ -175,6 +180,9 @@
 											.details"
 										:key="d.i"
 									>
+										<v-icon light small left class="li-icon"
+											>mdi-battery-charging-70
+										</v-icon>
 										{{ d }}
 									</li>
 								</ul>
@@ -192,6 +200,9 @@
 											.details"
 										:key="d.i"
 									>
+										<v-icon light small left class="li-icon"
+											>mdi-battery-charging-90
+										</v-icon>
 										{{ d }}
 									</li>
 								</ul>
@@ -205,6 +216,9 @@
 											.details"
 										:key="d.i"
 									>
+										<v-icon light small left class="li-icon"
+											>mdi-battery-charging-100
+										</v-icon>
 										{{ d }}
 									</li>
 								</ul>
@@ -213,7 +227,12 @@
 					</content>
 				</main>
 			</body>
-			<p style="text-align: center">The PDF created at {{ todays }}</p>
+			<p style="text-align: center; margin-bottom: 0; padding-bottom: 0;">
+				The PDF generated on a lovely day of {{ todays }} @
+				<a href="https://hire-mike.web.app/cv-mike"
+					>https://hire-mike.web.app/cv-mike</a
+				>
+			</p>
 		</div>
 	</div>
 </template>
@@ -231,7 +250,12 @@
 				],
 				n: 10,
 				cvData,
-				todays: new Date(),
+				todays: new Date().toLocaleString("en-US", {
+					weekday: "long",
+					year: "numeric",
+					month: "long",
+					day: "numeric",
+				}),
 				isLoaded: false,
 				isDone: false,
 				message: "",
@@ -296,6 +320,7 @@
 <style scoped>
 	/* ~~~~~ general stuff ~~~~~ */
 	@import url("https://fonts.googleapis.com/css2?family=Allison&family=Hina+Mincho&display=swap");
+	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 	* {
 		font-family: "Hina Mincho";
 	}
@@ -306,8 +331,15 @@
 	a {
 		color: black;
 	}
+
+	ul {
+		list-style: none;
+	}
+	.li-icon {
+		color: green;
+	}
 	#document {
-		height: 100%;
+		max-height: 100%;
 		overflow: hidden;
 		margin-left: -10px;
 		padding-left: 5px;
@@ -385,7 +417,7 @@
 	}
 	#aside-bg {
 		border-width: 2000px 0 0 280px;
-		border-color: #2196f3 #2196f3 #2196f3 #2196f3;
+		border-color: #2195f3c5 #2195f3c5 #2195f3c5 #2195f3c5;
 		z-index: -1;
 		top: 0;
 		left: -15px;
