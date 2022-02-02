@@ -17,7 +17,7 @@
 				v-if="$vuetify.breakpoint.mdAndUp"
 				class="my-auto"
 			>
-				<v-btn text router to="/print" target="_blank">
+				<v-btn text router to="/print">
 					<v-icon>print</v-icon>
 				</v-btn>
 			</v-col>
