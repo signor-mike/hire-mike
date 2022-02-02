@@ -320,7 +320,6 @@
 <style scoped>
 	/* ~~~~~ general stuff ~~~~~ */
 	@import url("https://fonts.googleapis.com/css2?family=Allison&family=Hina+Mincho&display=swap");
-	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 	* {
 		font-family: "Hina Mincho";
 	}
