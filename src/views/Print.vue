@@ -244,10 +244,6 @@
 	export default {
 		data() {
 			return {
-				contacts: [
-					{ name: "email", addr: "MikeLitoris34@icloud.com" },
-					{ name: "phone", addr: "+39 351 0499 441" },
-				],
 				n: 10,
 				cvData,
 				todays: new Date().toLocaleString("en-US", {
