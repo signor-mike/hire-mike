@@ -1,11 +1,7 @@
 <template>
 	<v-main class="pt-1 text-center">
 		<v-container :pb-4="$vuetify.breakpoint.smAndDown">
-			<div v-if="$vuetify.breakpoint.mdAndUp">
-				<h1>Mikhail (Mike) Krivoshchekov</h1>
-				<h3>Fullstack developer</h3>
-			</div>
-			<div v-else>
+			<div>
 				<h1>Mike K</h1>
 				<h3>Fullstack developer</h3>
 			</div>

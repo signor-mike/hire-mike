@@ -11,9 +11,14 @@
 				max-width="500"
 			></v-skeleton-loader>
 			<p>
-				P.S: This feature may not be working on some OS. Sorry for the
-				inconvenience. And it also might render the PDF in a dodgy way.
-				If it happens please try again and it'll be okay.
+				P.S: This feature may not be working on some OS/browser. Sorry
+				for the inconvenience. And it also might render the PDF in a
+				dodgy way. If it happens please try again and it'll be okay.
+				Thanks!
+				<br />
+				The point of this thing is to generate PDF for myself, so I
+				didn't bother much with this feature, as long as it works for me
+				:)
 			</p>
 			<h3>
 				Back to
@@ -34,10 +39,9 @@
 							alt="scan to visit my website"
 						/>
 					</div>
-					<div>
+					<div class="name-and-spec">
 						<h1>
-							Mikhail (Mike) <br />
-							Krivoshchekov
+							Mike K
 						</h1>
 						<h3 class="fancy-font">Fullstack developer</h3>
 					</div>
@@ -78,11 +82,9 @@
 							<p style="font-size: 0.7rem; font-weight: bold;">
 								{{ cvData["bootcamp"].spec }}
 							</p>
-							<br />
 							<p style="font-size: 0.7rem; font-weight: bold;">
 								{{ cvData["bootcamp"].title }}
 							</p>
-							<br />
 							<p>
 								{{ cvData["bootcamp"].description }}
 							</p>
@@ -227,12 +229,18 @@
 					</content>
 				</main>
 			</body>
-			<p style="text-align: center; margin-bottom: 0; padding-bottom: 0;">
-				The PDF generated on a lovely day of {{ todays }} @
-				<a href="https://hire-mike.web.app/cv-mike"
-					>https://hire-mike.web.app/cv-mike</a
-				>
-			</p>
+			<footer>
+				<p>
+					The PDF is generated
+					<br />
+					on a lovely day of {{ todays }}
+					<br />
+					@
+					<a href="https://hire-mike.web.app/cv-mike">
+						https://hire-mike.web.app/cv-mike
+					</a>
+				</p>
+			</footer>
 		</div>
 	</div>
 </template>
@@ -286,7 +294,7 @@
 					margin: 0,
 					filename: `!CV-FullStack-Developer-Mike.pdf`,
 					image: { type: "jpeg", quality: 0.98 },
-					html2canvas: { scale: 3 },
+					html2canvas: { scale: 2 },
 					jsPDF: {
 						unit: "in",
 						format: "letter",
@@ -322,6 +330,7 @@
 	main {
 		display: flex;
 		flex-direction: row;
+		margin-top: auto;
 	}
 	a {
 		color: black;
@@ -370,24 +379,23 @@
 
 	/* ~~~~~~~~~~~~ header styles ~~~~~~~~~~~~ */
 	header {
-		margin-top: 5%;
+		margin-top: 0;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
+		flex-direction: row-reverse;
+		justify-content: space-between;
 		text-align: center;
 	}
+
+	header .name-and-spec {
+		margin: 10px 0 0 10px;
+	}
+
 	header .image-wrapper > img {
 		width: 100px;
 		height: 100px;
-		margin: 25px;
-		align-self: center;
+		margin-right: 5px;
 	}
-	.image-wrapper {
-		display: flex;
-		justify-content: center;
-		border: 2px solid black;
-		border-radius: 100%;
-	}
+
 	h1 {
 		font-size: 3rem;
 		letter-spacing: 0.1rem;
@@ -406,13 +414,16 @@
 		flex-direction: column;
 		width: 650px;
 		margin-bottom: 0.3rem;
+		padding-left: 5px;
+		margin-top: 89px;
 	}
 	aside section {
 		padding-left: 2px;
+		margin-bottom: 47px;
 	}
 	#aside-bg {
 		border-width: 2000px 0 0 280px;
-		border-color: #2195f3c5 #2195f3c5 #2195f3c5 #2195f3c5;
+		border-color: #2195f370 #2195f370 #2195f370 #2195f370;
 		z-index: -1;
 		top: 0;
 		left: -15px;
@@ -425,21 +436,34 @@
 	aside p {
 		letter-spacing: 0.1rem;
 		line-height: 1rem;
+		font-weight: 800;
 	}
 	.hard-skills h4 {
-		margin-left: 10px;
+		margin: 15px 0 0 10px;
 	}
 
 	/* ~~~~~~~~~~~~ CONTENT ~~~~~~~~~~~~ */
 	content {
-		margin: 0 40px;
+		margin: 10px 10px;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		max-height: 100%;
+		/* line-height: 1rem; */
+		/* justify-content: space-around; */
 	}
+
 	content h4 {
 		text-align: center;
 		font-size: 1.5rem;
 	}
+
+	content section {
+		margin-bottom: 30px;
+	}
+
 	.project {
-		margin: 5px 0 0 10px;
+		margin-bottom: 5px;
 	}
 	.project h5 {
 		background: #8e9191;
@@ -447,5 +471,16 @@
 		border-radius: 20px 0 20px 0;
 		padding: 3px;
 		margin: 0;
+	}
+
+	/* ~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~ */
+	footer {
+		margin: 0 2px;
+		padding: 0 10px;
+	}
+	footer p {
+		text-align: right;
+		font-size: 0.8rem;
+		padding-bottom: 5px;
 	}
 </style>

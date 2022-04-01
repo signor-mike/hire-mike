@@ -75,19 +75,14 @@
 						level: "Bilingual",
 					},
 					{
-						lang: "ESP",
-						flag: "es",
-						level: "Basic",
-					},
-					{
 						lang: "ITA",
 						flag: "it",
-						level: "Basic",
+						level: "Learning...",
 					},
 					{
-						lang: "RU",
-						flag: "ru",
-						level: "Native",
+						lang: "ESP",
+						flag: "es",
+						level: "Very basic",
 					},
 				],
 				projects: [],
