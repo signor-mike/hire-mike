@@ -31,9 +31,7 @@
 				<v-menu offset-y>
 					<template v-slot:activator="{ on, attrs }">
 						<v-btn text color="grey" dark v-bind="attrs" v-on="on">
-							<v-icon left>
-								expand_more
-							</v-icon>
+							<v-icon left> expand_more </v-icon>
 							<span>menu</span>
 						</v-btn>
 					</template>
@@ -87,7 +85,7 @@
 								<v-list-item-content>
 									<v-list-item-title>
 										<h3
-											class="text-center font-weight-black  class text-uppercase primary--text"
+											class="text-center font-weight-black class text-uppercase primary--text"
 										>
 											{{ link.text }}
 										</h3>

@@ -16,7 +16,7 @@ const routes = [
 	{
 		path: "/cv-mike",
 		name: "My CV",
-		component: () => import("../views/MikeCV.vue"),
+		component: () => import("../views/Curriculum.vue"),
 	},
 	{
 		path: "/portfolio",
