@@ -1,0 +1,58 @@
+{
+	"skills": {
+		"Languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
+		"Libraries": [
+			"React.js",
+			"Vue.js",
+			"Vuetify.js",
+			"Tailwind",
+			"Cypress",
+			"Jest",
+			"Express.js",
+			"Node.js",
+			"REST api"
+		],
+		"Software": [
+			"Jira",
+			"Figma",
+			"Wrike",
+			"ClickUp",
+			"Slack",
+			"Google Cloud Platform",
+			"Firebase"
+		],
+		"Interpersonal Skills": [
+			"Adaptability",
+			"Flexibility",
+			"Agile",
+			"Work Ethic",
+			"Code ownership"
+		]
+	},
+	"projects": [
+		{
+			"name": "unagi.media",
+			"url": "https://unagi.media/",
+			"position": "Frontend dev",
+			"year": "2021",
+			"techs": ["Nuxt.js", "CSS", "stylus", "pug", "MongoDB"],
+			"description": "Participated in pair programming sessions, created layouts and UI elements; bug hunt"
+		},
+		{
+			"name": "monferrato.bike",
+			"url": "https://monferrato.bike",
+			"position": "Frontend dev",
+			"year": "2022",
+			"techs": ["React.js", "typescript", "Remix", "Tailwind"],
+			"description": "Created UI elements, developed email templates with over 90% market support"
+		},
+		{
+			"name": "fastloop.it",
+			"url": "https://fastloop.it",
+			"position": "JAM stack dev",
+			"year": "2022",
+			"techs": ["Next.js", "typescript", "Tailwind", "Axios"],
+			"description": "Developed pages and UI components; collaborated on UI component library (for internal use)"
+		}
+	]
+}
