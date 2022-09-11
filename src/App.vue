@@ -1,36 +1,19 @@
 <template class>
 	<v-app>
-		<NavBar />
+		<NavBar v-if="$store.state.isAnimationDone" />
 		<v-main>
 			<router-view />
-			<v-btn
-				v-show="fab"
-				v-scroll="onScroll"
-				fab
-				fixed
-				bottom
-				right
-				color="secondary"
-				class="to-top-button"
-				@click="toTop"
-			>
-				<v-icon color="primary" large>keyboard_arrow_up</v-icon>
-			</v-btn>
 		</v-main>
 	</v-app>
 </template>
 
 <script>
-	import NavBar from "./components/Navbar";
+	import NavBar from "@/blocks/Navbar";
 
 	export default {
 		name: "App",
 
 		components: { NavBar },
-		data: () => ({
-			fab: false,
-		}),
-
 		beforeMount: function () {
 			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 				(this.$vuetify.theme.dark = true),
@@ -43,16 +26,6 @@
 						`The light theme is set to ${this.$vuetify.theme.light} by default, because my dear visitor prefers light color scheme :)`
 					);
 			}
-		},
-		methods: {
-			onScroll(e) {
-				if (typeof window === "undefined") return;
-				const top = window.pageYOffset || e.target.scrollTop || 0;
-				this.fab = top > 200;
-			},
-			toTop() {
-				this.$vuetify.goTo(0);
-			},
 		},
 	};
 </script>

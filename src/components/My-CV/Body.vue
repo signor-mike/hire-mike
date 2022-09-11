@@ -109,5 +109,5 @@
 </script>
 
 <style>
-	@import url("../../assets/global.css");
+	/* @import url("../../assets/global.css"); */
 </style>

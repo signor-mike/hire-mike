@@ -10,6 +10,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
 	state: {
+		isAnimationDone: false,
 		contacts: [
 			{
 				id: "1",
@@ -61,6 +62,9 @@ const store = new Vuex.Store({
 		},
 	},
 	mutations: {
+		SET_IS_ANIMATION_DONE(state, value) {
+			state.isAnimationDone = value;
+		},
 		/* users */
 		SET_LOGGED_IN(state, value) {
 			state.user.loggedIn = value;
