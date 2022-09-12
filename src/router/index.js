@@ -1,8 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import printing from "../views/Print.vue";
-import feedback from "../views/Feedback.vue";
 import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
@@ -14,24 +12,19 @@ const routes = [
 		component: Home,
 	},
 	{
-		path: "/cv-mike",
-		name: "My CV",
-		component: () => import("../views/Curriculum.vue"),
+		path: "/view",
+		name: "main view",
+		component: () => import("../views/MainView.vue"),
 	},
 	{
-		path: "/portfolio",
-		name: "Portfolio",
-		component: () => import("../views/Portfolio.vue"),
+		path: "/export",
+		name: "exportPdf",
+		component: () => import("../views/ExportPdf.vue"),
 	},
 	{
-		path: "/print",
-		name: "print",
-		component: printing,
-	},
-	{
-		path: "/contact",
-		name: "contact me",
-		component: feedback,
+		path: "/auth",
+		name: "auth",
+		component: () => import("../views/Authorization.vue"),
 	},
 	{
 		path: "/db",
@@ -42,29 +35,9 @@ const routes = [
 		},
 	},
 	{
-		path: "/auth",
-		name: "auth",
-		component: () => import("../views/Authorization.vue"),
-	},
-	{
 		path: "*",
 		name: "Not Found",
 		component: NotFound,
-	},
-	{
-		path: "/faq",
-		name: "FAQ",
-		component: () => import("../views/faq.vue"),
-	},
-	{
-		path: "/export",
-		name: "exportPdf",
-		component: () => import("../views/ExportPdf.vue"),
-	},
-	{
-		path: "/view",
-		name: "main view",
-		component: () => import("../views/MainView.vue"),
 	},
 ];
 const router = new VueRouter({

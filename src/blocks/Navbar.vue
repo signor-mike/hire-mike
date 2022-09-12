@@ -26,7 +26,6 @@
 
 		data() {
 			return {
-				toggle_exclusive: 0,
 				links: [
 					{
 						icon: "home",

@@ -46,8 +46,16 @@
 		data: () => ({
 			opacity: 100,
 			scale: 1,
+			words: [
+				"prosperity",
+				"happiness",
+				"success",
+				"triumph",
+				"abundance",
+			],
 		}),
 		mounted: function () {
+			console.log(this.pickedWord);
 			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		methods: {
@@ -112,7 +120,7 @@
 
 				text.innerHTML = ``;
 				text.appendChild(this.createSpan("and face ", "fadeOut"));
-				text.appendChild(this.createSpan("prosperity", "zoomIn"));
+				text.appendChild(this.createSpan(this.pickedWord, "zoomIn"));
 
 				this.animation("fadeOut");
 				await new Promise((r) => setTimeout(r, 500)).then(() =>
@@ -123,7 +131,12 @@
 				);
 			},
 		},
-		computed: {},
+		computed: {
+			pickedWord() {
+				const num = Math.floor(Math.random() * this.words.length);
+				return this.words[num];
+			},
+		},
 		beforeDestroy() {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
@@ -135,23 +148,5 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-	}
-	* {
-		overflow: hidden;
-	}
-	.zoomIn {
-		animation-name: zoomIn;
-		animation-duration: 10s;
-		animation-fill-mode: forwards;
-		overflow: hidden;
-	}
-
-	@keyframes zoomIn {
-		0% {
-			transform: scale(1);
-		}
-		100% {
-			transform: scale(10);
-		}
 	}
 </style>
