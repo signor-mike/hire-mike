@@ -1,6 +1,6 @@
 <template class>
 	<v-app>
-		<NavBar v-if="$store.state.isAnimationDone" />
+		<NavBar v-if="$store.state.isNavVisible" />
 		<v-main>
 			<router-view />
 		</v-main>

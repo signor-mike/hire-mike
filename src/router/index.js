@@ -61,6 +61,11 @@ const routes = [
 		name: "exportPdf",
 		component: () => import("../views/ExportPdf.vue"),
 	},
+	{
+		path: "/view",
+		name: "main view",
+		component: () => import("../views/MainView.vue"),
+	},
 ];
 const router = new VueRouter({
 	mode: "history",

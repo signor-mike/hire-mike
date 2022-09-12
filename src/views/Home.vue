@@ -1,7 +1,22 @@
 <template>
-	<v-container fluid fill-height flex-column class="primary--text">
+	<v-container
+		fluid
+		fill-height
+		flex-column
+		class="primary--text main-wrapper"
+	>
+		<div class="button-wrap">
+			<v-btn
+				color="primary"
+				outlined
+				@click="$router.push('/view?page=about')"
+			>
+				<v-icon>keyboard_double_arrow_right</v-icon>
+			</v-btn>
+		</div>
 		<v-spacer />
 		<vue-typed-js
+			@preStringTyped="getData()"
 			:strings="['Hire mike']"
 			:type-speed="50"
 			:start-delay="100"
@@ -33,10 +48,7 @@
 			scale: 1,
 		}),
 		mounted: function () {
-			console.log("query.page: ", this.$route.query.page);
-			const { xs, sm, md, lg } = this.$vuetify.breakpoint;
-			console.log("xs: ", xs, "\nsm: ", sm, "\nmd: ", md, "\nlg: ", lg);
-			this.$store.commit("SET_IS_ANIMATION_DONE", false);
+			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		methods: {
 			createSpan(text, name) {
@@ -46,51 +58,47 @@
 				return domSpan;
 			},
 
-			animatonHandler(element) {
-				let counter = element === "fadeOut" ? 100 : 1;
-				const timer = element === "fadeOut" ? 50 : 100;
-				const opacityInterval = setInterval(() => {
-					document.querySelectorAll("." + element).forEach((e) => {
-						if (element === "fadeOut") {
-							e.style.opacity = counter <= 2 ? 0 : counter / 100;
-							counter--;
-						}
-						if (element === "zoomIn") {
-							e.style = `position: absolute;`;
-							e.style.transform = `scale(${counter + 1 / 100})`;
-							counter++;
-						}
-					});
-					if (counter <= 0 || counter >= 10) {
-						clearInterval(opacityInterval);
-					}
-				}, timer);
+			async getData() {
+				console.log("fetching data");
+				await new Promise((r) => setTimeout(r, 500)).then(() =>
+					console.log("got the data")
+				);
 			},
 
 			animation(target) {
+				let items = document.querySelectorAll("." + target);
 				if (target === "fadeOut") {
 					const opacityInterval = setInterval(() => {
-						document.querySelectorAll("." + target).forEach((e) => {
+						items.forEach((e) => {
 							e.style.opacity =
 								this.opacity <= 2 ? 0 : this.opacity / 100;
 							this.opacity--;
 							if (this.opacity <= 0)
 								clearInterval(opacityInterval);
 						});
-						console.log("opacity: ", this.opacity);
 					}, 10);
 				} else {
 					const zoomInterval = setInterval(() => {
-						document.querySelectorAll("." + target).forEach((e) => {
-							e.style = `position: absolute;`;
+						items.forEach((e, i) => {
+							e.style = `position: absolute; overflow: hidden;`;
+							if (i === 0) {
+								e.style.top = e.offsetTop - this.scale + "px";
+								e.style.left = e.offsetLeft - this.scale + "px";
+							}
+							if (i === 1) {
+								e.style.left = `${e.offsetLeft - this.scale}px`;
+								e.style.bottom = `${
+									e.offsetTop - this.scale
+								}px`;
+							}
 							e.style.transform = `scale(${
-								this.scale + 1 / 100
+								this.scale / 100 + 1
 							})`;
 							this.scale++;
-							if (this.scale >= 100) clearInterval(zoomInterval);
+							if (this.scale / 100 + 1 >= 8)
+								clearInterval(zoomInterval);
 						});
-						console.log("scale: ", this.scale);
-					}, 100);
+					}, 5);
 				}
 			},
 
@@ -101,25 +109,36 @@
 				title.innerHTML = ``;
 				title.appendChild(this.createSpan("hire ", "fadeOut"));
 				title.appendChild(this.createSpan("mike", "zoomIn"));
+
 				text.innerHTML = ``;
 				text.appendChild(this.createSpan("and face ", "fadeOut"));
 				text.appendChild(this.createSpan("prosperity", "zoomIn"));
+
 				this.animation("fadeOut");
-				// this.animatonHandler("fadeOut");
-				await new Promise((r) => setTimeout(r, 1500)).then(() =>
+				await new Promise((r) => setTimeout(r, 500)).then(() =>
 					this.animation("zoomIn")
 				);
-				// await new Promise((r) => setTimeout(r, 500)).then(() =>
-				// 	this.$router.push("/faq")
-				// );
-				this.$store.commit("SET_IS_ANIMATION_DONE", true);
+				await new Promise((r) => setTimeout(r, 2000)).then(() =>
+					this.$router.push("/view?page=about")
+				);
 			},
 		},
 		computed: {},
+		beforeDestroy() {
+			this.$store.commit("SET_NAV_VISIBILITY", true);
+		},
 	};
 </script>
 
 <style scoped>
+	.button-wrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	* {
+		overflow: hidden;
+	}
 	.zoomIn {
 		animation-name: zoomIn;
 		animation-duration: 10s;

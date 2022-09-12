@@ -12,7 +12,7 @@
 					:outlined="$route.query.page === link.route ? false : true"
 					:x-small="$vuetify.breakpoint.smAndDown"
 					block
-					@click="$router.push(`/?page=${link.route}`)"
+					@click="$router.push(`?page=${link.route}`)"
 				>
 					{{ link.text }}
 				</v-btn>
