@@ -1,6 +1,8 @@
 <template>
 	<v-container fill-height>
-		<span class="text-h2">my stack</span>
+		<span class="text-h4 text-md-h2 mx-md-auto mt-md-auto">
+			I am working with:
+		</span>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
 			aperiam dolores ducimus et similique eligendi adipisci soluta

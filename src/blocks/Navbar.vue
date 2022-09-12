@@ -1,8 +1,8 @@
 <template>
-	<v-app-bar app>
+	<v-app-bar app fixed flat color="secondary">
 		<a href="/">
 			<span
-				class="primary--text text-uppercase"
+				class="primary--text text-uppercase mr-5"
 				:class="{
 					'text-h6': $vuetify.breakpoint.smAndDown,
 					'text-h3': $vuetify.breakpoint.md,

@@ -55,7 +55,6 @@
 			],
 		}),
 		mounted: function () {
-			console.log(this.pickedWord);
 			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		methods: {

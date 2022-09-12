@@ -1,6 +1,8 @@
 <template>
 	<v-container fill-height>
-		<span class="text-h2">my work</span>
+		<span class="text-h4 text-md-h2 mx-md-auto mt-md-auto">
+			See my work
+		</span>
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
 			neque praesentium, alias ea aut facilis sit molestiae ducimus itaque

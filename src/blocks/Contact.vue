@@ -1,6 +1,8 @@
 <template>
 	<v-container fill-height>
-		<span class="text-h2">contact me</span>
+		<span class="text-h4 text-md-h2 mx-md-auto mt-md-auto">
+			Reach me out
+		</span>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
 			facere laboriosam iste rerum molestiae numquam veritatis explicabo
