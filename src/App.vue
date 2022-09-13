@@ -4,19 +4,18 @@
 		<v-main>
 			<router-view />
 		</v-main>
-		<v-footer v-if="$store.state.isNavVisible" app color="secondary"
-			>footer</v-footer
-		>
+		<Footer v-if="$store.state.isNavVisible" />
 	</v-app>
 </template>
 
 <script>
 	import NavBar from "@/blocks/Navbar";
+	import Footer from "@/blocks/Footer";
 
 	export default {
 		name: "App",
 
-		components: { NavBar },
+		components: { NavBar, Footer },
 		beforeMount: function () {
 			if (window.matchMedia("(prefers-color-scheme: dark)").matches)
 				this.$vuetify.theme.dark = true;
