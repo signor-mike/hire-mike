@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import MainView from "../views/MainView.vue";
 import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
@@ -14,7 +15,7 @@ const routes = [
 	{
 		path: "/view",
 		name: "main view",
-		component: () => import("../views/MainView.vue"),
+		component: MainView,
 	},
 	{
 		path: "/export",
