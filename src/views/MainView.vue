@@ -18,13 +18,14 @@
 			counter: 0,
 		}),
 		mounted: function () {
-			setInterval(() => {
-				this.counter = this.counter + 1;
-				document.getElementById(
-					"gradient"
-				).style.background = `conic-gradient(from ${this.counter}deg at 50% 50%, ${this.computedPallete})`;
-				if (this.counter >= 360) this.counter = 0;
-			}, 25);
+			if (this.$vuetify.theme.dark)
+				setInterval(() => {
+					this.counter = this.counter + 1;
+					document.getElementById(
+						"gradient"
+					).style.background = `conic-gradient(from ${this.counter}deg at 50% 50%, ${this.computedPallete})`;
+					if (this.counter >= 360) this.counter = 0;
+				}, 25);
 		},
 		computed: {
 			computedPallete() {
