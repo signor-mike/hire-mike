@@ -1,21 +1,21 @@
 <template>
-	<v-container fill-height>
+	<v-container fill-height class="secondary">
 		<span class="text-h4 text-md-h2 mx-md-auto mt-md-auto">
 			See my work
 		</span>
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
-			neque praesentium, alias ea aut facilis sit molestiae ducimus itaque
-			illo, facere culpa molestias distinctio asperiores veniam iste odio
-			aperiam. Laboriosam, autem facilis distinctio quis velit modi
-			repellat fugit maxime amet! Assumenda eos porro laboriosam aperiam
-			aliquam beatae temporibus hic labore.
-		</p>
+		<v-row>
+			<v-col v-for="(n, i) in 4" :key="n" cols="12" md="6">
+				<Project :index="i" />
+			</v-col>
+		</v-row>
 	</v-container>
 </template>
 
 <script>
-	export default {};
+	import Project from "@/components/CV/Project";
+	export default {
+		components: { Project },
+	};
 </script>
 
 <style></style>
