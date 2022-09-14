@@ -1,8 +1,6 @@
 <template>
-	<v-container fill-height class="secondary">
-		<span class="text-h4 text-md-h2 mx-md-auto mb-md-auto">
-			See my work
-		</span>
+	<v-container fill-height align-content-center class="secondary">
+		<span class="text-h4 text-md-h2 mx-auto mb-md-auto"> See my work </span>
 		<v-row>
 			<v-col v-for="(n, i) in 4" :key="n" cols="12" md="6">
 				<Project :index="i" />

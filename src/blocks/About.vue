@@ -1,8 +1,12 @@
 <template>
-	<v-container fill-height d-flex class="secondary">
-		<span class="text-h4 text-md-h2 mx-md-auto mb-md-auto">
-			Get to know me
-		</span>
+	<v-container
+		fill-height
+		d-flex
+		justify-center
+		align-content-center
+		class="secondary"
+	>
+		<span class="text-h4 text-md-h2 mx-md-auto"> Get to know me</span>
 		<div
 			v-if="$vuetify.breakpoint.smAndDown"
 			class="ml-auto d-flex flex-row justify-around"

@@ -18,7 +18,7 @@
 			counter: 0,
 		}),
 		mounted: function () {
-			if (this.$vuetify.theme.dark)
+			if (this.$vuetify.theme.dark && this.$vuetify.breakpoint.mdAndUp)
 				setInterval(() => {
 					this.counter = this.counter + 1;
 					document.getElementById(
