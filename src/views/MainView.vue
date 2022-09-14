@@ -37,4 +37,9 @@
 	};
 </script>
 
-<style></style>
+<style>
+	span.title {
+		position: relative;
+		top: 0px;
+	}
+</style>

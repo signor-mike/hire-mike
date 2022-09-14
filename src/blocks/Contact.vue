@@ -1,6 +1,6 @@
 <template>
 	<v-container fill-height>
-		<span class="text-h4 text-md-h2 mx-md-auto mt-md-auto">
+		<span class="text-h4 text-md-h2 mx-md-auto mb-md-auto">
 			Reach me out
 		</span>
 		<p>
