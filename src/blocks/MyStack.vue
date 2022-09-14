@@ -1,8 +1,6 @@
 <template>
 	<v-container fill-height secondary align-content-center>
-		<span class="text-h4 text-md-h2 mx-auto mb-5 mb-md-auto">
-			I am working with
-		</span>
+		<span class="text-h4 text-md-h2 mx-auto mb-5"> I am working with </span>
 		<v-row align="center">
 			<v-col cols="12" md="6">
 				<Skills
