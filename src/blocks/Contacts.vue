@@ -1,5 +1,5 @@
 <template>
-	<v-container fill-height align-content-center>
+	<v-container fill-height align-content-center secondary>
 		<span class="text-h4 text-md-h2 mx-auto mb-5 mb-md-auto">
 			Reach me out
 		</span>
