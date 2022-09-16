@@ -9,7 +9,7 @@
 					align="right"
 				/>
 			</v-col>
-			<v-divider :vertical="$vuetify.breakpoint.mdAndUp" />
+			<v-divider vertical v-if="$vuetify.breakpoint.mdAndUp" />
 			<v-col cols="12" v-if="$vuetify.breakpoint.smAndDown">
 				<v-divider />
 			</v-col>
