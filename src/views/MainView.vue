@@ -2,7 +2,7 @@
 	<v-container fluid fill-height class="pa-0" id="gradient">
 		<MyWork v-if="$route.query.page === 'experience'" />
 		<MyStack v-else-if="$route.query.page === 'stack'" />
-		<Contact v-else-if="$route.query.page === 'contact'" />
+		<Contacts v-else-if="$route.query.page === 'contact'" />
 		<About v-else />
 	</v-container>
 </template>
@@ -11,9 +11,9 @@
 	import About from "../blocks/About.vue";
 	import MyWork from "../blocks/MyWork.vue";
 	import MyStack from "../blocks/MyStack.vue";
-	import Contact from "../blocks/Contact.vue";
+	import Contacts from "../blocks/Contacts.vue";
 	export default {
-		components: { About, MyWork, MyStack, Contact },
+		components: { About, MyWork, MyStack, Contacts },
 		data: () => ({
 			counter: 0,
 		}),
