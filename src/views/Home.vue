@@ -52,6 +52,9 @@
 				"success",
 				"triumph",
 				"abundance",
+				"fortune",
+				"wholesomeness",
+				"awesomeness",
 			],
 		}),
 		mounted: function () {
