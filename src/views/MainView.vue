@@ -18,6 +18,13 @@
 			degrees: 0,
 		}),
 		methods: {},
+		updated: function () {
+			const { page } = this.$route.query;
+			if (page === "experience") this.degrees = 120;
+			if (page === "stack") this.degrees = 220;
+			if (page === "contact") this.degrees = 320;
+			if (page === "about") this.degrees = 60;
+		},
 		mounted: function () {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
 			if (this.$vuetify.theme.dark && this.$vuetify.breakpoint.mdAndUp)
@@ -26,7 +33,7 @@
 					document.getElementById(
 						"gradient"
 					).style.background = `conic-gradient(from ${this.degrees}deg
-		         at ${this.computedX}% ${this.computedY}%,
+		         at ${this.computedXY},
 		         ${this.computedPallete})`;
 					if (this.degrees >= 360) this.degrees = 0;
 				}, 25);
@@ -38,19 +45,18 @@
 					? `#ebf8e1, 10deg, ${dark.primary}, 45deg, transparent, 315deg, ${light.primary}, #ebf8e1`
 					: `#ebf8e1, 10deg, ${light.primary}, 45deg, transparent, 315deg, ${dark.primary}, #ebf8e1`;
 			},
-			computedX() {
+			computedXY() {
 				const { page } = this.$route.query;
-				if (page === "experience") return 100;
-				if (page === "stack") return 100;
-				if (page === "contact") return 0;
-				return 0;
-			},
-			computedY() {
-				const { page } = this.$route.query;
-				if (page === "experience") return 0;
-				if (page === "stack") return 100;
-				if (page === "contact") return 100;
-				return 0;
+				switch (page) {
+					case "experience":
+						return "100% 0%";
+					case "stack":
+						return "100% 100%";
+					case "contact":
+						return "0% 100%";
+					default:
+						return "0% 0%";
+				}
 			},
 		},
 	};
