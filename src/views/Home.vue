@@ -69,10 +69,7 @@
 			},
 
 			async getData() {
-				console.log("fetching data");
-				await new Promise((r) => setTimeout(r, 500)).then(() =>
-					console.log("got the data")
-				);
+				await this.$store.dispatch("fetchBio");
 			},
 
 			animation(target) {

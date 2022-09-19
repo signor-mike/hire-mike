@@ -1,10 +1,22 @@
 <template>
 	<v-container fluid fill-height>
 		<span :class="computedClasses.titleClasses">
+			<v-icon
+				v-if="isEdit"
+				color="success"
+				@click="$emit('editBio', { title })"
+				>edit</v-icon
+			>
 			{{ title }}
 		</span>
 		<br />
 		<span :class="computedClasses.bodyClasses">
+			<v-icon
+				v-if="isEdit"
+				color="success"
+				@click="$emit('editBio', { text })"
+				>edit</v-icon
+			>
 			{{ text }}
 		</span>
 	</v-container>
@@ -16,7 +28,11 @@
 			title: String,
 			text: String,
 			textAlign: String,
+			isEdit: Boolean,
 		},
+		data: () => ({
+			// dialog: false,
+		}),
 		computed: {
 			computedClasses() {
 				let titleClasses;

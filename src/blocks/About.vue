@@ -24,13 +24,17 @@
 		>
 			<v-col cols="5" v-if="$vuetify.breakpoint.mdAndUp">
 				<Bio
+					@editBio="(payload) => handleEdit(payload, 'professional')"
+					:isEdit="isEdit"
 					textAlign="right"
-					:title="bio.prof.title"
-					:text="bio.prof.text"
+					:title="$store.state.about.professional.title"
+					:text="$store.state.about.professional.text"
 				/>
 			</v-col>
 			<v-col cols="12" v-else>
 				<Bio
+					@editBio="(data) => handleEdit(data, computedProps.type)"
+					:isEdit="isEdit"
 					textAlign="center"
 					:title="computedProps.title"
 					:text="computedProps.text"
@@ -47,40 +51,72 @@
 
 			<v-col v-if="$vuetify.breakpoint.mdAndUp" cols="5">
 				<Bio
+					@editBio="(payload) => handleEdit(payload, 'personal')"
+					:isEdit="isEdit"
 					textAlign="left"
-					:title="bio.pers.title"
-					:text="bio.pers.text"
+					:title="$store.state.about.personal.title"
+					:text="$store.state.about.personal.text"
 				/>
 			</v-col>
 		</v-row>
+		<v-dialog v-model="dialog">
+			<v-container secondary pa-2>
+				<p class="text-h5">new value:</p>
+				<v-textarea v-model="values.value" />
+				<v-btn
+					block
+					color="primary"
+					:loading="isLoading"
+					@click="handleSubmit"
+				>
+					save
+				</v-btn>
+			</v-container>
+		</v-dialog>
 	</v-container>
 </template>
 
 <script>
 	import Bio from "../components/CV/Bio.vue";
+
 	export default {
+		props: { isEdit: Boolean },
 		components: { Bio },
 		data: () => ({
 			isProf: true,
-			bio: {
-				prof: {
-					title: "professionally",
-					text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ipsam cumque! Numquam, magnam quae assumenda reprehenderit deleniti distinctio iusto quo? Aspernatur, odio? Quaerat quo magnam omnis totam eius commodi odio. Optio id maxime aliquam ullam est assumenda nobis quaerat error hic labore cum reprehenderit et, ipsam iusto odit facere corporis.",
-				},
-				pers: {
-					title: "...and personally",
-					text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ipsam cumque! Numquam, magnam quae assumenda reprehenderit deleniti distinctio iusto quo? Aspernatur, odio? Quaerat quo magnam omnis totam eius commodi odio. Optio id maxime aliquam ullam est assumenda nobis quaerat error hic labore cum reprehenderit et, ipsam iusto odit facere corporis.",
-				},
-			},
+			dialog: false,
+			isLoading: false,
+			values: {},
 		}),
 		computed: {
 			computedProps() {
-				if (this.isProf) return { ...this.bio.prof };
-				else return { ...this.bio.pers };
+				if (this.isProf)
+					return {
+						...this.$store.state.about.professional,
+						type: "professional",
+					};
+				else
+					return {
+						...this.$store.state.about.personal,
+						type: "personal",
+					};
 			},
 		},
-		mounted: function () {
-			// console.log(this.$vuetify.breakpoint.smAndDown);
+		methods: {
+			async handleEdit(payload, key) {
+				this.dialog = true;
+				const collection = "about";
+				const document = key;
+				const field = Object.keys(payload)[0];
+				const value = payload[field];
+				this.values = { collection, document, field, value };
+			},
+			async handleSubmit() {
+				this.isLoading = true;
+				await this.$store.dispatch("updateBio", this.values);
+				this.isLoading = false;
+				this.dialog = false;
+			},
 		},
 	};
 </script>
