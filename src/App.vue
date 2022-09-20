@@ -23,7 +23,7 @@
 		},
 
 		async mounted() {
-			this.$store.dispatch("getAll");
+			await this.$store.dispatch("getAll");
 		},
 	};
 </script>
