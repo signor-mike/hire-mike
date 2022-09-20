@@ -60,7 +60,7 @@
 						this.credentials.password
 					);
 					if (user) {
-						this.$router.push("/db");
+						this.$router.push("/db?view=about");
 					}
 				} catch (error) {
 					this.error.isError = true;
@@ -80,7 +80,7 @@
 						loggedIn &&
 						data.email === this.$store.state.currentUser.email
 					) {
-						this.$router.push("/db");
+						this.$router.push("/db?view=about");
 					} else {
 						console.log("current user is missing. Please login.");
 					}
