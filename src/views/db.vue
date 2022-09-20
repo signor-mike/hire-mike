@@ -102,7 +102,6 @@
 		},
 		async mounted() {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
-			await this.$store.dispatch("fetchBio");
 		},
 		components: {
 			About,

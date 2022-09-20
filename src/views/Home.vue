@@ -16,7 +16,6 @@
 		</div>
 		<v-spacer />
 		<vue-typed-js
-			@preStringTyped="getData()"
 			:strings="['Hire mike']"
 			:type-speed="50"
 			:start-delay="100"
@@ -66,10 +65,6 @@
 				if (name) domSpan.classList.add(name);
 				domSpan.innerText = text;
 				return domSpan;
-			},
-
-			async getData() {
-				await this.$store.dispatch("fetchBio");
 			},
 
 			animation(target) {

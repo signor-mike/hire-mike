@@ -54,4 +54,8 @@ export const actions = {
 			console.log(error);
 		}
 	},
+
+	async getAll({ dispatch }) {
+		await dispatch("fetchBio");
+	},
 };
