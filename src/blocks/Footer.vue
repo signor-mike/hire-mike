@@ -1,5 +1,5 @@
 <template>
-	<v-footer app color="secondary" style="max-width: 100vw">
+	<v-footer app color="secondary">
 		<v-container fluid d-flex>
 			<span
 				class="mx-auto text-caption text-center primary--text font-italic"
