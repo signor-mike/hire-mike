@@ -1,24 +1,45 @@
 <template>
-	<v-card class="" color="secondary lighten-2" :class="computedBorder">
+	<v-card color="secondary lighten-2" :class="computedBorder">
 		<v-card-title>
-			<span class="text-left">company</span>
-			<v-spacer />
-			<span class="text-right">year</span>
+			<span class="text-left">{{ project.company }}</span>
+			<div v-if="isEdit" class="mx-auto d-flex">
+				<v-icon
+					color="success darken-3"
+					@click="$emit('editProject', project)"
+				>
+					edit
+				</v-icon>
+				<v-divider vertical class="mx-2" />
+				<v-icon
+					color="error darken-3"
+					@click="$emit('deleteProject', project)"
+				>
+					delete
+				</v-icon>
+			</div>
+			<v-spacer v-else />
+			<span class="text-right">{{ project.year }}</span>
 		</v-card-title>
 		<v-card-subtitle class="d-flex">
-			<span class="text-left">position</span>
+			<span class="text-left">{{ project.position }}</span>
 			<v-spacer />
-			<span v-for="n in 4" :key="n" class="text-right text-caption px-1">
-				tech {{ n }}
+			<span
+				v-for="tech in project.techs"
+				:key="tech"
+				class="text-right text-caption px-1"
+			>
+				{{ tech }}
 			</span>
 		</v-card-subtitle>
 		<v-divider />
 		<v-card-text class="d-flex flex-column">
-			<span class="text-center text-overline">project</span>
+			<a :href="project.project" class="text-center text-overline">
+				{{ project.project.replace("https://", "") }}
+			</a>
 			<v-row dense class="pt-4">
 				<v-col
-					v-for="(n, i) in 4"
-					:key="n"
+					v-for="(task, i) in project.tasks"
+					:key="task"
 					cols="6"
 					align-self="center"
 					class="d-flex"
@@ -40,35 +61,21 @@
 								'text-right': i % 2 !== 0,
 							}"
 						>
-							task {{ n }} Lorem ipsum dolor, sit amet consectetur
-							adipisicing.
+							{{ task }}
 						</span>
 					</v-container>
 				</v-col>
 			</v-row>
 		</v-card-text>
-		<!-- <v-card-actions>
-			<v-container>
-				<v-btn
-					small
-					block
-					color="primary"
-					href="https://google.com"
-					target="_blank"
-					class="mx-auto"
-				>
-					visit
-					<v-icon class="ml-1" small>launch</v-icon>
-				</v-btn>
-			</v-container>
-		</v-card-actions> -->
 	</v-card>
 </template>
 
 <script>
 	export default {
 		props: {
+			isEdit: Boolean,
 			index: Number,
+			project: Object,
 		},
 		computed: {
 			computedBorder() {

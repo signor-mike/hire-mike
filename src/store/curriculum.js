@@ -25,6 +25,7 @@ export const state = {
 			text: "",
 		},
 	},
+	projects: [],
 };
 
 export const mutations = {
@@ -32,6 +33,9 @@ export const mutations = {
 		const key = Object.keys(value)[0];
 		value = value[key];
 		state.about[key] = value;
+	},
+	setProjects(state, value) {
+		state.projects = value;
 	},
 };
 
@@ -50,6 +54,32 @@ export const actions = {
 			await updateDoc(doc(db, collection, document), {
 				[field]: value,
 			}).then(() => dispatch("fetchBio"));
+		} catch (error) {
+			console.log(error);
+		}
+	},
+
+	async fetchProjects({ commit }) {
+		try {
+			const querySnapshot = await getDocs(collection(db, "work"));
+			let array = [];
+			querySnapshot.forEach((doc) => {
+				array.push({
+					id: doc.id,
+					...doc.data(),
+				});
+			});
+			array.sort((a, b) => {
+				switch (true) {
+					case a.year > b.year:
+						return -1;
+					case a.year < b.year:
+						return 1;
+					default:
+						return 0;
+				}
+			});
+			commit("setProjects", array);
 		} catch (error) {
 			console.log(error);
 		}
