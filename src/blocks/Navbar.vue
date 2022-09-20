@@ -1,5 +1,5 @@
 <template>
-	<v-app-bar app fixed flat color="secondary">
+	<v-app-bar app fixed flat color="secondary" style="max-width: 100vw">
 		<a href="/">
 			<span
 				class="primary--text text-uppercase mr-5"

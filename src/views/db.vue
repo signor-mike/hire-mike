@@ -1,6 +1,6 @@
 <template>
 	<v-main>
-		<v-row justify="center">
+		<v-row justify="center" style="max-width: 100vw">
 			<v-col cols="auto" class="ma-auto">
 				<p v-if="$store.state.currentUser">
 					{{ $store.state.currentUser.email.split("@")[0] }}
