@@ -18,9 +18,9 @@
 			<span
 				class="text-overline"
 				:class="{
-					'text-center': $vuetify.breakpoint.smAndDown,
-					'text-left': align === 'left',
-					'text-right': align === 'right',
+					'mx-auto text-center': $vuetify.breakpoint.smAndDown,
+					'mr-auto': align === 'left',
+					'ml-auto': align === 'right',
 				}"
 			>
 				{{ computedSkills }}

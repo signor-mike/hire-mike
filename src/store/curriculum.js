@@ -27,6 +27,7 @@ export const state = {
 		},
 	},
 	projects: [],
+	stack: [],
 };
 
 export const mutations = {
@@ -35,6 +36,7 @@ export const mutations = {
 		value = value[key];
 		state.about[key] = value;
 	},
+
 	setProjects(state, value) {
 		if (value.length)
 			state.projects = value.sort((a, b) => {
@@ -49,9 +51,15 @@ export const mutations = {
 			});
 		else state.projects = { ...state.projects, value };
 	},
+
+	setStack(state, value) {
+		state.stack = value;
+	},
 };
 
 export const actions = {
+	/* ~~~~~~~~~~~~~~~~ BIO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 	async fetchBio({ commit }) {
 		about.forEach((d, i) =>
 			getDoc(doc(db, "about", d))
@@ -70,7 +78,7 @@ export const actions = {
 			console.log(error);
 		}
 	},
-
+	/* ~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~ */
 	async fetchProjects({ commit }) {
 		try {
 			const querySnapshot = await getDocs(collection(db, "work"));
@@ -86,7 +94,6 @@ export const actions = {
 			console.log(error);
 		}
 	},
-
 	async addProject({ commit, dispatch }, payload) {
 		try {
 			await setDoc(
@@ -99,7 +106,6 @@ export const actions = {
 			console.log(error);
 		}
 	},
-
 	async deleteProject({ dispatch }, payload) {
 		try {
 			await deleteDoc(doc(db, "work", payload.id));
@@ -108,11 +114,27 @@ export const actions = {
 			console.log(error);
 		}
 	},
-
 	async updateProject({ dispatch }, payload) {
 		try {
 			await updateDoc(doc(db, "work", payload.id), payload);
 			dispatch("fetchProjects");
+		} catch (error) {
+			console.log(error);
+		}
+	},
+	/* ~~~~~~~~~~~~~~~~~~ STACK ~~~~~~~~~~~~~~~~~~~~~~~ */
+	async fetchStack({ commit }) {
+		try {
+			const querySnapshot = await getDocs(collection(db, "stack"));
+			let docs = [];
+			querySnapshot.forEach((doc) => {
+				docs.push({
+					id: doc.id,
+					...doc.data(),
+				});
+			});
+			console.log(docs);
+			commit("setStack", docs);
 		} catch (error) {
 			console.log(error);
 		}

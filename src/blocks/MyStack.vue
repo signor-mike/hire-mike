@@ -4,8 +4,8 @@
 		<v-row align="center">
 			<v-col cols="12" md="6">
 				<Skills
-					:skills="techs"
-					:title="Object.keys({ techs })[0]"
+					:skills="techs.data"
+					:title="techs.title"
 					align="right"
 				/>
 			</v-col>
@@ -17,8 +17,8 @@
 				<v-row align-content="center">
 					<v-col cols="12">
 						<Skills
-							:skills="software"
-							:title="Object.keys({ software })[0]"
+							:skills="software.data"
+							:title="software.title"
 							align="left"
 						/>
 					</v-col>
@@ -30,8 +30,8 @@
 					</v-col>
 					<v-col cols="12">
 						<Skills
-							:skills="abilities"
-							:title="Object.keys({ abilities })[0]"
+							:skills="abilities.data"
+							:title="abilities.title"
 							align="left"
 						/>
 					</v-col>
@@ -44,42 +44,24 @@
 <script>
 	import Skills from "../components/CV/Skills.vue";
 	export default {
+		props: { isEdit: Boolean },
 		components: { Skills },
-		data: () => ({
-			techs: [
-				"vue",
-				"react",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-			],
-			software: [
-				"vscode",
-				"firebase",
-				"some",
-				"some",
-				"some",
-				"some",
-				"some",
-
-				"some",
-			],
-			abilities: [
-				"adaptability",
-				"flexibility",
-				"some",
-				"some",
-				"some",
-				"some",
-			],
-		}),
-		mounted: function () {},
+		mounted: async function() {
+			await this.$store.dispatch("fetchStack");
+		},
+		computed: {
+			techs() {
+				return this.$store.state.stack.find((e) => e.id === "techs");
+			},
+			software() {
+				return this.$store.state.stack.find((e) => e.id === "software");
+			},
+			abilities() {
+				return this.$store.state.stack.find(
+					(e) => e.id === "abilities"
+				);
+			},
+		},
 	};
 </script>
 
