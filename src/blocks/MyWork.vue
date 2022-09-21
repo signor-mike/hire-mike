@@ -94,11 +94,7 @@
 				<v-card-actions>
 					<v-btn
 						:loading="isLoading"
-						@click="
-							isNew
-								? handleAdd(newProject)
-								: handleUpdate(newProject)
-						"
+						@click="handleSubmit(newProject)"
 					>
 						{{ isNew ? "add project" : "update project" }}
 					</v-btn>
@@ -133,7 +129,6 @@
 		}),
 		methods: {
 			openDialog() {
-				this.dialog = true;
 				this.isNew = true;
 				this.newProject = {
 					company: "",
@@ -143,10 +138,13 @@
 					techs: [],
 					year: 2022,
 				};
+				this.dialog = true;
 			},
-			async handleAdd() {
+			async handleSubmit(payload) {
 				this.isLoading = true;
-				await this.$store.dispatch("addProject", this.newProject);
+				if (this.isNew)
+					await this.$store.dispatch("addProject", payload);
+				else await this.$store.dispatch("updateProject", payload);
 				this.newProject = {
 					company: "",
 					position: "",
@@ -181,12 +179,6 @@
 				this.isNew = false;
 				this.dialog = true;
 				this.newProject = payload;
-			},
-			async handleUpdate(payload) {
-				this.isLoading = true;
-				await this.$store.dispatch("updateProject", payload);
-				this.isLoading = false;
-				this.dialog = false;
 			},
 			async handleDelete(payload) {
 				this.isLoading = true;
