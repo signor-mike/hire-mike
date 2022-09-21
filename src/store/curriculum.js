@@ -100,6 +100,24 @@ export const actions = {
 		}
 	},
 
+	async deleteProject({ dispatch }, payload) {
+		try {
+			await deleteDoc(doc(db, "work", payload.id));
+			dispatch("fetchProjects");
+		} catch (error) {
+			console.log(error);
+		}
+	},
+
+	async updateProject({ dispatch }, payload) {
+		try {
+			await updateDoc(doc(db, "work", payload.id), payload);
+			dispatch("fetchProjects");
+		} catch (error) {
+			console.log(error);
+		}
+	},
+
 	async getAll({ dispatch }) {
 		await dispatch("fetchBio");
 		await dispatch("fetchProjects");

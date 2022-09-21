@@ -6,15 +6,17 @@
 				<v-icon
 					color="success darken-3"
 					@click="$emit('editProject', project)"
+					:disabled="isLoading"
 				>
-					edit
+					{{ isLoading ? "loop" : "edit" }}
 				</v-icon>
 				<v-divider vertical class="mx-2" />
 				<v-icon
 					color="error darken-3"
 					@click="$emit('deleteProject', project)"
+					:disabled="isLoading"
 				>
-					delete
+					{{ isLoading ? "loop" : "delete" }}
 				</v-icon>
 			</div>
 			<v-spacer v-else />
@@ -75,6 +77,7 @@
 		props: {
 			isEdit: Boolean,
 			index: Number,
+			isLoading: Boolean,
 			project: Object,
 		},
 		computed: {
