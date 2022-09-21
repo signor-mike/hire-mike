@@ -24,8 +24,8 @@
 			<span class="text-left">{{ project.position }}</span>
 			<v-spacer />
 			<span
-				v-for="tech in project.techs"
-				:key="tech"
+				v-for="(tech, i) in project.techs"
+				:key="i"
 				class="text-right text-caption px-1"
 			>
 				{{ tech }}
@@ -39,7 +39,7 @@
 			<v-row dense class="pt-4">
 				<v-col
 					v-for="(task, i) in project.tasks"
-					:key="task"
+					:key="i"
 					cols="6"
 					align-self="center"
 					class="d-flex"
@@ -79,11 +79,12 @@
 		},
 		computed: {
 			computedBorder() {
+				const index = parseInt(this.index);
 				if (this.$vuetify.breakpoint.mdAndUp) {
-					if (this.index === 0) return "rounded-tl-xl";
-					if (this.index === 1) return "rounded-tr-xl";
-					if (this.index === 2) return "rounded-bl-xl";
-					if (this.index === 3) return "rounded-br-xl";
+					if (index === 0) return "rounded-tl-xl";
+					if (index === 1) return "rounded-tr-xl";
+					if (index === 2) return "rounded-bl-xl";
+					if (index === 3) return "rounded-br-xl";
 				}
 				return "rounded-lg";
 			},
