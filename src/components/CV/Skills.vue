@@ -9,14 +9,27 @@
 			}"
 		>
 			<v-icon v-if="isEdit" color="success darken-3">edit</v-icon>
-			{{ title }}
+			{{ stack.title }}
 		</span>
 		<v-container
 			d-flex
 			pa-0
 			:justify-center="$vuetify.breakpoint.smAndDown"
 		>
+			<div v-if="isEdit" class="mx-auto">
+				<span
+					v-for="(item, i) in stack.data"
+					:key="i"
+					class="px-3 d-block"
+				>
+					<v-icon color="success darken-3">edit</v-icon>
+					{{ item }}
+					<v-icon color="error darken-3">delete</v-icon>
+				</span>
+				<v-btn color="primary">add new</v-btn>
+			</div>
 			<span
+				v-else
 				class="text-overline"
 				:class="{
 					'mx-auto text-center': $vuetify.breakpoint.smAndDown,
@@ -33,17 +46,15 @@
 <script>
 	export default {
 		props: {
-			skills: Array,
-			title: String,
+			stack: Object,
 			align: String,
 			isEdit: Boolean,
-			id: String,
 		},
 		computed: {
 			computedSkills() {
-				return this.skills
+				return this.stack.data
 					.map((s, i) => {
-						if (i !== this.skills.length - 1) return s + ";";
+						if (i !== this.stack.data.length - 1) return s + ";";
 						return s + ".";
 					})
 					.join(" ");
@@ -52,4 +63,4 @@
 	};
 </script>
 
-<style></style>
+<style scoped></style>
