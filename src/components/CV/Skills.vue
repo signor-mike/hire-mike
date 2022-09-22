@@ -8,6 +8,7 @@
 				'text-left': align === 'left',
 			}"
 		>
+			<v-icon v-if="isEdit" color="success darken-3">edit</v-icon>
 			{{ title }}
 		</span>
 		<v-container
@@ -35,6 +36,8 @@
 			skills: Array,
 			title: String,
 			align: String,
+			isEdit: Boolean,
+			id: String,
 		},
 		computed: {
 			computedSkills() {

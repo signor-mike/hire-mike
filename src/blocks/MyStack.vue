@@ -7,6 +7,8 @@
 					:skills="techs.data"
 					:title="techs.title"
 					align="right"
+					:isEdit="isEdit"
+					:id="techs.id"
 				/>
 			</v-col>
 			<v-divider vertical v-if="$vuetify.breakpoint.mdAndUp" />
@@ -20,6 +22,8 @@
 							:skills="software.data"
 							:title="software.title"
 							align="left"
+							:isEdit="isEdit"
+							:id="software.id"
 						/>
 					</v-col>
 					<v-col
@@ -33,6 +37,8 @@
 							:skills="abilities.data"
 							:title="abilities.title"
 							align="left"
+							:isEdit="isEdit"
+							:id="abilities.id"
 						/>
 					</v-col>
 				</v-row>
