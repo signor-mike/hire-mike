@@ -133,8 +133,17 @@ export const actions = {
 					...doc.data(),
 				});
 			});
-			console.log(docs);
 			commit("setStack", docs);
+		} catch (error) {
+			console.log(error);
+		}
+	},
+
+	async updateStack({ dispatch }, payload) {
+		try {
+			const { id, type, newValue } = payload;
+			await updateDoc(doc(db, "stack", id), { [type]: newValue });
+			await dispatch("fetchStack");
 		} catch (error) {
 			console.log(error);
 		}
@@ -143,5 +152,6 @@ export const actions = {
 	async getAll({ dispatch }) {
 		await dispatch("fetchBio");
 		await dispatch("fetchProjects");
+		await dispatch("fetchStack");
 	},
 };
