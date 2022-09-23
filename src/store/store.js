@@ -8,7 +8,6 @@ const vuexLocal = new VuexPersistence({
 });
 
 Vue.use(Vuex);
-// create new file, export default and import here
 const store = new Vuex.Store({
 	state: {
 		...state,
@@ -57,5 +56,3 @@ const store = new Vuex.Store({
 });
 
 export { store };
-
-//set it up in main.js
