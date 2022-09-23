@@ -38,7 +38,9 @@
 				document.getElementById(
 					this.contact.title + "-image"
 				).innerHTML = `
-        <a class='d-block text-center'>
+        <a class='d-block text-center' href='${this.contact.url}'
+				target='${this.contact.url.includes("mailto") ? "_self" : "_blank"}'
+				>
         failed to load image, click to contact via ${this.contact.title}
         </a>
         `;
