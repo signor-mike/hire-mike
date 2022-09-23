@@ -142,6 +142,9 @@
 
 <script>
 	import html2pdf from "html2pdf.js";
+	import { getAnalytics, logEvent } from "firebase/analytics";
+	const analytics = getAnalytics();
+
 	import mock from "../assets/my-stack.json";
 	export default {
 		methods: {
@@ -165,6 +168,11 @@
 					.then(() => (this.message = "PDF is generated. Hit Save."))
 					.then(() => (this.message = `Thank you!`))
 					.then(() => (this.isDone = true))
+					.then(() =>
+						logEvent(analytics, "cv_generated", {
+							name: "export pdf",
+						})
+					)
 					.finally(() => {
 						const navInterval = setInterval(() => {
 							this.n -= 1;
@@ -183,8 +191,6 @@
 				() => (this.isLoaded = true)
 			);
 			this.message = "Generating pdf...";
-			if (window.location.href.includes("hire-mike".toLowerCase()))
-				this.$anaLogger(this.$anal, "my CV printed");
 			this.printTheShit();
 		},
 		data: () => ({
