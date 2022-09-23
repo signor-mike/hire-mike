@@ -38,9 +38,9 @@
 				document.getElementById(
 					this.contact.title + "-image"
 				).innerHTML = `
-        <p class='text-center'>
+        <a class='d-block text-center'>
         failed to load image, click to contact via ${this.contact.title}
-        </p>
+        </a>
         `;
 			},
 		},
