@@ -1,81 +1,146 @@
 <template>
-	<div class="primary--text">
-		<div class="class">
-			<vue-typed-js
-				:strings="['Hire mike']"
-				:type-speed="50"
-				:start-delay="700"
-				:show-cursor="false"
+	<v-container
+		fluid
+		fill-height
+		flex-column
+		class="primary--text main-wrapper"
+	>
+		<div class="button-wrap">
+			<v-btn
+				color="primary"
+				outlined
+				@click="$router.push('/view?page=about')"
 			>
-				<h1 class="text-uppercase mb-1 typing" />
-			</vue-typed-js>
-			<br />
-			<vue-typed-js
-				:strings="['today please']"
-				:start-delay="2100"
-				:cursor-char="'_'"
-				@onComplete="draw = !draw"
-			>
-				<h3 class="typing" />
-			</vue-typed-js>
-
-			<div v-show="draw" class="button-box">
-				<v-row dense :no-gutters="$vuetify.breakpoint.smAndDown">
-					<v-col
-						v-for="contact in contacts"
-						:key="contact.i"
-						cols="auto"
-					>
-						<Contacts :contact="contact" />
-					</v-col>
-				</v-row>
-			</div>
+				<v-icon>keyboard_double_arrow_right</v-icon>
+			</v-btn>
 		</div>
-	</div>
+		<v-spacer />
+		<vue-typed-js
+			:strings="['Hire mike']"
+			:type-speed="50"
+			:start-delay="100"
+			:show-cursor="false"
+		>
+			<span
+				id="typed-title"
+				class="text-uppercase text-h2 typing mx-auto"
+			/>
+		</vue-typed-js>
+		<vue-typed-js
+			:strings="['and face prosperity']"
+			:start-delay="700"
+			:type-speed="10"
+			:show-cursor="false"
+			@onComplete="completeTyping"
+		>
+			<span id="typed-text" class="typing text-overline mx-auto" />
+		</vue-typed-js>
+		<v-spacer />
+	</v-container>
 </template>
 
 <script>
-	import Contacts from "../components/Contacts.vue";
 	export default {
-		components: { Contacts },
-		data() {
-			return {
-				draw: false,
-			};
-		},
-		mounted: function() {
-			this.wakeUp();
+		components: {},
+		data: () => ({
+			opacity: 100,
+			scale: 1,
+			words: [
+				"prosperity",
+				"happiness",
+				"success",
+				"triumph",
+				"abundance",
+				"fortune",
+				"wholesomeness",
+				"awesomeness",
+			],
+		}),
+		mounted: function () {
+			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		methods: {
-			async wakeUp() {
-				await fetch(`${process.env.VUE_APP_BACKEND_URL}/wakeup`);
+			createSpan(text, name) {
+				const domSpan = document.createElement("span");
+				if (name) domSpan.classList.add(name);
+				domSpan.innerText = text;
+				return domSpan;
+			},
+
+			animation(target) {
+				let items = document.querySelectorAll("." + target);
+				if (target === "fadeOut") {
+					const opacityInterval = setInterval(() => {
+						items.forEach((e) => {
+							e.style.opacity =
+								this.opacity <= 2 ? 0 : this.opacity / 100;
+							this.opacity--;
+							if (this.opacity <= 0)
+								clearInterval(opacityInterval);
+						});
+					}, 10);
+				} else {
+					const zoomInterval = setInterval(() => {
+						items.forEach((e, i) => {
+							e.style = `position: absolute; overflow: hidden;`;
+							if (i === 0) {
+								e.style.top = e.offsetTop - this.scale + "px";
+								e.style.left = e.offsetLeft - this.scale + "px";
+							}
+							if (i === 1) {
+								e.style.left = `${e.offsetLeft - this.scale}px`;
+								e.style.bottom = `${
+									e.offsetTop - this.scale
+								}px`;
+							}
+							e.style.transform = `scale(${
+								this.scale / 100 + 1
+							})`;
+							this.scale++;
+							if (this.scale / 100 + 1 >= 8)
+								clearInterval(zoomInterval);
+						});
+					}, 5);
+				}
+			},
+
+			async completeTyping() {
+				const text = document.getElementById("typed-text");
+				const title = document.getElementById("typed-title");
+
+				title.innerHTML = ``;
+				title.appendChild(this.createSpan("hire ", "fadeOut"));
+				title.appendChild(this.createSpan("mike", "zoomIn"));
+
+				text.innerHTML = ``;
+				text.appendChild(this.createSpan("and face ", "fadeOut"));
+				text.appendChild(this.createSpan(this.pickedWord, "zoomIn"));
+
+				this.animation("fadeOut");
+				await new Promise((r) => setTimeout(r, 500)).then(() =>
+					this.animation("zoomIn")
+				);
+				await new Promise((r) => setTimeout(r, 2000)).then(() =>
+					this.$router.push("/view?page=about")
+				);
 			},
 		},
 		computed: {
-			contacts() {
-				return this.$store.state.contacts;
+			pickedWord() {
+				const num = Math.floor(Math.random() * this.words.length);
+				return this.words[num];
 			},
+		},
+		beforeDestroy() {
+			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
 	};
 </script>
 
 <style scoped>
-	.class {
-		display: flex;
-		flex-direction: column;
+	.button-wrap {
 		position: absolute;
-		top: calc(30% + 15px);
-		left: calc(25% - 20px);
+		top: 0;
+		right: 0;
 	}
-
-	.button-box {
-		position: relative;
-		left: -28px;
-		margin-top: 20%;
-	}
-	h1,
-	h3 {
-		font-family: "Merriweather";
-	}
-	/* css animation / transition for drawing the div */
 </style>

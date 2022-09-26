@@ -1,7 +1,6 @@
 <template>
 	<v-main>
 		<v-container d-flex flex-column style="max-width: 80vw">
-			<!-- <h1 v-if="currentUser">current user: {{ currentUser }}</h1> -->
 			<p
 				v-if="error.isError && error.status && error.text"
 				:class="{ 'error--text': $vuetify.theme.dark }"
@@ -19,12 +18,13 @@
 				type="password"
 				placeholder="password"
 			></v-text-field>
-			<v-btn v-if="!currentUser" @click="login" :loading="isLoading"
-				>login</v-btn
+			<v-btn
+				:color="!!currentUser ? 'error' : 'primary'"
+				@click="!!currentUser ? logout() : login()"
+				:loading="isLoading"
 			>
-			<v-btn class="mx-auto" v-if="currentUser" @click="logout"
-				>logout</v-btn
-			>
+				{{ !!currentUser ? "logout" : "login" }}
+			</v-btn>
 		</v-container>
 	</v-main>
 </template>
@@ -50,6 +50,10 @@
 		},
 		mounted() {
 			this.isLogged();
+			this.$store.commit("SET_NAV_VISIBILITY", false);
+		},
+		destroyed() {
+			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
 		methods: {
 			async login() {
@@ -60,7 +64,7 @@
 						this.credentials.password
 					);
 					if (user) {
-						this.$router.push("/db");
+						this.$router.push("/db?view=about");
 					}
 				} catch (error) {
 					this.error.isError = true;
@@ -80,7 +84,7 @@
 						loggedIn &&
 						data.email === this.$store.state.currentUser.email
 					) {
-						this.$router.push("/db");
+						this.$router.push("/db?view=about");
 					} else {
 						console.log("current user is missing. Please login.");
 					}

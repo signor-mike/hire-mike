@@ -43,8 +43,3 @@ export const appCheck = initializeAppCheck(app, {
 });
 
 // console.log("captcha:", new ReCaptchaV3Provider(process.env.VUE_APP_CAPTCHA));
-
-import Vue from "vue";
-import { getAnalytics, logEvent } from "firebase/analytics";
-Vue.prototype.$anal = getAnalytics();
-Vue.prototype.$anaLogger = logEvent;
