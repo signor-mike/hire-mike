@@ -55,7 +55,7 @@
 					class="d-flex"
 				>
 					<v-container
-						style="min-height: 70px"
+						style="min-height: 90px"
 						d-flex
 						class="secondary darken-5"
 						:class="{
