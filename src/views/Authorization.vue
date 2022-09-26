@@ -21,7 +21,7 @@
 			<v-btn v-if="!currentUser" @click="login" :loading="isLoading"
 				>login</v-btn
 			>
-			<v-btn class="mx-auto" v-if="currentUser" @click="logout"
+			<v-btn class="mx-auto" v-if="!!currentUser" @click="logout"
 				>logout</v-btn
 			>
 		</v-container>
@@ -49,10 +49,10 @@
 		},
 		mounted() {
 			this.isLogged();
-			this.$store.commit('SET_NAV_VISIBILITY', false)
+			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		destroyed() {
-			this.$store.commit('SET_NAV_VISIBILITY', true,)
+			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
 		methods: {
 			async login() {

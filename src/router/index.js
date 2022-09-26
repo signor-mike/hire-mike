@@ -18,11 +18,6 @@ const routes = [
 		component: MainView,
 	},
 	{
-		path: "/export",
-		name: "exportPdf",
-		component: () => import("../views/ExportPdf.vue"),
-	},
-	{
 		path: "/auth",
 		name: "auth",
 		component: () => import("../views/Authorization.vue"),
@@ -67,22 +62,5 @@ router.beforeEach(async (to, from, next) => {
 		next();
 	}
 });
-// import { auth } from "@/plugins/fbase.js";
-// router.beforeEach(async (to, from, next) => {
-// 	if (to.matched.some((record) => record.meta.authRequired)) {
-// 		const status = await auth.currentUser;
-// 		console.log("status in router: ", status);
-// 		if (status) {
-// 			next();
-// 		} else {
-// 			alert("You must be logged in to see this page");
-// 			next({
-// 				path: "/auth",
-// 			});
-// 		}
-// 	} else {
-// 		next();
-// 	}
-// });
 
 export default router;

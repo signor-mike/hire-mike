@@ -1,6 +1,7 @@
 <template>
 	<v-container>
 		<v-row dense>
+			<v-spacer />
 			<v-col v-for="link in links" :key="link.text" cols="6" md="2">
 				<v-btn
 					:class="{
@@ -16,15 +17,6 @@
 				>
 					{{ link.text }}
 				</v-btn>
-			</v-col>
-			<v-spacer />
-			<v-col v-if="$vuetify.breakpoint.mdAndUp" cols="2" class="d-flex">
-				<v-icon
-					@click="$router.push('/export')"
-					class="ma-auto"
-					color="primary"
-					>print</v-icon
-				>
 			</v-col>
 			<v-spacer />
 		</v-row>
