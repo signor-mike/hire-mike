@@ -10,7 +10,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - run: /usr/bin/git config --global url."https://".insteadOf ssh://
-            - run: npm ci
+            - run: npm ci --legacy-peer-deps
             - run: npm run build
               env:
                   VUE_APP_BACKEND_URL: "${{secrets.BACKEND_URL}}"
