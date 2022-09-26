@@ -54,8 +54,8 @@
 				class="text-overline"
 				:class="{
 					'mx-auto text-center': $vuetify.breakpoint.smAndDown,
-					'mr-auto': align === 'left',
-					'ml-auto': align === 'right',
+					'mr-auto text-left': align === 'left',
+					'ml-auto text-right': align === 'right',
 				}"
 			>
 				{{ computedSkills }}

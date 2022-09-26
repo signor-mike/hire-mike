@@ -1,7 +1,7 @@
 <template class>
 	<v-app>
 		<NavBar v-if="$store.state.isNavVisible" />
-		<v-main>
+		<v-main class="pa-0">
 			<router-view />
 		</v-main>
 		<Footer v-if="$store.state.isNavVisible" />

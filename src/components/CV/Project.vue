@@ -1,5 +1,9 @@
 <template>
-	<v-card color="secondary lighten-2" :class="computedBorder">
+	<v-card
+		color="secondary lighten-2"
+		:class="computedBorder"
+		style="min-height: 100%"
+	>
 		<v-card-title>
 			<span class="text-left">{{ project.company }}</span>
 			<div v-if="isEdit" class="mx-auto d-flex">
