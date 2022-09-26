@@ -9,10 +9,6 @@ import { store } from "./store/store";
 import vuetify from "./plugins/vuetify";
 import "./plugins/type"; // typing animation
 
-/* 3rd party packages */
-import jsPDF from "jspdf";
-import html2PDF from "jspdf-html2canvas";
-
 Vue.config.productionTip = false;
 
 new Vue({
@@ -20,8 +16,5 @@ new Vue({
 	store,
 	router,
 	vuetify,
-	jsPDF,
-	html2PDF,
-
 	render: (h) => h(App),
 }).$mount("#app");
