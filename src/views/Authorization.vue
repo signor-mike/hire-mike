@@ -18,12 +18,13 @@
 				type="password"
 				placeholder="password"
 			></v-text-field>
-			<v-btn v-if="!currentUser" @click="login" :loading="isLoading"
-				>login</v-btn
+			<v-btn
+				:color="!!currentUser ? 'error' : 'primary'"
+				@click="!!currentUser ? logout() : login()"
+				:loading="isLoading"
 			>
-			<v-btn class="mx-auto" v-if="!!currentUser" @click="logout"
-				>logout</v-btn
-			>
+				{{ !!currentUser ? "logout" : "login" }}
+			</v-btn>
 		</v-container>
 	</v-main>
 </template>
