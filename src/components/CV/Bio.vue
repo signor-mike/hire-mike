@@ -17,7 +17,7 @@
 				@click="$emit('editBio', { text })"
 				>edit</v-icon
 			>
-			{{ text }}
+			<p v-html="formattedText"></p>
 		</span>
 	</v-container>
 </template>
@@ -30,9 +30,6 @@
 			textAlign: String,
 			isEdit: Boolean,
 		},
-		data: () => ({
-			// dialog: false,
-		}),
 		computed: {
 			computedClasses() {
 				let titleClasses;
@@ -41,11 +38,16 @@
 					titleClasses = "text-h5 text-center pb-1";
 					bodyClasses = "text-body-1 text-center";
 				} else {
-					titleClasses = `text-h4 text-${this.textAlign}`;
+					titleClasses = `text-h4 text-${this.textAlign} mb-auto pb-2`;
 					bodyClasses = `text-body-1 text-${this.textAlign}`;
 				}
 
 				return { titleClasses, bodyClasses };
+			},
+			formattedText() {
+				return this.text
+					.replaceAll("\\n\\n", "<br/><br/>")
+					.replaceAll("\\n", "<br/>");
 			},
 		},
 	};

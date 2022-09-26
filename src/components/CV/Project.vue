@@ -35,7 +35,11 @@
 		</v-card-subtitle>
 		<v-divider />
 		<v-card-text class="d-flex flex-column">
-			<a :href="project.project" class="text-center text-overline">
+			<a
+				:href="project.project"
+				class="text-center text-overline"
+				target="_blank"
+			>
 				{{ project.project.replace("https://", "") }}
 			</a>
 			<v-row dense class="pt-4">
@@ -47,6 +51,7 @@
 					class="d-flex"
 				>
 					<v-container
+						style="min-height: 70px"
 						d-flex
 						class="secondary darken-5"
 						:class="{
@@ -57,10 +62,10 @@
 						}"
 					>
 						<span
-							class="px-2"
+							class="px-2 my-auto"
 							:class="{
-								'text-left': i % 2 === 0,
-								'text-right': i % 2 !== 0,
+								'mr-auto text-left': i % 2 === 0,
+								'ml-auto text-right': i % 2 !== 0,
 							}"
 						>
 							{{ task }}
