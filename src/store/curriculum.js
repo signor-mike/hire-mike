@@ -1,13 +1,9 @@
-/* eslint-disable no-unused-vars */
 import { db } from "@/plugins/fbase.js";
-import isEqual from "lodash.isequal";
-import { store } from "@/store/store";
 import {
 	collection,
 	getDocs,
 	getDoc,
 	setDoc,
-	addDoc,
 	doc,
 	updateDoc,
 	deleteDoc,
