@@ -1,5 +1,9 @@
 module.exports = {
-  transpileDependencies: ["vuetify"],
+    transpileDependencies: ["vuetify"],
 
-  pluginOptions: {},
+    pluginOptions: {},
+
+    chainWebpack: (config) => {
+        config.performance.maxEntrypointSize(400000).maxAssetSize(100000);
+    },
 };
