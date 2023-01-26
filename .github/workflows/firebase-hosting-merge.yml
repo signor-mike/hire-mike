@@ -15,7 +15,6 @@ jobs:
             - run: npm ci
             - run: npm run build
               env:
-                  VUE_APP_BACKEND_URL: "${{secrets.BACKEND_URL}}"
                   VUE_APP_I18N_LOCALE: "${{secrets.VUE_APP_I18N_LOCALE}}"
                   VUE_APP_I18N_FALLBACK_LOCALE: "${{secrets.VUE_APP_I18N_FALLBACK_LOCALE}}"
                   VUE_APP_FIRESTORE: "${{secrets.VUE_APP_FIRESTORE}}"
