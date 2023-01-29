@@ -89,7 +89,8 @@
 				dom.style.opacity = 1;
 				await new Promise((resolve) => {
 					const fadeZoomOutInterval = setInterval(() => {
-						dom.style.opacity = dom.style.opacity - 1 / 5;
+						dom.style.opacity =
+							parseFloat(dom.style.opacity) - 1 / 5;
 						dom.style.transform = `scale(${dom.style.opacity})`;
 						if (dom.style.opacity < 0) {
 							resolve();
@@ -152,79 +153,16 @@
 								break;
 						}
 						dom.style.transform = `rotate(${i}deg)`;
-						if (i > 360 || i < -360) {
+						if (
+							dom.offsetTop > window.innerHeight + 100 ||
+							dom.offsetTop < -100
+						) {
 							resolve();
 							clearInterval(spinInterval);
 						}
 					}, 25);
 				});
 			},
-
-			// // old code
-			// createSpan(text, name) {
-			// 	const domSpan = document.createElement("span");
-			// 	if (name) domSpan.classList.add(name);
-			// 	domSpan.innerText = text;
-			// 	return domSpan;
-			// },
-
-			// animation(target) {
-			// 	let items = document.querySelectorAll("." + target);
-			// 	if (target === "fadeOut") {
-			// 		const opacityInterval = setInterval(() => {
-			// 			items.forEach((e) => {
-			// 				e.style.opacity =
-			// 					this.opacity <= 2 ? 0 : this.opacity / 100;
-			// 				this.opacity--;
-			// 				if (this.opacity <= 0)
-			// 					clearInterval(opacityInterval);
-			// 			});
-			// 		}, 10);
-			// 	} else {
-			// 		const zoomInterval = setInterval(() => {
-			// 			items.forEach((e, i) => {
-			// 				e.style = `position: absolute; overflow: hidden;`;
-			// 				if (i === 0) {
-			// 					e.style.top = e.offsetTop - this.scale + "px";
-			// 					e.style.left = e.offsetLeft - this.scale + "px";
-			// 				}
-			// 				if (i === 1) {
-			// 					e.style.left = `${e.offsetLeft - this.scale}px`;
-			// 					e.style.bottom = `${
-			// 						e.offsetTop - this.scale
-			// 					}px`;
-			// 				}
-			// 				e.style.transform = `scale(${
-			// 					this.scale / 100 + 1
-			// 				})`;
-			// 				this.scale++;
-			// 				if (this.scale / 100 + 1 >= 8)
-			// 					clearInterval(zoomInterval);
-			// 			});
-			// 		}, 5);
-			// 	}
-			// },
-
-			// async completeTyping() {
-			// 	const text = document.getElementById("typed-text");
-			// 	const title = document.getElementById("typed-title");
-
-			// 	title.innerHTML = ``;
-			// 	title.appendChild(this.createSpan("hire ", "fadeOut"));
-			// 	title.appendChild(this.createSpan("mike", "zoomIn"));
-
-			// 	text.innerHTML = ``;
-			// 	text.appendChild(this.createSpan("and face ", "fadeOut"));
-			// 	text.appendChild(this.createSpan(this.pickedWord, "zoomIn"));
-
-			// 	this.animation("fadeOut");
-			// 	await new Promise((r) => setTimeout(r, 500)).then(() =>
-			// 		this.animation("zoomIn")
-			// 	);
-			// 	await new Promise((r) => setTimeout(r, 2000)).then(() =>
-			// 		this.$router.push("/view?page=about")
-			// 	);
-			// },
 		},
 		computed: {
 			pickedWord() {
