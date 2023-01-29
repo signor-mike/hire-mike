@@ -27,7 +27,7 @@
 				v-if="isFirstFinished"
 				:text="pickedWord"
 				:speed="50"
-				className="text-overline text-center"
+				className="text-overline text-center font-weight-bold"
 				:styles="customWidth"
 				@onComplete="(payload) => handleFinish(2, payload)"
 			/>
@@ -82,6 +82,7 @@
 			},
 
 			async zoomaFader(dom, operation) {
+				const timer = operation === "++" ? 75 : 50;
 				return await new Promise((resolve) => {
 					const zoomaFadeInterval = setInterval(() => {
 						dom.style.transform = `scale(${dom.style.opacity})`;
@@ -107,7 +108,7 @@
 							default:
 								break;
 						}
-					}, 25);
+					}, timer);
 				});
 			},
 
