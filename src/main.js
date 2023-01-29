@@ -7,7 +7,6 @@ import { store } from "./store/store";
 
 /* plugins */
 import vuetify from "./plugins/vuetify";
-import "./plugins/type"; // typing animation
 
 Vue.config.productionTip = false;
 

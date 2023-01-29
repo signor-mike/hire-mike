@@ -15,36 +15,37 @@
 			</v-btn>
 		</div>
 		<v-spacer />
-		<vue-typed-js
-			:strings="['Hire mike']"
-			:type-speed="50"
-			:start-delay="100"
-			:show-cursor="false"
-		>
-			<span
-				id="typed-title"
-				class="text-uppercase text-h2 typing mx-auto"
+		<div ref="foo">
+			<TypedText
+				text="hire mike"
+				:speed="25"
+				className="text-h4 text-uppercase text-center"
+				:styles="customWidth"
+				@onComplete="(payload) => handleFinish(1, payload)"
 			/>
-		</vue-typed-js>
-		<vue-typed-js
-			:strings="['and face prosperity']"
-			:start-delay="700"
-			:type-speed="10"
-			:show-cursor="false"
-			@onComplete="completeTyping"
-		>
-			<span id="typed-text" class="typing text-overline mx-auto" />
-		</vue-typed-js>
+			<TypedText
+				v-if="isFirstFinished"
+				:text="pickedWord"
+				:speed="50"
+				className="text-overline text-center"
+				:styles="customWidth"
+				@onComplete="(payload) => handleFinish(2, payload)"
+			/>
+		</div>
 		<v-spacer />
 	</v-container>
 </template>
 
 <script>
 	export default {
-		components: {},
+		components: {
+			TypedText: () => import("../components/TypedText.vue"),
+		},
 		data: () => ({
-			opacity: 100,
-			scale: 1,
+			firstDom: "p ref",
+			isFirstFinished: false,
+			secondDom: "p ref",
+			isSecondFinished: false,
 			words: [
 				"prosperity",
 				"happiness",
@@ -60,75 +61,180 @@
 			this.$store.commit("SET_NAV_VISIBILITY", false);
 		},
 		methods: {
-			createSpan(text, name) {
-				const domSpan = document.createElement("span");
-				if (name) domSpan.classList.add(name);
-				domSpan.innerText = text;
-				return domSpan;
-			},
+			async handleFinish(num, dom) {
+				switch (num) {
+					case 1:
+						this.firstDom = dom;
+						this.isFirstFinished = true;
+						break;
+					case 2:
+						this.secondDom = dom;
+						this.isSecondFinished = true;
+						break;
 
-			animation(target) {
-				let items = document.querySelectorAll("." + target);
-				if (target === "fadeOut") {
-					const opacityInterval = setInterval(() => {
-						items.forEach((e) => {
-							e.style.opacity =
-								this.opacity <= 2 ? 0 : this.opacity / 100;
-							this.opacity--;
-							if (this.opacity <= 0)
-								clearInterval(opacityInterval);
-						});
-					}, 10);
-				} else {
-					const zoomInterval = setInterval(() => {
-						items.forEach((e, i) => {
-							e.style = `position: absolute; overflow: hidden;`;
-							if (i === 0) {
-								e.style.top = e.offsetTop - this.scale + "px";
-								e.style.left = e.offsetLeft - this.scale + "px";
-							}
-							if (i === 1) {
-								e.style.left = `${e.offsetLeft - this.scale}px`;
-								e.style.bottom = `${
-									e.offsetTop - this.scale
-								}px`;
-							}
-							e.style.transform = `scale(${
-								this.scale / 100 + 1
-							})`;
-							this.scale++;
-							if (this.scale / 100 + 1 >= 8)
-								clearInterval(zoomInterval);
-						});
-					}, 5);
+					default:
+						break;
 				}
+				if (!this.isFirstFinished || !this.isSecondFinished) return;
+				this.animator(this.firstDom, "right-top");
+				await this.animator(this.secondDom, "left-bottom");
+				this.$router.push("/view?page=about");
 			},
 
-			async completeTyping() {
-				const text = document.getElementById("typed-text");
-				const title = document.getElementById("typed-title");
+			async animator(dom, direction) {
+				let lastWord = dom.textContent.split(" ");
+				lastWord = lastWord[lastWord.length - 1];
 
-				title.innerHTML = ``;
-				title.appendChild(this.createSpan("hire ", "fadeOut"));
-				title.appendChild(this.createSpan("mike", "zoomIn"));
+				// fade out + zoom out
+				dom.style.opacity = 1;
+				await new Promise((resolve) => {
+					const fadeZoomOutInterval = setInterval(() => {
+						dom.style.opacity = dom.style.opacity - 1 / 5;
+						dom.style.transform = `scale(${dom.style.opacity})`;
+						if (dom.style.opacity < 0) {
+							resolve();
+							clearInterval(fadeZoomOutInterval);
+						}
+					}, 25);
+				});
 
-				text.innerHTML = ``;
-				text.appendChild(this.createSpan("and face ", "fadeOut"));
-				text.appendChild(this.createSpan(this.pickedWord, "zoomIn"));
+				// reset opacity+scale, replace content;
+				dom.textContent = lastWord;
+				dom.style.opacity = 0.1;
+				dom.style.transform = `scale(${dom.style.opacity})`;
 
-				this.animation("fadeOut");
-				await new Promise((r) => setTimeout(r, 500)).then(() =>
-					this.animation("zoomIn")
-				);
-				await new Promise((r) => setTimeout(r, 2000)).then(() =>
-					this.$router.push("/view?page=about")
-				);
+				// zoom in
+				await new Promise((resolve) => {
+					const fadeZoomInInterval = setInterval(() => {
+						dom.style.opacity =
+							parseFloat(dom.style.opacity) + 1 / 5;
+						dom.style.transform = `scale(${dom.style.opacity})`;
+						if (dom.style.opacity > 1) {
+							resolve();
+							clearInterval(fadeZoomInInterval);
+						}
+					}, 25);
+				});
+
+				// spin and fly
+				let i = 0;
+				let x = 0;
+				let y = 0;
+				dom.style = `position: relative; overflow: hidden;`;
+				await new Promise((resolve) => {
+					const spinInterval = setInterval(() => {
+						switch (direction) {
+							case "left-top":
+								console.log("not implemented yet");
+								break;
+
+							case "right-top":
+								i += 10;
+								x -= 10;
+								dom.style.top = `${x}px`;
+								y -= 10;
+								dom.style.right = `${y}px`;
+								break;
+
+							case "right-bottom":
+								console.log("not implemented yet");
+								break;
+
+							case "left-bottom":
+								i -= 10;
+								x += 10;
+								dom.style.top = `${x}px`;
+								y += 10;
+								dom.style.right = `${y}px`;
+								break;
+
+							default:
+								break;
+						}
+						dom.style.transform = `rotate(${i}deg)`;
+						if (i > 360 || i < -360) {
+							resolve();
+							clearInterval(spinInterval);
+						}
+					}, 25);
+				});
 			},
+
+			// // old code
+			// createSpan(text, name) {
+			// 	const domSpan = document.createElement("span");
+			// 	if (name) domSpan.classList.add(name);
+			// 	domSpan.innerText = text;
+			// 	return domSpan;
+			// },
+
+			// animation(target) {
+			// 	let items = document.querySelectorAll("." + target);
+			// 	if (target === "fadeOut") {
+			// 		const opacityInterval = setInterval(() => {
+			// 			items.forEach((e) => {
+			// 				e.style.opacity =
+			// 					this.opacity <= 2 ? 0 : this.opacity / 100;
+			// 				this.opacity--;
+			// 				if (this.opacity <= 0)
+			// 					clearInterval(opacityInterval);
+			// 			});
+			// 		}, 10);
+			// 	} else {
+			// 		const zoomInterval = setInterval(() => {
+			// 			items.forEach((e, i) => {
+			// 				e.style = `position: absolute; overflow: hidden;`;
+			// 				if (i === 0) {
+			// 					e.style.top = e.offsetTop - this.scale + "px";
+			// 					e.style.left = e.offsetLeft - this.scale + "px";
+			// 				}
+			// 				if (i === 1) {
+			// 					e.style.left = `${e.offsetLeft - this.scale}px`;
+			// 					e.style.bottom = `${
+			// 						e.offsetTop - this.scale
+			// 					}px`;
+			// 				}
+			// 				e.style.transform = `scale(${
+			// 					this.scale / 100 + 1
+			// 				})`;
+			// 				this.scale++;
+			// 				if (this.scale / 100 + 1 >= 8)
+			// 					clearInterval(zoomInterval);
+			// 			});
+			// 		}, 5);
+			// 	}
+			// },
+
+			// async completeTyping() {
+			// 	const text = document.getElementById("typed-text");
+			// 	const title = document.getElementById("typed-title");
+
+			// 	title.innerHTML = ``;
+			// 	title.appendChild(this.createSpan("hire ", "fadeOut"));
+			// 	title.appendChild(this.createSpan("mike", "zoomIn"));
+
+			// 	text.innerHTML = ``;
+			// 	text.appendChild(this.createSpan("and face ", "fadeOut"));
+			// 	text.appendChild(this.createSpan(this.pickedWord, "zoomIn"));
+
+			// 	this.animation("fadeOut");
+			// 	await new Promise((r) => setTimeout(r, 500)).then(() =>
+			// 		this.animation("zoomIn")
+			// 	);
+			// 	await new Promise((r) => setTimeout(r, 2000)).then(() =>
+			// 		this.$router.push("/view?page=about")
+			// 	);
+			// },
 		},
 		computed: {
 			pickedWord() {
 				const num = Math.floor(Math.random() * this.words.length);
-				return this.words[num];
+				return "and face " + this.words[num];
+			},
+			customWidth() {
+				return "width: " + this.$vuetify.breakpoint.mdAndUp
+					? "50%"
+					: "70%";
 			},
 		},
 		beforeDestroy() {
