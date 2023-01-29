@@ -15,7 +15,7 @@
 			</v-btn>
 		</div>
 		<v-spacer />
-		<div ref="foo">
+		<div>
 			<TypedText
 				text="hire mike"
 				:speed="25"
@@ -81,48 +81,69 @@
 				this.$router.push("/view?page=about");
 			},
 
+			async zoomaFader(dom, operation) {
+				return await new Promise((resolve) => {
+					const zoomaFadeInterval = setInterval(() => {
+						dom.style.transform = `scale(${dom.style.opacity})`;
+						switch (operation) {
+							case "++":
+								dom.style.opacity =
+									parseFloat(dom.style.opacity) + 1 / 5;
+								if (dom.style.opacity > 1) {
+									resolve();
+									clearInterval(zoomaFadeInterval);
+								}
+								break;
+
+							case "--":
+								dom.style.opacity =
+									parseFloat(dom.style.opacity) - 1 / 5;
+								if (dom.style.opacity < 0) {
+									resolve();
+									clearInterval(zoomaFadeInterval);
+								}
+								break;
+
+							default:
+								break;
+						}
+					}, 25);
+				});
+			},
+
 			async animator(dom, direction) {
 				let lastWord = dom.textContent.split(" ");
 				lastWord = lastWord[lastWord.length - 1];
 
 				// fade out + zoom out
 				dom.style.opacity = 1;
-				await new Promise((resolve) => {
-					const fadeZoomOutInterval = setInterval(() => {
-						dom.style.opacity =
-							parseFloat(dom.style.opacity) - 1 / 5;
-						dom.style.transform = `scale(${dom.style.opacity})`;
-						if (dom.style.opacity < 0) {
-							resolve();
-							clearInterval(fadeZoomOutInterval);
-						}
-					}, 25);
-				});
+				await this.zoomaFader(dom, "--");
 
 				// reset opacity+scale, replace content;
-				dom.textContent = lastWord;
 				dom.style.opacity = 0.1;
 				dom.style.transform = `scale(${dom.style.opacity})`;
+				dom.textContent = lastWord;
 
 				// zoom in
-				await new Promise((resolve) => {
-					const fadeZoomInInterval = setInterval(() => {
-						dom.style.opacity =
-							parseFloat(dom.style.opacity) + 1 / 5;
-						dom.style.transform = `scale(${dom.style.opacity})`;
-						if (dom.style.opacity > 1) {
-							resolve();
-							clearInterval(fadeZoomInInterval);
-						}
-					}, 25);
-				});
+				await this.zoomaFader(dom, "++");
 
-				// spin and fly
+				// spin and fly responsiveness and initial values
 				let i = 0;
 				let x = 0;
 				let y = 0;
 				dom.style = `position: relative; overflow: hidden;`;
 				await new Promise((resolve) => {
+					let Xstep;
+					let Ystep;
+					if (window.innerWidth > window.innerHeight) {
+						Xstep = 10;
+						Ystep = 20;
+					} else {
+						Xstep = 20;
+						Ystep = 10;
+					}
+
+					// spin and fly
 					const spinInterval = setInterval(() => {
 						switch (direction) {
 							case "left-top":
@@ -131,9 +152,9 @@
 
 							case "right-top":
 								i += 10;
-								x -= 10;
+								x -= Xstep;
 								dom.style.top = `${x}px`;
-								y -= 10;
+								y -= Ystep;
 								dom.style.right = `${y}px`;
 								break;
 
@@ -143,9 +164,9 @@
 
 							case "left-bottom":
 								i -= 10;
-								x += 10;
+								x += Xstep;
 								dom.style.top = `${x}px`;
-								y += 10;
+								y += Ystep;
 								dom.style.right = `${y}px`;
 								break;
 
@@ -154,8 +175,8 @@
 						}
 						dom.style.transform = `rotate(${i}deg)`;
 						if (
-							dom.offsetTop > window.innerHeight + 100 ||
-							dom.offsetTop < -100
+							dom.offsetTop > window.innerHeight + 25 ||
+							dom.offsetTop < -40
 						) {
 							resolve();
 							clearInterval(spinInterval);
