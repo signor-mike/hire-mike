@@ -1,24 +1,22 @@
 <template>
 	<v-container>
-		<v-row dense>
-			<v-spacer />
-			<v-col v-for="link in links" :key="link.text" cols="6" md="2">
+		<v-row no-gutters justify="center" align="center">
+			<v-col
+				cols="3"
+				class="d-flex"
+				v-for="link in links"
+				:key="link.text"
+			>
 				<v-btn
-					:class="{
-						'secondary--text':
-							$route.query.page === link.route &&
-							$vuetify.theme.dark,
-					}"
+					class="pa-0 ma-auto primary--text font-weight-bold"
 					color="primary"
-					:outlined="$route.query.page === link.route ? false : true"
 					:x-small="$vuetify.breakpoint.smAndDown"
-					block
+					text
 					@click="$router.push(`?page=${link.route}`)"
 				>
 					{{ link.text }}
 				</v-btn>
 			</v-col>
-			<v-spacer />
 		</v-row>
 	</v-container>
 </template>
@@ -28,6 +26,7 @@
 		props: {
 			links: Array,
 		},
+		data: () => ({}),
 	};
 </script>
 

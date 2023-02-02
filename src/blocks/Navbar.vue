@@ -34,12 +34,12 @@
 					},
 					{
 						icon: "contact_page",
-						text: "my work",
+						text: "projects",
 						route: "experience",
 					},
 					{
 						icon: "quiz",
-						text: "my stack",
+						text: "stack",
 						route: "stack",
 					},
 					{

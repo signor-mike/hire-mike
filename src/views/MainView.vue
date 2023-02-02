@@ -27,16 +27,16 @@
 		},
 		mounted: function () {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
-			if (this.$vuetify.theme.dark && this.$vuetify.breakpoint.mdAndUp)
-				setInterval(() => {
-					this.degrees += 1;
-					document.getElementById(
-						"gradient"
-					).style.background = `conic-gradient(from ${this.degrees}deg
-		         at ${this.computedXY},
-		         ${this.computedPallete})`;
-					if (this.degrees >= 360) this.degrees = 0;
-				}, 25);
+			// if (this.$vuetify.theme.dark && this.$vuetify.breakpoint.mdAndUp)
+			// 	setInterval(() => {
+			// 		this.degrees += 1;
+			// 		document.getElementById(
+			// 			"gradient"
+			// 		).style.background = `conic-gradient(from ${this.degrees}deg
+			//        at ${this.computedXY},
+			//        ${this.computedPallete})`;
+			// 		if (this.degrees >= 360) this.degrees = 0;
+			// 	}, 25);
 		},
 		computed: {
 			computedPallete() {

@@ -15,7 +15,6 @@
 			<v-switch color="grey" v-model="isProf" />
 			<v-icon :color="!isProf ? 'grey' : 'primary'">engineering</v-icon>
 		</div>
-
 		<v-row
 			:class="{
 				'ma-auto': $vuetify.breakpoint.mdAndUp,
@@ -40,7 +39,6 @@
 					:text="computedProps.text"
 				/>
 			</v-col>
-
 			<v-col
 				v-if="$vuetify.breakpoint.mdAndUp"
 				cols="2"
@@ -48,7 +46,6 @@
 			>
 				<v-divider vertical />
 			</v-col>
-
 			<v-col v-if="$vuetify.breakpoint.mdAndUp" cols="5">
 				<Bio
 					@editBio="(payload) => handleEdit(payload, 'personal')"
