@@ -12,7 +12,7 @@ const vuetify = new Vuetify({
 		},
 		themes: {
 			light: {
-				primary: "#0064ba;",
+				primary: "#0064ba",
 				secondary: "#bababa",
 			},
 			dark: {

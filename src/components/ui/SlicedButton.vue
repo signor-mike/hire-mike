@@ -1,5 +1,6 @@
 <template>
 	<router-link
+		custom
 		:to="`?page=${link.route}`"
 		v-slot="{ navigate, isActive, isExactActive }"
 	>
