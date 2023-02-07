@@ -1,5 +1,9 @@
 <template>
-	<v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+	<v-btn
+		color="primary"
+		icon
+		@click="$vuetify.theme.dark = !$vuetify.theme.dark"
+	>
 		<v-icon>
 			{{ $vuetify.theme.dark ? "light_mode" : "dark_mode" }}
 		</v-icon>
@@ -10,4 +14,8 @@
 	export default {};
 </script>
 
-<style></style>
+<style>
+	body {
+		color: #888787;
+	}
+</style>

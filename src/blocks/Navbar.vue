@@ -1,28 +1,21 @@
 <template>
 	<v-app-bar app fixed flat bottom color="secondary">
-		<a href="/" v-if="$vuetify.breakpoint.mdAndUp">
-			<span
-				class="primary--text text-uppercase mr-5"
-				:class="{
-					'text-h6': $vuetify.breakpoint.smAndDown,
-					'text-h3': $vuetify.breakpoint.md,
-					'text-h2': $vuetify.breakpoint.lgAndUp,
-				}"
-			>
-				mike
-			</span>
-		</a>
-
-		<v-spacer />
+		<!-- <v-spacer />
 		<NavLinks :links="links" />
-		<v-spacer />
+		<v-spacer /> -->
+		<v-row justify="space-around" align="center">
+			<v-col cols="auto" v-for="link in links" :key="link">
+				<SlicedButton :link="link" />
+			</v-col>
+		</v-row>
 	</v-app-bar>
 </template>
 
 <script>
-	import NavLinks from "../components/NavLinks.vue";
 	export default {
-		components: { NavLinks },
+		components: {
+			SlicedButton: () => import("@/components/ui/SlicedButton"),
+		},
 
 		data() {
 			return {

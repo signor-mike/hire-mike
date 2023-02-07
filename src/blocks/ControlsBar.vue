@@ -8,11 +8,15 @@
 			<Dialogue :text="info" @onClose="dialogs.info = false" />
 		</v-dialog>
 
-		<v-row align="center" justify="space-between">
+		<v-row
+			align="center"
+			justify="space-between"
+			class="mx-auto text-center"
+		>
 			<v-col cols="3">
-				<v-btn text href="/" color="primary">
-					<v-icon>home</v-icon></v-btn
-				>
+				<v-btn icon @click="$router.push('/')" color="primary">
+					<v-icon> home </v-icon>
+				</v-btn>
 			</v-col>
 
 			<v-col cols="3">
