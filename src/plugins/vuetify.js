@@ -1,10 +1,15 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
 
-Vue.use(Vuetify, { iconfont: "md" });
+Vue.use(Vuetify, {
+	iconfont: "md",
+});
 
 const vuetify = new Vuetify({
 	theme: {
+		options: {
+			customProperties: true,
+		},
 		themes: {
 			light: {
 				primary: "#2196f3",

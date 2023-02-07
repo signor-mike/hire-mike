@@ -1,6 +1,6 @@
 <template>
-	<v-app-bar app fixed flat color="secondary">
-		<a href="/">
+	<v-app-bar app fixed flat bottom color="secondary">
+		<a href="/" v-if="$vuetify.breakpoint.mdAndUp">
 			<span
 				class="primary--text text-uppercase mr-5"
 				:class="{
@@ -12,17 +12,17 @@
 				mike
 			</span>
 		</a>
+
 		<v-spacer />
 		<NavLinks :links="links" />
-		<ThemeToggler />
+		<v-spacer />
 	</v-app-bar>
 </template>
 
 <script>
 	import NavLinks from "../components/NavLinks.vue";
-	import ThemeToggler from "../components/ThemeToggler.vue";
 	export default {
-		components: { NavLinks, ThemeToggler },
+		components: { NavLinks },
 
 		data() {
 			return {
