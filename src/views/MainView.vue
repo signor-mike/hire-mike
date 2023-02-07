@@ -1,9 +1,11 @@
 <template>
-	<v-container fluid fill-height class="pa-0" id="gradient">
-		<MyWork v-if="$route.query.page === 'experience'" />
-		<MyStack v-else-if="$route.query.page === 'stack'" />
-		<Contacts v-else-if="$route.query.page === 'contact'" />
-		<About v-else />
+	<v-container fluid fill-height class="pa-0">
+		<v-slide-x-transition mode="out-in" :appear="true">
+			<MyWork v-if="$route.query.page === 'experience'" />
+			<MyStack v-else-if="$route.query.page === 'stack'" />
+			<Contacts v-else-if="$route.query.page === 'contact'" />
+			<About v-else />
+		</v-slide-x-transition>
 	</v-container>
 </template>
 
