@@ -4,7 +4,7 @@
 		icon
 		@click="$vuetify.theme.dark = !$vuetify.theme.dark"
 	>
-		<v-icon>
+		<v-icon large>
 			{{ $vuetify.theme.dark ? "light_mode" : "dark_mode" }}
 		</v-icon>
 	</v-btn>

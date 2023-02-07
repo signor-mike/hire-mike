@@ -1,23 +1,20 @@
-<!-- eslint-disable vue/no-unused-vars -->
 <template>
-	<!-- <div class="body"> -->
 	<router-link
 		:to="`?page=${link.route}`"
-		class="text-button primary--text"
-		v-slot="{ href, route, navigate, isActive, isExactActive }"
+		v-slot="{ navigate, isActive, isExactActive }"
 	>
 		<a
-			class="ma-auto text-center"
+			class="ma-auto text-center primary--text text-truncate"
+			style="max-width: 100%"
 			:class="[
-				isActive && 'router-link-active',
-				isExactActive && 'router-link-exact-active',
+				isActive && 'router-link-active text-button',
+				isExactActive && 'router-link-exact-active text-h6',
 			]"
 			@click="navigate"
 		>
 			{{ link.text }}
 		</a>
 	</router-link>
-	<!-- </div> -->
 </template>
 
 <script>
@@ -25,7 +22,6 @@
 		props: {
 			link: Object,
 		},
-		computed: {},
 	};
 </script>
 

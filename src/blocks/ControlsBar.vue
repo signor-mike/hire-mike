@@ -15,19 +15,19 @@
 		>
 			<v-col cols="3">
 				<v-btn icon @click="$router.push('/')" color="primary">
-					<v-icon> home </v-icon>
+					<v-icon large> home </v-icon>
 				</v-btn>
 			</v-col>
 
 			<v-col cols="3">
 				<v-btn color="primary" icon @click="dialogs.gdpr = true">
-					<v-icon> privacy_tip </v-icon>
+					<v-icon large> privacy_tip </v-icon>
 				</v-btn>
 			</v-col>
 
 			<v-col cols="3">
 				<v-btn color="primary" icon @click="dialogs.info = true">
-					<v-icon> info </v-icon>
+					<v-icon large> info </v-icon>
 				</v-btn>
 			</v-col>
 
