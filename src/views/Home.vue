@@ -1,36 +1,36 @@
 <template>
-	<v-container
-		fluid
-		fill-height
-		flex-column
-		class="primary--text main-wrapper"
-	>
-		<div class="button-wrap">
-			<v-btn
-				color="primary"
-				outlined
-				@click="$router.push('/view?page=about')"
-			>
-				<v-icon>keyboard_double_arrow_right</v-icon>
-			</v-btn>
-		</div>
+	<v-container fluid fill-height flex-column class="primary--text">
+		<v-btn
+			class="ml-auto"
+			color="primary"
+			outlined
+			@click="$router.push('/view?page=about')"
+		>
+			<v-icon>keyboard_double_arrow_right</v-icon>
+		</v-btn>
 		<v-spacer />
 		<div>
-			<TypedText
-				text="hire mike"
-				:speed="25"
-				className="text-h4 text-uppercase text-center"
-				:styles="customWidth"
-				@onComplete="(payload) => handleFinish(1, payload)"
-			/>
-			<TypedText
-				v-if="isFirstFinished"
-				:text="pickedWord"
-				:speed="50"
-				className="text-overline text-center font-weight-bold"
-				:styles="customWidth"
-				@onComplete="(payload) => handleFinish(2, payload)"
-			/>
+			<v-slide-y-transition
+				mode="in-out"
+				origin="top center"
+				:hide-on-leave="true"
+				@after-enter="isReady2 = true"
+				:duration="{ enter: 1000, leave: 1000 }"
+			>
+				<p v-if="isReady" class="text-h4 text-uppercase">Mike K.</p>
+			</v-slide-y-transition>
+
+			<v-slide-y-reverse-transition
+				mode="out-in"
+				@enter="isReady = false"
+				:duration="{ enter: 1000, leave: 1000 }"
+				:hide-on-leave="true"
+				@after-enter="$router.push('/view?page=about')"
+			>
+				<p v-if="isReady2" class="text-overline">
+					Web development for everyone
+				</p>
+			</v-slide-y-reverse-transition>
 		</div>
 		<v-spacer />
 	</v-container>
@@ -38,175 +38,17 @@
 
 <script>
 	export default {
-		components: {
-			TypedText: () => import("../components/TypedText.vue"),
-		},
+		components: {},
 		data: () => ({
-			firstDom: "p ref",
-			isFirstFinished: false,
-			secondDom: "p ref",
-			isSecondFinished: false,
-			words: [
-				"prosperity",
-				"happiness",
-				"success",
-				"triumph",
-				"abundance",
-				"fortune",
-				"wholesomeness",
-				"awesomeness",
-			],
+			isReady: false,
+			isReady2: false,
 		}),
 		mounted: function () {
 			this.$store.commit("SET_NAV_VISIBILITY", false);
-		},
-		methods: {
-			async handleFinish(num, dom) {
-				switch (num) {
-					case 1:
-						this.firstDom = dom;
-						this.isFirstFinished = true;
-						break;
-					case 2:
-						this.secondDom = dom;
-						this.isSecondFinished = true;
-						break;
-
-					default:
-						break;
-				}
-				if (!this.isFirstFinished || !this.isSecondFinished) return;
-				this.animator(this.firstDom, "right-top");
-				await this.animator(this.secondDom, "left-bottom");
-				this.$router.push("/view?page=about");
-			},
-
-			async zoomaFader(dom, operation) {
-				const timer = operation === "++" ? 75 : 50;
-				return await new Promise((resolve) => {
-					const zoomaFadeInterval = setInterval(() => {
-						dom.style.transform = `scale(${dom.style.opacity})`;
-						switch (operation) {
-							case "++":
-								dom.style.opacity =
-									parseFloat(dom.style.opacity) + 1 / 5;
-								if (dom.style.opacity > 1) {
-									resolve();
-									clearInterval(zoomaFadeInterval);
-								}
-								break;
-
-							case "--":
-								dom.style.opacity =
-									parseFloat(dom.style.opacity) - 1 / 5;
-								if (dom.style.opacity < 0) {
-									resolve();
-									clearInterval(zoomaFadeInterval);
-								}
-								break;
-
-							default:
-								break;
-						}
-					}, timer);
-				});
-			},
-
-			async animator(dom, direction) {
-				let lastWord = dom.textContent.split(" ");
-				lastWord = lastWord[lastWord.length - 1];
-
-				// fade out + zoom out
-				dom.style.opacity = 1;
-				await this.zoomaFader(dom, "--");
-
-				// reset opacity+scale, replace content;
-				dom.style.opacity = 0.1;
-				dom.style.transform = `scale(${dom.style.opacity})`;
-				dom.textContent = lastWord;
-
-				// zoom in
-				await this.zoomaFader(dom, "++");
-
-				// spin and fly responsiveness and initial values
-				let i = 0;
-				let x = 0;
-				let y = 0;
-				dom.style = `position: relative; overflow: hidden;`;
-				await new Promise((resolve) => {
-					let Xstep;
-					let Ystep;
-					if (window.innerWidth > window.innerHeight) {
-						Xstep = 10;
-						Ystep = 20;
-					} else {
-						Xstep = 20;
-						Ystep = 10;
-					}
-
-					// spin and fly
-					const spinInterval = setInterval(() => {
-						switch (direction) {
-							case "left-top":
-								console.log("not implemented yet");
-								break;
-
-							case "right-top":
-								i += 10;
-								x -= Xstep;
-								dom.style.top = `${x}px`;
-								y -= Ystep;
-								dom.style.right = `${y}px`;
-								break;
-
-							case "right-bottom":
-								console.log("not implemented yet");
-								break;
-
-							case "left-bottom":
-								i -= 10;
-								x += Xstep;
-								dom.style.top = `${x}px`;
-								y += Ystep;
-								dom.style.right = `${y}px`;
-								break;
-
-							default:
-								break;
-						}
-						dom.style.transform = `rotate(${i}deg)`;
-						if (
-							dom.offsetTop > window.innerHeight + 25 ||
-							dom.offsetTop < -40
-						) {
-							resolve();
-							clearInterval(spinInterval);
-						}
-					}, 25);
-				});
-			},
-		},
-		computed: {
-			pickedWord() {
-				const num = Math.floor(Math.random() * this.words.length);
-				return "and face " + this.words[num];
-			},
-			customWidth() {
-				return "width: " + this.$vuetify.breakpoint.mdAndUp
-					? "50%"
-					: "70%";
-			},
+			this.isReady = true;
 		},
 		beforeDestroy() {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
 	};
 </script>
-
-<style scoped>
-	.button-wrap {
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-</style>

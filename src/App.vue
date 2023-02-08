@@ -8,15 +8,14 @@
 	</v-app>
 </template>
 
-<!-- eslint-disable vue/no-unused-components -->
 <script>
-	import NavBar from "@/blocks/Navbar";
-	import ControlsBar from "@/blocks/ControlsBar";
-
 	export default {
 		name: "App",
 
-		components: { NavBar, ControlsBar },
+		components: {
+			NavBar: () => import("@/blocks/Navbar"),
+			ControlsBar: () => import("@/blocks/ControlsBar"),
+		},
 		beforeMount: function () {
 			if (window.matchMedia("(prefers-color-scheme: dark)").matches)
 				this.$vuetify.theme.dark = true;
@@ -29,7 +28,5 @@
 	};
 </script>
 <style>
-	a {
-		text-decoration: none;
-	}
+	@import url("@/../public/global.css");
 </style>
