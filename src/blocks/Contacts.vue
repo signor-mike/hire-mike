@@ -19,9 +19,8 @@
 </template>
 
 <script>
-	import Contact from "../components/CV/Contact.vue";
 	export default {
-		components: { Contact },
+		components: { Contact: () => import("@/components/CV/Contact") },
 		data: () => ({
 			booking: false,
 			contacts: [

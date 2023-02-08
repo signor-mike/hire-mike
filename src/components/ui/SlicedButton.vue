@@ -1,7 +1,7 @@
 <template>
 	<router-link
 		custom
-		:to="`?page=${link.route}`"
+		:to="`?page=${link}`"
 		v-slot="{ navigate, isActive, isExactActive }"
 	>
 		<a
@@ -13,7 +13,7 @@
 			]"
 			@click="navigate"
 		>
-			{{ link.text }}
+			{{ link }}
 		</a>
 	</router-link>
 </template>
@@ -21,7 +21,7 @@
 <script>
 	export default {
 		props: {
-			link: Object,
+			link: String,
 		},
 	};
 </script>
@@ -41,10 +41,12 @@
 		display: block;
 		background-color: var(--v-primary-base);
 		position: relative;
+		left: 0;
 		transition: all 1000ms cubic-bezier(0.89, -0.17, 0.14, 1.225);
 	}
 	.router-link-exact-active:before,
 	.router-link-exact-active:after {
 		width: 0px;
+		left: 50%;
 	}
 </style>

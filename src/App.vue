@@ -28,5 +28,5 @@
 	};
 </script>
 <style>
-	@import url("@/../public/global.css");
+	@import url("/public/global");
 </style>
