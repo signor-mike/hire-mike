@@ -4,7 +4,8 @@
 			<MyWork v-if="$route.query.page === 'projects'" />
 			<MyStack v-else-if="$route.query.page === 'stack'" />
 			<Contacts v-else-if="$route.query.page === 'contact'" />
-			<About v-else />
+			<About v-else-if="$route.query.page === 'about'" />
+			<NotFound v-else />
 		</v-slide-x-transition>
 	</v-container>
 </template>
@@ -16,6 +17,7 @@
 			MyWork: () => import("@/blocks/MyWork"),
 			MyStack: () => import("@/blocks/MyStack"),
 			Contacts: () => import("@/blocks/Contacts"),
+			NotFound: () => import("@/views/NotFound"),
 		},
 		mounted: function () {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
