@@ -19,7 +19,6 @@
 		>
 			{{ computedText }}
 			<v-btn @click="dialog = true" color="primary" text class="ml-auto">
-				<!-- <v-icon>unfold_more</v-icon> -->
 				<v-icon>read_more</v-icon>
 				see more
 			</v-btn>
@@ -72,7 +71,6 @@
 			model: Number,
 		},
 		data: () => ({
-			// stringLength: 200,
 			dialog: false,
 		}),
 		computed: {

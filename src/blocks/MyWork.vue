@@ -1,15 +1,5 @@
 <template>
 	<Wrapper :title="title">
-		<!-- <v-btn-toggle
-			v-model="projectType"
-			tile
-			color="primary"
-			group
-			mandatory
-		>
-			<v-btn value="in a team"> in a team </v-btn>
-			<v-btn value="solo"> solo </v-btn>
-		</v-btn-toggle> -->
 		<v-spacer />
 		<v-window continuous v-model="model" cycle hide-delimiters>
 			<v-window-item
@@ -70,7 +60,6 @@
 		},
 		data: () => ({
 			model: 0,
-			// projectType: "in a team",
 		}),
 		methods: {
 			changeSlide(way) {
