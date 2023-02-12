@@ -38,7 +38,7 @@
 				{
 					title: "linkedin",
 					image: "/contacts/linkedin.webp",
-					url: "https://www.linkedin.com/in/mike-litoris/",
+					url: "https://www.linkedin.com/in/dev-mike-k",
 				},
 			],
 		}),
