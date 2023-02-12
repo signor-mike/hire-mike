@@ -1,13 +1,14 @@
 <template>
-	<v-container fluid fill-height class="pa-0">
-		<v-slide-x-transition mode="out-in" :appear="true">
-			<MyWork v-if="$route.query.page === 'projects'" />
-			<MyStack v-else-if="$route.query.page === 'stack'" />
-			<Contacts v-else-if="$route.query.page === 'contact'" />
-			<About v-else-if="$route.query.page === 'about'" />
-			<NotFound v-else />
-		</v-slide-x-transition>
-	</v-container>
+	<v-slide-x-transition mode="out-in" :appear="true">
+		<About v-if="$route.query.page === 'about'" />
+		<MyWork
+			v-else-if="$route.query.page === 'projects'"
+			title="Projects I've participated in"
+		/>
+		<MyStack v-else-if="$route.query.page === 'stack'" />
+		<Contacts v-else-if="$route.query.page === 'contact'" />
+		<NotFound v-else />
+	</v-slide-x-transition>
 </template>
 
 <script>

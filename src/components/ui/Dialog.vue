@@ -4,11 +4,11 @@
 			close
 		</v-icon>
 		<v-spacer />
-		<p class="primary--text text-center px-2">{{ text }}</p>
+		<p class="mb-0 px-2" :class="`${textAlign} ${textColor}`">{{ text }}</p>
 		<v-spacer />
 		<v-btn @click="$emit('onClose')" class="primary--text" outlined>
-			got it
-			<v-icon>done</v-icon>
+			{{ buttonText }}
+			<v-icon>{{ buttonIcon }}</v-icon>
 		</v-btn>
 	</v-container>
 </template>
@@ -17,6 +17,22 @@
 	export default {
 		props: {
 			text: String,
+			textAlign: {
+				type: String,
+				default: "text-center",
+			},
+			textColor: {
+				type: String,
+				default: "primary--text",
+			},
+			buttonText: {
+				type: String,
+				default: "got it",
+			},
+			buttonIcon: {
+				type: String,
+				default: "done",
+			},
 		},
 	};
 </script>

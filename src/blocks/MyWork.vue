@@ -1,192 +1,107 @@
 <template>
-	<v-container fill-height align-content-center class="secondary">
-		<span class="text-h4 text-md-h2 mx-auto mb-md-auto"> See my work </span>
-		<v-btn color="primary" v-if="isEdit" @click="openDialog">
-			<v-icon>add</v-icon>
-			new project
-		</v-btn>
-		<v-row>
-			<v-col
-				v-for="(project, i) in $store.state.projects"
+	<Wrapper :title="title">
+		<!-- <v-btn-toggle
+			v-model="projectType"
+			tile
+			color="primary"
+			group
+			mandatory
+		>
+			<v-btn value="in a team"> in a team </v-btn>
+			<v-btn value="solo"> solo </v-btn>
+		</v-btn-toggle> -->
+		<v-spacer />
+		<v-window continuous v-model="model" cycle hide-delimiters>
+			<v-window-item
+				v-for="(project, i) in projects"
 				:key="project.id + i"
-				cols="12"
-				md="6"
 			>
-				<Project
-					:index="parseInt(i)"
-					:isEdit="isEdit"
-					:isLoading="isLoading"
-					:project="project"
-					@editProject="(prj) => handleEdit(prj)"
-					@deleteProject="(prj) => handleDelete(prj)"
-				/>
-			</v-col>
-		</v-row>
-		<v-dialog v-model="dialog">
-			<v-card>
-				<v-container secondary d-flex flex-column>
-					<v-card-title>
-						<v-text-field
-							label="company name"
-							v-model="newProject.company"
-						/>
-						<v-text-field
-							label="position"
-							v-model="newProject.position"
-						/>
-						<v-text-field
-							label="year"
-							type="number"
-							v-model="newProject.year"
-						/>
-						<v-text-field
-							label="tech"
-							v-model="newTech"
-							append-icon="add"
-							@click:append="addNew('tech')"
-						/>
-					</v-card-title>
-					<div v-if="newProject.techs.length > 0" class="mb-5">
-						<span
-							v-for="(tech, i) in newProject.techs"
-							:key="i"
-							class="d-block"
+				<Project :project="project" :model="model" />
+			</v-window-item>
+		</v-window>
+
+		<v-spacer />
+		<v-container py-0 d-flex>
+			<v-btn icon @click="changeSlide('--')" color="secondary">
+				<v-icon x-large color="primary">chevron_left</v-icon>
+			</v-btn>
+
+			<v-spacer />
+
+			<v-item-group v-model="model" class="text-center" mandatory>
+				<v-item
+					v-for="n in $store.state.projects.length"
+					:key="`btn-${n}`"
+					v-slot="{ active, toggle }"
+				>
+					<v-btn icon @click="toggle" color="secondary">
+						<v-icon
+							:color="active ? 'primary' : 'primary darken-3'"
+							>{{
+								active
+									? "radio_button_checked"
+									: "radio_button_unchecked"
+							}}</v-icon
 						>
-							{{ tech }}
-							<v-icon
-								color="error darken-3"
-								@click="deleteItem('techs', tech)"
-							>
-								delete
-							</v-icon>
-						</span>
-					</div>
-					<v-divider />
-					<v-container>
-						<v-text-field
-							label="project"
-							v-model="newProject.project"
-						/>
-						<v-divider />
-						<v-text-field
-							label="task"
-							v-model="newTask"
-							append-icon="add"
-							@click:append="addNew('task')"
-						/>
-						<div v-if="newProject.tasks.length > 0">
-							<span
-								v-for="(task, i) in newProject.tasks"
-								:key="i"
-								class="d-block"
-							>
-								{{ task }}
-								<v-icon
-									color="error darken-3"
-									@click="deleteItem('tasks', task)"
-								>
-									delete
-								</v-icon>
-							</span>
-						</div>
-					</v-container>
-				</v-container>
-				<v-card-actions>
-					<v-btn
-						:loading="isLoading"
-						@click="handleSubmit(newProject)"
-					>
-						{{ isNew ? "add project" : "update project" }}
 					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog>
-	</v-container>
+				</v-item>
+			</v-item-group>
+
+			<v-spacer />
+
+			<v-btn icon @click="changeSlide('++')" color="secondary">
+				<v-icon x-large color="primary">chevron_right</v-icon>
+			</v-btn>
+		</v-container>
+	</Wrapper>
 </template>
 
 <script>
-	import Project from "@/components/CV/Project";
 	export default {
-		components: { Project },
-		props: { isEdit: Boolean },
-		async mounted() {
-			this.$store.dispatch("fetchProjects");
+		props: {
+			title: {
+				type: String,
+				default: "my projects",
+			},
+		},
+		components: {
+			Wrapper: () => import("@/layouts/ViewWrapper"),
+			Project: () => import("@/components/Project"),
 		},
 		data: () => ({
-			dialog: false,
-			isLoading: false,
-			isNew: true,
-			newTask: "",
-			newTech: "",
-			newProject: {
-				company: "",
-				position: "",
-				project: "https://",
-				tasks: [],
-				techs: [],
-				year: 2022,
-			},
+			model: 0,
+			// projectType: "in a team",
 		}),
 		methods: {
-			openDialog() {
-				this.isNew = true;
-				this.newProject = {
-					company: "",
-					position: "",
-					project: "https://",
-					tasks: [],
-					techs: [],
-					year: 2022,
-				};
-				this.dialog = true;
-			},
-			async handleSubmit(payload) {
-				this.isLoading = true;
-				if (this.isNew)
-					await this.$store.dispatch("addProject", payload);
-				else await this.$store.dispatch("updateProject", payload);
-				this.newProject = {
-					company: "",
-					position: "",
-					project: "https://",
-					tasks: [],
-					techs: [],
-					year: 2022,
-				};
-				this.isLoading = false;
-				this.dialog = false;
-			},
-			addNew(param) {
-				switch (param) {
-					case "tech":
-						this.newProject.techs.push(this.newTech);
-						this.newTech = "";
-						break;
-					case "task":
-						this.newProject.tasks.push(this.newTask);
-						this.newTask = "";
-						break;
+			changeSlide(way) {
+				const length = this.$store.state.projects.length;
+				switch (way) {
+					case "++":
+						if (this.model + 1 === length) this.model = 0;
+						else this.model++;
+						return;
+
+					case "--":
+						if (this.model - 1 < 0) this.model = length - 1;
+						else this.model--;
+						return;
+
 					default:
-						break;
+						return;
 				}
 			},
-			deleteItem(param, payload) {
-				this.newProject[param] = this.newProject[param].filter(
-					(e) => e !== payload
-				);
-			},
-			handleEdit(payload) {
-				this.isNew = false;
-				this.dialog = true;
-				this.newProject = payload;
-			},
-			async handleDelete(payload) {
-				this.isLoading = true;
-				await this.$store.dispatch("deleteProject", payload);
-				this.isLoading = false;
+		},
+		computed: {
+			projects() {
+				switch (this.projectType) {
+					case "in a team":
+						return this.$store.state.projects;
+					case "solo":
+						return this.$store.state.projects;
+					default:
+						return this.$store.state.projects;
+				}
 			},
 		},
 	};
 </script>
-
-<style></style>
