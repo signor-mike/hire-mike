@@ -1,7 +1,6 @@
 <template>
 	<Wrapper :title="title">
-		<v-spacer />
-		<v-window continuous v-model="model" cycle hide-delimiters>
+		<v-window continuous v-model="model" hide-delimiters>
 			<v-window-item
 				v-for="(project, i) in projects"
 				:key="project.id + i"

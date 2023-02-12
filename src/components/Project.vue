@@ -1,16 +1,25 @@
 <template>
-	<v-card outlined class="mx-auto">
+	<v-card
+		outlined
+		class="mx-auto"
+		:max-width="$vuetify.breakpoint.smAndDown ? '90%' : '50%'"
+	>
 		<v-card-title>
-			<v-spacer />
+			<!-- <v-spacer /> -->
 			<a
 				:href="project.project"
-				class="text-button my-auto text-left text-truncate"
+				class="text-button ma-auto text-left text-truncate"
 				target="_blank"
 			>
 				{{ project.project.replace("https://", "") }}
 			</a>
-			<v-spacer />
+			<!-- <v-spacer /> -->
 		</v-card-title>
+		<v-card-subtitle>
+			<p class="text-overline mb-0 text-center">
+				{{ project.year }}
+			</p>
+		</v-card-subtitle>
 		<v-divider />
 
 		<v-card-text
@@ -23,8 +32,15 @@
 				see more
 			</v-btn>
 		</v-card-text>
-		<v-dialog v-model="dialog" fullscreen>
-			<Dialogue :text="text" @onClose="dialog = false" />
+		<v-dialog v-model="dialog" width="100%" height="100%">
+			<Dialogue
+				:text="project.description"
+				@onClose="dialog = false"
+				textAlign="text-left"
+				textColor="secondary-lighten-4--text"
+				buttonText="close"
+				:buttonIcon="null"
+			/>
 		</v-dialog>
 
 		<v-divider />
@@ -39,11 +55,27 @@
 				<v-slide-item v-for="(tech, i) in project.techs" :key="tech">
 					<div class="d-flex">
 						<v-divider vertical class="mx-4" v-if="i !== 0" />
-						<span
-							class="secondary-lighten-4--text font-italic text-lowercase my-auto"
-						>
-							{{ tech }}
-						</span>
+						<v-menu offset-y>
+							<template v-slot:activator="{ on, attrs }">
+								<span
+									v-bind="attrs"
+									v-on="on"
+									class="secondary-lighten-4--text font-italic text-lowercase my-auto px-1"
+								>
+									{{ tech }}
+								</span>
+							</template>
+							<v-list>
+								<v-list-item
+									v-for="(tech, index) in project.techs"
+									:key="index"
+								>
+									<v-list-item-title>{{
+										tech
+									}}</v-list-item-title>
+								</v-list-item>
+							</v-list>
+						</v-menu>
 					</div>
 				</v-slide-item>
 
@@ -53,6 +85,7 @@
 					</v-btn>
 				</template>
 			</v-slide-group>
+			<!-- <p class="text-center text-caption">techs:</p> -->
 		</v-card-actions>
 	</v-card>
 </template>
@@ -63,11 +96,6 @@
 		},
 		props: {
 			project: Object,
-			text: {
-				type: String,
-				default:
-					"According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history. Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains.",
-			},
 			model: Number,
 		},
 		data: () => ({
@@ -75,14 +103,19 @@
 		}),
 		computed: {
 			stringLength() {
-				if (this.$vuetify.breakpoint.smAndDown) return 200;
-				return 500;
+				if (this.$vuetify.breakpoint.smAndDown) return 300;
+				return 700;
 			},
+
 			computedText() {
 				// strips last character if it's a space
-				return this.text.charAt(this.stringLength - 1) === " "
-					? this.text.slice(0, this.stringLength - 1) + "..."
-					: this.text.slice(0, this.stringLength) + "...";
+				return this.project.description.charAt(
+					this.stringLength - 1
+				) === " "
+					? this.project.description.slice(0, this.stringLength - 1) +
+							"..."
+					: this.project.description.slice(0, this.stringLength) +
+							"...";
 			},
 
 			computedTextAlign() {

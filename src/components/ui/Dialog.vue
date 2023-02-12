@@ -1,12 +1,14 @@
 <template>
-	<v-container d-flex flex-column fill-height secondary>
+	<v-container d-flex flex-column fill-height secondary fluid>
 		<v-icon color="primary" @click="$emit('onClose')" class="ml-auto pa-5">
 			close
 		</v-icon>
 		<v-spacer />
-		<p class="mb-0 px-2" :class="`${textAlign} ${textColor}`">{{ text }}</p>
+		<p class="mb-0 px-2 d-inline" :class="`${textAlign} ${textColor}`">
+			{{ text }}
+		</p>
 		<v-spacer />
-		<v-btn @click="$emit('onClose')" class="primary--text" outlined>
+		<v-btn @click="$emit('onClose')" class="primary--text mt-3" outlined>
 			{{ buttonText }}
 			<v-icon>{{ buttonIcon }}</v-icon>
 		</v-btn>
