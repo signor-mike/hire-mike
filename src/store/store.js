@@ -22,6 +22,12 @@ const store = new Vuex.Store({
 		user(state) {
 			return state.user;
 		},
+		isAdmin(state) {
+			return (
+				state.user.data.email === state.currentUser.email &&
+				state.user.loggedIn
+			);
+		},
 	},
 	mutations: {
 		...mutations,

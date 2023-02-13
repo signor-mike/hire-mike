@@ -7,11 +7,11 @@
 		<v-card-title>
 			<!-- <v-spacer /> -->
 			<a
-				:href="project.project"
+				:href="project.url"
 				class="text-button ma-auto text-left text-truncate"
 				target="_blank"
 			>
-				{{ project.project.replace("https://", "") }}
+				{{ project.url.replace("https://", "") }}
 			</a>
 			<!-- <v-spacer /> -->
 		</v-card-title>
@@ -85,7 +85,6 @@
 					</v-btn>
 				</template>
 			</v-slide-group>
-			<!-- <p class="text-center text-caption">techs:</p> -->
 		</v-card-actions>
 	</v-card>
 </template>
@@ -96,7 +95,7 @@
 		},
 		props: {
 			project: Object,
-			model: Number,
+			model: { type: Number, required: false },
 		},
 		data: () => ({
 			dialog: false,

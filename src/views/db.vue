@@ -1,28 +1,32 @@
 <template>
-	<v-main>
-		<v-row justify="center" style="max-width: 100vw">
-			<v-col cols="auto" class="ma-auto">
-				<p v-if="$store.state.currentUser">
+	<v-main class="px-2 py-3 d-flex flex-column">
+		<v-row justify="space-around" align="center" style="max-width: 100vw">
+			<v-col cols="auto">
+				<p v-if="$store.state.currentUser" class="mb-0 my-auto">
 					{{ $store.state.currentUser.email.split("@")[0] }}
 				</p>
+				<p v-else>please <a href="/auth">login</a></p>
+			</v-col>
+			<v-col cols="auto">
 				<v-btn
 					color="error"
 					@click="logout"
 					v-if="$store.state.user.loggedIn"
-					>logout</v-btn
 				>
-
-				<p v-else>please <a href="/auth">login</a></p>
+					logout
+				</v-btn>
 			</v-col>
 		</v-row>
-		<v-container v-if="isAdmin" mt-5>
-			<MyWork v-if="$route.query.page === 'experience'" :isEdit="true" />
+		<v-divider class="my-3" />
+		<v-container v-if="$store.getters.isAdmin">
+			<Projects v-if="$route.query.page === 'projects'" />
+			<!-- <MyWork v-if="$route.query.page === 'projects'" :isEdit="true" />
 			<MyStack v-else-if="$route.query.page === 'stack'" :isEdit="true" />
 			<Contacts
 				v-else-if="$route.query.page === 'contact'"
 				:isEdit="true"
 			/>
-			<About v-else :isEdit="true" />
+			<About v-else :isEdit="true" /> -->
 		</v-container>
 		<v-container v-else>
 			<h1>401 Unathorized!</h1>
@@ -31,23 +35,14 @@
 </template>
 
 <script>
-	import About from "../blocks/About.vue";
-	import MyWork from "../blocks/MyWork.vue";
-	import MyStack from "../blocks/MyStack.vue";
-	import Contacts from "../blocks/Contacts.vue";
-
 	import authService from "../utils/auth.js";
 	const { signOut } = authService();
 
 	export default {
-		computed: {
-			isAdmin() {
-				const { user, currentUser } = this.$store.state;
-				return user.data && currentUser.email
-					? user.data.email === currentUser.email && user.loggedIn
-					: false;
-			},
+		components: {
+			Projects: () => import("@/components/admin/Projects"),
 		},
+		computed: {},
 		methods: {
 			async logout() {
 				await signOut();
@@ -56,12 +51,6 @@
 		},
 		async mounted() {
 			this.$store.commit("SET_NAV_VISIBILITY", true);
-		},
-		components: {
-			About,
-			MyWork,
-			MyStack,
-			Contacts,
 		},
 	};
 </script>

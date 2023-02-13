@@ -17,5 +17,4 @@
 			},
 		},
 	};
-	// compute responsive padding
 </script>

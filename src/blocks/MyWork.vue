@@ -10,8 +10,13 @@
 		</v-window>
 
 		<v-spacer />
-		<v-container py-0 d-flex>
-			<v-btn icon @click="changeSlide('--')" color="secondary">
+		<v-container d-flex style="max-width: 50%">
+			<v-btn
+				icon
+				@click="changeSlide('--')"
+				color="secondary"
+				class="ml-auto"
+			>
 				<v-icon x-large color="primary">chevron_left</v-icon>
 			</v-btn>
 
@@ -38,7 +43,12 @@
 
 			<v-spacer />
 
-			<v-btn icon @click="changeSlide('++')" color="secondary">
+			<v-btn
+				icon
+				@click="changeSlide('++')"
+				color="secondary"
+				class="mr-auto"
+			>
 				<v-icon x-large color="primary">chevron_right</v-icon>
 			</v-btn>
 		</v-container>
