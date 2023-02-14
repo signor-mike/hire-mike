@@ -2,7 +2,7 @@
 	<Wrapper :title="title">
 		<v-window continuous v-model="model" hide-delimiters>
 			<v-window-item
-				v-for="(project, i) in projects"
+				v-for="(project, i) in $store.state.projects"
 				:key="project.id + i"
 			>
 				<Project :project="project" :model="model" />
@@ -10,7 +10,7 @@
 		</v-window>
 
 		<v-spacer />
-		<v-container d-flex style="max-width: 50%">
+		<v-container d-flex :style="computedStyle">
 			<v-btn
 				icon
 				@click="changeSlide('--')"
@@ -90,15 +90,9 @@
 			},
 		},
 		computed: {
-			projects() {
-				switch (this.projectType) {
-					case "in a team":
-						return this.$store.state.projects;
-					case "solo":
-						return this.$store.state.projects;
-					default:
-						return this.$store.state.projects;
-				}
+			computedStyle() {
+				if (this.$vuetify.breakpoint.smAndDown) return "max-width:100%";
+				return "max-width: 50%";
 			},
 		},
 	};

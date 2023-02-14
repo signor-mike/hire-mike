@@ -5,7 +5,6 @@
 		:max-width="$vuetify.breakpoint.smAndDown ? '90%' : '50%'"
 	>
 		<v-card-title>
-			<!-- <v-spacer /> -->
 			<a
 				:href="project.url"
 				class="text-button ma-auto text-left text-truncate"
@@ -13,12 +12,25 @@
 			>
 				{{ project.url.replace("https://", "") }}
 			</a>
-			<!-- <v-spacer /> -->
 		</v-card-title>
 		<v-card-subtitle>
-			<p class="text-overline mb-0 text-center">
-				{{ project.year }}
-			</p>
+			<v-row>
+				<v-col cols="5" class="d-flex align-center justify-center">
+					<p class="text-caption mb-0 text-center">
+						{{ project.role }}
+					</p>
+				</v-col>
+
+				<v-col cols="2" class="d-flex align-center justify-center">
+					<v-divider vertical class="mx-2" />
+				</v-col>
+
+				<v-col cols="5" class="d-flex align-center justify-center">
+					<p class="text-overline mb-0 text-center">
+						{{ project.year }}
+					</p>
+				</v-col>
+			</v-row>
 		</v-card-subtitle>
 		<v-divider />
 
@@ -102,7 +114,7 @@
 		}),
 		computed: {
 			stringLength() {
-				if (this.$vuetify.breakpoint.smAndDown) return 300;
+				if (this.$vuetify.breakpoint.smAndDown) return 240;
 				return 700;
 			},
 
