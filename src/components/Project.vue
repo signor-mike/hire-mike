@@ -1,7 +1,7 @@
 <template>
 	<v-card
 		outlined
-		class="mx-auto"
+		class="mx-auto mt-md-5"
 		:max-width="$vuetify.breakpoint.smAndDown ? '90%' : '50%'"
 	>
 		<v-card-title>
@@ -39,12 +39,18 @@
 			:class="computedTextAlign"
 		>
 			{{ computedText }}
-			<v-btn @click="dialog = true" color="primary" text class="ml-auto">
+			<v-btn
+				v-if="project.description.length > stringLength"
+				@click="dialog = true"
+				color="primary"
+				text
+				class="ml-auto"
+			>
 				<v-icon>read_more</v-icon>
 				see more
 			</v-btn>
 		</v-card-text>
-		<v-dialog v-model="dialog" width="100%" height="100%">
+		<v-dialog v-model="dialog" fullscreen>
 			<Dialogue
 				:text="project.description"
 				@onClose="dialog = false"
@@ -119,6 +125,8 @@
 			},
 
 			computedText() {
+				if (this.project.description.length < this.stringLength)
+					return this.project.description;
 				// strips last character if it's a space
 				return this.project.description.charAt(
 					this.stringLength - 1

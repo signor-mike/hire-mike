@@ -4,13 +4,14 @@
 			<v-window-item
 				v-for="(project, i) in $store.state.projects"
 				:key="project.id + i"
+				:style="computedStyle.window"
 			>
 				<Project :project="project" :model="model" />
 			</v-window-item>
 		</v-window>
 
 		<v-spacer />
-		<v-container d-flex :style="computedStyle">
+		<v-container d-flex :style="computedStyle.controls">
 			<v-btn
 				icon
 				@click="changeSlide('--')"
@@ -91,8 +92,12 @@
 		},
 		computed: {
 			computedStyle() {
-				if (this.$vuetify.breakpoint.smAndDown) return "max-width:100%";
-				return "max-width: 50%";
+				if (this.$vuetify.breakpoint.smAndDown)
+					return {
+						window: "height: 100%",
+						controls: "max-width:100%",
+					};
+				return { window: "height:540px", controls: "max-width: 50%" };
 			},
 		},
 	};
