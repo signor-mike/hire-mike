@@ -1,22 +1,22 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import VuexPersistence from "vuex-persist";
+// import VuexPersistence from "vuex-persist";
 import { state, mutations, actions } from "./curriculum";
-import {
-	PROJECTS_STATE,
-	PROJECTS_ACTIONS,
-	PROJECTS_MUTATIONS,
-} from "./projects";
+// import { PROJECTS_ACTIONS, PROJECTS_MUTATIONS } from "./projects";
 
-const vuexLocal = new VuexPersistence({
-	storage: window.localStorage,
-});
+import projects from "@/../public/data/projects.json";
+
+// const vuexLocal = new VuexPersistence({
+// 	storage: window.localStorage,
+// });
 
 Vue.use(Vuex);
 const store = new Vuex.Store({
 	state: {
 		...state,
-		...PROJECTS_STATE,
+		projects: [...projects],
+		projectsTitle:
+			"I've either built from ground-zero or actively participated in the following projects:",
 		isNavVisible: false,
 		user: {
 			loggedIn: false,
@@ -37,7 +37,7 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		...mutations,
-		...PROJECTS_MUTATIONS,
+		// ...PROJECTS_MUTATIONS,
 		SET_NAV_VISIBILITY(state, value) {
 			state.isNavVisible = value;
 		},
@@ -54,7 +54,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		...actions,
-		...PROJECTS_ACTIONS,
+		// ...PROJECTS_ACTIONS,
 		fetchUser({ commit }, user) {
 			commit("SET_LOGGED_IN", user !== null);
 			if (user) {
@@ -67,12 +67,12 @@ const store = new Vuex.Store({
 		},
 		async getAll({ dispatch }) {
 			await dispatch("fetchBio");
-			await dispatch("fetchProjects");
+			// await dispatch("fetchProjects");
 			await dispatch("fetchStack");
-			await dispatch("GET_PROJECTS_TITLE");
+			// await dispatch("GET_PROJECTS_TITLE");
 		},
 	},
-	plugins: [vuexLocal.plugin],
+	// plugins: [vuexLocal.plugin],
 });
 
 export { store };

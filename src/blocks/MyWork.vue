@@ -97,7 +97,10 @@
 						window: "height: 100%",
 						controls: "max-width:100%",
 					};
-				return { window: "height:540px", controls: "max-width: 50%" };
+				return {
+					window: "min-height:50%",
+					controls: "max-width: 50%",
+				};
 			},
 		},
 	};

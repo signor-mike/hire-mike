@@ -10,9 +10,10 @@ import {
 	deleteDoc,
 } from "firebase/firestore";
 
+import projects from "@/../public/data/projects.json";
+
 export const PROJECTS_STATE = {
-	projectsTitle: "",
-	projects: [],
+	projects,
 };
 
 export const PROJECTS_MUTATIONS = {

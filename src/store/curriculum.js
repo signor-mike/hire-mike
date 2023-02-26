@@ -22,7 +22,7 @@ export const state = {
 			text: "",
 		},
 	},
-	projects: [],
+	// projects: [],
 	stack: [],
 };
 
@@ -33,20 +33,20 @@ export const mutations = {
 		state.about[key] = value;
 	},
 
-	setProjects(state, value) {
-		if (value.length)
-			state.projects = value.sort((a, b) => {
-				switch (true) {
-					case a.year > b.year:
-						return -1;
-					case a.year < b.year:
-						return 1;
-					default:
-						return 0;
-				}
-			});
-		else state.projects = { ...state.projects, value };
-	},
+	// setProjects(state, value) {
+	// 	if (value.length)
+	// 		state.projects = value.sort((a, b) => {
+	// 			switch (true) {
+	// 				case a.year > b.year:
+	// 					return -1;
+	// 				case a.year < b.year:
+	// 					return 1;
+	// 				default:
+	// 					return 0;
+	// 			}
+	// 		});
+	// 	else state.projects = { ...state.projects, value };
+	// },
 
 	setStack(state, value) {
 		state.stack = value;
@@ -75,21 +75,21 @@ export const actions = {
 		}
 	},
 	/* ~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~ */
-	async fetchProjects({ commit }) {
-		try {
-			const querySnapshot = await getDocs(collection(db, "work"));
-			let docs = [];
-			querySnapshot.forEach((doc) => {
-				docs.push({
-					id: doc.id,
-					...doc.data(),
-				});
-			});
-			commit("setProjects", docs);
-		} catch (error) {
-			console.log(error);
-		}
-	},
+	// async fetchProjects({ commit }) {
+	// 	try {
+	// 		const querySnapshot = await getDocs(collection(db, "work"));
+	// 		let docs = [];
+	// 		querySnapshot.forEach((doc) => {
+	// 			docs.push({
+	// 				id: doc.id,
+	// 				...doc.data(),
+	// 			});
+	// 		});
+	// 		commit("setProjects", docs);
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// },
 	async addProject({ commit, dispatch }, payload) {
 		try {
 			await setDoc(
