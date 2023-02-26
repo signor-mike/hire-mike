@@ -19,14 +19,9 @@
 		</v-row>
 		<v-divider class="my-3" />
 		<v-container v-if="$store.getters.isAdmin">
-			<Projects v-if="$route.query.page === 'projects'" />
-			<!-- <MyWork v-if="$route.query.page === 'projects'" :isEdit="true" />
-			<MyStack v-else-if="$route.query.page === 'stack'" :isEdit="true" />
-			<Contacts
-				v-else-if="$route.query.page === 'contact'"
-				:isEdit="true"
-			/>
-			<About v-else :isEdit="true" /> -->
+			<p class="ma-auto">
+				this functionality has been ditched due to its uselessness
+			</p>
 		</v-container>
 		<v-container v-else>
 			<h1>401 Unathorized!</h1>
@@ -39,9 +34,7 @@
 	const { signOut } = authService();
 
 	export default {
-		components: {
-			Projects: () => import("@/components/admin/Projects"),
-		},
+		components: {},
 		computed: {},
 		methods: {
 			async logout() {

@@ -3,7 +3,7 @@
 		<About v-if="$route.query.page === 'about'" />
 		<MyWork
 			v-else-if="$route.query.page === 'projects'"
-			title="Projects I've participated in"
+			:title="$store.state.title"
 		/>
 		<MyStack v-else-if="$route.query.page === 'stack'" />
 		<Contacts v-else-if="$route.query.page === 'contact'" />
