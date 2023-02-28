@@ -1,6 +1,9 @@
 <template>
 	<v-slide-x-transition mode="out-in" :appear="true">
-		<About v-if="$route.query.page === 'about'" />
+		<About
+			v-if="$route.query.page === 'about'"
+			:title="$store.state.aboutTitle"
+		/>
 		<MyWork
 			v-else-if="$route.query.page === 'projects'"
 			:title="$store.state.projectsTitle"

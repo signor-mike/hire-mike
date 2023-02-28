@@ -17,6 +17,7 @@ const store = new Vuex.Store({
 		projects: [...projects],
 		projectsTitle:
 			"I've either built from ground-zero or actively participated in the following projects:",
+		aboutTitle: "Hi, my name is Mike",
 		isNavVisible: false,
 		user: {
 			loggedIn: false,
