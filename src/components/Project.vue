@@ -41,47 +41,27 @@
 			<SeeMoreButton :text="project.description" />
 		</v-card-text>
 		<v-divider />
-		<v-card-actions class="d-flex flex-column">
-			<v-slide-group show-arrows>
-				<template v-slot:prev="{ on, attrs }">
-					<v-btn v-bind="attrs" v-on="on" icon class="mr-auto">
-						<v-icon> keyboard_double_arrow_left </v-icon>
-					</v-btn>
-				</template>
-
-				<v-slide-item v-for="(tech, i) in project.techs" :key="tech">
-					<div class="d-flex">
-						<v-divider vertical class="mx-4" v-if="i !== 0" />
-						<v-menu offset-y>
-							<template v-slot:activator="{ on, attrs }">
-								<span
-									v-bind="attrs"
-									v-on="on"
-									class="secondary-lighten-4--text font-italic text-lowercase my-auto px-1"
-								>
+		<v-card-actions>
+			<v-expansion-panels class="pa-0" v-model="panel" inset>
+				<v-expansion-panel>
+					<v-expansion-panel-header expand-icon="expand_more">
+						{{ computedActionsText }}
+					</v-expansion-panel-header>
+					<v-expansion-panel-content>
+						<v-row align="center" justify="space-between">
+							<v-col
+								cols="auto"
+								v-for="tech in project.techs"
+								:key="tech"
+							>
+								<span>
 									{{ tech }}
 								</span>
-							</template>
-							<v-list>
-								<v-list-item
-									v-for="(tech, index) in project.techs"
-									:key="index"
-								>
-									<v-list-item-title>{{
-										tech
-									}}</v-list-item-title>
-								</v-list-item>
-							</v-list>
-						</v-menu>
-					</div>
-				</v-slide-item>
-
-				<template v-slot:next="{ on, attrs }">
-					<v-btn v-bind="attrs" v-on="on" icon class="ml-auto">
-						<v-icon> keyboard_double_arrow_right</v-icon>
-					</v-btn>
-				</template>
-			</v-slide-group>
+							</v-col>
+						</v-row>
+					</v-expansion-panel-content>
+				</v-expansion-panel>
+			</v-expansion-panels>
 		</v-card-actions>
 	</v-card>
 </template>
@@ -94,6 +74,9 @@
 			project: Object,
 			model: { type: Number, required: false },
 		},
+		data: () => ({
+			panel: () => (this.$vuetify.breakpoint.smAndDown ? null : 0),
+		}),
 		computed: {
 			computedTextAlign() {
 				switch (this.model) {
@@ -106,6 +89,12 @@
 					default:
 						return "text-center";
 				}
+			},
+			computedActionsText() {
+				if (this.panel === 0) return "Tools we used:";
+				return `${this.project.techs[0]} and ${
+					this.project.techs.length - 1
+				} more...`;
 			},
 		},
 	};

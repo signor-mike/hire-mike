@@ -94,11 +94,11 @@
 			computedStyle() {
 				if (this.$vuetify.breakpoint.smAndDown)
 					return {
-						window: "height: 100%",
+						window: "max-height: 100%",
 						controls: "max-width:100%",
 					};
 				return {
-					window: "min-height:50%",
+					window: "max-height:50%",
 					controls: "max-width: 50%",
 				};
 			},
