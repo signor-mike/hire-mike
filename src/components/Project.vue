@@ -75,12 +75,9 @@
 			model: { type: Number, required: false },
 		},
 		data: () => ({
-			panel: 0,
+			panel: null,
 		}),
-		mounted() {
-			if (this.$vuetify.breakpoint.smAndDown) this.panel = null;
-			return;
-		},
+
 		computed: {
 			computedTextAlign() {
 				switch (this.model) {

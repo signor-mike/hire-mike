@@ -1,11 +1,10 @@
 import Vue from "vue";
 import Vuex from "vuex";
 // import VuexPersistence from "vuex-persist";
-import { state, mutations, actions } from "./curriculum";
-// import { PROJECTS_ACTIONS, PROJECTS_MUTATIONS } from "./projects";
 
-import projects from "@/../public/data/projects.json";
-import about from "@/../public/data/about.json";
+import projects from "./mock/projects.json";
+import about from "./mock/about.json";
+import stack from "./mock/stack.json";
 
 // const vuexLocal = new VuexPersistence({
 // 	storage: window.localStorage,
@@ -14,10 +13,12 @@ import about from "@/../public/data/about.json";
 Vue.use(Vuex);
 const store = new Vuex.Store({
 	state: {
-		...state,
 		projects: projects.data,
 		projectsTitle: projects.title,
-		...about,
+		about: about.data,
+		aboutTitle: about.title,
+		stack: stack.data,
+		stackTitle: stack.title,
 		gdpr: "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history. Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains.",
 		info: "This website is designed within mobile-first approach",
 		isNavVisible: false,
@@ -39,8 +40,6 @@ const store = new Vuex.Store({
 		},
 	},
 	mutations: {
-		...mutations,
-		// ...PROJECTS_MUTATIONS,
 		SET_NAV_VISIBILITY(state, value) {
 			state.isNavVisible = value;
 		},
@@ -56,8 +55,6 @@ const store = new Vuex.Store({
 		},
 	},
 	actions: {
-		...actions,
-		// ...PROJECTS_ACTIONS,
 		fetchUser({ commit }, user) {
 			commit("SET_LOGGED_IN", user !== null);
 			if (user) {
@@ -67,12 +64,6 @@ const store = new Vuex.Store({
 			} else {
 				commit("SET_USER", null);
 			}
-		},
-		async getAll({ dispatch }) {
-			await dispatch("fetchBio");
-			// await dispatch("fetchProjects");
-			await dispatch("fetchStack");
-			// await dispatch("GET_PROJECTS_TITLE");
 		},
 	},
 	// plugins: [vuexLocal.plugin],

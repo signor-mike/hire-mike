@@ -1,0 +1,37 @@
+{
+	"title": "I work with",
+	"data": {
+		"code": [
+			"git",
+			"vue",
+			"nuxt.js",
+			"react",
+			"next.js",
+			"typescript",
+			"vuetify",
+			"stripe api",
+			"rest api",
+			"cypress.js",
+			"jest",
+			"mongodb",
+			"bash",
+			"node.js"
+		],
+		"code_off": [
+			"gcp",
+			"figma",
+			"vscode",
+			"gimp",
+			"Linux",
+			"clickup",
+			"Mac",
+			"jira",
+			"firebase",
+			"Storybook",
+			"material design",
+			"tailwind css",
+			"bootstrap",
+			"Axios"
+		]
+	}
+}
