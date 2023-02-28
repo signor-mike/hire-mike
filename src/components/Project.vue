@@ -38,30 +38,8 @@
 			class="secondary-lighten-5--text d-flex flex-column"
 			:class="computedTextAlign"
 		>
-			<!-- {{ computedText }}
-			<v-btn
-				v-if="project.description.length > stringLength"
-				@click="dialog = true"
-				color="primary"
-				text
-				class="ml-auto"
-			>
-				<v-icon>read_more</v-icon>
-				see more
-			</v-btn> -->
 			<SeeMoreButton :text="project.description" />
 		</v-card-text>
-		<!-- <v-dialog v-model="dialog" fullscreen>
-			<Dialogue
-				:text="project.description"
-				@onClose="dialog = false"
-				textAlign="text-left"
-				textColor="secondary-lighten-4--text"
-				buttonText="close"
-				:buttonIcon="null"
-			/>
-		</v-dialog> -->
-
 		<v-divider />
 		<v-card-actions class="d-flex flex-column">
 			<v-slide-group show-arrows>
@@ -110,35 +88,13 @@
 <script>
 	export default {
 		components: {
-			// Dialogue: () => import("@/components/ui/Dialog"),
 			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
 		props: {
 			project: Object,
 			model: { type: Number, required: false },
 		},
-		data: () => ({
-			dialog: false,
-		}),
 		computed: {
-			stringLength() {
-				if (this.$vuetify.breakpoint.smAndDown) return 240;
-				return 700;
-			},
-
-			computedText() {
-				if (this.project.description.length < this.stringLength)
-					return this.project.description;
-				// strips last character if it's a space
-				return this.project.description.charAt(
-					this.stringLength - 1
-				) === " "
-					? this.project.description.slice(0, this.stringLength - 1) +
-							"..."
-					: this.project.description.slice(0, this.stringLength) +
-							"...";
-			},
-
 			computedTextAlign() {
 				switch (this.model) {
 					case 0:

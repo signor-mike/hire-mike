@@ -20,15 +20,11 @@
 			</v-col>
 
 			<v-col cols="3">
-				<v-btn color="primary" icon @click="dialogs.gdpr = true">
-					<v-icon large> privacy_tip </v-icon>
-				</v-btn>
+				<SeeMoreButton :text="$store.state.gdpr" icon="privacy_tip" />
 			</v-col>
 
 			<v-col cols="3">
-				<v-btn color="primary" icon @click="dialogs.info = true">
-					<v-icon large> info </v-icon>
-				</v-btn>
+				<SeeMoreButton :text="$store.state.info" icon="info" />
 			</v-col>
 
 			<v-col cols="3">
@@ -43,12 +39,9 @@
 		components: {
 			ThemeToggler: () => import("@/components/ThemeToggler"),
 			Dialogue: () => import("@/components/ui/Dialog"),
+			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
-		data: () => ({
-			gdpr: "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history. Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains.",
-			info: "This website is designed within mobile-first approach",
-			dialogs: { gdpr: false, info: false },
-		}),
+		// TODO: info button should show description of THIS project
 	};
 </script>
 

@@ -1,34 +1,35 @@
 <template>
-	<!-- 
-      if props.icon
-        render icon w/ @click=handleClick(open)
-      else
-        if text.tooLong
-          strip and render button
-        else
-          render just text
+	<div>
+		<div v-if="!!text && !!!icon">
+			{{ computedText }}
+			<v-btn
+				v-if="isTooLong"
+				@click="handleClick('open')"
+				color="primary"
+				text
+				class="d-flex ml-auto"
+			>
+				<v-icon>read_more</v-icon>
+				see more
+			</v-btn>
+		</div>
 
-      if props.icon || text.tooLong
-        v-show dialog w/ button w/ @click=handleClick(close)
-      -->
-	<div v-if="!!text">
-		{{ computedText }}
-		<v-btn
-			v-if="text.length > stringLength"
-			@click="dialog = true"
-			color="primary"
-			text
-			class="d-flex ml-auto"
-		>
-			<v-icon>read_more</v-icon>
-			see more
-		</v-btn>
-		<v-dialog v-model="dialog" fullscreen>
+		<div v-else>
+			<v-btn color="primary" icon @click="handleClick('open')">
+				<v-icon large>
+					{{ icon }}
+				</v-icon>
+			</v-btn>
+		</div>
+
+		<v-dialog v-model="dialog" fullscreen :scrollable="!!icon">
 			<Dialogue
 				:text="text"
-				@onClose="dialog = false"
-				textAlign="text-left"
-				textColor="secondary-lighten-4--text"
+				@onClose="handleClick('close')"
+				:textAlign="!!icon ? 'text-center' : 'text-left'"
+				:textColor="
+					!!icon ? 'primary--text' : 'secondary-lighten-4--text'
+				"
 				buttonText="close"
 				:buttonIcon="null"
 			/>
@@ -38,10 +39,9 @@
 
 <script>
 	export default {
-		props: { text: String },
+		props: { text: String, icon: { type: String, default: null } },
 		components: {
 			Dialogue: () => import("@/components/ui/Dialog"),
-			// SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
 		data: () => ({
 			dialog: false,
@@ -58,10 +58,15 @@
 					? this.text.slice(0, this.stringLength - 1) + "..."
 					: this.text.slice(0, this.stringLength) + "...";
 			},
+			isTooLong() {
+				return this.text.length > this.stringLength;
+			},
 		},
 		methods: {
-			handleClick(operation) {
-				console.log(`${operation} dialog`);
+			handleClick(op) {
+				if (op === "open") this.dialog = true;
+				if (op === "close") this.dialog = false;
+				return;
 			},
 		},
 	};
