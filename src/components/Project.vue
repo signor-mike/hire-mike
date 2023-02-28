@@ -48,7 +48,7 @@
 						{{ computedActionsText }}
 					</v-expansion-panel-header>
 					<v-expansion-panel-content>
-						<v-row align="center" justify="space-between">
+						<v-row align="center" justify="space-around">
 							<v-col
 								cols="auto"
 								v-for="tech in project.techs"
@@ -75,8 +75,12 @@
 			model: { type: Number, required: false },
 		},
 		data: () => ({
-			panel: () => (this.$vuetify.breakpoint.smAndDown ? null : 0),
+			panel: 0,
 		}),
+		mounted() {
+			if (this.$vuetify.breakpoint.smAndDown) this.panel = null;
+			return;
+		},
 		computed: {
 			computedTextAlign() {
 				switch (this.model) {
