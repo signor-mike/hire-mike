@@ -22,7 +22,11 @@
 			</v-btn>
 		</div>
 
-		<v-dialog v-model="dialog" fullscreen :scrollable="!!icon">
+		<v-dialog
+			v-model="dialog"
+			:fullscreen="fullscreen"
+			:scrollable="scrollable"
+		>
 			<Dialogue
 				:text="text"
 				@onClose="handleClick('close')"
@@ -39,7 +43,12 @@
 
 <script>
 	export default {
-		props: { text: String, icon: { type: String, default: null } },
+		props: {
+			text: String,
+			icon: { type: String, default: null },
+			fullscreen: { type: Boolean, default: true },
+			scrollable: { type: Boolean, default: false },
+		},
 		components: {
 			Dialogue: () => import("@/components/ui/Dialog"),
 		},
