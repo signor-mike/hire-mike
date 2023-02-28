@@ -2,36 +2,36 @@
 	"title": "I work with",
 	"data": {
 		"code": [
-			"git",
-			"vue",
-			"nuxt.js",
-			"react",
-			"next.js",
+			"vue.js",
+			"react.js",
 			"typescript",
-			"vuetify",
+			"git",
+			"bash",
+			"tailwind css",
+			"nuxt.js",
+			"next.js",
+			"vuetify.js",
 			"stripe api",
 			"rest api",
 			"cypress.js",
 			"jest",
-			"mongodb",
-			"bash",
-			"node.js"
+			"mongo db",
+			"node.js",
+			"express.js"
 		],
 		"code_off": [
-			"gcp",
 			"figma",
 			"vscode",
-			"gimp",
 			"Linux",
+			"firebase",
+			"gcp",
 			"clickup",
 			"Mac",
 			"jira",
-			"firebase",
 			"Storybook",
 			"material design",
-			"tailwind css",
-			"bootstrap",
-			"Axios"
-		]
+			"bootstrap"
+		],
+		"lightbulb": ["creativity", "research", "analysis", "precision"]
 	}
 }
