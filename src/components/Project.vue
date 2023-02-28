@@ -38,7 +38,7 @@
 			class="secondary-lighten-5--text d-flex flex-column"
 			:class="computedTextAlign"
 		>
-			{{ computedText }}
+			<!-- {{ computedText }}
 			<v-btn
 				v-if="project.description.length > stringLength"
 				@click="dialog = true"
@@ -48,9 +48,10 @@
 			>
 				<v-icon>read_more</v-icon>
 				see more
-			</v-btn>
+			</v-btn> -->
+			<SeeMoreButton :text="project.description" />
 		</v-card-text>
-		<v-dialog v-model="dialog" fullscreen>
+		<!-- <v-dialog v-model="dialog" fullscreen>
 			<Dialogue
 				:text="project.description"
 				@onClose="dialog = false"
@@ -59,7 +60,7 @@
 				buttonText="close"
 				:buttonIcon="null"
 			/>
-		</v-dialog>
+		</v-dialog> -->
 
 		<v-divider />
 		<v-card-actions class="d-flex flex-column">
@@ -109,7 +110,8 @@
 <script>
 	export default {
 		components: {
-			Dialogue: () => import("@/components/ui/Dialog"),
+			// Dialogue: () => import("@/components/ui/Dialog"),
+			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
 		props: {
 			project: Object,

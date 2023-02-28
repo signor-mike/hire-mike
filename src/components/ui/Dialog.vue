@@ -1,5 +1,5 @@
 <template>
-	<v-container d-flex flex-column fill-height secondary fluid>
+	<v-container d-flex flex-column secondary>
 		<v-icon color="primary" @click="$emit('onClose')" class="ml-auto pa-5">
 			close
 		</v-icon>
