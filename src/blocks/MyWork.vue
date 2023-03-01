@@ -4,14 +4,13 @@
 			<v-window-item
 				v-for="(project, i) in $store.state.projects"
 				:key="project.id + i"
-				:style="computedStyle.window"
 			>
 				<Project :project="project" :model="model" />
 			</v-window-item>
 		</v-window>
 
 		<v-spacer />
-		<v-container d-flex :style="computedStyle.controls">
+		<v-container d-flex>
 			<v-btn
 				icon
 				@click="changeSlide('--')"
@@ -78,29 +77,17 @@
 					case "++":
 						if (this.model + 1 === length) this.model = 0;
 						else this.model++;
-						return;
+						break;
 
 					case "--":
 						if (this.model - 1 < 0) this.model = length - 1;
 						else this.model--;
-						return;
+						break;
 
 					default:
-						return;
+						break;
 				}
-			},
-		},
-		computed: {
-			computedStyle() {
-				if (this.$vuetify.breakpoint.smAndDown)
-					return {
-						window: "max-height: 100%",
-						controls: "max-width:100%",
-					};
-				return {
-					window: "max-height:50%",
-					controls: "max-width: 50%",
-				};
+				return;
 			},
 		},
 	};

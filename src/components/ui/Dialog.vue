@@ -1,5 +1,11 @@
 <template>
-	<v-container d-flex flex-column secondary>
+	<v-container
+		d-flex
+		flex-column
+		secondary
+		:fluid="!$vuetify.breakpoint.smAndDown"
+		:fill-height="!$vuetify.breakpoint.smAndDown"
+	>
 		<v-icon color="primary" @click="$emit('onClose')" class="ml-auto pa-5">
 			close
 		</v-icon>
