@@ -5,6 +5,7 @@ import Vuex from "vuex";
 import projects from "./mock/projects.json";
 import about from "./mock/about.json";
 import stack from "./mock/stack.json";
+import contact from "./mock/contact.json";
 
 // const vuexLocal = new VuexPersistence({
 // 	storage: window.localStorage,
@@ -19,6 +20,8 @@ const store = new Vuex.Store({
 		aboutTitle: about.title,
 		stack: stack.data,
 		stackTitle: stack.title,
+		contacts: contact.data,
+		contactsTitle: contact.title,
 		gdpr: "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history. Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains.",
 		info: "This website is designed within mobile-first approach",
 		isNavVisible: false,

@@ -1,10 +1,10 @@
 <template>
-	<v-container fluid fill-height flex-column :class="computedPadding">
+	<v-container fluid fill-height flex-column :class="compStyles.parent">
 		<p class="text-h5 text-center mx-auto my-3 text-capitalize">
 			{{ title }}
 		</p>
 		<v-spacer />
-		<v-container :style="computedWidth">
+		<v-container :style="compStyles.child">
 			<slot />
 		</v-container>
 		<v-spacer />
@@ -15,13 +15,14 @@
 	export default {
 		props: { title: String },
 		computed: {
-			computedPadding() {
-				if (this.$vuetify.breakpoint.smAndDown) return "pa-5";
-				return "py-5 px-15";
-			},
-			computedWidth() {
-				if (this.$vuetify.breakpoint.mdAndDown) return "width:100%";
-				return "width:50%";
+			compStyles() {
+				const parent = this.$vuetify.breakpoint.smAndDown
+					? "pa-5"
+					: "py-5 px-15";
+				const child = this.$vuetify.breakpoint.mdAndDown
+					? "width:100%"
+					: "width:50%";
+				return { parent, child };
 			},
 		},
 	};

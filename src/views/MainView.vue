@@ -12,7 +12,10 @@
 			v-else-if="$route.query.page === 'stack'"
 			:title="$store.state.stackTitle"
 		/>
-		<Contacts v-else-if="$route.query.page === 'contact'" />
+		<Contacts
+			v-else-if="$route.query.page === 'contact'"
+			:title="$store.state.contactsTitle"
+		/>
 		<NotFound v-else />
 	</v-slide-x-transition>
 </template>
