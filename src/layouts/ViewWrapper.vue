@@ -1,6 +1,8 @@
 <template>
 	<v-container fluid fill-height flex-column :class="computedPadding">
-		<p class="text-h5 text-center mx-auto my-3">{{ title }}</p>
+		<p class="text-h5 text-center mx-auto my-3 text-capitalize">
+			{{ title }}
+		</p>
 		<v-spacer />
 		<v-container :style="computedWidth">
 			<slot />
