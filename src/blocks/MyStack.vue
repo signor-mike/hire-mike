@@ -23,14 +23,17 @@
 				<v-row justify="center" align="center">
 					<v-col
 						cols="4"
-						v-for="(str, i) in $store.state.stack[item].slice(0, 5)"
+						v-for="(str, i) in $store.state.stack[item].slice(
+							0,
+							wordsCount
+						)"
 						:key="str"
 					>
 						<p
 							class="text-truncate text-uppercase text-subtitle-2 font-weight-bold text-center mb-0"
 						>
 							{{
-								i === 4
+								i === wordsCount - 1
 									? `And ${$store.state.stack[item].length} more...`
 									: str
 							}}
@@ -49,13 +52,8 @@
 			Wrapper: () => import("@/layouts/ViewWrapper"),
 			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
-		computed: {
-			computedContent() {
-				return {
-					icon: "",
-					techs: [],
-				};
-			},
-		},
+		data: () => ({
+			wordsCount: 5,
+		}),
 	};
 </script>
