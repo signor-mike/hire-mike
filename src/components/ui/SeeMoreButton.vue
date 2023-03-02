@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="!!text && !!!icon">
+		<div v-if="!!text && !!!icon" class="text-body-2">
 			{{ computedText }}
 			<v-btn
 				v-if="isTooLong"

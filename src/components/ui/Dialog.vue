@@ -10,7 +10,10 @@
 			close
 		</v-icon>
 		<v-spacer />
-		<p class="mb-0 px-2 d-inline" :class="`${textAlign} ${textColor}`">
+		<p
+			class="mb-0 px-2 d-inline text-body-1"
+			:class="`${textAlign} ${textColor}`"
+		>
 			{{ text }}
 		</p>
 		<v-spacer />

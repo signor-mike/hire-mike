@@ -1,47 +1,41 @@
 <template>
 	<Wrapper :title="title">
-		<v-container>
-			<v-row
-				v-for="item in Object.keys($store.state.stack)"
-				:key="item"
-				justify="space-around"
-			>
-				<v-col cols="12" class="d-flex justify-space-between">
-					<v-icon>
-						{{ item }}
-					</v-icon>
-					<SeeMoreButton
-						v-show="$store.state.stack[item].length > 5"
-						:scrollable="true"
-						:text="
-							$store.state.stack[item].join(', ').toUpperCase()
-						"
-						icon="more_vert"
-					/>
-				</v-col>
+		<v-card
+			class="my-2"
+			outlined
+			hover
+			color="secondary"
+			v-for="item in Object.keys($store.state.stack)"
+			:key="item"
+		>
+			<v-card-title class="d-flex justify-space-between align-center">
+				<v-icon>
+					{{ item }}
+				</v-icon>
+				<SeeMoreButton
+					v-show="$store.state.stack[item].length > 5"
+					:scrollable="true"
+					:text="$store.state.stack[item].join(', ').toUpperCase()"
+					icon="more_vert"
+				/>
+			</v-card-title>
 
-				<v-col
-					cols="4"
-					md="2"
-					v-for="str in $store.state.stack[item].slice(0, 5)"
-					:key="str"
-					class="d-flex"
-				>
-					<span class="text-uppercase text-caption mx-auto">
-						{{ str }}
-					</span>
-				</v-col>
-				<v-col
-					cols="12"
-					v-if="
-						Object.keys($store.state.stack).indexOf(item) !==
-						Object.keys($store.state.stack).length - 1
-					"
-				>
-					<v-divider class="my-1" />
-				</v-col>
-			</v-row>
-		</v-container>
+			<v-card-text class="d-flex">
+				<v-row justify="center" align="center">
+					<v-col
+						cols="4"
+						v-for="str in $store.state.stack[item].slice(0, 5)"
+						:key="str"
+					>
+						<p
+							class="text-uppercase text-subtitle-2 font-weight-bold text-center mb-0"
+						>
+							{{ str }}
+						</p>
+					</v-col>
+				</v-row>
+			</v-card-text>
+		</v-card>
 	</Wrapper>
 </template>
 
