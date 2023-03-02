@@ -1,10 +1,9 @@
 <template>
 	<Wrapper :title="title">
 		<v-card
-			class="my-2"
+			class="my-6"
 			outlined
-			hover
-			color="secondary"
+			elevation="24"
 			v-for="item in Object.keys($store.state.stack)"
 			:key="item"
 		>
@@ -19,18 +18,22 @@
 					icon="more_vert"
 				/>
 			</v-card-title>
-
+			<v-divider />
 			<v-card-text class="d-flex">
 				<v-row justify="center" align="center">
 					<v-col
 						cols="4"
-						v-for="str in $store.state.stack[item].slice(0, 5)"
+						v-for="(str, i) in $store.state.stack[item].slice(0, 5)"
 						:key="str"
 					>
 						<p
-							class="text-uppercase text-subtitle-2 font-weight-bold text-center mb-0"
+							class="text-truncate text-uppercase text-subtitle-2 font-weight-bold text-center mb-0"
 						>
-							{{ str }}
+							{{
+								i === 4
+									? `And ${$store.state.stack[item].length} more...`
+									: str
+							}}
 						</p>
 					</v-col>
 				</v-row>
