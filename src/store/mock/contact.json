@@ -1,4 +1,23 @@
 {
 	"title": "drop me a message",
-	"data": {}
+	"data": {
+		"data": [
+			{
+				"title": "email",
+				"href": "mailto:dev_mike.k@yahoo.com",
+				"icon": "mail_outline"
+			},
+			{
+				"title": "linkedin",
+				"href": "https://linkedin.com/in/dev-mike-k",
+				"icon": "language"
+			}
+		],
+		"footer": {
+			"title": "GitHub",
+			"href": "https://github.com/signor-mike/hire-mike",
+			"icon": "data_object",
+			"body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsa dicta vel saepe obcaecati aliquid qui non veritatis nesciunt! Labore?"
+		}
+	}
 }
