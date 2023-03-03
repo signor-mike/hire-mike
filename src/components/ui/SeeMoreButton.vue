@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<div v-if="!!text && !!!icon" class="text-body-2">
-			{{ computedText }}
+		<div v-if="!!text && !!!icon">
+			<p class="text-body-2 mb-0" v-html="computedText" />
 			<v-btn
 				v-if="isTooLong"
 				@click="handleClick('open')"

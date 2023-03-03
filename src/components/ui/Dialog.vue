@@ -13,9 +13,8 @@
 		<p
 			class="mb-0 px-2 d-inline text-body-1"
 			:class="`${textAlign} ${textColor}`"
-		>
-			{{ text }}
-		</p>
+			v-html="text"
+		/>
 		<v-spacer />
 		<v-btn @click="$emit('onClose')" class="primary--text mt-3" outlined>
 			{{ buttonText }}

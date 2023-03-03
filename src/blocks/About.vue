@@ -1,7 +1,7 @@
 <template>
 	<Wrapper :title="title">
 		<!-- <v-img src="https://picsum.photos/300/300?random=1"></v-img> -->
-		<SeeMoreButton :scrollable="true" :text="$store.state.about" />
+		<SeeMoreButton :text="$store.state.about" />
 	</Wrapper>
 </template>
 

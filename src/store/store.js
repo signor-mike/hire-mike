@@ -7,6 +7,9 @@ import about from "./mock/about.json";
 import stack from "./mock/stack.json";
 import contact from "./mock/contact.json";
 
+import parser from "@/utils/stringParser.js";
+const { parseP } = parser();
+
 // const vuexLocal = new VuexPersistence({
 // 	storage: window.localStorage,
 // });
@@ -16,7 +19,7 @@ const store = new Vuex.Store({
 	state: {
 		projects: projects.data,
 		projectsTitle: projects.title,
-		about: about.data,
+		about: parseP(about.data),
 		aboutTitle: about.title,
 		stack: stack.data,
 		stackTitle: stack.title,
