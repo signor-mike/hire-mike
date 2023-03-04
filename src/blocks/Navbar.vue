@@ -1,60 +1,23 @@
 <template>
-	<v-app-bar app fixed flat color="secondary">
-		<a href="/">
-			<span
-				class="primary--text text-uppercase mr-5"
-				:class="{
-					'text-h6': $vuetify.breakpoint.smAndDown,
-					'text-h3': $vuetify.breakpoint.md,
-					'text-h2': $vuetify.breakpoint.lgAndUp,
-				}"
-			>
-				mike
-			</span>
-		</a>
-		<v-spacer />
-		<NavLinks :links="links" />
-		<ThemeToggler />
-	</v-app-bar>
+	<v-bottom-navigation app flat color="secondary">
+		<v-row justify="space-around" align="center">
+			<v-col cols="3" v-for="link in links" :key="link">
+				<SlicedButton :link="link" />
+			</v-col>
+		</v-row>
+	</v-bottom-navigation>
 </template>
 
 <script>
-	import NavLinks from "../components/NavLinks.vue";
-	import ThemeToggler from "../components/ThemeToggler.vue";
 	export default {
-		components: { NavLinks, ThemeToggler },
+		components: {
+			SlicedButton: () => import("@/components/ui/SlicedButton"),
+		},
 
 		data() {
 			return {
-				links: [
-					{
-						icon: "home",
-						text: "about",
-						route: "about",
-					},
-					{
-						icon: "contact_page",
-						text: "my work",
-						route: "experience",
-					},
-					{
-						icon: "quiz",
-						text: "my stack",
-						route: "stack",
-					},
-					{
-						icon: "flutter_dash",
-						text: "Contact",
-						route: "contact",
-					},
-				],
+				links: ["about", "projects", "stack", "contact"],
 			};
 		},
 	};
 </script>
-
-<style>
-	a {
-		text-decoration: none;
-	}
-</style>

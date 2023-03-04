@@ -1,0 +1,48 @@
+<template>
+	<v-container
+		d-flex
+		flex-column
+		secondary
+		:fluid="!$vuetify.breakpoint.smAndDown"
+		:fill-height="!$vuetify.breakpoint.smAndDown"
+	>
+		<v-icon color="primary" @click="$emit('onClose')" class="ml-auto pa-5">
+			close
+		</v-icon>
+		<v-spacer />
+		<p
+			class="mb-0 px-2 d-inline text-body-1"
+			:class="`${textAlign} ${textColor}`"
+			v-html="text"
+		/>
+		<v-spacer />
+		<v-btn @click="$emit('onClose')" class="primary--text mt-3" outlined>
+			{{ buttonText }}
+			<v-icon>{{ buttonIcon }}</v-icon>
+		</v-btn>
+	</v-container>
+</template>
+
+<script>
+	export default {
+		props: {
+			text: String,
+			textAlign: {
+				type: String,
+				default: "text-center",
+			},
+			textColor: {
+				type: String,
+				default: "primary--text",
+			},
+			buttonText: {
+				type: String,
+				default: "got it",
+			},
+			buttonIcon: {
+				type: String,
+				default: "done",
+			},
+		},
+	};
+</script>

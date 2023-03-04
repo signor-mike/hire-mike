@@ -1,11 +1,14 @@
 <template>
-	<v-icon
+	<v-btn
+		color="primary"
+		icon
+		aria-label="toggle-theme"
 		@click="$vuetify.theme.dark = !$vuetify.theme.dark"
-		:small="$vuetify.breakpoint.smAndDown"
-		:large="$vuetify.breakpoint.lgAndUp"
 	>
-		{{ $vuetify.theme.dark ? "light_mode" : "dark_mode" }}
-	</v-icon>
+		<v-icon large>
+			{{ $vuetify.theme.dark ? "light_mode" : "dark_mode" }}
+		</v-icon>
+	</v-btn>
 </template>
 
 <script>
