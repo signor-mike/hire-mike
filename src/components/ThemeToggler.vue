@@ -2,6 +2,7 @@
 	<v-btn
 		color="primary"
 		icon
+		aria-label="toggle-theme"
 		@click="$vuetify.theme.dark = !$vuetify.theme.dark"
 	>
 		<v-icon large>

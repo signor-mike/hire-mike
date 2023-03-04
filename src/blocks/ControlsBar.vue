@@ -6,13 +6,19 @@
 			class="mx-auto text-center"
 		>
 			<v-col cols="3">
-				<v-btn icon @click="$router.push('/')" color="primary">
+				<v-btn
+					aria-label="go-to-homepage"
+					icon
+					@click="$router.push('/')"
+					color="primary"
+				>
 					<v-icon large> home </v-icon>
 				</v-btn>
 			</v-col>
 
 			<v-col cols="3">
 				<SeeMoreButton
+					:aria-label="'privacy'"
 					:scrollable="true"
 					:text="$store.state.gdpr"
 					icon="privacy_tip"
@@ -21,6 +27,7 @@
 
 			<v-col cols="3">
 				<SeeMoreButton
+					:aria-label="'project-description'"
 					:scrollable="true"
 					:text="projectDescription"
 					icon="info"
