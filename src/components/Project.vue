@@ -88,11 +88,6 @@
 		data: () => ({
 			panel: null,
 		}),
-		watch: {
-			model(newVal, oldVal) {
-				console.log(`new: ${newVal}, old: ${oldVal}`);
-			},
-		},
 		computed: {
 			computedTextAlign() {
 				switch (this.model) {

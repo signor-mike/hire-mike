@@ -10,7 +10,12 @@
 			>
 				<v-icon x-large color="primary">chevron_left</v-icon>
 			</v-btn>
-			<v-window continuous v-model="model" hide-delimiters>
+			<v-window
+				continuous
+				v-model="model"
+				hide-delimiters
+				@change="(payload) => changeSlide(payload + 1)"
+			>
 				<v-window-item
 					v-for="(project, i) in $store.state.projects"
 					:key="project.id + i"
@@ -31,40 +36,43 @@
 			>
 				<v-icon x-large color="primary">chevron_right</v-icon>
 			</v-btn>
-
-			<!-- TODO: mobile: double arrows @click ++/-- && window@next/prev => handleModel 
-								desktop: radio_button_(un)checked @click=changeSlide to corresponding one
-			-->
-			<v-toolbar
-				bottom
-				absolute
-				flat
-				v-if="$vuetify.breakpoint.smAndDown"
-			>
-				<v-btn
-					icon
-					@click="changeSlide('--')"
-					color="secondary"
-					class="ml-auto"
-				>
-					<v-icon x-large color="primary">chevron_left</v-icon>
-				</v-btn>
-
-				<v-spacer />
-
-				<v-spacer />
-
-				<v-btn
-					icon
-					@click="changeSlide('++')"
-					color="secondary"
-					class="mr-auto"
-				>
-					<v-icon x-large color="primary">chevron_right</v-icon>
-				</v-btn>
-			</v-toolbar>
-			<!-- <v-progress-linear color="primary" :value="tracker" striped /> -->
 		</div>
+
+		<!-- TODO: mobile: double arrows @click ++/-- && window@next/prev => handleModel 
+				
+			-->
+		<v-toolbar
+			absolute
+			bottom
+			flat
+			dense
+			floating
+			style="left: 50%; transform: translate(-50%, 0)"
+			v-if="$vuetify.breakpoint.mdAndUp"
+		>
+			<template>
+				<v-btn
+					class="mx-auto"
+					v-for="n in $store.state.projects.length"
+					:key="`btn-${n}`"
+					icon
+					@click="changeSlide(n)"
+					:color="
+						model === n - 1
+							? 'primary darken-2'
+							: 'secondary lighten-3'
+					"
+				>
+					<v-icon>
+						{{
+							model === n - 1
+								? "radio_button_checked"
+								: "radio_button_unchecked"
+						}}
+					</v-icon>
+				</v-btn>
+			</template>
+		</v-toolbar>
 	</Wrapper>
 </template>
 
@@ -119,6 +127,8 @@
 						break;
 
 					default:
+						this.model = way - 1;
+						this.tracker = this.trackingStep * way;
 						break;
 				}
 				return;
