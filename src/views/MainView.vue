@@ -30,11 +30,16 @@
 			NotFound: () => import("@/views/NotFound"),
 		},
 		mounted: function () {
+			this.updateTitle();
 			this.$store.commit("SET_NAV_VISIBILITY", true);
-			// document.title = "foobar";
 		},
 		updated() {
-			document.title = `Mike | ${this.$route.query.page.toUpperCase()}`;
+			this.updateTitle();
+		},
+		methods: {
+			updateTitle() {
+				document.title = `Mike | ${this.$route.query.page.toUpperCase()}`;
+			},
 		},
 	};
 </script>

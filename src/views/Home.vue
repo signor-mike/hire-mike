@@ -43,6 +43,9 @@
 			isReady: false,
 			isReady2: false,
 		}),
+		beforeMount() {
+			document.title = "Hire Mike";
+		},
 		mounted: function () {
 			this.$store.commit("SET_NAV_VISIBILITY", false);
 			this.isReady = true;
