@@ -18,7 +18,7 @@
 
 			<v-col cols="3">
 				<SeeMoreButton
-					:aria-label="'privacy'"
+					:ariaLabel="'privacy'"
 					:scrollable="true"
 					:text="$store.state.gdpr"
 					icon="privacy_tip"
@@ -27,7 +27,7 @@
 
 			<v-col cols="3">
 				<SeeMoreButton
-					:aria-label="'project-description'"
+					:ariaLabel="'project-description'"
 					:scrollable="true"
 					:text="projectDescription"
 					icon="info"

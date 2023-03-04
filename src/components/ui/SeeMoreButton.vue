@@ -4,7 +4,7 @@
 			<!-- TODO: ditch v-html in favor of formatted text -->
 			<p class="text-body-2 mb-0" v-html="computedText" />
 			<v-btn
-				:aria-label="aria - label"
+				:aria-label="ariaLabel"
 				v-if="isTooLong"
 				@click="handleClick('open')"
 				color="primary"
@@ -17,7 +17,12 @@
 		</div>
 
 		<div v-else>
-			<v-btn color="primary" icon @click="handleClick('open')">
+			<v-btn
+				color="primary"
+				:aria-label="ariaLabel"
+				icon
+				@click="handleClick('open')"
+			>
 				<v-icon large>
 					{{ icon }}
 				</v-icon>
@@ -51,7 +56,7 @@
 			fullscreen: { type: Boolean, default: true },
 			scrollable: { type: Boolean, default: false },
 			stringLength: { type: Number, default: 240 },
-			"aria-label": { type: String, default: "read-more" },
+			ariaLabel: { type: String, default: "read-more" },
 		},
 		components: {
 			Dialogue: () => import("@/components/ui/Dialog"),
