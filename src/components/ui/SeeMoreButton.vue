@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<div v-if="!!text && !!!icon">
+			<!-- TODO: ditch v-html in favor of formatted text -->
 			<p class="text-body-2 mb-0" v-html="computedText" />
 			<v-btn
 				v-if="isTooLong"
@@ -48,19 +49,15 @@
 			icon: { type: String, default: null },
 			fullscreen: { type: Boolean, default: true },
 			scrollable: { type: Boolean, default: false },
+			stringLength: { type: Number, default: 240 },
 		},
 		components: {
 			Dialogue: () => import("@/components/ui/Dialog"),
 		},
 		data: () => ({
 			dialog: false,
-			stringLength: 240,
 		}),
 		computed: {
-			// stringLength() {
-			// 	if (this.$vuetify.breakpoint.smAndDown) return 240;
-			// 	return 700;
-			// },
 			computedText() {
 				if (this.text.length < this.stringLength) return this.text;
 				// strips last character if it's a space

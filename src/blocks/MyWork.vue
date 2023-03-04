@@ -37,10 +37,6 @@
 				<v-icon x-large color="primary">chevron_right</v-icon>
 			</v-btn>
 		</div>
-
-		<!-- TODO: mobile: double arrows @click ++/-- && window@next/prev => handleModel 
-				
-			-->
 		<v-toolbar
 			absolute
 			bottom
@@ -60,7 +56,7 @@
 					:color="
 						model === n - 1
 							? 'primary darken-2'
-							: 'secondary lighten-3'
+							: 'secondary darken-2'
 					"
 				>
 					<v-icon>

@@ -1,7 +1,7 @@
 <template>
 	<Wrapper :title="title">
-		<!-- <v-img src="https://picsum.photos/300/300?random=1"></v-img> -->
-		<SeeMoreButton :text="$store.state.about" />
+		<v-img src="https://picsum.photos/200/200?random=1"></v-img>
+		<SeeMoreButton :text="$store.state.about" :stringLength="360" />
 	</Wrapper>
 </template>
 

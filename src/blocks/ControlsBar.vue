@@ -22,7 +22,7 @@
 			<v-col cols="3">
 				<SeeMoreButton
 					:scrollable="true"
-					:text="$store.state.info"
+					:text="projectDescription"
 					icon="info"
 				/>
 			</v-col>
@@ -40,7 +40,13 @@
 			ThemeToggler: () => import("@/components/ThemeToggler"),
 			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
-		// TODO: info button should show description of THIS project
+		computed: {
+			projectDescription() {
+				return this.$store.state.projects.find(
+					(obj) => obj.url === "https://hire-mike.web.app"
+				)["description"];
+			},
+		},
 	};
 </script>
 
