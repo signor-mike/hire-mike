@@ -1,15 +1,15 @@
 import Vue from "vue";
 import Vuex from "vuex";
-// import VuexPersistence from "vuex-persist";
+import VuexPersistence from "vuex-persist";
 
 import projects from "./mock/projects.json";
 import about from "./mock/about.json";
 import stack from "./mock/stack.json";
 import contact from "./mock/contact.json";
 
-// const vuexLocal = new VuexPersistence({
-// 	storage: window.localStorage,
-// });
+const vuexLocal = new VuexPersistence({
+	storage: window.localStorage,
+});
 
 Vue.use(Vuex);
 const store = new Vuex.Store({
@@ -30,7 +30,7 @@ const store = new Vuex.Store({
 			state.isNavVisible = value;
 		},
 	},
-	// plugins: [vuexLocal.plugin],
+	plugins: [vuexLocal.plugin],
 });
 
 export { store };
