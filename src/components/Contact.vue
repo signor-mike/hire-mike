@@ -22,7 +22,7 @@
 					{{ contact.icon }}
 				</v-icon>
 			</v-btn>
-			<v-btn x-small text @click="copyToClipboard">
+			<v-btn x-small text @click="copyToClipboard(computedHref)">
 				{{ computedHref }}
 			</v-btn>
 			<v-spacer />
@@ -61,8 +61,8 @@
 			snackbar: false,
 		}),
 		methods: {
-			copyToClipboard() {
-				navigator.clipboard.writeText(this.computedHref);
+			copyToClipboard(text) {
+				navigator.clipboard.writeText(text);
 				this.snackbar = true;
 			},
 		},

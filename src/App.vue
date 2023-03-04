@@ -21,10 +21,6 @@
 				this.$vuetify.theme.dark = true;
 			else this.$vuetify.theme.dark = false;
 		},
-
-		async mounted() {
-			await this.$store.dispatch("getAll");
-		},
 	};
 </script>
 <style>

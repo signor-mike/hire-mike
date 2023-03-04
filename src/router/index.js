@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import MainView from "../views/MainView.vue";
-import NotFound from "../views/NotFound.vue";
+// import MainView from "../views/MainView.vue";
+// import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -15,52 +15,17 @@ const routes = [
 	{
 		path: "/view",
 		name: "main view",
-		component: MainView,
-	},
-	{
-		path: "/auth",
-		name: "auth",
-		component: () => import("../views/Authorization.vue"),
-	},
-	{
-		path: "/db",
-		name: "db",
-		component: () => import("../views/db.vue"),
-		meta: {
-			authRequired: true,
-		},
+		component: () => import("@/views/MainView"),
 	},
 	{
 		path: "*",
 		name: "Not Found",
-		component: NotFound,
+		component: () => import("@/views/NotFound"),
 	},
 ];
 const router = new VueRouter({
 	mode: "history",
 	routes,
-});
-import { store } from "@/store/store";
-
-router.beforeEach(async (to, from, next) => {
-	if (to.matched.some((record) => record.meta.authRequired)) {
-		const { user } = store.state;
-		const { currentUser } = store.state;
-		const status =
-			user.data && currentUser
-				? user.data.email === currentUser.email
-				: false;
-		if (status) {
-			next();
-		} else {
-			alert("You must be logged in to see this page");
-			next({
-				path: "/auth",
-			});
-		}
-	} else {
-		next();
-	}
 });
 
 export default router;
