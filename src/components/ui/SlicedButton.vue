@@ -2,7 +2,7 @@
 	<router-link
 		custom
 		:to="`?page=${link}`"
-		v-slot="{ navigate, isActive, isExactActive }"
+		v-slot="{ navigate, isActive, isExactActive, href }"
 	>
 		<a
 			class="ma-auto text-center primary--text text-truncate"
@@ -12,6 +12,7 @@
 				isExactActive && 'router-link-exact-active text-h6',
 			]"
 			@click="navigate"
+			:href="href"
 		>
 			{{ link }}
 		</a>
