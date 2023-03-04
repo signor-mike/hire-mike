@@ -1,11 +1,11 @@
 <template>
-	<v-app-bar app fixed flat bottom color="secondary">
+	<v-bottom-navigation app flat color="secondary">
 		<v-row justify="space-around" align="center">
 			<v-col cols="3" v-for="link in links" :key="link">
 				<SlicedButton :link="link" />
 			</v-col>
 		</v-row>
-	</v-app-bar>
+	</v-bottom-navigation>
 </template>
 
 <script>

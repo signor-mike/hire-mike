@@ -54,12 +54,13 @@
 		},
 		data: () => ({
 			dialog: false,
+			stringLength: 240,
 		}),
 		computed: {
-			stringLength() {
-				if (this.$vuetify.breakpoint.smAndDown) return 240;
-				return 700;
-			},
+			// stringLength() {
+			// 	if (this.$vuetify.breakpoint.smAndDown) return 240;
+			// 	return 700;
+			// },
 			computedText() {
 				if (this.text.length < this.stringLength) return this.text;
 				// strips last character if it's a space

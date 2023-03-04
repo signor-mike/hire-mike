@@ -2,78 +2,49 @@
 	"title": "I've either built from ground-zero or actively participated in the following projects:",
 	"data": [
 		{
-			"id": "company.4",
-			"tasks": [
-				"created pages and layouts ",
-				"designed API and data structure",
-				"contributed to UX/UI design workflow",
-				"wrote extensive testing suites"
-			],
-			"url": "https://fastloop.it",
-			"company": "Fastloop Srl",
-			"year": 2022,
-			"role": "frontend developer",
-			"position": "JAMstack developer",
-			"description": "  Curabitur pulvinar arcu id risus fringilla, eget dignissim nunc ultricies. Nullam sit amet porta tellus. Vivamus imperdiet sapien et nisi convallis egestas. Aenean ut dui tortor. Etiam eget molestie diam, sed tincidunt augue. Vivamus id dapibus quam. In pharetra, nibh a vestibulum pellentesque, ex tortor vehicula leo, sed tempus ligula est sit amet risus. Sed lobortis diam sed arcu dictum feugiat. Maecenas pellentesque turpis non turpis luctus sodales. Pellentesque dignissim felis sapien, sed faucibus justo mattis non. Etiam vehicula magna maximus quam sagittis facilisis. Curabitur pharetra quam id mi mollis, quis vehicula enim fermentum.  Morbi nec mollis velit. Fusce rutrum sapien velit, a tempus velit interdum eu. Suspendisse volutpat metus non ipsum egestas, vel scelerisque mi ornare. Curabitur iaculis lacinia nunc posuere mattis. Integer eu metus eget magna condimentum porttitor. Aliquam malesuada porta aliquam. Donec egestas tortor id commodo dictum.  Cras semper egestas libero quis luctus. Pellentesque faucibus sed dui at mattis. Donec in velit pretium, tempor nulla id, convallis quam. Sed imperdiet sit amet justo id vestibulum. Morbi ut lectus ante. Donec in urna magna. Nam velit felis, tincidunt eget nisi eget, commodo iaculis enim. Ut sagittis risus orci, at finibus arcu maximus a. Quisque porta rhoncus ante, id ultrices sapien interdum non. Suspendisse et lectus rutrum, aliquet nulla at, blandit nisi. Vestibulum efficitur, nisi nec ultricies mollis, sem ante varius neque, condimentum rhoncus justo nisl ac tellus. Nam vitae felis imperdiet, volutpat turpis ac, dictum orci. Praesent urna mi, feugiat vel rutrum a, fringilla ac felis. Vestibulum tincidunt tincidunt lectus ac cursus. Ut sed justo dapibus, ultricies mi non, cursus justo.  Pellentesque vel gravida arcu. Quisque non fermentum augue, vitae pulvinar est. Suspendisse orci mauris, rutrum at neque at, ultricies fermentum enim. Fusce nec tincidunt magna. Suspendisse eu quam id turpis molestie condimentum nec in mi. Nam hendrerit, purus ut efficitur molestie, sapien nulla fermentum justo, vel commodo lacus lorem et quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eleifend venenatis diam, et semper nibh commodo ut. Mauris sit amet quam fringilla, faucibus urna quis, euismod felis. Suspendisse luctus efficitur libero et bibendum. Integer non tellus non nisi ornare maximus in a felis. Vestibulum ante sapien, dictum id felis et, consequat eleifend enim.  Praesent malesuada pharetra metus eu consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu justo a turpis feugiat consectetur. Mauris tempor commodo orci, at congue eros tincidunt ac. Nunc eu egestas sapien, et finibus diam. Sed vulputate mi vel consectetur fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sit amet rhoncus lectus, eget pellentesque nisi. Nullam id tortor id felis semper lacinia. Curabitur varius laoreet magna. In porta, leo non auctor ornare, tortor risus faucibus magna, id luctus ipsum libero efficitur mi. Integer ornare lorem eu dolor vestibulum, eu scelerisque enim sollicitudin. ",
-			"techs": [
-				"Next.js",
-				"TypeScript",
-				"Tailwind",
-				"Cypress",
-				"storybook"
-			],
-			"project": "https://fastloop.it"
-		},
-		{
-			"id": "fifthbeat",
-			"role": "frontend developer",
-			"year": 2022,
-			"project": "https://monferrato.bike",
-			"position": "Frontend developer",
-			"techs": ["React.js", "Tailwind", "Cypress", "TypeScript"],
-			"company": "Fifthbeat Srl",
 			"url": "https://monferrato.bike",
-			"description": "  Curabitur pulvinar arcu id risus fringilla, eget dignissim nunc ultricies. Nullam sit amet porta tellus. Vivamus imperdiet sapien et nisi convallis egestas. Aenean ut dui tortor. Etiam eget molestie diam, sed tincidunt augue. Vivamus id dapibus quam. In pharetra, nibh a vestibulum pellentesque, ex tortor vehicula leo, sed tempus ligula est sit amet risus. Sed lobortis diam sed arcu dictum feugiat. Maecenas pellentesque turpis non turpis luctus sodales. Pellentesque dignissim felis sapien, sed faucibus justo mattis non. Etiam vehicula magna maximus quam sagittis facilisis. Curabitur pharetra quam id mi mollis, quis vehicula enim fermentum.  Morbi nec mollis velit. Fusce rutrum sapien velit, a tempus velit interdum eu. Suspendisse volutpat metus non ipsum egestas, vel scelerisque mi ornare. Curabitur iaculis lacinia nunc posuere mattis. Integer eu metus eget magna condimentum porttitor. Aliquam malesuada porta aliquam. Donec egestas tortor id commodo dictum.  Cras semper egestas libero quis luctus. Pellentesque faucibus sed dui at mattis. Donec in velit pretium, tempor nulla id, convallis quam. Sed imperdiet sit amet justo id vestibulum. Morbi ut lectus ante. Donec in urna magna. Nam velit felis, tincidunt eget nisi eget, commodo iaculis enim. Ut sagittis risus orci, at finibus arcu maximus a. Quisque porta rhoncus ante, id ultrices sapien interdum non. Suspendisse et lectus rutrum, aliquet nulla at, blandit nisi. Vestibulum efficitur, nisi nec ultricies mollis, sem ante varius neque, condimentum rhoncus justo nisl ac tellus. Nam vitae felis imperdiet, volutpat turpis ac, dictum orci. Praesent urna mi, feugiat vel rutrum a, fringilla ac felis. Vestibulum tincidunt tincidunt lectus ac cursus. Ut sed justo dapibus, ultricies mi non, cursus justo.  Pellentesque vel gravida arcu. Quisque non fermentum augue, vitae pulvinar est. Suspendisse orci mauris, rutrum at neque at, ultricies fermentum enim. Fusce nec tincidunt magna. Suspendisse eu quam id turpis molestie condimentum nec in mi. Nam hendrerit, purus ut efficitur molestie, sapien nulla fermentum justo, vel commodo lacus lorem et quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eleifend venenatis diam, et semper nibh commodo ut. Mauris sit amet quam fringilla, faucibus urna quis, euismod felis. Suspendisse luctus efficitur libero et bibendum. Integer non tellus non nisi ornare maximus in a felis. Vestibulum ante sapien, dictum id felis et, consequat eleifend enim.  Praesent malesuada pharetra metus eu consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu justo a turpis feugiat consectetur. Mauris tempor commodo orci, at congue eros tincidunt ac. Nunc eu egestas sapien, et finibus diam. Sed vulputate mi vel consectetur fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sit amet rhoncus lectus, eget pellentesque nisi. Nullam id tortor id felis semper lacinia. Curabitur varius laoreet magna. In porta, leo non auctor ornare, tortor risus faucibus magna, id luctus ipsum libero efficitur mi. Integer ornare lorem eu dolor vestibulum, eu scelerisque enim sollicitudin. ",
-			"tasks": [
-				"developed UI components and layouts",
-				"fixed tons of errors and warnings in codebase",
-				"closed majority of opened bugs",
-				"created email templates with 94% market share"
+			"id": "fastloop-mfb",
+			"year": 2022,
+			"role": "FE",
+			"description": "I was brought onto the team as the third frontend developer for the Monferrato.bike e-commerce project. We were tasked with modernizing and optimizing the webstore for e-bikes, using technologies such as React, remix, tailwind, storybook, cypress, vite, figma, and clickup.<br/><br/>As part of my role, I focused on creating layouts and UI elements, writing unit and e2e tests, and fixing bugs. I worked closely with the QA and Design teams to make sure the website was up to scratch and functioning properly. When we encountered bugs that were difficult to reproduce, I worked with the QA team to get additional information to help us identify and fix the root cause of the problem.<br/><br/>In the latter stages of the project, I mainly focused on debugging the app. When I came across bugs I couldn't fix, I'd request additional information or leave a comment explaining what needed to be done, like asking for a string when the backend was returning an object.<br/><br/>This project was a great opportunity to work with an amazing team of developers, QA, and designers. It also gave me valuable experience in React, remix, tailwind, storybook, cypress, vite, figma, and clickup. The website turned out to be a success, and I'm proud to have contributed to its development.",
+			"techs": [
+				"React.js",
+				"Tailwind CSS",
+				"Cypress.js",
+				"TypeScript",
+				"Remix.js",
+				"StoryBook",
+				"Vite",
+				"Figma",
+				"ClickUp"
 			]
 		},
 		{
-			"id": "unagi.media",
-			"position": "fullstack web engineer",
+			"url": "https://linkedin.com/company/unagi-media",
+			"id": "unagi-media",
 			"year": 2021,
-			"project": "https://unagi.media",
-			"url": "https://unagi.media",
-			"company": "Unagi Media Srl",
-			"role": "fullstack developer",
-			"description": "Curabitur pulvinar arcu id risus fringilla, eget dignissim nunc ultricies. Nullam sit amet porta tellus. Vivamus imperdiet sapien et nisi convallis egestas. Aenean ut dui tortor. Etiam eget molestie diam, sed tincidunt augue. Vivamus id dapibus quam. In pharetra, nibh a vestibulum pellentesque, ex tortor vehicula leo, sed tempus ligula est sit amet risus. Sed lobortis diam sed arcu dictum feugiat. Maecenas pellentesque turpis non turpis luctus sodales. Pellentesque dignissim felis sapien, sed faucibus justo mattis non. Etiam vehicula magna maximus quam sagittis facilisis. Curabitur pharetra quam id mi mollis, quis vehicula enim fermentum.  Morbi nec mollis velit.",
-			"tasks": [
-				"implemented Stripe API",
-				"reduced amount of active bugs",
-				"aligned UI with design prototype",
-				"pair programming sessions"
-			],
-			"techs": ["MongoDB", "Nuxt.js", "Vue.js", "Firebase"]
+			"role": "FS",
+			"description": "I worked on the Unagi.media e-learning project as the third frontend developer, along with another developer who joined as the fourth member. The project was built using Vue.js (nuxt.js), PUG, and stylus, and I had the opportunity to work with Node.js (Feathers.js) and Stripe API as well. I reported directly to the CEO and CTO, who were two different individuals.<br /><br />At the time, I was relatively new to my career and faced numerous difficulties. However, thanks to amazing teamwork, we were able to resolve these issues quickly. Unfortunately, the startup did not succeed in the market, and everyone was laid off. Although I did not have many opportunities to influence the product, there were a few things that made me proud of myself.<br /><br />First and foremost, I gained valuable mentoring experience by helping the other developer to implement required features through pair programming sessions. Additionally, I once closed 4 (four) Jira issues by deleting a single record from the database that was causing issues after a buggy account deactivation.<br /><br />Overall, despite the project's unfortunate end, I learned a lot from my experience with Unagi.media. The project taught me the importance of teamwork and communication in software development, as well as the importance of persistence and adaptability in the face of challenges.",
+			"techs": [
+				"Vue.js",
+				"Nuxt.js",
+				"Stylus",
+				"Jest",
+				"Firebase",
+				"MongoDB",
+				"PUG",
+				"Figma",
+				"Jira"
+			]
 		},
 		{
-			"id": "company.2",
-			"position": "dev",
-			"role": "fullstack web developer",
-			"year": "2020",
-			"tasks": [
-				"showcase of my professional capabilities",
-				"up to date most of the time",
-				"some projects listed here may not be available",
-				"latest PR is +15,125 −25,869"
-			],
 			"url": "https://hire-mike.web.app",
-			"project": "https://hire-mike.web.app",
-			"company": "Myself",
-			"techs": ["Vue.js", "Vuetify.js", "Firebase", "Vuex"],
-			"description": "  Curabitur pulvinar arcu id risus fringilla, eget dignissim nunc ultricies. Nullam sit amet porta tellus. Vivamus imperdiet sapien et nisi convallis egestas. Aenean ut dui tortor. Etiam eget molestie diam, sed tincidunt augue. Vivamus id dapibus quam. In pharetra, nibh a vestibulum pellentesque, ex tortor vehicula leo, sed tempus ligula est sit amet risus. Sed lobortis diam sed arcu dictum feugiat. Maecenas pellentesque turpis non turpis luctus sodales. Pellentesque dignissim felis sapien, sed faucibus justo mattis non. Etiam vehicula magna maximus quam sagittis facilisis. Curabitur pharetra quam id mi mollis, quis vehicula enim fermentum.  Morbi nec mollis velit. Fusce rutrum sapien velit, a tempus velit interdum eu. Suspendisse volutpat metus non ipsum egestas, vel scelerisque mi ornare. Curabitur iaculis lacinia nunc posuere mattis. Integer eu metus eget magna condimentum porttitor. Aliquam malesuada porta aliquam. Donec egestas tortor id commodo dictum.  Cras semper egestas libero quis luctus. Pellentesque faucibus sed dui at mattis. Donec in velit pretium, tempor nulla id, convallis quam. Sed imperdiet sit amet justo id vestibulum. Morbi ut lectus ante. Donec in urna magna. Nam velit felis, tincidunt eget nisi eget, commodo iaculis enim. Ut sagittis risus orci, at finibus arcu maximus a. Quisque porta rhoncus ante, id ultrices sapien interdum non. Suspendisse et lectus rutrum, aliquet nulla at, blandit nisi. Vestibulum efficitur, nisi nec ultricies mollis, sem ante varius neque, condimentum rhoncus justo nisl ac tellus. Nam vitae felis imperdiet, volutpat turpis ac, dictum orci. Praesent urna mi, feugiat vel rutrum a, fringilla ac felis. Vestibulum tincidunt tincidunt lectus ac cursus. Ut sed justo dapibus, ultricies mi non, cursus justo.  Pellentesque vel gravida arcu. Quisque non fermentum augue, vitae pulvinar est. Suspendisse orci mauris, rutrum at neque at, ultricies fermentum enim. Fusce nec tincidunt magna. Suspendisse eu quam id turpis molestie condimentum nec in mi. Nam hendrerit, purus ut efficitur molestie, sapien nulla fermentum justo, vel commodo lacus lorem et quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eleifend venenatis diam, et semper nibh commodo ut. Mauris sit amet quam fringilla, faucibus urna quis, euismod felis. Suspendisse luctus efficitur libero et bibendum. Integer non tellus non nisi ornare maximus in a felis. Vestibulum ante sapien, dictum id felis et, consequat eleifend enim.  Praesent malesuada pharetra metus eu consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu justo a turpis feugiat consectetur. Mauris tempor commodo orci, at congue eros tincidunt ac. Nunc eu egestas sapien, et finibus diam. Sed vulputate mi vel consectetur fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sit amet rhoncus lectus, eget pellentesque nisi. Nullam id tortor id felis semper lacinia. Curabitur varius laoreet magna. In porta, leo non auctor ornare, tortor risus faucibus magna, id luctus ipsum libero efficitur mi. Integer ornare lorem eu dolor vestibulum, eu scelerisque enim sollicitudin. "
+			"id": "company.2",
+			"year": "2020",
+			"role": "fullstack web developer",
+			"position": "dev",
+			"description": "  Curabitur pulvinar arcu id risus fringilla, eget dignissim nunc ultricies. Nullam sit amet porta tellus. Vivamus imperdiet sapien et nisi convallis egestas. Aenean ut dui tortor. Etiam eget molestie diam, sed tincidunt augue. Vivamus id dapibus quam. In pharetra, nibh a vestibulum pellentesque, ex tortor vehicula leo, sed tempus ligula est sit amet risus. Sed lobortis diam sed arcu dictum feugiat. Maecenas pellentesque turpis non turpis luctus sodales. Pellentesque dignissim felis sapien, sed faucibus justo mattis non. Etiam vehicula magna maximus quam sagittis facilisis. Curabitur pharetra quam id mi mollis, quis vehicula enim fermentum.  Morbi nec mollis velit. Fusce rutrum sapien velit, a tempus velit interdum eu. Suspendisse volutpat metus non ipsum egestas, vel scelerisque mi ornare. Curabitur iaculis lacinia nunc posuere mattis. Integer eu metus eget magna condimentum porttitor. Aliquam malesuada porta aliquam. Donec egestas tortor id commodo dictum.  Cras semper egestas libero quis luctus. Pellentesque faucibus sed dui at mattis. Donec in velit pretium, tempor nulla id, convallis quam. Sed imperdiet sit amet justo id vestibulum. Morbi ut lectus ante. Donec in urna magna. Nam velit felis, tincidunt eget nisi eget, commodo iaculis enim. Ut sagittis risus orci, at finibus arcu maximus a. Quisque porta rhoncus ante, id ultrices sapien interdum non. Suspendisse et lectus rutrum, aliquet nulla at, blandit nisi. Vestibulum efficitur, nisi nec ultricies mollis, sem ante varius neque, condimentum rhoncus justo nisl ac tellus. Nam vitae felis imperdiet, volutpat turpis ac, dictum orci. Praesent urna mi, feugiat vel rutrum a, fringilla ac felis. Vestibulum tincidunt tincidunt lectus ac cursus. Ut sed justo dapibus, ultricies mi non, cursus justo.  Pellentesque vel gravida arcu. Quisque non fermentum augue, vitae pulvinar est. Suspendisse orci mauris, rutrum at neque at, ultricies fermentum enim. Fusce nec tincidunt magna. Suspendisse eu quam id turpis molestie condimentum nec in mi. Nam hendrerit, purus ut efficitur molestie, sapien nulla fermentum justo, vel commodo lacus lorem et quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eleifend venenatis diam, et semper nibh commodo ut. Mauris sit amet quam fringilla, faucibus urna quis, euismod felis. Suspendisse luctus efficitur libero et bibendum. Integer non tellus non nisi ornare maximus in a felis. Vestibulum ante sapien, dictum id felis et, consequat eleifend enim.  Praesent malesuada pharetra metus eu consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu justo a turpis feugiat consectetur. Mauris tempor commodo orci, at congue eros tincidunt ac. Nunc eu egestas sapien, et finibus diam. Sed vulputate mi vel consectetur fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sit amet rhoncus lectus, eget pellentesque nisi. Nullam id tortor id felis semper lacinia. Curabitur varius laoreet magna. In porta, leo non auctor ornare, tortor risus faucibus magna, id luctus ipsum libero efficitur mi. Integer ornare lorem eu dolor vestibulum, eu scelerisque enim sollicitudin. ",
+			"techs": ["Vue.js", "Vuetify.js", "Firebase", "Vuex"]
 		}
 	]
 }

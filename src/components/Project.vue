@@ -1,9 +1,10 @@
 <template>
 	<v-card
 		outlined
-		class="mx-auto mt-md-5"
-		:max-width="$vuetify.breakpoint.smAndDown ? '90%' : '50%'"
+		class="mx-auto"
+		:max-width="$vuetify.breakpoint.smAndDown ? '100%' : '60%'"
 	>
+		<v-progress-linear color="primary" :value="tracker" striped />
 		<v-card-title>
 			<a
 				:href="project.url"
@@ -42,19 +43,28 @@
 		</v-card-text>
 		<v-divider />
 		<v-card-actions>
-			<v-expansion-panels class="pa-0" v-model="panel" inset>
+			<v-expansion-panels
+				accordion
+				class="pa-0"
+				v-model="panel"
+				popout
+				focusable
+			>
 				<v-expansion-panel>
-					<v-expansion-panel-header expand-icon="expand_more">
+					<v-expansion-panel-header>
+						<template v-slot:actions>
+							<v-icon color="primary"> expand_more </v-icon>
+						</template>
 						{{ computedActionsText }}
 					</v-expansion-panel-header>
 					<v-expansion-panel-content>
-						<v-row align="center" justify="space-around">
+						<v-row align="center" dense justify="space-around">
 							<v-col
 								cols="auto"
 								v-for="tech in project.techs"
 								:key="tech"
 							>
-								<span>
+								<span class="text-caption">
 									{{ tech }}
 								</span>
 							</v-col>
@@ -72,12 +82,17 @@
 		},
 		props: {
 			project: Object,
-			model: { type: Number, required: false },
+			model: { type: Number, default: 0 },
+			tracker: { type: Number, default: 0 },
 		},
 		data: () => ({
 			panel: null,
 		}),
-
+		watch: {
+			model(newVal, oldVal) {
+				console.log(`new: ${newVal}, old: ${oldVal}`);
+			},
+		},
 		computed: {
 			computedTextAlign() {
 				switch (this.model) {
