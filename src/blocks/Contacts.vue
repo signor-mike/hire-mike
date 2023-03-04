@@ -16,7 +16,6 @@
 </template>
 
 <script>
-	// TODO: ADD GITHUB DESCRIPTION
 	export default {
 		props: {
 			title: {

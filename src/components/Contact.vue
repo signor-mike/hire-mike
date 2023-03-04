@@ -12,7 +12,11 @@
 		</v-card-title>
 		<v-divider />
 		<v-card-text v-if="contact.body" class="text-body-2 text-center">
-			{{ contact.body }}
+			<SeeMoreButton
+				:scrollable="true"
+				:text="contact.body"
+				:stringLength="120"
+			/>
 		</v-card-text>
 		<v-divider v-show="!!contact.body" />
 		<v-card-actions class="d-flex">
@@ -56,6 +60,9 @@
 	export default {
 		props: {
 			contact: Object,
+		},
+		components: {
+			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 		},
 		data: () => ({
 			snackbar: false,

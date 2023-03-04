@@ -17,7 +17,7 @@
 			"title": "GitHub",
 			"href": "https://github.com/signor-mike/hire-mike",
 			"icon": "data_object",
-			"body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsa dicta vel saepe obcaecati aliquid qui non veritatis nesciunt! Labore?"
+			"body": "When building this project, my main goal was to ensure that the code was reusable and followed best practices. I wanted to create a framework that could easily be adapted and used in other projects. I believe that this is essential in web development as it saves time and effort while ensuring that projects are scalable.<br /><br />The app is fully open source, and I encourage others to use and adapt any part of the code for their own projects. I believe that open source is the way forward in web development as it encourages collaboration and innovation.<br /><br />Overall, I'm proud of the work that I've done on this project. It has been an excellent learning experience for me, and I believe that it showcases my skills as a web developer. While the app may not be perfect, I'm confident that it can be used as a starting point for other projects, and I'm excited to see where it goes from here."
 		}
 	}
 }
