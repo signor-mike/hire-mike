@@ -32,7 +32,7 @@
 				<v-icon x-large color="primary">chevron_right</v-icon>
 			</v-btn>
 
-			<!-- TODO: mobile: double arrows @click ++/--;
+			<!-- TODO: mobile: double arrows @click ++/-- && window@next/prev => handleModel 
 								desktop: radio_button_(un)checked @click=changeSlide to corresponding one
 			-->
 			<v-toolbar
