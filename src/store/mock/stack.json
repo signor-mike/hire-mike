@@ -1,5 +1,5 @@
 {
-	"title": "My favorite tools are:",
+	"title": "My tools included but not limited to ",
 	"data": {
 		"code": [
 			"vue.js",
@@ -7,13 +7,11 @@
 			"typescript",
 			"cypress.js",
 			"bash",
-			"tailwind css",
 			"nuxt.js",
 			"next.js",
+			"tailwind css",
 			"vuetify.js",
-			"stripe api",
 			"rest api",
-			"jest",
 			"mongo db",
 			"node.js",
 			"express.js"
@@ -25,13 +23,20 @@
 			"firebase",
 			"vscode",
 			"gcp",
-			"clickup",
 			"Mac",
 			"jira",
 			"Storybook",
 			"material design",
 			"bootstrap"
 		],
-		"lightbulb": ["creativity", "research", "analysis", "precision"]
+		"lightbulb": [
+			"creativity",
+			"research",
+			"analysis",
+			"precision",
+			"Critical thinking",
+			"Innovation",
+			"Adaptability"
+		]
 	}
 }

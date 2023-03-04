@@ -46,7 +46,6 @@
 </template>
 
 <script>
-	// TODO: update stack
 	export default {
 		props: { title: String },
 		components: {
