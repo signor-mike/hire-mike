@@ -1,4 +1,4 @@
-# hire-mike test
+# Portfolio project
 
 ## Project setup
 ```
