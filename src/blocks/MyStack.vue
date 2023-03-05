@@ -8,15 +8,17 @@
 			:key="item"
 		>
 			<v-card-title class="d-flex justify-space-between align-center">
-				<v-icon>
-					{{ item }}
-				</v-icon>
 				<SeeMoreButton
 					v-show="$store.state.stack[item].length > 5"
-					:scrollable="true"
-					:text="$store.state.stack[item].join(', ').toUpperCase()"
-					icon="more_vert"
-				/>
+					:body="$store.state.stack[item].join(', ').toUpperCase()"
+					:bodyLength="0"
+					buttonIcon="more_vert"
+					wrapperClass="d-flex justify-space-between"
+				>
+					<v-icon>
+						{{ item }}
+					</v-icon>
+				</SeeMoreButton>
 			</v-card-title>
 			<v-divider />
 			<v-card-text class="d-flex">

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+	// TODO: remember user choice of theme
 	export default {
 		name: "App",
 

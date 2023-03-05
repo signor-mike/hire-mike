@@ -19,18 +19,20 @@
 			<v-col cols="3">
 				<SeeMoreButton
 					:ariaLabel="'privacy'"
-					:scrollable="true"
-					:text="$store.state.gdpr"
-					icon="privacy_tip"
+					:body="$store.state.gdpr"
+					buttonIcon="privacy_tip"
+					:bodyLength="0"
+					wrapperClass="d-flex justify-center"
 				/>
 			</v-col>
 
 			<v-col cols="3">
 				<SeeMoreButton
 					:ariaLabel="'project-description'"
-					:scrollable="true"
-					:text="projectDescription"
-					icon="info"
+					:body="projectDescription"
+					buttonIcon="info"
+					:bodyLength="0"
+					wrapperClass="d-flex justify-center"
 				/>
 			</v-col>
 

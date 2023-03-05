@@ -4,7 +4,7 @@
 			<v-img src="/mike.webp" height="200px"></v-img>
 
 			<v-card-actions>
-				<SeeMoreButton :text="$store.state.about" :stringLength="360" />
+				<SeeMoreButton :body="$store.state.about" />
 			</v-card-actions>
 		</v-card>
 	</Wrapper>

@@ -39,7 +39,7 @@
 			class="secondary-lighten-5--text d-flex flex-column"
 			:class="computedTextAlign"
 		>
-			<SeeMoreButton :text="project.description" :scrollable="true" />
+			<SeeMoreButton :body="project.description" />
 		</v-card-text>
 		<v-divider />
 		<v-card-actions>

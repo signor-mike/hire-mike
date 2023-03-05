@@ -12,11 +12,7 @@
 		</v-card-title>
 		<v-divider />
 		<v-card-text v-if="contact.body" class="text-body-2 text-center">
-			<SeeMoreButton
-				:scrollable="true"
-				:text="contact.body"
-				:stringLength="120"
-			/>
+			<SeeMoreButton :body="contact.body" :bodyLength="120" />
 		</v-card-text>
 		<v-divider v-show="!!contact.body" />
 		<v-card-actions class="d-flex">
