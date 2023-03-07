@@ -2,13 +2,18 @@
 	<Wrapper :title="title">
 		<div class="d-flex">
 			<v-btn
-				v-if="$vuetify.breakpoint.mdAndUp"
 				icon
 				@click="changeSlide('--')"
 				color="secondary"
 				class="my-auto"
 			>
-				<v-icon x-large color="primary">chevron_left</v-icon>
+				<v-icon
+					:small="$vuetify.breakpoint.xs"
+					:x-large="$vuetify.breakpoint.mdAndUp"
+					color="primary"
+				>
+					{{ $vuetify.breakpoint.mdAndUp ? "chevron" : "swipe" }}_left
+				</v-icon>
 			</v-btn>
 			<v-window
 				continuous
@@ -28,23 +33,30 @@
 				</v-window-item>
 			</v-window>
 			<v-btn
-				v-if="$vuetify.breakpoint.mdAndUp"
 				icon
 				@click="changeSlide('++')"
 				color="secondary"
 				class="my-auto"
 			>
-				<v-icon x-large color="primary">chevron_right</v-icon>
+				<v-icon
+					:small="$vuetify.breakpoint.xs"
+					:x-large="$vuetify.breakpoint.mdAndUp"
+					color="primary"
+				>
+					{{
+						$vuetify.breakpoint.mdAndUp ? "chevron" : "swipe"
+					}}_right
+				</v-icon>
 			</v-btn>
 		</div>
 		<v-toolbar
+			v-if="$vuetify.breakpoint.mdAndUp"
 			absolute
 			bottom
 			flat
 			dense
 			floating
 			style="left: 50%; transform: translate(-50%, 0)"
-			v-if="$vuetify.breakpoint.mdAndUp"
 		>
 			<template>
 				<v-btn
@@ -90,6 +102,7 @@
 		}),
 		mounted() {
 			this.tracker = this.trackingStep;
+			console.log(`xs: ${this.$vuetify.breakpoint.xs}`);
 		},
 
 		computed: {
