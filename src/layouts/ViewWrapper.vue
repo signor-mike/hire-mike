@@ -16,13 +16,21 @@
 		props: { title: String },
 		computed: {
 			compStyles() {
-				const parent = this.$vuetify.breakpoint.smAndDown
-					? "pa-5"
-					: "py-5 px-15";
-				const child = this.$vuetify.breakpoint.mdAndDown
-					? "width:100%"
-					: "width:50%";
-				return { parent, child };
+				if (this.$vuetify.breakpoint.smAndDown)
+					return {
+						parent: "pa-5",
+						child: "width:100%",
+					};
+				else if (this.$vuetify.breakpoint.mdAndDown)
+					return {
+						parent: "py-5 px-10",
+						child: "width:80%",
+					};
+				else
+					return {
+						parent: "py-10 px-16",
+						child: "width:50%",
+					};
 			},
 		},
 	};
