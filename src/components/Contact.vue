@@ -18,7 +18,7 @@
 		<v-card-actions class="d-flex">
 			<v-spacer />
 			<v-btn icon :href="contact.href" target="_blank">
-				<v-icon color="secondary lighten-3">
+				<v-icon color="primary darken-4">
 					{{ contact.icon }}
 				</v-icon>
 			</v-btn>
