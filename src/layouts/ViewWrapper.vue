@@ -1,6 +1,6 @@
 <template>
 	<v-container fluid fill-height flex-column :class="compStyles.parent">
-		<p class="text-h5 text-center mx-auto my-3 text-capitalize">
+		<p class="text-h5 text-center mx-auto px-2 my-3 text-capitalize">
 			{{ title }}
 		</p>
 		<v-spacer />
@@ -18,7 +18,7 @@
 			compStyles() {
 				if (this.$vuetify.breakpoint.smAndDown)
 					return {
-						parent: "pa-5",
+						parent: "pa-0",
 						child: "width:100%",
 					};
 				else if (this.$vuetify.breakpoint.mdAndDown)
