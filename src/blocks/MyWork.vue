@@ -102,7 +102,6 @@
 		}),
 		mounted() {
 			this.tracker = this.trackingStep;
-			console.log(`xs: ${this.$vuetify.breakpoint.xs}`);
 		},
 
 		computed: {
