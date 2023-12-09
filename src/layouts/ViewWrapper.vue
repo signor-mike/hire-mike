@@ -1,37 +1,89 @@
 <template>
-    <v-container fluid fill-height flex-column :class="compStyles.parent">
-        <v-spacer />
-        <p class="text-h5 text-center mx-auto px-2 my-3 text-capitalize">
-            {{ title }}
-        </p>
-        <v-spacer />
-        <v-container :style="compStyles.child">
-            <slot />
-        </v-container>
-        <v-spacer />
+    <v-container fill-height>
+        <v-row>
+            <v-col cols="12">
+                <p
+                    class="text-h5 text-center mx-auto px-2 my-3 text-capitalize"
+                >
+                    {{ title }}
+                </p>
+            </v-col>
+            <v-col cols="12" md="1" offset-md="2" align-self="center">
+                <v-btn
+                    @click="navigator('prev')"
+                    :x-large="$vuetify.breakpoint.mdAndUp"
+                    block
+                    outlined
+                    color="primary"
+                >
+                    <v-icon>keyboard_double_arrow_left</v-icon>
+                </v-btn>
+            </v-col>
+            <v-col cols="12" md="6">
+                <slot />
+            </v-col>
+            <v-col cols="12" md="1" offset-md="-2" align-self="center">
+                <v-btn
+                    @click="navigator('next')"
+                    :x-large="$vuetify.breakpoint.mdAndUp"
+                    block
+                    outlined
+                    color="primary"
+                >
+                    <v-icon>keyboard_double_arrow_right</v-icon>
+                </v-btn>
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 
 <script>
     export default {
-        props: { title: String },
-        computed: {
-            compStyles() {
-                if (this.$vuetify.breakpoint.smAndDown)
-                    return {
-                        parent: "pa-0",
-                        child: "width:100%",
-                    };
-                else if (this.$vuetify.breakpoint.mdAndDown)
-                    return {
-                        parent: "py-5 px-10",
-                        child: "width:80%",
-                    };
-                else
-                    return {
-                        parent: "py-10 px-16",
-                        child: "width:50%",
-                    };
+        props: {
+            title: { type: String, default: "" },
+        },
+        methods: {
+            navigator(param) {
+                if (!param) {
+                    console.error("Missing param.");
+                    return;
+                }
+                if (!this.$route.query.page || !this.$store.state.navLinks) {
+                    console.error(
+                        "Missing $route.query.page or $store.state.navLinks"
+                    );
+                    return;
+                }
+
+                const { page } = this.$route.query;
+                const links = this.$store.state.navLinks;
+                links.forEach((l, i) => {
+                    if (l.query !== page) return;
+                    switch (param) {
+                        case "next":
+                            if (i === links.length - 1)
+                                this.$router.push("?page=" + links[0].query);
+                            else
+                                this.$router.push(
+                                    "?page=" + links[i + 1].query
+                                );
+                            return;
+
+                        case "prev":
+                            if (i === 0)
+                                this.$router.push(
+                                    "?page=" + links[links.length - 1].query
+                                );
+                            else
+                                this.$router.push(
+                                    "?page=" + links[i - 1].query
+                                );
+                            return;
+                        default:
+                            console.error("Unrecognized direction: ", param);
+                            break;
+                    }
+                });
             },
         },
     };
