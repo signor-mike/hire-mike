@@ -1,14 +1,14 @@
 <template>
     <v-container fill-height>
         <v-row>
-            <v-col cols="12">
+            <v-col v-if="!!title" cols="12">
                 <p
                     class="text-h5 text-center mx-auto px-2 my-3 text-capitalize"
                 >
                     {{ title }}
                 </p>
             </v-col>
-            <v-col cols="12" md="1" offset-md="2" align-self="center">
+            <v-col cols="12" md="1" offset-md="1" align-self="center">
                 <v-btn
                     @click="navigator('prev')"
                     :x-large="$vuetify.breakpoint.mdAndUp"
@@ -19,10 +19,10 @@
                     <v-icon>keyboard_double_arrow_left</v-icon>
                 </v-btn>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="8">
                 <slot />
             </v-col>
-            <v-col cols="12" md="1" offset-md="-2" align-self="center">
+            <v-col cols="12" md="1" offset-md="-1" align-self="center">
                 <v-btn
                     @click="navigator('next')"
                     :x-large="$vuetify.breakpoint.mdAndUp"
