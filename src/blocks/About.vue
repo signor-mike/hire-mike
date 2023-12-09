@@ -13,7 +13,7 @@
 <script>
     export default {
         props: {
-            title: { type: String, default: "" },
+            title: { type: String, default: "Hi, I am Mike" },
         },
         components: {
             Wrapper: () => import("@/layouts/ViewWrapper"),
