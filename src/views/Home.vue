@@ -17,14 +17,11 @@
             >
                 <v-card-title class="primary--text"> Mike K. </v-card-title>
                 <v-card-subtitle class="font-italic">/ˈmaɪ.ki/</v-card-subtitle>
-                <v-card-text
-                    >I do not wish to spoil anything, let it all be a suprise
-                    for you. I did take time to put work into all those things,
-                    so please bear with me.
+                <v-card-text>
+                    Hello and Welcome to my App
                     <v-divider class="my-2" />
                     <p class="text-caption text-center">
-                        tap anywhere outside of this card or the button down
-                        below to skip this whole thing.
+                        tap somewhere to skip this whole thing.
                     </p>
                 </v-card-text>
                 <v-card-actions>
@@ -42,7 +39,7 @@
     export default {
         components: {},
         data: () => ({
-            timeout: 7,
+            timeout: 5,
             isRunning: false,
         }),
         methods: {
