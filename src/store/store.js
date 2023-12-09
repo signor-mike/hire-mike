@@ -14,6 +14,8 @@ const store = new Vuex.Store({
         stack: stack.data,
         contacts: contact.data,
         gdpr: "According to the General Data Protection Regulation (GDPR) (EU) 2016/679. Information contained on this website may be privileged or confidential and intended for the exclusive use of the original recipient. If you have visited this website by mistake, please leave the website immediately and delete it from your history. Any information contained on this website are confidential and are intended solely for the use of the individual or entity to whom they are addressed. If you visited this website in error, you must not copy, distribute or disclose of the information it contains.",
+        appInfo:
+            "Delve into the world of my professional endeavors, where you'll discover a tapestry of accomplishments, skills, and expertise woven together to create a compelling narrative of my journey. My app serves as a gateway to my professional universe, inviting you to explore my portfolio, engage with me directly, and embark on a path of collaboration that elevates your aspirations.",
         isNavVisible: false,
         navLinks: [
             { query: "about", id: "About", slug: "bio" },
