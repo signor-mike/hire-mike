@@ -46,7 +46,7 @@
                                 :max-height="
                                     $vuetify.breakpoint.smAndDown
                                         ? '600'
-                                        : '1200'
+                                        : '800'
                                 "
                                 contain
                                 :src="project.image"
