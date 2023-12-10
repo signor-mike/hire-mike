@@ -2,9 +2,6 @@
     <Wrapper :title="$store.state['about-title']">
         <v-card class="mx-auto" max-width="344">
             <v-img src="/mike.webp" height="200px"></v-img>
-            <v-card-title>
-                {{ title }}
-            </v-card-title>
             <v-card-actions>
                 <SeeMoreButton :body="$store.state.about" />
             </v-card-actions>
