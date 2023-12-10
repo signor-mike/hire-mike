@@ -67,27 +67,19 @@
 
                 const { page } = this.$route.query;
                 const links = this.$store.state.navLinks;
+                const go = (to) => this.$router.push(`?page=${to}`);
+
                 links.forEach((l, i) => {
                     if (l.query !== page) return;
                     switch (param) {
                         case "next":
-                            if (i === links.length - 1)
-                                this.$router.push("?page=" + links[0].query);
-                            else
-                                this.$router.push(
-                                    "?page=" + links[i + 1].query
-                                );
+                            if (i === links.length - 1) go(links[0].query);
+                            else go(links[i + 1].query);
                             return;
 
                         case "prev":
-                            if (i === 0)
-                                this.$router.push(
-                                    "?page=" + links[links.length - 1].query
-                                );
-                            else
-                                this.$router.push(
-                                    "?page=" + links[i - 1].query
-                                );
+                            if (i === 0) go(links[links.length - 1].query);
+                            else go(links[i - 1].query);
                             return;
                         default:
                             console.error("Unrecognized direction: ", param);
