@@ -90,7 +90,8 @@
 
 <style scoped>
     .img {
-        filter: blur(2px);
+        filter: blur(3px);
+        transition: 1s;
     }
     .img:hover,
     .img:active {
