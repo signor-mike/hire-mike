@@ -9,7 +9,7 @@
         >
             <v-card-title class="d-flex justify-space-between align-center">
                 <SeeMoreButton
-                    v-show="$store.state.stack[item].length > 5"
+                    v-show="$store.state.stack[item].length > wordsCount"
                     :body="$store.state.stack[item].join(', ').toUpperCase()"
                     :bodyLength="0"
                     buttonIcon="more_vert"
@@ -36,7 +36,11 @@
                         >
                             {{
                                 i === wordsCount - 1
-                                    ? `And ${$store.state.stack[item].length} more...`
+                                    ? `And ${
+                                          $store.state.stack[item].length -
+                                          wordsCount +
+                                          1
+                                      } more...`
                                     : str
                             }}
                         </p>
