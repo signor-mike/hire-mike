@@ -6,7 +6,7 @@ This project supposed to be a showcase of my professional capabilities.
 And it's some sort of my personal playground.
 I'd be honored if anybody decides to "steal" it and modify to match their data. It's really simple:
 modify `/store/*` files (`JSON` mostly);
-modify `/views/*` files (texts to display)
+modify `/views/Home` files (text and image on the very first page)
 And it's done.
 
 ---
