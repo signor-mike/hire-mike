@@ -2,10 +2,10 @@
     <Wrapper :title="title">
         <v-row justify="center" align="center">
             <v-col
-                v-for="(prj, i) in $store.state.projects"
+                v-for="prj in $store.state.projects"
                 :key="prj.image"
-                :cols="i % 2 !== 0 ? '5' : '7'"
-                :md="i % 2 !== 0 ? '3' : '4'"
+                :cols="prj.vertical ? '6' : '4'"
+                :md="prj.vertical ? '8' : '4'"
             >
                 <Project :project="prj" />
             </v-col>
