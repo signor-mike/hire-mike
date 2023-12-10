@@ -1,5 +1,5 @@
 <template>
-    <Wrapper :title="title">
+    <Wrapper :title="$store.state['stack-title']">
         <v-card
             class="my-6"
             outlined
@@ -53,7 +53,6 @@
 
 <script>
     export default {
-        props: { title: { type: String, default: "" } },
         components: {
             Wrapper: () => import("@/layouts/ViewWrapper"),
             SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),

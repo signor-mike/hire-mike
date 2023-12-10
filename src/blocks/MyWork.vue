@@ -1,5 +1,5 @@
 <template>
-    <Wrapper :title="title">
+    <Wrapper :title="$store.state['projects-title']">
         <v-row justify="center" align="center">
             <v-col
                 v-for="prj in $store.state.projects"
@@ -15,22 +15,9 @@
 
 <script>
     export default {
-        props: {
-            title: {
-                type: String,
-                default: "",
-            },
-        },
         components: {
             Wrapper: () => import("@/layouts/ViewWrapper"),
             Project: () => import("@/components/Project"),
         },
-
-        data: () => ({}),
-        mounted() {},
-
-        computed: {},
-
-        methods: {},
     };
 </script>

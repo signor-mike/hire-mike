@@ -1,5 +1,5 @@
 <template>
-    <Wrapper :title="title">
+    <Wrapper :title="$store.state['contact-title']">
         <v-row :dense="$vuetify.breakpoint.smAndDown">
             <v-col
                 cols="12"
@@ -17,12 +17,6 @@
 
 <script>
     export default {
-        props: {
-            title: {
-                type: String,
-                default: "",
-            },
-        },
         components: {
             Wrapper: () => import("@/layouts/ViewWrapper"),
             Contact: () => import("@/components/Contact"),

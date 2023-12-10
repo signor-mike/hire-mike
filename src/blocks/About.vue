@@ -1,5 +1,5 @@
 <template>
-    <Wrapper>
+    <Wrapper :title="$store.state['about-title']">
         <v-card class="mx-auto" max-width="344">
             <v-img src="/mike.webp" height="200px"></v-img>
             <v-card-title>
@@ -14,9 +14,6 @@
 
 <script>
     export default {
-        props: {
-            title: { type: String, default: "Hi, I am Mike" },
-        },
         components: {
             Wrapper: () => import("@/layouts/ViewWrapper"),
             SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
