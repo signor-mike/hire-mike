@@ -1,42 +1,31 @@
 {
-	"title": "Techs and tools I use in my craft",
-	"data": {
-		"code": [
-			"vue.js",
-			"react.js",
-			"typescript",
-			"cypress.js",
-			"bash",
-			"nuxt.js",
-			"next.js",
-			"tailwind css",
-			"vuetify.js",
-			"rest api",
-			"mongo db",
-			"node.js",
-			"express.js"
-		],
-		"code_off": [
-			"figma",
-			"git",
-			"Linux",
-			"firebase",
-			"vscode",
-			"gcp",
-			"Mac",
-			"jira",
-			"Storybook",
-			"material design",
-			"bootstrap"
-		],
-		"lightbulb": [
-			"creativity",
-			"research",
-			"analysis",
-			"precision",
-			"Critical thinking",
-			"Innovation",
-			"Adaptability"
-		]
-	}
+    "title": "Techs and tools I use in my craft",
+    "data": {
+        "code": [
+            "js/ts",
+            "vue.js",
+            "react.js",
+            "react native",
+            "cypress.js",
+            "nuxt.js",
+            "next.js",
+            "tailwind css",
+            "vuetify.js",
+            "rest api",
+            "node.js",
+            "express.js"
+        ],
+        "code_off": [
+            "git",
+            "Linux",
+            "firebase",
+            "figma",
+            "vscode",
+            "gcp",
+            "jira",
+            "Storybook",
+            "material design",
+            "bootstrap"
+        ]
+    }
 }
