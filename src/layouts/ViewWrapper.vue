@@ -10,9 +10,10 @@
             </v-col>
             <v-col cols="12" md="1" offset-md="1" align-self="center">
                 <v-btn
+                    :block="$vuetify.breakpoint.smAndDown"
+                    :class="{ fixed: $vuetify.breakpoint.mdAndUp }"
                     @click="navigator('prev')"
                     :x-large="$vuetify.breakpoint.mdAndUp"
-                    block
                     outlined
                     color="primary"
                 >
@@ -24,9 +25,10 @@
             </v-col>
             <v-col cols="12" md="1" offset-md="-1" align-self="center">
                 <v-btn
+                    :block="$vuetify.breakpoint.smAndDown"
+                    :class="{ fixed: $vuetify.breakpoint.mdAndUp }"
                     @click="navigator('next')"
                     :x-large="$vuetify.breakpoint.mdAndUp"
-                    block
                     outlined
                     color="primary"
                 >
@@ -36,6 +38,14 @@
         </v-row>
     </v-container>
 </template>
+
+<style>
+    .fixed {
+        position: fixed;
+        top: 50%;
+        transform: translate(0, 50%);
+    }
+</style>
 
 <script>
     export default {
