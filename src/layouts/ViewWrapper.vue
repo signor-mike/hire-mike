@@ -1,6 +1,6 @@
 <template>
 	<v-container fill-height>
-		<v-row>
+		<v-row class="fill-height" justify="space-between">
 			<v-col v-if="!!title" cols="12">
 				<p
 					class="text-h5 text-center mx-auto px-2 my-3 text-capitalize"
@@ -8,31 +8,37 @@
 					{{ title }}
 				</p>
 			</v-col>
-			<v-col cols="12" md="1" offset-md="1" align-self="center">
+			<v-col cols="12" md="1" align-self="center">
 				<v-btn
 					:block="$vuetify.breakpoint.smAndDown"
 					:class="{ fixed: $vuetify.breakpoint.mdAndUp }"
 					@click="navigator('prev')"
 					:x-large="$vuetify.breakpoint.mdAndUp"
-					outlined
+					:outlined="$vuetify.breakpoint.mdAndUp"
+					:text="$vuetify.breakpoint.smAndDown"
 					color="primary"
 				>
-					<v-icon>keyboard_double_arrow_left</v-icon>
+					<v-icon :x-large="$vuetify.breakpoint.smAndDown">
+						keyboard_double_arrow_left
+					</v-icon>
 				</v-btn>
 			</v-col>
 			<v-col cols="12" md="8">
 				<slot />
 			</v-col>
-			<v-col cols="12" md="1" offset-md="-1" align-self="center">
+			<v-col cols="12" md="1" align-self="center">
 				<v-btn
 					:block="$vuetify.breakpoint.smAndDown"
 					:class="{ fixed: $vuetify.breakpoint.mdAndUp }"
 					@click="navigator('next')"
 					:x-large="$vuetify.breakpoint.mdAndUp"
-					outlined
+					:outlined="$vuetify.breakpoint.mdAndUp"
+					:text="$vuetify.breakpoint.smAndDown"
 					color="primary"
 				>
-					<v-icon>keyboard_double_arrow_right</v-icon>
+					<v-icon :x-large="$vuetify.breakpoint.smAndDown">
+						keyboard_double_arrow_right
+					</v-icon>
 				</v-btn>
 			</v-col>
 		</v-row>
@@ -54,16 +60,9 @@ export default {
 	},
 	methods: {
 		navigator(param) {
-			if (!param) {
-				console.error("Missing param.");
-				return;
-			}
-			if (!this.$route.query.page || !this.$store.state.navLinks) {
-				console.error(
-					"Missing $route.query.page or $store.state.navLinks"
-				);
-				return;
-			}
+			if (!param) return;
+			if (!this.$route.query.page) return;
+			if (!this.$store.state.navLinks) return;
 
 			const { page } = this.$route.query;
 			const links = this.$store.state.navLinks;
