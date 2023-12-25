@@ -7,7 +7,7 @@
 				<v-sheet width="100%" height="100%"></v-sheet>
 			</template>
 			<template #top-small>
-				<v-img src="/mike.webp" height="200px"></v-img>
+				<v-img src="/mike.webp" height="200px" eager></v-img>
 			</template>
 			<template #bottom-small>
 				<SeeMoreButton
