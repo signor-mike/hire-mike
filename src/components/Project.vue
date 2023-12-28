@@ -23,6 +23,17 @@
 			<v-sheet>
 				<v-container>
 					<v-row justify="center" align="center">
+						<v-col cols="12" class="d-flex">
+							<v-btn
+								color="primary"
+								x-large
+								icon
+								@click="dialog = false"
+								class="ml-auto"
+							>
+								<v-icon> close </v-icon>
+							</v-btn>
+						</v-col>
 						<v-col cols="12">
 							<v-row
 								align="center"
@@ -62,6 +73,16 @@
 							<p class="text-md-left text-center">
 								{{ project.data.description }}
 							</p>
+						</v-col>
+						<v-col>
+							<v-btn
+								@click="dialog = false"
+								block
+								outlined
+								color="primary"
+							>
+								dismiss
+							</v-btn>
 						</v-col>
 					</v-row>
 				</v-container>
