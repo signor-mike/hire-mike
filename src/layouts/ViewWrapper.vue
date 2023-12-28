@@ -1,7 +1,7 @@
 <template>
 	<v-container fill-height>
 		<v-row class="fill-height" justify="space-between">
-			<v-col v-if="!!title" cols="12">
+			<v-col v-if="!!title && $vuetify.breakpoint.mdAndUp" cols="12">
 				<p
 					class="text-h5 text-center mx-auto px-2 my-3 text-capitalize"
 				>

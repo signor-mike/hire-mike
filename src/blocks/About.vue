@@ -1,7 +1,5 @@
 <template>
-	<Wrapper
-		:title="$vuetify.breakpoint.mdAndUp ? $store.state['about-title'] : ''"
-	>
+	<Wrapper :title="$store.state['about-title']">
 		<Grid>
 			<template #top-large>
 				<v-sheet width="100%" height="100%"></v-sheet>
