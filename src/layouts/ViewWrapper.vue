@@ -12,14 +12,22 @@
 				<v-btn
 					:block="$vuetify.breakpoint.smAndDown"
 					:class="{ fixed: $vuetify.breakpoint.mdAndUp }"
-					@click="navigator('prev')"
+					@click="
+						$vuetify.breakpoint.smAndDown
+							? navigator('next')
+							: navigator('prev')
+					"
 					:x-large="$vuetify.breakpoint.mdAndUp"
 					:outlined="$vuetify.breakpoint.mdAndUp"
 					:text="$vuetify.breakpoint.smAndDown"
 					color="primary"
 				>
 					<v-icon :x-large="$vuetify.breakpoint.smAndDown">
-						keyboard_double_arrow_left
+						{{
+							$vuetify.breakpoint.smAndDown
+								? "keyboard_double_arrow_right"
+								: "keyboard_double_arrow_left"
+						}}
 					</v-icon>
 				</v-btn>
 			</v-col>
@@ -30,14 +38,22 @@
 				<v-btn
 					:block="$vuetify.breakpoint.smAndDown"
 					:class="{ fixed: $vuetify.breakpoint.mdAndUp }"
-					@click="navigator('next')"
+					@click="
+						$vuetify.breakpoint.smAndDown
+							? navigator('prev')
+							: navigator('next')
+					"
 					:x-large="$vuetify.breakpoint.mdAndUp"
 					:outlined="$vuetify.breakpoint.mdAndUp"
 					:text="$vuetify.breakpoint.smAndDown"
 					color="primary"
 				>
 					<v-icon :x-large="$vuetify.breakpoint.smAndDown">
-						keyboard_double_arrow_right
+						{{
+							$vuetify.breakpoint.smAndDown
+								? "keyboard_double_arrow_left"
+								: "keyboard_double_arrow_right"
+						}}
 					</v-icon>
 				</v-btn>
 			</v-col>
