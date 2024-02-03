@@ -1,75 +1,32 @@
 {
-    "title": "These are some of the things that I worked on",
-    "data": [
-        {
-            "image": "/images/monferrato.webp",
-            "title": "e-commerce",
-            "data": {
-                "header": "monferrato.bike",
-                "description": "A user-centric e-commerce platform for the sale of e-bikes, designed to provide a seamless and engaging shopping experience for customers. The platform features a wide range of e-bikes, detailed product descriptions, high-quality product imagery, and a user-friendly navigation system. It also integrates a secure payment gateway for safe transactions, offers convenient shipping options worldwide, and provides responsive customer support. This platform helps businesses increase sales, enhance customer experience, and boost brand awareness in the competitive e-commerce market for e-bikes.",
-                "techs": ["React.js", "Tailwind CSS", "Cypress"]
-            },
-            "vertical": true
-        },
-        {
-            "image": "/images/tecnag.webp",
-            "title": "SaaS",
-            "data": {
-                "header": "Software as a Service",
-                "description": "A web-based application designed to streamline maintenance management for businesses of all sizes, empowering technicians to efficiently record, track, and manage maintenance tasks with unparalleled ease. This user-friendly application ensures timely and thorough maintenance procedures, ensuring the optimal performance and longevity of critical equipment.",
-                "techs": ["Bootstrap", "jQuery", "HTML/CSS/JS"]
-            },
-            "vertical": false
-        },
-        {
-            "image": "/images/bah.webp",
-            "title": "Marketplace",
-            "data": {
-                "header": "",
-                "description": "",
-                "techs": ["", "", ""]
-            },
-            "vertical": true
-        },
-        {
-            "image": "/images/unagi.webp",
-            "title": "e-learning",
-            "data": {
-                "header": "",
-                "description": "",
-                "techs": ["", "", ""]
-            },
-            "vertical": true
-        },
-        {
-            "image": "/images/pv.webp",
-            "title": "Telehealthcare",
-            "data": {
-                "header": "",
-                "description": "",
-                "techs": ["", "", ""]
-            },
-            "vertical": true
-        },
-        {
-            "image": "/images/kaku.webp",
-            "title": "Utility",
-            "data": {
-                "header": "",
-                "description": "",
-                "techs": ["", "", ""]
-            },
-            "vertical": false
-        },
-        {
-            "image": "/images/etc.webp",
-            "title": "etc.",
-            "data": {
-                "header": "",
-                "description": "",
-                "techs": ["", "", ""]
-            },
-            "vertical": true
-        }
-    ]
+	"title": "Specialties",
+	"data": [
+		{
+			"icon": "tablet_android",
+			"items": [
+				"React Native",
+				"TypeScript",
+				"Detox",
+				"Expo",
+				"Metro",
+				"Gradle",
+				"Daily.co RTC"
+			]
+		},
+		{
+			"icon": "http",
+			"items": [
+				"Vue.js v2 && v3",
+				"React.js",
+				"TypeScript",
+				"Webpack/Vite",
+				"Vuetify v2 && v3",
+				"Tailwind CSS",
+				"Storybook",
+				"Cypress",
+				"Node.js",
+				"Firebase/GCP"
+			]
+		}
+	]
 }
