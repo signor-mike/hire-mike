@@ -1,31 +1,24 @@
 {
-    "title": "These are some of the things that I worked with",
-    "data": {
-        "code": [
-            "js/ts",
-            "vue.js",
-            "react.js",
-            "react native",
-            "cypress.js",
-            "nuxt.js",
-            "next.js",
-            "tailwind css",
-            "vuetify.js",
-            "rest api",
-            "node.js",
-            "express.js"
-        ],
-        "code_off": [
-            "git",
-            "Linux",
-            "firebase",
-            "figma",
-            "vscode",
-            "gcp",
-            "jira",
-            "Storybook",
-            "material design",
-            "bootstrap"
-        ]
-    }
+	"title": "Other tools",
+	"data": [
+		{
+			"icon": "computer",
+			"items": [
+				"Ubuntu Linux",
+				"bash",
+				"Figma",
+				"VSCode",
+				"Android Studio",
+				"Postman"
+			]
+		},
+		{
+			"icon": "cloud",
+			"items": [
+				"git",
+				"Linux (yes, I like them in the cloud too)",
+				"Various issue tracking software (e.g Jira/ClickUp)"
+			]
+		}
+	]
 }

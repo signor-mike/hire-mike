@@ -1,54 +1,33 @@
-<!-- eslint-disable no-mixed-spaces-and-tabs -->
 <template>
 	<Wrapper :title="$store.state['stack-title']">
-		<v-card
-			class="my-6"
-			outlined
-			elevation="24"
-			v-for="item in Object.keys($store.state.stack)"
-			:key="item"
-		>
-			<v-card-title class="d-flex justify-space-between align-center">
+		<Grid>
+			<template #top-large>
 				<SeeMoreButton
-					v-show="$store.state.stack[item].length > wordsCount"
-					:body="$store.state.stack[item].join(', ').toUpperCase()"
-					:bodyLength="0"
-					buttonIcon="more_vert"
-					wrapperClass="d-flex justify-space-between"
-				>
-					<v-icon>
-						{{ item }}
+					:body="$store.state.stack[0].items.join(', ')"
+					:bodyLength="$vuetify.breakpoint.smAndDown ? 60 : 240"
+				/>
+			</template>
+			<template #top-small>
+				<v-container fluid class="d-flex">
+					<v-icon class="ma-auto" x-large>
+						{{ $store.state.stack[0].icon }}
 					</v-icon>
-				</SeeMoreButton>
-			</v-card-title>
-			<v-divider />
-			<v-card-text class="d-flex">
-				<v-row justify="center" align="center">
-					<v-col
-						cols="4"
-						v-for="(str, i) in $store.state.stack[item].slice(
-							0,
-							wordsCount
-						)"
-						:key="str"
-					>
-						<p
-							class="text-truncate text-uppercase text-subtitle-2 font-weight-bold text-center mb-0"
-						>
-							{{
-								i === wordsCount - 1
-									? `And ${
-											$store.state.stack[item].length -
-											wordsCount +
-											1
-									  } more...`
-									: str
-							}}
-						</p>
-					</v-col>
-				</v-row>
-			</v-card-text>
-		</v-card>
+				</v-container>
+			</template>
+			<template #bottom-small>
+				<v-container fluid class="d-flex">
+					<v-icon x-large class="ma-auto">
+						{{ $store.state.stack[1].icon }}
+					</v-icon>
+				</v-container>
+			</template>
+			<template #bottom-large>
+				<SeeMoreButton
+					:body="$store.state.stack[1].items.join(', ')"
+					:bodyLength="$vuetify.breakpoint.smAndDown ? 60 : 240"
+				/>
+			</template>
+		</Grid>
 	</Wrapper>
 </template>
 
@@ -56,10 +35,9 @@
 export default {
 	components: {
 		Wrapper: () => import("@/layouts/ViewWrapper"),
+		// Project: () => import("@/components/Project"),
+		Grid: () => import("@/layouts/GridWrapper"),
 		SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 	},
-	data: () => ({
-		wordsCount: 5,
-	}),
 };
 </script>
