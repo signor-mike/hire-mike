@@ -1,5 +1,5 @@
 <template>
-	<v-row>
+	<v-row align="center">
 		<v-col :cols="cols.large" class="d-flex justify-end">
 			<v-expand-x-transition>
 				<slot v-if="top" name="top-large" />
