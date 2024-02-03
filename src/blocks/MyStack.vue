@@ -35,7 +35,6 @@
 export default {
 	components: {
 		Wrapper: () => import("@/layouts/ViewWrapper"),
-		// Project: () => import("@/components/Project"),
 		Grid: () => import("@/layouts/GridWrapper"),
 		SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
 	},
