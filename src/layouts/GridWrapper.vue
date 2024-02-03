@@ -1,6 +1,6 @@
 <template>
 	<v-row align="center">
-		<v-col :cols="cols.large" class="d-flex justify-end">
+		<v-col :cols="cols.large">
 			<v-expand-x-transition>
 				<slot v-if="top" name="top-large" />
 			</v-expand-x-transition>
