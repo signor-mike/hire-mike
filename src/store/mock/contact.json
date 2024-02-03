@@ -1,23 +1,23 @@
 {
-    "title": "And these are the ways to reach me out",
-    "data": {
-        "data": [
-            {
-                "title": "email",
-                "href": "mailto:dev_mike.k@yahoo.com",
-                "icon": "mail_outline"
-            },
-            {
-                "title": "linkedin",
-                "href": "https://linkedin.com/in/dev-mike-k",
-                "icon": "language"
-            }
-        ],
-        "footer": {
-            "title": "GitHub",
-            "href": "https://github.com/signor-mike/hire-mike",
-            "icon": "data_object",
-            "body": "This is my first web app. It's all about myself. And it did evolve a lot."
-        }
-    }
+	"title": "Contact",
+	"data": {
+		"data": [
+			{
+				"id": 1,
+				"title": "dev_mike.k@yahoo.com",
+				"href": "mailto:dev_mike.k@yahoo.com",
+				"icon": "mail_outline"
+			},
+			{
+				"id": 2,
+				"title": "linkedin.com/in/dev-mike-k",
+				"href": "https://linkedin.com/in/dev-mike-k",
+				"icon": "public"
+			}
+		],
+		"bottom": {
+			"icon": "language",
+			"list": ["English", "Russian", "Italian"]
+		}
+	}
 }
