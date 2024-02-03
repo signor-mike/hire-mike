@@ -2,7 +2,7 @@
 	<Wrapper :title="$store.state['about-title']">
 		<Grid>
 			<template #top-large>
-				<v-sheet width="100%" height="100%"></v-sheet>
+				<v-sheet width="100%" height="100%" color="secondary"></v-sheet>
 			</template>
 			<template #top-small>
 				<v-img src="/mike.webp" height="200px" eager></v-img>
@@ -14,7 +14,7 @@
 				/>
 			</template>
 			<template #bottom-large>
-				<v-sheet width="100%" height="100%"></v-sheet>
+				<v-sheet width="100%" height="100%" color="secondary"></v-sheet>
 			</template>
 		</Grid>
 	</Wrapper>
