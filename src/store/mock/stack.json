@@ -1,42 +1,24 @@
 {
-	"title": "Techs and tools I use in my craft",
-	"data": {
-		"code": [
-			"vue.js",
-			"react.js",
-			"typescript",
-			"cypress.js",
-			"bash",
-			"nuxt.js",
-			"next.js",
-			"tailwind css",
-			"vuetify.js",
-			"rest api",
-			"mongo db",
-			"node.js",
-			"express.js"
-		],
-		"code_off": [
-			"figma",
-			"git",
-			"Linux",
-			"firebase",
-			"vscode",
-			"gcp",
-			"Mac",
-			"jira",
-			"Storybook",
-			"material design",
-			"bootstrap"
-		],
-		"lightbulb": [
-			"creativity",
-			"research",
-			"analysis",
-			"precision",
-			"Critical thinking",
-			"Innovation",
-			"Adaptability"
-		]
-	}
+	"title": "Other tools",
+	"data": [
+		{
+			"icon": "computer",
+			"items": [
+				"Ubuntu Linux",
+				"bash",
+				"Figma",
+				"VSCode",
+				"Android Studio",
+				"Postman"
+			]
+		},
+		{
+			"icon": "cloud",
+			"items": [
+				"git",
+				"Linux (yes, I like them in the cloud too)",
+				"Various issue tracking software (e.g Jira/ClickUp)"
+			]
+		}
+	]
 }

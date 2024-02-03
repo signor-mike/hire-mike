@@ -1,23 +1,37 @@
 <template>
-	<Wrapper :title="title">
-		<v-card class="mx-auto" max-width="344">
-			<v-img src="/mike.webp" height="200px"></v-img>
-
-			<v-card-actions>
-				<SeeMoreButton :body="$store.state.about" />
-			</v-card-actions>
-		</v-card>
+	<Wrapper :title="$store.state['about-title']">
+		<Grid>
+			<template #top-large>
+				<v-sheet
+					:min-height="$vuetify.breakpoint.mdAndUp ? 200 : 100"
+					color="secondary"
+				></v-sheet>
+			</template>
+			<template #top-small>
+				<v-img :src="$store.state['about-image']" eager></v-img>
+			</template>
+			<template #bottom-small>
+				<SeeMoreButton
+					:body="$store.state.about"
+					:bodyLength="$vuetify.breakpoint.smAndDown ? 60 : 240"
+				/>
+			</template>
+			<template #bottom-large>
+				<v-sheet
+					:min-height="$vuetify.breakpoint.mdAndUp ? 200 : 100"
+					color="secondary"
+				></v-sheet>
+			</template>
+		</Grid>
 	</Wrapper>
 </template>
 
 <script>
-	export default {
-		props: {
-			title: { type: String, default: "About" },
-		},
-		components: {
-			Wrapper: () => import("@/layouts/ViewWrapper"),
-			SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
-		},
-	};
+export default {
+	components: {
+		Wrapper: () => import("@/layouts/ViewWrapper"),
+		Grid: () => import("@/layouts/GridWrapper"),
+		SeeMoreButton: () => import("@/components/ui/SeeMoreButton"),
+	},
+};
 </script>

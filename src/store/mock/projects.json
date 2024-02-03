@@ -1,59 +1,32 @@
 {
-	"title": "I've either built from ground-zero or actively participated in the following projects:",
+	"title": "Specialties",
 	"data": [
 		{
-			"url": "https://monferrato.bike",
-			"id": "fastloop-mfb",
-			"year": 2022,
-			"role": "frontend",
-			"description": "I was brought onto the team as the third frontend developer for the Monferrato.bike e-commerce project. We were tasked with modernizing and optimizing the webstore for e-bikes, using technologies such as React, remix, tailwind, storybook, cypress, vite, figma, and clickup.<br/><br/>As part of my role, I focused on creating layouts and UI elements, writing unit and e2e tests, and fixing bugs. I worked closely with the QA and Design teams to make sure the website was up to scratch and functioning properly. When we encountered bugs that were difficult to reproduce, I worked with the QA team to get additional information to help us identify and fix the root cause of the problem.<br/><br/>In the latter stages of the project, I mainly focused on debugging the app. When I came across bugs I couldn't fix, I'd request additional information or leave a comment explaining what needed to be done, like asking for a string when the backend was returning an object.<br/><br/>This project was a great opportunity to work with an amazing team of developers, QA, and designers. It also gave me valuable experience in React, remix, tailwind, storybook, cypress, vite, figma, and clickup. The website turned out to be a success, and I'm proud to have contributed to its development.",
-			"techs": [
-				"React.js",
-				"Tailwind CSS",
-				"Cypress.js",
+			"icon": "tablet_android",
+			"items": [
+				"React Native",
 				"TypeScript",
-				"Remix.js",
-				"StoryBook",
-				"Vite",
-				"Figma",
-				"ClickUp"
+				"Detox",
+				"Expo",
+				"Metro",
+				"Gradle",
+				"Daily.co RTC"
 			]
 		},
 		{
-			"url": "https://linkedin.com/company/unagi-media",
-			"id": "unagi-media",
-			"year": 2021,
-			"role": "fullstack",
-			"description": "I worked on the Unagi.media e-learning project as the third frontend developer, along with another developer who joined as the fourth member. The project was built using Vue.js (nuxt.js), PUG, and stylus, and I had the opportunity to work with Node.js (Feathers.js) and Stripe API as well. I reported directly to the CEO and CTO, who were two different individuals.<br /><br />At the time, I was relatively new to my career and faced numerous difficulties. However, thanks to amazing teamwork, we were able to resolve these issues quickly. Unfortunately, the startup did not succeed in the market, and everyone was laid off. Although I did not have many opportunities to influence the product, there were a few things that made me proud of myself.<br /><br />First and foremost, I gained valuable mentoring experience by helping the other developer to implement required features through pair programming sessions. Additionally, I once closed 4 (four) Jira issues by deleting a single record from the database that was causing issues after a buggy account deactivation.<br /><br />Overall, despite the project's unfortunate end, I learned a lot from my experience with Unagi.media. The project taught me the importance of teamwork and communication in software development, as well as the importance of persistence and adaptability in the face of challenges.",
-			"techs": [
-				"Vue.js",
-				"Nuxt.js",
-				"Stylus",
-				"Jest",
-				"Firebase",
-				"MongoDB",
-				"PUG",
-				"Figma",
-				"Jira"
+			"icon": "http",
+			"items": [
+				"Vue.js v2 && v3",
+				"React.js",
+				"TypeScript",
+				"Webpack/Vite",
+				"Vuetify v2 && v3",
+				"Tailwind CSS",
+				"Storybook",
+				"Cypress",
+				"Node.js",
+				"Firebase/GCP"
 			]
-		},
-		{
-			"url": "https://hire-mike.web.app",
-			"id": "hire-mike",
-			"year": "2020",
-			"role": "des<>dev",
-			"position": "dev",
-			"description": "The main purpose of the app is reflected in its name, and it was designed with a mobile-first approach in mind. As a web developer, I wanted to create a personal app that showcases my skills in a practical way. While it was unnecessary to mention that the app works on all screen sizes, I still ensured that it was responsive and worked well on different devices. However, during development, I faced a few challenges with implementing advanced features and decided to simplify the app's functionality to avoid complexity and difficulties in maintenance.<br /><br />Throughout my career, I've continuously worked on the app, refining it and improving its performance. It's been an excellent opportunity for me to apply new techniques and experiment with different technologies. At its core, the app serves a simple purpose, but I believe it's essential to have a personal web app that demonstrates my expertise in web development.<br /><br />As a fun addition, I included an Easter egg in the app. It's a small detail that shows my attention to detail and creativity. Lastly, I recommend viewing the app in dark mode as it enhances the user experience and highlights the app's design.",
-			"techs": ["Vue.js", "Vuetify.js", "Vuex", "Vue-router", "Webpack"]
-		},
-		{
-			"url": "https://kakulator.web.app",
-			"id": "kakulator",
-			"year": "2022",
-			"role": "des<>dev",
-			"position": "dev",
-			"description": "This lighthearted side project was built as a fun way for me to explore new technologies and frameworks. I wanted to experiment with Pinia, the new version of Vuex, and see how it worked with Vuetify 3 and TypeScript in Vue3. Additionally, I was curious to see how Vite could bundle all of these tools together.<br/ ><br/ >To my surprise, everything went smoothly during the development process. However, the biggest challenge I faced was bringing the user experience up to an acceptable level. I know that a good user experience is critical for any app, but in this case, it was particularly challenging given the lighthearted nature of the project. Despite this challenge, I'm happy with how it turned out.<br/ ><br/ >The purpose of the app is simple - to calculate the cheapest toilet paper based on the currency per activity. Although the app's purpose may seem trivial, it aligns with my belief in environmental conservation and sustainability. By saving trees, we're doing our part to protect the environment.<br/ ><br/ >Overall, this project was a fun way for me to experiment with new tools and frameworks while also creating an app that promotes environmental sustainability.",
-			"techs": ["Vue.js", "TypeScript", "Vuetify.js", "Pinia", "Vite"]
 		}
 	]
 }
