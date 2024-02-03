@@ -1,5 +1,5 @@
 <template>
-	<v-row align="center">
+	<v-row align="center" justify="space-between">
 		<v-col :cols="cols.large">
 			<v-expand-x-transition>
 				<slot v-if="top" name="top-large" />
@@ -11,6 +11,11 @@
 				<slot name="top-small" />
 			</v-scale-transition>
 		</v-col>
+
+		<v-col cols="12">
+			<v-divider></v-divider>
+		</v-col>
+
 		<v-col :cols="cols.small">
 			<v-scale-transition appear @afterEnter="runner('bottom')">
 				<slot name="bottom-small" />

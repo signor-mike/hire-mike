@@ -3,14 +3,12 @@
 		<Grid>
 			<template #top-large>
 				<v-sheet
-					width="100%"
-					height="100%"
-					min-height="100"
+					:min-height="$vuetify.breakpoint.mdAndUp ? 200 : 100"
 					color="secondary"
 				></v-sheet>
 			</template>
 			<template #top-small>
-				<v-img src="/mike.webp" height="200px" eager></v-img>
+				<v-img :src="$store.state['about-image']" eager></v-img>
 			</template>
 			<template #bottom-small>
 				<SeeMoreButton
@@ -20,9 +18,7 @@
 			</template>
 			<template #bottom-large>
 				<v-sheet
-					width="100%"
-					height="100%"
-					min-height="100"
+					:min-height="$vuetify.breakpoint.mdAndUp ? 200 : 100"
 					color="secondary"
 				></v-sheet>
 			</template>

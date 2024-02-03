@@ -52,10 +52,6 @@
 						<p class="text-center">{{ item }}</p>
 					</v-col>
 				</v-row>
-				<!-- <SeeMoreButton
-					:body="$store.state.stack[1].items.join(', ')"
-					:bodyLength="$vuetify.breakpoint.smAndDown ? 60 : 240"
-				/> -->
 			</template>
 		</Grid>
 	</Wrapper>

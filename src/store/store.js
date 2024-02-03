@@ -12,6 +12,7 @@ const store = new Vuex.Store({
 		projects: projects.data,
 		"projects-title": projects.title,
 		about: about.data,
+		"about-image": about.image,
 		"about-title": about.title,
 		stack: stack.data,
 		"stack-title": stack.title,
