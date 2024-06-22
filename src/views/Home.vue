@@ -49,7 +49,7 @@ export default {
 		goAhead() {
 			this.isRunning = false;
 			this.timeout = 0;
-			this.$router.push("/view?page=about");
+			this.$router.push("/view");
 			this.$store.commit("SET_NAV_VISIBILITY", true);
 		},
 	},
