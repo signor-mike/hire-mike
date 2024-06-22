@@ -1,10 +1,10 @@
 <template>
-	<v-row align="center" justify="space-between" dense class="full-width">
+	<v-row align="center" justify="space-between" dense style="max-width: 100%">
 		<v-col :cols="cols.large">
 			<v-expand-x-transition>
 				<v-sheet color="secondary">
 					<v-container>
-						<v-card flat>
+						<v-card flat color="secondary">
 							<slot v-if="top" name="top-large" />
 						</v-card>
 					</v-container>
@@ -16,7 +16,7 @@
 			<v-scale-transition appear @beforeEnter="runner('top')">
 				<v-sheet class="h-100" color="secondary">
 					<v-container>
-						<v-card flat>
+						<v-card flat color="secondary">
 							<slot name="top-small" />
 						</v-card>
 					</v-container>
@@ -32,7 +32,7 @@
 			<v-scale-transition appear @afterEnter="runner('bottom')">
 				<v-sheet color="secondary">
 					<v-container>
-						<v-card flat>
+						<v-card flat color="secondary">
 							<slot name="bottom-small" />
 						</v-card>
 					</v-container>
@@ -44,7 +44,7 @@
 			<v-expand-transition>
 				<v-sheet color="secondary">
 					<v-container>
-						<v-card flat>
+						<v-card flat color="secondary">
 							<slot v-if="bottom" name="bottom-large" />
 						</v-card>
 					</v-container>
