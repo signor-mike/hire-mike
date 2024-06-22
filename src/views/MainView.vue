@@ -1,36 +1,71 @@
 <template>
-    <v-slide-x-transition mode="out-in" :appear="true">
-        <About v-if="$route.query.page === 'about'" />
-        <MyWork v-else-if="$route.query.page === 'projects'" />
-        <MyStack v-else-if="$route.query.page === 'stack'" />
-        <Contacts v-else-if="$route.query.page === 'contact'" />
-        <NotFound v-else />
-    </v-slide-x-transition>
+	<v-slide-x-transition mode="out-in" :appear="true" class="mx-auto">
+		<v-container fill-height fluid pa-0>
+			<Grid>
+				<template #top-large>
+					<v-card-title>
+						Mikhail
+						<br />
+						"Mike K."
+						<br />
+						Krivoshchekov
+					</v-card-title>
+					<v-divider />
+					<v-card-subtitle> Software Engineer </v-card-subtitle>
+				</template>
+				<template #top-small>
+					<v-img src="/mike.webp" eager></v-img>
+				</template>
+				<template #bottom-small>
+					<v-card-title>LinkedIn</v-card-title>
+					<v-card-actions>
+						<v-btn
+							tonal
+							block
+							href="https://linkedin.com/in/dev-mike-k"
+							target="_blank"
+						>
+							connect
+							<v-icon right>launch</v-icon>
+						</v-btn>
+					</v-card-actions>
+				</template>
+				<template #bottom-large>
+					<v-card-title>Email: </v-card-title>
+					<v-card-actions>
+						<v-btn
+							tonal
+							block
+							href="mailto:dev_mike.k@yahoo.com"
+							target="_blank"
+						>
+							write
+							<v-icon right>launch</v-icon>
+						</v-btn>
+					</v-card-actions>
+				</template>
+			</Grid>
+		</v-container>
+	</v-slide-x-transition>
 </template>
 
 <script>
-    export default {
-        components: {
-            About: () => import("@/blocks/About"),
-            MyWork: () => import("@/blocks/MyWork"),
-            MyStack: () => import("@/blocks/MyStack"),
-            Contacts: () => import("@/blocks/Contacts"),
-            NotFound: () => import("@/views/NotFound"),
-        },
-        mounted: function () {
-            this.updateTitle();
-            if (!this.$store.state.isNavVisible)
-                this.$store.commit("SET_NAV_VISIBILITY", true);
-        },
-        updated() {
-            this.updateTitle();
-        },
-        methods: {
-            updateTitle() {
-                document.title = `Mike | ${this.$route.query.page.toUpperCase()}`;
-            },
-        },
-    };
+export default {
+	components: {
+		Grid: () => import("@/layouts/GridWrapper"),
+	},
+	mounted: function () {
+		this.updateTitle();
+	},
+	updated() {
+		this.updateTitle();
+	},
+	methods: {
+		updateTitle() {
+			document.title = `Mike | ${this.$route.query.page.toUpperCase()}`;
+		},
+	},
+};
 </script>
 
 <style></style>
