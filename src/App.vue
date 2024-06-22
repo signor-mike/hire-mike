@@ -1,10 +1,9 @@
 <template class>
 	<v-app>
-		<ControlsBar v-if="$store.state.isNavVisible" />
+		<ControlsBar />
 		<v-main>
 			<router-view />
 		</v-main>
-		<NavBar v-if="$store.state.isNavVisible" />
 	</v-app>
 </template>
 
@@ -14,7 +13,6 @@ export default {
 	name: "App",
 
 	components: {
-		NavBar: () => import("@/blocks/Navbar"),
 		ControlsBar: () => import("@/blocks/ControlsBar"),
 	},
 	beforeMount: function () {
