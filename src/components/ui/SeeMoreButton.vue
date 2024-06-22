@@ -28,7 +28,10 @@
 				<v-btn icon class="ml-auto" @click="dialog = false">
 					<v-icon x-large color="primary"> close </v-icon>
 				</v-btn>
-				<p class="mb-0 pa-5 text-body-1" v-html="body" />
+				<p
+					class="mb-0 pa-5 text-body-2 font-weight-bold"
+					v-html="body"
+				/>
 				<v-btn
 					outlined
 					class="mx-auto"
