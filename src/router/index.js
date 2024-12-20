@@ -5,25 +5,26 @@ import Home from "@/views/Home.vue";
 Vue.use(VueRouter);
 
 const routes = [
-    {
-        path: "/",
-        name: "Home",
-        component: Home,
-    },
-    {
-        path: "/view",
-        name: "main view",
-        component: () => import("@/views/MainView"),
-    },
-    {
-        path: "*",
-        name: "Not Found",
-        component: () => import("@/views/NotFound"),
-    },
+	{
+		path: "/",
+		name: "Home",
+		component: Home,
+	},
+	{
+		path: "/view",
+		name: "main view",
+		component: () => import("@/views/MainView"),
+	},
+	{ path: "/app-ads.txt" },
+	{
+		path: "*",
+		name: "Not Found",
+		component: () => import("@/views/NotFound"),
+	},
 ];
 const router = new VueRouter({
-    mode: "history",
-    routes,
+	mode: "history",
+	routes,
 });
 
 export default router;
