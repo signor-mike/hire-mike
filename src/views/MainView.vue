@@ -1,6 +1,6 @@
 <template>
 	<v-slide-x-transition mode="out-in" :appear="true" class="mx-auto">
-		<v-container fill-height fluid pa-0>
+		<v-container fill-height fluid pa-0 my-3>
 			<Grid>
 				<template #top-large>
 					<v-card-title>
@@ -47,6 +47,7 @@
 					</v-card-actions>
 				</template>
 			</Grid>
+			<!-- <SofosApp /> -->
 		</v-container>
 	</v-slide-x-transition>
 </template>
@@ -55,6 +56,7 @@
 export default {
 	components: {
 		Grid: () => import("@/layouts/GridWrapper"),
+		// SofosApp: () => import("@/components/SofosApp.vue"),
 	},
 	mounted: function () {
 		document.title = `Mike | JavaScript Engineer`;
