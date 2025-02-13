@@ -16,20 +16,18 @@
 				v-if="isRunning"
 				class="ma-auto"
 			>
-				<v-card-title class="primary--text">
-					Hi, the name reads:
-				</v-card-title>
-				<v-card-subtitle class="font-italic">/ˈmaɪ.ki/</v-card-subtitle>
+				<v-card-title class="primary--text"> Mike K. </v-card-title>
+				<v-card-subtitle class="font-italic">
+					[/ˈmaɪ.ki/]
+				</v-card-subtitle>
 				<v-card-text>
-					JavaScript Engineer at your serivce
+					JavaScript Engineer / AI hobbyist
 					<v-divider class="my-2" />
-					<p class="text-caption text-center">
-						wait a moment or tap to continue
-					</p>
+					<p class="text-caption text-center">fasten your belt</p>
 				</v-card-text>
 				<v-card-actions>
 					<v-btn outlined color="primary" block @click.once="goAhead">
-						Going ahead in {{ timeout }}...
+						Coming in hot ({{ timeout }})
 						<v-icon right>keyboard_double_arrow_right</v-icon>
 					</v-btn>
 				</v-card-actions>
